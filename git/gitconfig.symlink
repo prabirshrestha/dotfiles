@@ -1,0 +1,42 @@
+[user]
+        name = Prabir Shrestha
+        email = mail@prabir.me
+[apply]
+        whitespace = nowarn
+[alias]
+        l = log
+        ci = commit
+        br = branch
+        st = status	
+        co = checkout
+        w = whatchanged
+        rank = shortlog -sn --no-meres
+        tags = tag -n1 -l
+[color]
+        diff = auto
+        status = auto
+        branch = auto
+[color "branch"]
+        current = green reverse
+        local = green
+        remote = cyan
+[color "status"]
+        added = green
+        changed = yellow
+        untracked = red
+[core]
+        autocrlf = false
+[diff]
+        tool = kdiff3
+[difftool]
+        prompt = false
+[difftool "kdiff3"]
+        path = kdiff3
+[mergetool]
+        keepBackup = false
+        prompt = false
+[mergetool "kdiff3"]
+        tool = kdiff3
+[github]
+        user = prabirshrestha
+
