@@ -1,6 +1,6 @@
 colorscheme molokai
 set anti
-set lines=999 columns=84
+#set lines=999 columns=84
 set guioptions=egmrt
 
 " Command + t to :CommandT
