@@ -19,7 +19,15 @@ if has('win32') || has('win64')
 
 	set viminfo='10,\"100,:20,%,n~/.viminfo
 endif
- 
+
+
+" ----------------------------------------------------------------------------
+"  Pathogen Bundle Support
+" ----------------------------------------------------------------------------
+runtime! autoload/pathogen.vim
+silent! call pathogen#helptags()
+silent! call pathogen#runtime_append_all_bundles()
+
 
 " ----------------------------------------------------------------------------
 "  Text Formatting
