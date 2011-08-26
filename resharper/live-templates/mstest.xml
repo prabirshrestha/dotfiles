@@ -1,0 +1,58 @@
+<TemplatesExport family="Live Templates">
+  <Template uid="72843a60-6b39-4bf3-8a7d-388374dd057b" shortcut="mstc" description="MSTest class" text="[TestClass]&#xD;&#xA;public class $classname$&#xD;&#xA;{&#xD;&#xA;	$END$&#xD;&#xA;}" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="TypeAndNamespace" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories />
+    <Variables>
+      <Variable name="classname" expression="getFileNameWithoutExtension()" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="0c90892b-fd34-42fd-98ac-c76b5e1e2839" shortcut="mstm" description="MSTestMethod" text="[TestMethod]&#xD;&#xA;public void $methodname$()&#xD;&#xA;{&#xD;&#xA;    $END$&#xD;&#xA;}" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="TypeMember" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories />
+    <Variables>
+      <Variable name="methodname" expression="" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="72843a60-6b39-4bf3-8a7d-388374dd057b" shortcut="mstc" description="MSTest class" text="[TestClass]&#xD;&#xA;public class $classname$&#xD;&#xA;{&#xD;&#xA;	$END$&#xD;&#xA;}" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="TypeAndNamespace" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories />
+    <Variables>
+      <Variable name="classname" expression="getFileNameWithoutExtension()" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="cdac2419-40c6-4dea-bac3-bb85fba3ee69" shortcut="mstd" description="MSTests cleanup (dispose)" text="[TestCleanup]&#xD;&#xA;public void CleanUp()&#xD;&#xA;{&#xD;&#xA;    $END$        &#xD;&#xA;}" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="TypeMember" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories />
+    <Variables />
+    <CustomProperties />
+  </Template>
+  <Template uid="0c90892b-fd34-42fd-98ac-c76b5e1e2839" shortcut="mstm" description="MSTestMethod" text="[TestMethod]&#xD;&#xA;public void $methodname$()&#xD;&#xA;{&#xD;&#xA;    $END$&#xD;&#xA;}" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="TypeMember" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories />
+    <Variables>
+      <Variable name="methodname" expression="" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="396fcdc5-36cf-49c7-bbeb-44d73f0c42f0" shortcut="msts" description="MSTest Test initialize (setup)" text="[TestInitialize]&#xD;&#xA;public void SetUp()&#xD;&#xA;{&#xD;&#xA;	$END$&#xD;&#xA;}" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="TypeMember" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories />
+    <Variables />
+    <CustomProperties />
+  </Template>
+</TemplatesExport>
