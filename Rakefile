@@ -1,7 +1,10 @@
 require 'rake'
 
+
+
 desc "Hook our dotfiles into system-standard positions."
-task :install do
+task :install, [:symlink] do |t, args|
+  symlink = args[:symlink] || 'ln'  
   linkables = Dir.glob('*/**{.symlink}')
 
   skip_all = false
@@ -13,7 +16,7 @@ task :install do
     backup = false
 
     file = linkable.split('/').last.split('.symlink')
-    target = "#{ENV["HOME"]}/.#{file}"
+    target = "#{ENV["HOME"]}/.#{file[0]}"
 
     if File.exists?(target) || File.symlink?(target)
       unless skip_all || overwrite_all || backup_all
@@ -29,7 +32,15 @@ task :install do
       FileUtils.rm_rf(target) if overwrite || overwrite_all
       `mv "$HOME/.#{file}" "$HOME/.#{file}.backup"` if backup || backup_all
     end
-    `ln -s "$PWD/#{linkable}" "#{target}"`
+	if symlink == 'mklink' then
+	  if(File.directory?(linkable)) then
+	    `mklink /D "#{target}" "%cd%/#{linkable}"`
+	  else
+	    `mklink "#{target}" "%cd%/#{linkable}"`
+	  end
+	else
+      `ln -s "$PWD/#{linkable}" "#{target}"`
+	end
   end
 end
 task :default => 'install'
