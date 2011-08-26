@@ -1,0 +1,35 @@
+<TemplatesExport family="Live Templates">
+  <Template uid="cbd8b428-905c-45d3-af2d-cfe5047f2912" shortcut="ar" description="MVC Action Result" text="//&#xD;&#xA;// GET: /$path$/&#xD;&#xA;&#xD;&#xA;public ActionResult $actionName$()&#xD;&#xA;{&#xD;&#xA;    $END$&#xD;&#xA;	return View();&#xD;&#xA;}" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="TypeMember" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories />
+    <Variables>
+      <Variable name="actionName" expression="" initialRange="0" />
+      <Variable name="path" expression="" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="cbd8b428-905c-45d3-af2d-cfe5047f2912" shortcut="ar" description="MVC Action Result" text="//&#xD;&#xA;// GET: /$path$/&#xD;&#xA;&#xD;&#xA;public ActionResult $actionName$()&#xD;&#xA;{&#xD;&#xA;    $END$&#xD;&#xA;	return View();&#xD;&#xA;}" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="TypeMember" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories />
+    <Variables>
+      <Variable name="actionName" expression="" initialRange="0" />
+      <Variable name="path" expression="" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="e31a5db5-5d47-48d3-8eaa-223ef2daf31c" shortcut="arp" description="ASP.NET MVC Action Result Post" text="[HttpPost]&#xD;&#xA;public ActionResult $actionName$($modelType$ model)&#xD;&#xA;{&#xD;&#xA;    if (ModelState.IsValid)&#xD;&#xA;    {&#xD;&#xA;        $END$	&#xD;&#xA;    }&#xD;&#xA;&#xD;&#xA;    return View(model);&#xD;&#xA;}" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="TypeMember" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories />
+    <Variables>
+      <Variable name="actionName" expression="" initialRange="0" />
+      <Variable name="modelType" expression="" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+</TemplatesExport>
