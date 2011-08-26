@@ -1,0 +1,49 @@
+###############################################################################
+# powershell initialization script
+# call from profile.ps1, like this:
+#     . "$env:HOME\profile.ps1"
+# (notice the '.')
+# make sure you set the HOME environent variable (ex:  c:\HOMEDIR)
+# 
+###############################################################################
+
+#
+# Set the $HOME variable for our use
+# and make powershell recognize ~\ as $HOME
+# in paths
+#
+set-variable -name HOME -value (resolve-path $env:Home) -force
+(get-psprovider FileSystem).Home = $HOME
+
+#
+# global variables and core env variables 
+#
+#$TOOLS = [Environment]::GetFolderPath("MyDocuments") + "\PortableApps"
+$TOOLS = $env:HOME + "\tools"
+
+#
+#  good place change  HOME/OFFICE configurations out here
+#
+$computerName = Get-Content Env:\COMPUTERNAME
+$windowsUserName =  Get-Content Env:\USERNAME
+switch(Get-Content Env:\COMPUTERNAME){
+	"PSLAPTOP"{
+		break;
+	}
+	default{
+		break;
+	}
+}
+
+Write-Host "Setting environment for '$windowsUserName@$computerName'" -foregroundcolor cyan
+
+#
+# set path to include my usual directories
+# and configure dev environment
+#
+function script:append-path { 
+   if ( -not $env:PATH.contains($args) ) {
+      $env:PATH += ';' + $args
+   }
+}
+
