@@ -1,3 +1,6 @@
 [submodule "vim/vim.symlink/bundle/nerdtree"]
 	path = vim/vim.symlink/bundle/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
+[submodule "powershell/posh-git"]
+	path = powershell/posh-git
+	url = https://github.com/dahlbyk/posh-git.git
