@@ -13,3 +13,6 @@
 [submodule ".\\vim\\vim.symlink\\bundle/closetag"]
 	path = .\\vim\\vim.symlink\\bundle/closetag
 	url = https://github.com/docunext/closetag.vim.git
+[submodule "vim/vim.symlink/bundle/nerdcommenter"]
+	path = vim/vim.symlink/bundle/nerdcommenter
+	url = https://github.com/scrooloose/nerdcommenter.git
