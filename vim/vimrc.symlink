@@ -85,7 +85,7 @@ set number                 " line numbers
 set wildmenu               " turn on wild menu
 set wildmode=list:longest,full
 set ch=2                   " command line height
-set backspace=2            " allow backspacing over everything in insert mode
+set backspace=indent,eol,start 
 set whichwrap+=<,>,h,l,[,] " backspace and cursor keys wrap to
 set shortmess=filtIoOA     " shorten messages
 set report=0               " tell us about changes

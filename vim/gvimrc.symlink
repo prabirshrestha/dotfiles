@@ -1,4 +1,4 @@
-colorscheme molokai
+colorscheme prabirdark
 set anti
 " set lines=999 columns=84
 set guioptions=egmrt
