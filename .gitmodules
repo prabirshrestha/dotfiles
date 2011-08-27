@@ -7,11 +7,11 @@
 [submodule "powershell/powershell.symlink/posh-hg"]
 	path = powershell/powershell.symlink/posh-hg
 	url = https://github.com/JeremySkinner/posh-hg.git
-[submodule ".\\vim\\vim.symlink\\bundle\\delmitMate"]
-	path = .\\vim\\vim.symlink\\bundle\\delmitMate
+[submodule "/vim/vim.symlink/bundle/delmitMate"]
+	path = /vim/vim.symlink/bundle/delmitMate
 	url = https://github.com/Raimondi/delimitMate.git
-[submodule ".\\vim\\vim.symlink\\bundle/closetag"]
-	path = .\\vim\\vim.symlink\\bundle/closetag
+[submodule "/vim/vim.symlink/bundle/closetag"]
+	path = /vim/vim.symlink/bundle/closetag
 	url = https://github.com/docunext/closetag.vim.git
 [submodule "vim/vim.symlink/bundle/nerdcommenter"]
 	path = vim/vim.symlink/bundle/nerdcommenter
