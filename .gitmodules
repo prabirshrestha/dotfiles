@@ -4,9 +4,6 @@
 [submodule "powershell/powershell.symlink/posh-git"]
 	path = powershell/powershell.symlink/posh-git
 	url = https://github.com/dahlbyk/posh-git.git
-[submodule "powershell/powrshell.symlink/posh-hg"]
-	path = powershell/powrshell.symlink/posh-hg
-	url = https://github.com/dahlbyk/posh-git.git
 [submodule "powershell/powershell.symlink/posh-hg"]
 	path = powershell/powershell.symlink/posh-hg
 	url = https://github.com/JeremySkinner/posh-hg.git
