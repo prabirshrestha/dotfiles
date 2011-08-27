@@ -29,8 +29,12 @@ task :install, [:symlink] do |t, args|
         when 'S' then skip_all = true
         end
       end
-      FileUtils.rm_rf(target) if overwrite || overwrite_all
-      `mv "$HOME/.#{file}" "$HOME/.#{file}.backup"` if backup || backup_all
+	  if symlink == 'mklink' and File.directory?(target) then
+		`rmdir "#{target}"` if overwrite || overwrite_all
+	  else
+	    FileUtils.rm_rf(target) if overwrite || overwrite_all
+	  end
+	  `mv "$HOME/.#{file}" "$HOME/.#{file}.backup"` if backup || backup_all
     end
 	if symlink == 'mklink' then
 	  if(File.directory?(linkable)) then
@@ -43,4 +47,5 @@ task :install, [:symlink] do |t, args|
 	end
   end
 end
+
 task :default => 'install'
