@@ -1,9 +1,12 @@
 [submodule "vim/vim.symlink/bundle/nerdtree"]
 	path = vim/vim.symlink/bundle/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
-[submodule "powershell/posh-git"]
-	path = powershell/posh-git
+[submodule "powershell/powershell.symlink/posh-git"]
+	path = powershell/powershell.symlink/posh-git
 	url = https://github.com/dahlbyk/posh-git.git
-[submodule "powershell/posh-hg"]
-	path = powershell/posh-hg
+[submodule "powershell/powrshell.symlink/posh-hg"]
+	path = powershell/powrshell.symlink/posh-hg
+	url = https://github.com/dahlbyk/posh-git.git
+[submodule "powershell/powershell.symlink/posh-hg"]
+	path = powershell/powershell.symlink/posh-hg
 	url = https://github.com/JeremySkinner/posh-hg.git
