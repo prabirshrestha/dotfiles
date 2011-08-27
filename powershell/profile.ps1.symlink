@@ -11,15 +11,14 @@
 # Set the $HOME variable for our use
 # and make powershell recognize ~\ as $HOME
 # in paths
-#
-#set-variable -name HOME -value (resolve-path $env:Home) -force
-#(get-psprovider FileSystem).Home = $HOME
+set-variable -name HOME -value (resolve-path $env:USERPROFILE) -force
+(get-psprovider FileSystem).Home = $HOME
 
 #
 # global variables and core env variables 
 #
 #$TOOLS = [Environment]::GetFolderPath("MyDocuments") + "\PortableApps"
-$TOOLS = $env:HOME + "\apps\"
+$TOOLS = "$HOME/apps"
 
 #
 #  good place change  HOME/OFFICE configurations out here
@@ -55,3 +54,56 @@ append-path	"$TOOLS\kdiff3"
 Set-Alias notepad++ "$TOOLS\Notepad++\notepad++.exe"
 Set-Alias np notepad++
 
+
+# Load posh-git module
+Import-Module $HOME\.powershell\posh-git\posh-git
+Import-Module $HOME\.powershell\posh-hg\posh-hg
+
+# SETUP PROMPT
+function prompt {
+	# start a new line after the last command. makes it clear
+	Write-Host ""
+
+	# http://markembling.info/view/my-ideal-powershell-prompt-with-git-integration
+	$host.UI.RawUi.WindowTitle = $env:username + '@' + [System.Environment]::MachineName + ' ' + ($pwd)
+	Write-Host($pwd) -nonewline -foregroundcolor Green 
+        
+    # Git Prompt
+    $Global:GitStatus = Get-GitStatus
+    Write-GitStatus $GitStatus
+
+	# Mercurial Prompt
+    $Global:HgStatus = Get-HgStatus
+    Write-HgStatus $HgStatus
+
+	# start writing the command at new line
+	# coz it is easier to see the command in the same line.
+	Write-Host ""
+    return "$ "
+}
+
+if(-not $profile.EndsWith("NuGet_profile.ps1")){
+	if(-not (Test-Path Function:\DefaultTabExpansion)) {
+	  Rename-Item Function:\TabExpansion DefaultTabExpansion
+	}
+
+	# Set up tab expansion and include git expansion
+	function TabExpansion($line, $lastWord) {
+	  $lastBlock = [regex]::Split($line, '[|;]')[-1]
+
+	  switch -regex ($lastBlock) {
+		# Execute git tab completion for all git-related commands
+		'git (.*)' { GitTabExpansion $lastBlock }
+
+		# mercurial and tortoisehg tab expansion
+	    '(hg|hgtk) (.*)' { HgTabExpansion($lastBlock) }
+
+	    # Fall back on existing tab expansion
+	    default { DefaultTabExpansion $line $lastWord }
+	  }
+	}
+}
+
+Enable-GitColors
+
+Pop-Location
