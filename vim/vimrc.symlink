@@ -32,7 +32,8 @@ silent! call pathogen#runtime_append_all_bundles()
 " ----------------------------------------------------------------------------
 "  Text Formatting
 " ----------------------------------------------------------------------------
-
+filetype plugin indent on  " automatically detect file types
+syntax on                  " syntax higlight
 set autoindent             " automatic indent new lines
 set smartindent            " be smart about it
 inoremap # X<BS>#
