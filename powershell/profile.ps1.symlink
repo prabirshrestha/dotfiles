@@ -46,6 +46,9 @@ function script:append-path {
    }
 }
 
+append-path "$TOOLS\vim\vim73\"
+set-alias vi gvim
+
 append-path "$TOOLS\ruby-1.9.2-p0-i386-mingw32\bin" # http://rubyforge.org/frs/?group_id=167 (ruby-1.9.2-p0-i386-mingw32.7z)
 append-path "$TOOLS\git\cmd"        # download portable git from http://code.google.com/p/msysgit/downloads/list
 Set-Alias git-bash "$TOOLS\git\git-bash.bat"
