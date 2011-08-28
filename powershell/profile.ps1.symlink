@@ -53,6 +53,7 @@ append-path "$TOOLS\ruby-1.9.2-p0-i386-mingw32\bin" # http://rubyforge.org/frs/?
 append-path "$TOOLS\git\cmd"        # download portable git from http://code.google.com/p/msysgit/downloads/list
 Set-Alias git-bash "$TOOLS\git\git-bash.bat"
 append-path	"$TOOLS\kdiff3"
+append-path	"$TOOLS\node"
 
 Set-Alias notepad++ "$TOOLS\Notepad++\notepad++.exe"
 Set-Alias np notepad++
