@@ -115,3 +115,11 @@ function! StripWhitespace ()
     exec ':%s/ \+$//gc'
 endfunction
 map ,s :call StripWhitespace ()<CR>
+
+" ---------------------------------------------------------------------------
+" Use english for spellchecking, but don't spellcheck by default 
+" ---------------------------------------------------------------------------
+if version >= 700
+  set spl=en spell
+  set nospell
+endif
