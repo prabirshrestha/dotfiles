@@ -31,3 +31,6 @@
 [submodule "vim/vim.symlink/bundle/surround"]
 	path = vim/vim.symlink/bundle/surround
 	url = https://github.com/tpope/vim-surround.git
+[submodule "vim/vim.symlink/bundle/mru"]
+	path = vim/vim.symlink/bundle/mru
+	url = https://github.com/vim-scripts/mru.vim.git
