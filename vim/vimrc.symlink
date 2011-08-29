@@ -104,6 +104,7 @@ set incsearch              " do incremental searching
 set laststatus=2           " always show the status line
 set ignorecase             " ignore case when searching
 set hlsearch               " highlight searches
+nmap <silent> <leader>/ :nohlsearch<CR> " clearing higlighted search
 set visualbell             " shut the fuck up
 
 
