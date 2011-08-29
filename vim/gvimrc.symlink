@@ -41,3 +41,22 @@ nnoremap <silent> <F12>      :call ToggleWrap()<CR>
 vnoremap <silent> <F12> <C-C>:call ToggleWrap()<CR>
 inoremap <silent> <F12> <C-O>:call ToggleWrap()<CR>
 
+function ToggleHorizontalScrollbar()
+    "set guioptions+=b
+    if &go =~# "b"
+        set go-=b
+    else
+        set go+=b
+    endif
+endfunc
+
+function ToggleHorizontalScrollbar_setKeys()
+    "Shift+F12 toggles the horizontal scrollbar
+    nnoremap <silent> <S-F12>      :call ToggleHorizontalScrollbar()<CR>
+    vnoremap <silent> <S-F12> <C-C>:call ToggleHorizontalScrollbar()<CR>
+    inoremap <silent> <S-F12> <C-O>:call ToggleHorizontalScrollbar()<CR>
+endfunc
+
+au GUIEnter * call ToggleHorizontalScrollbar_setKeys()
+
+
