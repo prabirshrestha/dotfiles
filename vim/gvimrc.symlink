@@ -30,3 +30,14 @@ nmap <d-6> 6gt
 nmap <d-7> 7gt
 nmap <d-8> 8gt
 nmap <d-9> 9gt
+
+function ToggleWrap()
+    set wrap!
+    echo &wrap ? 'wrap' : 'nowrap'
+endfunc
+
+"F12 toggles wrap
+nnoremap <silent> <F12>      :call ToggleWrap()<CR>
+vnoremap <silent> <F12> <C-C>:call ToggleWrap()<CR>
+inoremap <silent> <F12> <C-O>:call ToggleWrap()<CR>
+
