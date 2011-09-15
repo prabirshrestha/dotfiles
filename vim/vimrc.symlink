@@ -56,7 +56,7 @@ set virtualedit=block      " allow virtual edit in visual block ..
 let mapleader = ","
 
 " exit to normal mode with 'jj'
-#inoremap jj <ESC>
+" inoremap jj <ESC>
 
 
 " reflow paragraph with Q in normal and visual mode
