@@ -37,3 +37,6 @@
 [submodule "vim/vim.symlink/bundle/xptemplate"]
 	path = vim/vim.symlink/bundle/xptemplate
 	url = https://github.com/drmingdrmer/xptemplate.git
+[submodule "hg/hg-git.symlink"]
+	path = hg/hg-git.symlink
+	url = https://github.com/schacon/hg-git.git
