@@ -40,3 +40,6 @@
 [submodule "hg/hg-git.symlink"]
 	path = hg/hg-git.symlink
 	url = https://github.com/schacon/hg-git.git
+[submodule "jake"]
+	path = jake
+	url = https://github.com/mde/jake.git
