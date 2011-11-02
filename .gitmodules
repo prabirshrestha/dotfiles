@@ -40,3 +40,6 @@
 [submodule "hg/hg-git.symlink"]
 	path = hg/hg-git.symlink
 	url = https://github.com/schacon/hg-git.git
+[submodule "vim/vim.symlink/bundle/xptemplate_personal_snippets"]
+	path = vim/vim.symlink/bundle/xptemplate_personal_snippets
+	url = git://github.com/prabirshrestha/xptemplate_personal_snippets.git
