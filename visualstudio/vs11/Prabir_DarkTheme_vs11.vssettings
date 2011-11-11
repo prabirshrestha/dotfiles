@@ -133,7 +133,7 @@
 			</ToolsOptionsSubCategory>
 			<ToolsOptionsSubCategory name="CSharp" RegisteredName="CSharp" PackageName="Text Management Package">
 				<PropertyValue name="TabSize">4</PropertyValue>
-				<PropertyValue name="AutoListMembers">true</PropertyValue>
+				<PropertyValue name="AutoListMembers">false</PropertyValue>
 				<PropertyValue name="IndentStyle">2</PropertyValue>
 				<PropertyValue name="HideAdvancedMembers">true</PropertyValue>
 				<PropertyValue name="ShowNavigationBar">true</PropertyValue>
@@ -145,7 +145,7 @@
 				<PropertyValue name="WordWrap">false</PropertyValue>
 				<PropertyValue name="IndentSize">4</PropertyValue>
 				<PropertyValue name="CutCopyBlankLines">true</PropertyValue>
-				<PropertyValue name="AutoListParams">true</PropertyValue>
+				<PropertyValue name="AutoListParams">false</PropertyValue>
 			</ToolsOptionsSubCategory>
 			<ToolsOptionsSubCategory name="CSharp-Specific" RegisteredName="CSharp-Specific" PackageName="Visual C# Language Service Package">
 				<PropertyValue name="NewLines_QueryExpression_EachClause">1</PropertyValue>
@@ -413,7 +413,6 @@ CSS 3.0;CSS 3.0</PropertyValue>
 				<PropertyValue name="ShowTagToolbar">0</PropertyValue>
 				<PropertyValue name="RulerAndGridShowRuler">0</PropertyValue>
 				<PropertyValue name="LayoutTableToolColor">3575607</PropertyValue>
-				<PropertyValue name="HtmlIndent">4</PropertyValue>
 				<PropertyValue name="DisableDesignView">0</PropertyValue>
 				<PropertyValue name="MarkupValidationWarningLevel">2</PropertyValue>
 				<PropertyValue name="ClientAttrCasing">2</PropertyValue>
@@ -444,7 +443,6 @@ CSS 3.0;CSS 3.0</PropertyValue>
 				<PropertyValue name="JsFailsafeTimeout">15000</PropertyValue>
 				<PropertyValue name="RequireAngleBracketForTagIntellisense">-1</PropertyValue>
 				<PropertyValue name="AutoIdOnPasteSourceView">-1</PropertyValue>
-				<PropertyValue name="CssIndentTabSize">4</PropertyValue>
 				<PropertyValue name="RulerAndGridGridSpacing">20</PropertyValue>
 				<PropertyValue name="EditorOptionFlags">8388616</PropertyValue>
 				<PropertyValue name="JsMaxCacheFiles">5</PropertyValue>
@@ -460,7 +458,6 @@ CSS 3.0;CSS 3.0</PropertyValue>
 				<PropertyValue name="LoadToolboxOnIdle">-1</PropertyValue>
 				<PropertyValue name="ClientTagNotLowerCase">0</PropertyValue>
 				<PropertyValue name="RestrictionsBOMFlag">4294967295</PropertyValue>
-				<PropertyValue name="CssIndent">4</PropertyValue>
 				<PropertyValue name="HtmlRightMarginRule">2</PropertyValue>
 				<PropertyValue name="HtmlBreakInTags">255</PropertyValue>
 				<PropertyValue name="AutoThumbnailSize">100</PropertyValue>
@@ -507,7 +504,6 @@ CSS 3.0;CSS 3.0</PropertyValue>
 				<PropertyValue name="RulerAndGridGridColor">11119017</PropertyValue>
 				<PropertyValue name="HtmlIndentTabs">0</PropertyValue>
 				<PropertyValue name="StartPageView">1</PropertyValue>
-				<PropertyValue name="HtmlIndentTabSize">4</PropertyValue>
 				<PropertyValue name="CssIndentTabs">0</PropertyValue>
 				<PropertyValue name="AutoThumbnailType">0</PropertyValue>
 				<PropertyValue name="AutoFormAroundControls">1</PropertyValue>
@@ -786,7 +782,7 @@ CSS 3.0;CSS 3.0</PropertyValue>
 						<Column Name="Bitmap" Width="17" Visibility="Visible" SortPriority="-1" SortDirection="Up"/>
 						<Column Name="ProviderKnowsOrder" Width="19" Visibility="Visible" SortPriority="-1" SortDirection="Up"/>
 						<Column Name="Checked" Width="28" Visibility="Invisible" SortPriority="-1" SortDirection="Up"/>
-						<Column Name="Description" Width="629" Visibility="Visible" SortPriority="0" SortDirection="Up"/>
+						<Column Name="Description" Width="484" Visibility="Visible" SortPriority="0" SortDirection="Up"/>
 						<Column Name="File" Width="120" Visibility="Visible" SortPriority="-1" SortDirection="Up"/>
 						<Column Name="Line" Width="70" Visibility="Visible" SortPriority="-1" SortDirection="Up"/>
 						<Column Name="Column" Width="70" Visibility="Visible" SortPriority="-1" SortDirection="Up"/>
@@ -804,12 +800,13 @@ CSS 3.0;CSS 3.0</PropertyValue>
 		</Category>
 		<Category name="Environment_DefaultEditors" Category="{68161AEE-BCA8-4214-B2E4-7875263E49C5}" Package="{DA9FB551-C724-11d0-AE1F-00A0C90FFFC3}" RegisteredName="Environment_DefaultEditors" PackageName="Visual Studio Environment Package">
 			<PropertyValue name="NumberOfMappings">0</PropertyValue>
-			<PropertyValue name="NumberOfDefaultEditors">0</PropertyValue>
+			<PropertyValue name="NumberOfDefaultEditors">1</PropertyValue>
+			<PropertyValue name="DefaultEditor&gt;0">js&gt;0&gt;NoGuid&gt;NoGuid&gt;1&gt;Vi Improved - A Text Editor?"C:\Users\Prabir Shrestha\apps\vim\vim73\gvim.exe"</PropertyValue>
 		</Category>
 		<Category name="Environment_UnifiedFind" Category="{DF00ADDF-C14C-4ffd-9325-634FD605850B}" Package="{DA9FB551-C724-11d0-AE1F-00A0C90FFFC3}" RegisteredName="Environment_UnifiedFind" PackageName="Visual Studio Environment Package">
-			<PropertyValue name="Options">MatchCase=0 WholeWord=0 Hidden=1 Up=0 Selection=0 Block=0 KeepCase=0 SubFolders=1 KeepOpen=0 NameOnly=0 Plain Files FindAll</PropertyValue>
-			<PropertyValue name="Document Options">MatchCase=0 WholeWord=0 Hidden=1 Up=0 Selection=0 Block=0 KeepCase=0 SubFolders=1 KeepOpen=0 NameOnly=0 Plain Document Find</PropertyValue>
-			<PropertyValue name="FiF Options">MatchCase=0 WholeWord=0 Hidden=1 Up=0 Selection=0 Block=0 KeepCase=0 SubFolders=1 KeepOpen=0 NameOnly=0 Plain Files FindAll</PropertyValue>
+			<PropertyValue name="Options">MatchCase=0 WholeWord=0 Hidden=1 Up=0 Selection=0 Block=0 KeepCase=0 SubFolders=1 KeepOpen=0 NameOnly=0 Plain Document FindAll</PropertyValue>
+			<PropertyValue name="Document Options">MatchCase=0 WholeWord=0 Hidden=1 Up=0 Selection=0 Block=0 KeepCase=0 SubFolders=1 KeepOpen=0 NameOnly=0 Plain Document FindAll</PropertyValue>
+			<PropertyValue name="FiF Options">MatchCase=0 WholeWord=0 Hidden=1 Up=0 Selection=0 Block=0 KeepCase=0 SubFolders=1 KeepOpen=0 NameOnly=0 Plain Document FindAll</PropertyValue>
 			<PropertyValue name="Result list">1</PropertyValue>
 			<PropertyValue name="ShowEndOfSearch">1</PropertyValue>
 			<PropertyValue name="ShowNoFound">1</PropertyValue>
@@ -921,6 +918,7 @@ CSS 3.0;CSS 3.0</PropertyValue>
 							<Item Name="Razor Code" Foreground="0x02000000" Background="0x004B4B4B" BoldFont="No"/>
 							<Item Name="Read-Only Region" Foreground="0x01000002" Background="0x00000000" BoldFont="No"/>
 							<Item Name="Refactoring Current Field" Foreground="0x01000000" Background="0x00B0D257" BoldFont="No"/>
+							<Item Name="ReSharper Matched Brace" Foreground="0x02000000" Background="0x00000000" BoldFont="No"/>
 							<Item Name="String" Foreground="0x009191C8" Background="0x02000000" BoldFont="No"/>
 							<Item Name="String(C# @ Verbatim)" Foreground="0x006671AE" Background="0x02000000" BoldFont="No"/>
 							<Item Name="urlformat" Foreground="0x00F5A350" Background="0x02000000" BoldFont="No"/>
@@ -1079,8 +1077,237 @@ CSS 3.0;CSS 3.0</PropertyValue>
 					<RemoveShortcut Command="Edit.BreakLine" Scope="Text Editor">Shift+Enter</RemoveShortcut>
 					<RemoveShortcut Command="EditorContextMenus.CodeWindow.GoToView" Scope="Global">Ctrl+M, Ctrl+G</RemoveShortcut>
 					<RemoveShortcut Command="EditorContextMenus.CodeWindow.AddView" Scope="Global">Ctrl+M, Ctrl+V</RemoveShortcut>
-					<Shortcut Command="Edit.NavigateTo" Scope="Global">Ctrl+,</Shortcut>
 					<Shortcut Command="EditorContextMenus.CodeWindow.OrganizeUsings.RemoveAndSort" Scope="Text Editor">Ctrl+U</Shortcut>
+					<RemoveShortcut Command="Window.PreviousTab" Scope="Global">Ctrl+Alt+PgUp</RemoveShortcut>
+					<Shortcut Command="Window.PreviousTab" Scope="Global">Ctrl+PgUp</Shortcut>
+					<Shortcut Command="Window.PreviousTab" Scope="HTML Editor Source View">Ctrl+PgUp</Shortcut>
+					<Shortcut Command="Window.PreviousTab" Scope="HTML Editor Design View">Ctrl+PgUp</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_GotoPreviousOccurence" Scope="Text Editor">Ctrl+Alt+PgUp</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_GotoPreviousOccurence" Scope="Global">Ctrl+Alt+PgUp</Shortcut>
+					<RemoveShortcut Command="Window.NextTab" Scope="Global">Ctrl+Alt+PgDn</RemoveShortcut>
+					<Shortcut Command="Window.NextTab" Scope="Global">Ctrl+PgDn</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_GotoNextOccurence" Scope="Text Editor">Ctrl+Alt+PgDn</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_GotoNextOccurence" Scope="Global">Ctrl+Alt+PgDn</Shortcut>
+					<Shortcut Command="ReSharper_ForceCompleteItem" Scope="Text Editor">Ctrl+Enter</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_GotoNextMethod" Scope="Text Editor">Alt+Down Arrow</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_GotoNextMethod" Scope="Global">Alt+Down Arrow</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_GotoPrevMethod" Scope="Text Editor">Alt+Up Arrow</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_GotoPrevMethod" Scope="Global">Alt+Up Arrow</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_ExtendSelection" Scope="Text Editor">Ctrl+Alt+Right Arrow</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_ShrinkSelection" Scope="Text Editor">Ctrl+Alt+Left Arrow</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_DuplicateText" Scope="Text Editor">Ctrl+D</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_LineComment" Scope="Text Editor">Ctrl+Alt+/</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_BlockComment" Scope="Text Editor">Ctrl+Shift+/</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_CompleteCodeTypeName" Scope="Text Editor">Shift+Alt+Space</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_CompleteCodeSmart" Scope="Text Editor">Ctrl+Alt+Space</Shortcut>
+					<RemoveShortcut Command="Window.AddTabtoSelection" Scope="Global">Ctrl+Shift+Alt+Space</RemoveShortcut>
+					<Shortcut Command="ReSharper_ParameterInfo_GoToPreviousSignature" Scope="Text Editor">Ctrl+Shift+Alt+Space</Shortcut>
+					<Shortcut Command="ReSharper_ParameterInfo_GoToPreviousSignature" Scope="Global">Ctrl+Shift+Alt+Space</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_QuickDoc" Scope="Text Editor">Ctrl+Shift+F1</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_QuickDoc" Scope="Global">Ctrl+Shift+F1</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_GotoType" Scope="Text Editor">Ctrl+T</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_GotoType" Scope="Global">Ctrl+T</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_GotoFile" Scope="Text Editor">Ctrl+Shift+T</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_GotoFile" Scope="Global">Ctrl+Shift+T</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_GotoSymbol" Scope="Text Editor">Shift+Alt+T</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_GotoSymbol" Scope="Global">Shift+Alt+T</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_GotoFileMember" Scope="Text Editor">Alt+\</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_GotoFileMember" Scope="Global">Alt+\</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_GotoUsage" Scope="Text Editor">Shift+Alt+F12</Shortcut>
+					<RemoveShortcut Command="{5EFC7975-14BC-11CF-9B2B-00AA00573819},1119" Scope="Global">Shift+Alt+F12</RemoveShortcut>
+					<Shortcut Command="ReSharper.ReSharper_GotoUsage" Scope="Global">Shift+Alt+F12</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_GotoBase" Scope="Text Editor">Alt+Home</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_GotoBase" Scope="Global">Alt+Home</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_GotoInheritors" Scope="Text Editor">Alt+End</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_GotoInheritors" Scope="Global">Alt+End</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_GotoTypeDeclaration" Scope="Text Editor">Ctrl+Shift+F11</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_GotoTypeDeclaration" Scope="Global">Ctrl+Shift+F11</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_GotoContainingDeclaration" Scope="Text Editor">Ctrl+[</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_GotoContainingDeclaration" Scope="Global">Ctrl+[</Shortcut>
+					<RemoveShortcut Command="Window.ActivateWindowSearch" Scope="Global">Alt+`</RemoveShortcut>
+					<Shortcut Command="ReSharper.ReSharper_NavigateTo" Scope="Text Editor">Alt+`</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_NavigateTo" Scope="Global">Alt+`</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_GotoRelatedFiles" Scope="Text Editor">Ctrl+Alt+F7</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_GotoRelatedFiles" Scope="Global">Ctrl+Alt+F7</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_FindUsagesAdvanced" Scope="Text Editor">Ctrl+Shift+Alt+F12</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_FindUsagesAdvanced" Scope="Global">Ctrl+Shift+Alt+F12</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_HighlightUsages" Scope="Text Editor">Shift+Alt+F11</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_HighlightUsages" Scope="Global">Shift+Alt+F11</Shortcut>
+					<Shortcut Command="ReSharper_SelectContainingDeclaration" Scope="Text Editor">Ctrl+Shift+[</Shortcut>
+					<Shortcut Command="ReSharper_SelectContainingDeclaration" Scope="Global">Ctrl+Shift+[</Shortcut>
+					<RemoveShortcut Command="Debug.IntelliTraceEvents" Scope="Global">Ctrl+Alt+Y, F</RemoveShortcut>
+					<RemoveShortcut Command="Debug.IntelliTraceCalls" Scope="Global">Ctrl+Alt+Y, T</RemoveShortcut>
+					<Shortcut Command="ReSharper.ReSharper_TypeHierarchy_Browse" Scope="Text Editor">Ctrl+E, H</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_TypeHierarchy_Browse" Scope="Global">Ctrl+E, H</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_TypeHierarchy_Browse" Scope="Text Editor">Ctrl+E, Ctrl+H</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_TypeHierarchy_Browse" Scope="Global">Ctrl+E, Ctrl+H</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_ExploreStackTrace" Scope="Text Editor">Ctrl+E, T</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_ExploreStackTrace" Scope="Global">Ctrl+E, T</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_ExploreStackTrace" Scope="Text Editor">Ctrl+E, Ctrl+T</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_ExploreStackTrace" Scope="Global">Ctrl+E, Ctrl+T</Shortcut>
+					<RemoveShortcut Command="Window.ActivateGlobalSearchorswitchtonextsearchcategory" Scope="Global">Ctrl+`</RemoveShortcut>
+					<Shortcut Command="ReSharper.ReSharper_Bookmarks_BookmarksMenu" Scope="Text Editor">Ctrl+`</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_Bookmarks_BookmarksMenu" Scope="Global">Ctrl+`</Shortcut>
+					<Shortcut Command="ReSharper_Bookmarks_ToggleBookmark0" Scope="Text Editor">Ctrl+Shift+0</Shortcut>
+					<Shortcut Command="ReSharper_Bookmarks_ToggleBookmark0" Scope="Global">Ctrl+Shift+0</Shortcut>
+					<Shortcut Command="ReSharper_Bookmarks_ToggleBookmark1" Scope="Text Editor">Ctrl+Shift+1</Shortcut>
+					<Shortcut Command="ReSharper_Bookmarks_ToggleBookmark1" Scope="Global">Ctrl+Shift+1</Shortcut>
+					<Shortcut Command="ReSharper_Bookmarks_ToggleBookmark2" Scope="Text Editor">Ctrl+Shift+2</Shortcut>
+					<Shortcut Command="ReSharper_Bookmarks_ToggleBookmark2" Scope="Global">Ctrl+Shift+2</Shortcut>
+					<Shortcut Command="ReSharper_Bookmarks_ToggleBookmark3" Scope="Text Editor">Ctrl+Shift+3</Shortcut>
+					<Shortcut Command="ReSharper_Bookmarks_ToggleBookmark3" Scope="Global">Ctrl+Shift+3</Shortcut>
+					<Shortcut Command="ReSharper_Bookmarks_ToggleBookmark4" Scope="Text Editor">Ctrl+Shift+4</Shortcut>
+					<Shortcut Command="ReSharper_Bookmarks_ToggleBookmark4" Scope="Global">Ctrl+Shift+4</Shortcut>
+					<Shortcut Command="ReSharper_Bookmarks_ToggleBookmark5" Scope="Text Editor">Ctrl+Shift+5</Shortcut>
+					<Shortcut Command="ReSharper_Bookmarks_ToggleBookmark5" Scope="Global">Ctrl+Shift+5</Shortcut>
+					<Shortcut Command="ReSharper_Bookmarks_ToggleBookmark6" Scope="Text Editor">Ctrl+Shift+6</Shortcut>
+					<Shortcut Command="ReSharper_Bookmarks_ToggleBookmark6" Scope="Global">Ctrl+Shift+6</Shortcut>
+					<Shortcut Command="ReSharper_Bookmarks_ToggleBookmark7" Scope="Text Editor">Ctrl+Shift+7</Shortcut>
+					<Shortcut Command="ReSharper_Bookmarks_ToggleBookmark7" Scope="Global">Ctrl+Shift+7</Shortcut>
+					<Shortcut Command="ReSharper_Bookmarks_ToggleBookmark8" Scope="Text Editor">Ctrl+Shift+8</Shortcut>
+					<Shortcut Command="ReSharper_Bookmarks_ToggleBookmark8" Scope="Global">Ctrl+Shift+8</Shortcut>
+					<Shortcut Command="ReSharper_Bookmarks_ToggleBookmark9" Scope="Text Editor">Ctrl+Shift+9</Shortcut>
+					<Shortcut Command="ReSharper_Bookmarks_ToggleBookmark9" Scope="Global">Ctrl+Shift+9</Shortcut>
+					<Shortcut Command="ReSharper_Bookmarks_GoToBookmark0" Scope="Text Editor">Ctrl+0</Shortcut>
+					<Shortcut Command="ReSharper_Bookmarks_GoToBookmark0" Scope="Global">Ctrl+0</Shortcut>
+					<Shortcut Command="ReSharper_Bookmarks_GoToBookmark1" Scope="Text Editor">Ctrl+1</Shortcut>
+					<Shortcut Command="ReSharper_Bookmarks_GoToBookmark1" Scope="Global">Ctrl+1</Shortcut>
+					<Shortcut Command="ReSharper_Bookmarks_GoToBookmark2" Scope="Text Editor">Ctrl+2</Shortcut>
+					<Shortcut Command="ReSharper_Bookmarks_GoToBookmark2" Scope="Global">Ctrl+2</Shortcut>
+					<Shortcut Command="ReSharper_Bookmarks_GoToBookmark3" Scope="Text Editor">Ctrl+3</Shortcut>
+					<Shortcut Command="ReSharper_Bookmarks_GoToBookmark3" Scope="Global">Ctrl+3</Shortcut>
+					<Shortcut Command="ReSharper_Bookmarks_GoToBookmark4" Scope="Text Editor">Ctrl+4</Shortcut>
+					<Shortcut Command="ReSharper_Bookmarks_GoToBookmark4" Scope="Global">Ctrl+4</Shortcut>
+					<Shortcut Command="ReSharper_Bookmarks_GoToBookmark5" Scope="Text Editor">Ctrl+5</Shortcut>
+					<Shortcut Command="ReSharper_Bookmarks_GoToBookmark5" Scope="Global">Ctrl+5</Shortcut>
+					<Shortcut Command="ReSharper_Bookmarks_GoToBookmark6" Scope="Text Editor">Ctrl+6</Shortcut>
+					<Shortcut Command="ReSharper_Bookmarks_GoToBookmark6" Scope="Global">Ctrl+6</Shortcut>
+					<Shortcut Command="ReSharper_Bookmarks_GoToBookmark7" Scope="Text Editor">Ctrl+7</Shortcut>
+					<Shortcut Command="ReSharper_Bookmarks_GoToBookmark7" Scope="Global">Ctrl+7</Shortcut>
+					<Shortcut Command="ReSharper_Bookmarks_GoToBookmark8" Scope="Text Editor">Ctrl+8</Shortcut>
+					<Shortcut Command="ReSharper_Bookmarks_GoToBookmark8" Scope="Global">Ctrl+8</Shortcut>
+					<Shortcut Command="ReSharper_Bookmarks_GoToBookmark9" Scope="Text Editor">Ctrl+9</Shortcut>
+					<Shortcut Command="ReSharper_Bookmarks_GoToBookmark9" Scope="Global">Ctrl+9</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_InspectThis" Scope="Text Editor">Ctrl+Shift+Alt+A</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_InspectThis" Scope="Global">Ctrl+Shift+Alt+A</Shortcut>
+					<RemoveShortcut Command="Debug.JavaScriptConsole" Scope="Global">Ctrl+Alt+V, C</RemoveShortcut>
+					<RemoveShortcut Command="Debug.DOMExplorer" Scope="Global">Ctrl+Alt+V, D</RemoveShortcut>
+					<Shortcut Command="ReSharper.ReSharper_ShowInspectionWindow" Scope="Text Editor">Ctrl+Alt+V</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_ShowInspectionWindow" Scope="Global">Ctrl+Alt+V</Shortcut>
+					<RemoveShortcut Command="ReSharper.ReSharper_AnalyzeReferences" Scope="Text Editor">Ctrl+Alt+Y</RemoveShortcut>
+					<Shortcut Command="ReSharper_ShowAnalyzeReferences" Scope="Text Editor">Ctrl+Alt+Y</Shortcut>
+					<RemoveShortcut Command="ReSharper.ReSharper_AnalyzeReferences" Scope="Global">Ctrl+Alt+Y</RemoveShortcut>
+					<Shortcut Command="ReSharper_ShowAnalyzeReferences" Scope="Global">Ctrl+Alt+Y</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_ShowHierarchyWindow" Scope="Text Editor">Ctrl+Alt+H</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_ShowHierarchyWindow" Scope="Global">Ctrl+Alt+H</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_ShowCodeStructure" Scope="Text Editor">Ctrl+Alt+F</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_ShowCodeStructure" Scope="Global">Ctrl+Alt+F</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_ShowTodoExplorer" Scope="Text Editor">Ctrl+Alt+D</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_ShowTodoExplorer" Scope="Global">Ctrl+Alt+D</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_ShowFindResults" Scope="Text Editor">Ctrl+Alt+F12</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_ShowFindResults" Scope="Global">Ctrl+Alt+F12</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_MoveUp" Scope="Text Editor">Ctrl+Shift+Alt+Up Arrow</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_MoveDown" Scope="Text Editor">Ctrl+Shift+Alt+Down Arrow</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_MoveLeft" Scope="Text Editor">Ctrl+Shift+Alt+Left Arrow</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_MoveRight" Scope="Text Editor">Ctrl+Shift+Alt+Right Arrow</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_Generate" Scope="Text Editor">Alt+Ins</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_Generate" Scope="Global">Alt+Ins</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_CleanupCode" Scope="Text Editor">Ctrl+E, Ctrl+C</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_CleanupCode" Scope="Global">Ctrl+E, Ctrl+C</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_CleanupCode" Scope="Text Editor">Ctrl+E, C</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_CleanupCode" Scope="Global">Ctrl+E, C</Shortcut>
+					<RemoveShortcut Command="Edit.NavigateTo" Scope="Global">Ctrl+,</RemoveShortcut>
+					<Shortcut Command="ReSharper.ReSharper_GotoRecentFiles" Scope="Text Editor">Ctrl+,</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_GotoRecentFiles" Scope="Global">Ctrl+,</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_GotoRecentEdits" Scope="Text Editor">Ctrl+Shift+,</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_GotoRecentEdits" Scope="Global">Ctrl+Shift+,</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_GotoLastEditLocation" Scope="Text Editor">Ctrl+Shift+Bkspce</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_GotoLastEditLocation" Scope="Global">Ctrl+Shift+Bkspce</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_UnitTestSession_RepeatPreviousRun" Scope="Text Editor">Ctrl+U, U</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_UnitTestSession_RepeatPreviousRun" Scope="Global">Ctrl+U, U</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_UnitTestSession_RepeatPreviousRun" Scope="Text Editor">Ctrl+U, Ctrl+U</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_UnitTestSession_RepeatPreviousRun" Scope="Global">Ctrl+U, Ctrl+U</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_ReSharper_UnitTest_RunContext" Scope="Text Editor">Ctrl+U, R</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_ReSharper_UnitTest_RunContext" Scope="Global">Ctrl+U, R</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_ReSharper_UnitTest_RunContext" Scope="Text Editor">Ctrl+U, Ctrl+R</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_ReSharper_UnitTest_RunContext" Scope="Global">Ctrl+U, Ctrl+R</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_ReSharper_UnitTest_DebugContext" Scope="Text Editor">Ctrl+U, D</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_ReSharper_UnitTest_DebugContext" Scope="Global">Ctrl+U, D</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_ReSharper_UnitTest_DebugContext" Scope="Text Editor">Ctrl+U, Ctrl+D</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_ReSharper_UnitTest_DebugContext" Scope="Global">Ctrl+U, Ctrl+D</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_ShowUnitTestExplorer" Scope="Text Editor">Ctrl+Alt+U</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_ShowUnitTestExplorer" Scope="Global">Ctrl+Alt+U</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_ShowUnitTestSessions" Scope="Text Editor">Ctrl+Alt+T</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_ShowUnitTestSessions" Scope="Global">Ctrl+Alt+T</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_UnitTest_RunSolution" Scope="Text Editor">Ctrl+U, L</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_UnitTest_RunSolution" Scope="Global">Ctrl+U, L</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_UnitTest_RunSolution" Scope="Text Editor">Ctrl+U, Ctrl+L</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_UnitTest_RunSolution" Scope="Global">Ctrl+U, Ctrl+L</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_UnitTest_RunCurrentSession" Scope="Text Editor">Ctrl+U, Y</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_UnitTest_RunCurrentSession" Scope="Global">Ctrl+U, Y</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_UnitTest_RunCurrentSession" Scope="Text Editor">Ctrl+U, Ctrl+Y</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_UnitTest_RunCurrentSession" Scope="Global">Ctrl+U, Ctrl+Y</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_GotoNextHighlight" Scope="Text Editor">Alt+PgDn</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_GotoNextHighlight" Scope="Global">Alt+PgDn</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_GotoPrevHighlight" Scope="Text Editor">Alt+PgUp</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_GotoPrevHighlight" Scope="Global">Alt+PgUp</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_GotoNextErrorInSolution" Scope="Text Editor">Shift+Alt+PgDn</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_GotoNextErrorInSolution" Scope="Global">Shift+Alt+PgDn</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_GotoPrevErrorInSolution" Scope="Text Editor">Shift+Alt+PgUp</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_GotoPrevErrorInSolution" Scope="Global">Shift+Alt+PgUp</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_RefactorThis" Scope="Text Editor">Ctrl+Shift+R</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_RefactorThis" Scope="Global">Ctrl+Shift+R</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_Rename" Scope="Text Editor">Ctrl+R, R</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_Rename" Scope="Global">Ctrl+R, R</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_Rename" Scope="Text Editor">Ctrl+R, Ctrl+R</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_Rename" Scope="Global">Ctrl+R, Ctrl+R</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_Move" Scope="Text Editor">Ctrl+R, O</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_Move" Scope="Global">Ctrl+R, O</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_Move" Scope="Text Editor">Ctrl+R, Ctrl+O</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_Move" Scope="Global">Ctrl+R, Ctrl+O</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_SafeDelete" Scope="Text Editor">Ctrl+R, D</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_SafeDelete" Scope="Global">Ctrl+R, D</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_SafeDelete" Scope="Text Editor">Ctrl+R, Ctrl+D</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_SafeDelete" Scope="Global">Ctrl+R, Ctrl+D</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_SafeDelete" Scope="Text Editor">Alt+Del</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_SafeDelete" Scope="Global">Alt+Del</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_ExtractMethod" Scope="Text Editor">Ctrl+R, M</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_ExtractMethod" Scope="Text Editor">Ctrl+R, Ctrl+M</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_IntroduceVariable" Scope="Text Editor">Ctrl+R, V</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_IntroduceVariable" Scope="Text Editor">Ctrl+R, Ctrl+V</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_IntroduceField" Scope="Text Editor">Ctrl+R, F</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_IntroduceField" Scope="Text Editor">Ctrl+R, Ctrl+F</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_IntroParameter" Scope="Text Editor">Ctrl+R, P</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_IntroParameter" Scope="Text Editor">Ctrl+R, Ctrl+P</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_InlineVariable" Scope="Text Editor">Ctrl+R, I</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_InlineVariable" Scope="Text Editor">Ctrl+R, Ctrl+I</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_EncapsulateField" Scope="Text Editor">Ctrl+R, E</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_EncapsulateField" Scope="Global">Ctrl+R, E</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_EncapsulateField" Scope="Text Editor">Ctrl+R, Ctrl+E</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_EncapsulateField" Scope="Global">Ctrl+R, Ctrl+E</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_ChangeSignature" Scope="Text Editor">Ctrl+R, S</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_ChangeSignature" Scope="Global">Ctrl+R, S</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_ChangeSignature" Scope="Text Editor">Ctrl+R, Ctrl+S</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_ChangeSignature" Scope="Global">Ctrl+R, Ctrl+S</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_GenerateFileBesides" Scope="Text Editor">Ctrl+Alt+Ins</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_GenerateFileBesides" Scope="Global">Ctrl+Alt+Ins</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_LiveTemplates_Insert" Scope="Text Editor">Ctrl+E, L</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_LiveTemplates_Insert" Scope="Text Editor">Ctrl+E, Ctrl+L</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_SurroundWith" Scope="Text Editor">Ctrl+E, U</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_SurroundWith" Scope="Text Editor">Ctrl+E, Ctrl+U</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_LocateInSolutionExplorerAction" Scope="Text Editor">Shift+Alt+L</Shortcut>
+					<Shortcut Command="ReSharper.ReSharper_LocateInSolutionExplorerAction" Scope="Global">Shift+Alt+L</Shortcut>
+					<Shortcut Command="ReSharper_SilentCleanupCode" Scope="Text Editor">Ctrl+E, F</Shortcut>
+					<Shortcut Command="ReSharper_SilentCleanupCode" Scope="Global">Ctrl+E, F</Shortcut>
+					<Shortcut Command="ReSharper_SilentCleanupCode" Scope="Text Editor">Ctrl+E, Ctrl+F</Shortcut>
+					<Shortcut Command="ReSharper_SilentCleanupCode" Scope="Global">Ctrl+E, Ctrl+F</Shortcut>
+					<Shortcut Command="ReSharper_QuickFix" Scope="Text Editor">Alt+Enter</Shortcut>
+					<Shortcut Command="ReSharper_WindowManager_CloseRecentTool" Scope="Text Editor">Ctrl+Shift+F4</Shortcut>
+					<Shortcut Command="ReSharper_WindowManager_CloseRecentTool" Scope="Global">Ctrl+Shift+F4</Shortcut>
+					<Shortcut Command="ReSharper_WindowManager_ActivateRecentTool" Scope="Text Editor">Ctrl+Alt+Bkspce</Shortcut>
+					<Shortcut Command="ReSharper_WindowManager_ActivateRecentTool" Scope="Global">Ctrl+Alt+Bkspce</Shortcut>
+					<Shortcut Command="ReSharper_EnableDaemon" Scope="Text Editor">Ctrl+Shift+Alt+8</Shortcut>
+					<Shortcut Command="ReSharper_EnableDaemon" Scope="Global">Ctrl+Shift+Alt+8</Shortcut>
 				</UserShortcuts>
 			</KeyboardShortcuts>
 		</Category>
@@ -1311,7 +1538,7 @@ CSS 3.0;CSS 3.0</PropertyValue>
 					<modify Cmd="{732ABE74-CD80-11D0-A2DB-00AA00A3EFFF}:00000012" CmdPri="01000000" Group="{732ABE74-CD80-11D0-A2DB-00AA00A3EFFF}:0000110b" GroupPri="09000000" Menu="{732ABE74-CD80-11D0-A2DB-00AA00A3EFFF}:00000101" BeginGroup="false"/>
 					<modify Cmd="{732ABE74-CD80-11D0-A2DB-00AA00A3EFFF}:00000012" CmdPri="01000000" Group="{732ABE74-CD80-11D0-A2DB-00AA00A3EFFF}:0000110b" GroupPri="09000000" Menu="{732ABE74-CD80-11D0-A2DB-00AA00A3EFFF}:00000101" BeginGroup="false"/>
 					<modify Cmd="{732ABE75-CD80-11D0-A2DB-00AA00A3EFFF}:00000007" CmdPri="01000000" Group="{732ABE74-CD80-11D0-A2DB-00AA00A3EFFF}:0000110c" GroupPri="0b000000" Menu="{732ABE74-CD80-11D0-A2DB-00AA00A3EFFF}:00000101" Icon="{2B671D3D-AB51-434A-8D38-CBF1728530BB}:0000000a" BeginGroup="false"/>
-					<modify Cmd="{5EFC7975-14BC-11CF-9B2B-00AA00573819}:00000032" CmdPri="01000000" Group="{732ABE74-CD80-11D0-A2DB-00AA00A3EFFF}:0000110f" GroupPri="0f000000" Menu="{732ABE74-CD80-11D0-A2DB-00AA00A3EFFF}:00000101" BeginGroup="false" Width="1909"/>
+					<modify Cmd="{5EFC7975-14BC-11CF-9B2B-00AA00573819}:00000032" CmdPri="01000000" Group="{732ABE74-CD80-11D0-A2DB-00AA00A3EFFF}:0000110f" GroupPri="0f000000" Menu="{732ABE74-CD80-11D0-A2DB-00AA00A3EFFF}:00000101" BeginGroup="false" Width="6409"/>
 					<modify Cmd="{732ABE75-CD80-11D0-A2DB-00AA00A3EFFF}:000002a4" CmdPri="01000000" Group="{732ABE74-CD80-11D0-A2DB-00AA00A3EFFF}:00001110" GroupPri="10000000" Menu="{732ABE74-CD80-11D0-A2DB-00AA00A3EFFF}:00000101" Icon="{2B671D3D-AB51-434A-8D38-CBF1728530BB}:00000011" BeginGroup="false"/>
 					<modify Cmd="{5EFC7975-14BC-11CF-9B2B-00AA00573819}:0000006d" CmdPri="01000000" Group="{732ABE74-CD80-11D0-A2DB-00AA00A3EFFF}:0000110a" GroupPri="03000000" Menu="{732ABE74-CD80-11D0-A2DB-00AA00A3EFFF}:00000107" Icon="{2B671D3D-AB51-434A-8D38-CBF1728530BB}:00000003" BeginGroup="false"/>
 					<modify Cmd="{5EFC7975-14BC-11CF-9B2B-00AA00573819}:0000006d" CmdPri="01000000" Group="{732ABE74-CD80-11D0-A2DB-00AA00A3EFFF}:0000110a" GroupPri="03000000" Menu="{732ABE74-CD80-11D0-A2DB-00AA00A3EFFF}:00000107" Icon="{2B671D3D-AB51-434A-8D38-CBF1728530BB}:00000003" BeginGroup="false"/>
@@ -1322,21 +1549,19 @@ CSS 3.0;CSS 3.0</PropertyValue>
 					<modify Cmd="{732ABE75-CD80-11D0-A2DB-00AA00A3EFFF}:00000004" CmdPri="08008001" Group="{732ABE74-CD80-11D0-A2DB-00AA00A3EFFF}:00001110" GroupPri="05000000" Menu="{732ABE74-CD80-11D0-A2DB-00AA00A3EFFF}:00000107" Icon="{2B671D3D-AB51-434A-8D38-CBF1728530BB}:00000008" BeginGroup="true"/>
 					<modify Cmd="{732ABE75-CD80-11D0-A2DB-00AA00A3EFFF}:00000004" CmdPri="08008001" Group="{732ABE74-CD80-11D0-A2DB-00AA00A3EFFF}:00001110" GroupPri="05000000" Menu="{732ABE74-CD80-11D0-A2DB-00AA00A3EFFF}:00000107" Icon="{2B671D3D-AB51-434A-8D38-CBF1728530BB}:00000008" BeginGroup="true"/>
 					<modify Cmd="{732ABE75-CD80-11D0-A2DB-00AA00A3EFFF}:00000005" CmdPri="08010001" Group="{732ABE74-CD80-11D0-A2DB-00AA00A3EFFF}:00001110" GroupPri="05000000" Menu="{732ABE74-CD80-11D0-A2DB-00AA00A3EFFF}:00000107" Icon="{2B671D3D-AB51-434A-8D38-CBF1728530BB}:00000009" BeginGroup="false"/>
-					<modify Cmd="{CB26E292-901A-419C-B79D-49BD45C43929}:00000078" CmdPri="01000000" Group="{CB26E292-901A-419C-B79D-49BD45C43929}:00002711" GroupPri="00000000" Menu="{CB26E292-901A-419C-B79D-49BD45C43929}:00002710" Width="21769"/>
 					<modify Cmd="{FB41A027-57C5-4F83-9508-C326DCE6D943}:0000206d" CmdPri="00080001" Group="{F5EAC013-F209-453B-A2F3-CDF43821C24E}:00001094" GroupPri="00100000" Menu="{F5EAC013-F209-453B-A2F3-CDF43821C24E}:00000302" Icon="{FB41A027-57C5-4F83-9508-C326DCE6D943}:00000005" BeginGroup="false"/>
 					<modify Cmd="{FB41A027-57C5-4F83-9508-C326DCE6D943}:0000206e" CmdPri="000c0001" Group="{F5EAC013-F209-453B-A2F3-CDF43821C24E}:00001094" GroupPri="00100000" Menu="{F5EAC013-F209-453B-A2F3-CDF43821C24E}:00000302" Icon="{FB41A027-57C5-4F83-9508-C326DCE6D943}:00000006" BeginGroup="false"/>
-					<modify Cmd="{FB41A027-57C5-4F83-9508-C326DCE6D943}:0000206f" CmdPri="000e0001" Group="{F5EAC013-F209-453B-A2F3-CDF43821C24E}:00001094" GroupPri="00100000" Menu="{F5EAC013-F209-453B-A2F3-CDF43821C24E}:00000302" BeginGroup="false" Width="1909"/>
+					<modify Cmd="{FB41A027-57C5-4F83-9508-C326DCE6D943}:0000206f" CmdPri="000e0001" Group="{F5EAC013-F209-453B-A2F3-CDF43821C24E}:00001094" GroupPri="00100000" Menu="{F5EAC013-F209-453B-A2F3-CDF43821C24E}:00000302" BeginGroup="false" Width="6409"/>
 					<modify Cmd="{FB41A027-57C5-4F83-9508-C326DCE6D943}:00002889" CmdPri="00100000" Group="{F5EAC013-F209-453B-A2F3-CDF43821C24E}:0000107a" GroupPri="00200000" Menu="{F5EAC013-F209-453B-A2F3-CDF43821C24E}:00000302" Icon="{FB41A027-57C5-4F83-9508-C326DCE6D943}:00000008" BeginGroup="true"/>
 					<modify Cmd="{FB41A027-57C5-4F83-9508-C326DCE6D943}:00002889" CmdPri="00100000" Group="{F5EAC013-F209-453B-A2F3-CDF43821C24E}:0000107a" GroupPri="00200000" Menu="{F5EAC013-F209-453B-A2F3-CDF43821C24E}:00000302" Icon="{FB41A027-57C5-4F83-9508-C326DCE6D943}:00000008" BeginGroup="true"/>
 					<modify Cmd="{FB41A027-57C5-4F83-9508-C326DCE6D943}:00002889" CmdPri="00100000" Group="{F5EAC013-F209-453B-A2F3-CDF43821C24E}:0000107a" GroupPri="00200000" Menu="{F5EAC013-F209-453B-A2F3-CDF43821C24E}:00000302" Icon="{FB41A027-57C5-4F83-9508-C326DCE6D943}:00000008" BeginGroup="true"/>
 					<modify Cmd="{FB41A027-57C5-4F83-9508-C326DCE6D943}:00002889" CmdPri="00100000" Group="{F5EAC013-F209-453B-A2F3-CDF43821C24E}:0000107a" GroupPri="00200000" Menu="{F5EAC013-F209-453B-A2F3-CDF43821C24E}:00000302" Icon="{FB41A027-57C5-4F83-9508-C326DCE6D943}:00000008" BeginGroup="true"/>
 					<modify Cmd="{FB41A027-57C5-4F83-9508-C326DCE6D943}:00002932" CmdPri="00100000" Group="{F5EAC013-F209-453B-A2F3-CDF43821C24E}:00001073" GroupPri="00300000" Menu="{F5EAC013-F209-453B-A2F3-CDF43821C24E}:00000302" Icon="{FB41A027-57C5-4F83-9508-C326DCE6D943}:00000013" BeginGroup="true"/>
 					<modify Cmd="{FB41A027-57C5-4F83-9508-C326DCE6D943}:00002932" CmdPri="00100000" Group="{F5EAC013-F209-453B-A2F3-CDF43821C24E}:00001073" GroupPri="00300000" Menu="{F5EAC013-F209-453B-A2F3-CDF43821C24E}:00000302" Icon="{FB41A027-57C5-4F83-9508-C326DCE6D943}:00000013" BeginGroup="true"/>
-					<modify Cmd="{4BCF92C9-7FEA-4913-AF26-F93582BA9C7A}:00000012" CmdPri="00400000" Group="{4BCF92C9-7FEA-4913-AF26-F93582BA9C7A}:00020001" GroupPri="01000000" Menu="{4BCF92C9-7FEA-4913-AF26-F93582BA9C7A}:00010002" Width="1909"/>
+					<modify Cmd="{4BCF92C9-7FEA-4913-AF26-F93582BA9C7A}:00000012" CmdPri="00400000" Group="{4BCF92C9-7FEA-4913-AF26-F93582BA9C7A}:00020001" GroupPri="01000000" Menu="{4BCF92C9-7FEA-4913-AF26-F93582BA9C7A}:00010002" Width="6409"/>
 					<modify Cmd="{4BCF92C9-7FEA-4913-AF26-F93582BA9C7A}:00000014" CmdPri="00300000" Group="{4BCF92C9-7FEA-4913-AF26-F93582BA9C7A}:00020002" GroupPri="01100000" Menu="{4BCF92C9-7FEA-4913-AF26-F93582BA9C7A}:00010002" Icon="{E5FD8797-928D-4720-99C6-D9241615013A}:00000001" BeginGroup="false"/>
 					<modify Cmd="{5BF14E63-E267-4787-B20B-B814FD043B38}:00005212" CmdPri="01000000" Group="{5BF14E63-E267-4787-B20B-B814FD043B38}:00002f2f" GroupPri="04000000" Menu="{5BF14E63-E267-4787-B20B-B814FD043B38}:00005dc0" Icon="{5BF14E63-E267-4787-B20B-B814FD043B38}:0000000d" BeginGroup="false"/>
-					<modify Cmd="{D7E8C5E1-BDB8-11D0-9C88-0000F8040A53}:00001132" CmdPri="00000000" Group="{D7E8C5E1-BDB8-11D0-9C88-0000F8040A53}:00001068" GroupPri="00000000" Menu="{D7E8C5E1-BDB8-11D0-9C88-0000F8040A53}:00000010" Width="21573"/>
-					<modify Cmd="{1496A755-94DE-11D0-8C3F-00C04FC2AAE2}:000000f5" CmdPri="02000000" Group="{D7E8C5E1-BDB8-11D0-9C88-0000F8040A53}:00001070" GroupPri="01000000" Menu="{D7E8C5E1-BDB8-11D0-9C88-0000F8040A53}:00000010" BeginGroup="false" Width="5494"/>
+					<modify Cmd="{1496A755-94DE-11D0-8C3F-00C04FC2AAE2}:000000f5" CmdPri="02000000" Group="{D7E8C5E1-BDB8-11D0-9C88-0000F8040A53}:00001070" GroupPri="01000000" Menu="{D7E8C5E1-BDB8-11D0-9C88-0000F8040A53}:00000010" BeginGroup="false" Width="21652"/>
 					<modify Cmd="{5EFC7975-14BC-11CF-9B2B-00AA00573819}:00000034" CmdPri="00000000" Group="{D7E8C5E1-BDB8-11D0-9C88-0000F8040A53}:00001071" GroupPri="02000000" Menu="{D7E8C5E1-BDB8-11D0-9C88-0000F8040A53}:00000010" Icon="{9CD93C42-CEEF-45AB-B1B5-6040880C9543}:0000000a" BeginGroup="false"/>
 					<modify Cmd="{D7E8C5E1-BDB8-11D0-9C88-0000F8040A53}:00001085" CmdPri="00000000" Group="{D7E8C5E1-BDB8-11D0-9C88-0000F8040A53}:00001073" GroupPri="04000000" Menu="{D7E8C5E1-BDB8-11D0-9C88-0000F8040A53}:00000010" BeginGroup="false"/>
 					<modify Cmd="{1496A755-94DE-11D0-8C3F-00C04FC2AAE2}:00000118" CmdPri="09000000" Group="{D7E8C5E1-BDB8-11D0-9C88-0000F8040A53}:00001076" GroupPri="06000000" Menu="{D7E8C5E1-BDB8-11D0-9C88-0000F8040A53}:00000010" Icon="{8328592C-227C-11D3-B870-00C04F79F802}:00000017" BeginGroup="false"/>
@@ -1349,7 +1574,7 @@ CSS 3.0;CSS 3.0</PropertyValue>
 					<modify Cmd="{1496A755-94DE-11D0-8C3F-00C04FC2AAE2}:00002c13" CmdPri="00100000" Group="{A764E896-518D-11D2-9A89-00C04F79EFC3}:00001403" GroupPri="04000000" Menu="{A764E896-518D-11D2-9A89-00C04F79EFC3}:00000103" BeginGroup="false"/>
 					<modify Cmd="{1496A755-94DE-11D0-8C3F-00C04FC2AAE2}:00002c13" CmdPri="00100000" Group="{A764E896-518D-11D2-9A89-00C04F79EFC3}:00001403" GroupPri="04000000" Menu="{A764E896-518D-11D2-9A89-00C04F79EFC3}:00000103" BeginGroup="false"/>
 					<modify Cmd="{5EFC7975-14BC-11CF-9B2B-00AA00573819}:0000014e" CmdPri="00108001" Group="{A764E896-518D-11D2-9A89-00C04F79EFC3}:00001403" GroupPri="04000000" Menu="{A764E896-518D-11D2-9A89-00C04F79EFC3}:00000103" Icon="{D309F791-903F-11D0-9EFC-00A0C911004F}:00000003" BeginGroup="false"/>
-					<modify Cmd="{ADC1BC7B-958B-4548-9F9F-10FC49099825}:0000200d" CmdPri="01000000" Group="{ADC1BC7B-958B-4548-9F9F-10FC49099825}:00001002" GroupPri="00500000" Menu="{ADC1BC7B-958B-4548-9F9F-10FC49099825}:00003010" Width="1909"/>
+					<modify Cmd="{ADC1BC7B-958B-4548-9F9F-10FC49099825}:0000200d" CmdPri="01000000" Group="{ADC1BC7B-958B-4548-9F9F-10FC49099825}:00001002" GroupPri="00500000" Menu="{ADC1BC7B-958B-4548-9F9F-10FC49099825}:00003010" Width="6409"/>
 					<modify Cmd="{ADC1BC7B-958B-4548-9F9F-10FC49099825}:00002300" CmdPri="01000000" Group="{ADC1BC7B-958B-4548-9F9F-10FC49099825}:00001009" GroupPri="00900000" Menu="{ADC1BC7B-958B-4548-9F9F-10FC49099825}:00003010" Icon="{AD7818C6-4420-4479-B0CB-CE68EFF9C2C8}:00000006" BeginGroup="false"/>
 					<modify Cmd="{5EFC7975-14BC-11CF-9B2B-00AA00573819}:00000006" CmdPri="01000000" Group="{234A7FC1-CFE9-4335-9E82-061F86E402C1}:0000055a" GroupPri="04000000" Menu="{74D21312-2AEE-11D1-8BFB-00A0C90F26F7}:00000601" Icon="{9CD93C42-CEEF-45AB-B1B5-6040880C9543}:00000008" BeginGroup="false"/>
 					<modify Cmd="{5EFC7975-14BC-11CF-9B2B-00AA00573819}:00000031" CmdPri="01000000" Group="{234A7FC1-CFE9-4335-9E82-061F86E402C1}:0000055e" GroupPri="07000000" Menu="{74D21312-2AEE-11D1-8BFB-00A0C90F26F7}:00000601" Icon="{9CD93C42-CEEF-45AB-B1B5-6040880C9543}:00000083" BeginGroup="false"/>
@@ -1362,8 +1587,8 @@ CSS 3.0;CSS 3.0</PropertyValue>
 				<UserCustomizations>
 					<add_toolbar Menu="{000D7B18-CDE4-49F0-B194-FE3E25BBF096}:0000007e" Name="GitExtensions" MenuType="toolbar"/>
 					<modify_toolbar Menu="{D309F791-903F-11D0-9EFC-00A0C911004F}:00000001" Visibility="auto" FullScreen="hide" Dock="top" Row="1" FloatRectangle="0,0,846,24" DockRectangle="0,0,846,24"/>
-					<modify_toolbar Menu="{D309F791-903F-11D0-9EFC-00A0C911004F}:0000000d" Visibility="show" FullScreen="hide" Dock="top" Row="1" FloatRectangle="0,0,96,24" DockRectangle="1,0,96,24"/>
-					<modify_toolbar Menu="{9ADF33D0-8AAD-11D0-B606-00A0C922E851}:0000000e" Visibility="auto" FullScreen="hide" Dock="top" Row="2" FloatRectangle="0,0,418,24" DockRectangle="36,0,418,24"/>
+					<modify_toolbar Menu="{D309F791-903F-11D0-9EFC-00A0C911004F}:0000000d" Visibility="show" FullScreen="hide" Dock="top" Row="1" FloatRectangle="0,0,93,24" DockRectangle="1,0,93,24"/>
+					<modify_toolbar Menu="{9ADF33D0-8AAD-11D0-B606-00A0C922E851}:0000000e" Visibility="auto" FullScreen="hide" Dock="top" Row="1" FloatRectangle="0,0,213,24" DockRectangle="25,0,213,24"/>
 					<modify_toolbar Menu="{E8B06F42-6D01-11D2-AA7D-00C04F990343}:00000001" Visibility="auto" FullScreen="hide" Dock="top" Row="2" FloatRectangle="0,0,240,24" DockRectangle="15,0,240,24"/>
 					<modify_toolbar Menu="{B85579AA-8BE0-4C4F-A850-90902B317571}:00004000" Visibility="auto" FullScreen="hide" Dock="top" Row="2" FloatRectangle="0,0,403,24" DockRectangle="35,0,403,24"/>
 					<modify_toolbar Menu="{E148F049-C570-4F55-84A6-6DA870AF229E}:00001838" Visibility="auto" FullScreen="hide" Dock="top" Row="2" FloatRectangle="0,0,193,24" DockRectangle="22,0,193,24"/>
@@ -2012,20 +2237,42 @@ CSS 3.0;CSS 3.0</PropertyValue>
 								<AutoHideGroup IsVisible="True">
 									<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="ForceCreate" Name="ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}" IsVisible="True" DockedHeight="768" DockedWidth="174.08" FloatingHeight="537.6" FloatingWidth="204.8"/>
 								</AutoHideGroup>
-								<AutoHideGroup>
+								<AutoHideGroup IsVisible="True">
 									<wm:ToolWindowView ForceCreate="ForceCreate" Name="ST:0:0:{25f7e850-ffa1-11d0-b63f-00a0c922e851}" DockedHeight="768" DockedWidth="204.8" FloatingHeight="537.6" FloatingWidth="256"/>
-									<wm:ToolWindowView ForceCreate="ForceCreate" Name="ST:0:0:{873151d0-cf2e-48cc-b4bf-ad0394f6a3c3}" DockedHeight="768" DockedWidth="204.8" FloatingHeight="537.6" FloatingWidth="256"/>
+									<wm:ToolWindowView OnTopWhenLastInContext="False" ForceCreate="ForceCreate" Name="ST:0:0:{873151d0-cf2e-48cc-b4bf-ad0394f6a3c3}" IsVisible="True" DockedHeight="768" DockedWidth="204.8" FloatingHeight="537.6" FloatingWidth="256"/>
+								</AutoHideGroup>
+								<AutoHideGroup IsVisible="True">
+									<wm:ToolWindowView ForceCreate="ForceCreate" IconIndex="0" IconResourceID="306" IconResourcePackage="0c6e6407-13fc-4878-869a-c8b4016c57fe" Name="ST:0:0:{532ddd98-f6a6-4a76-a84e-4aea5211f733}" IsVisible="True" DockedHeight="442" DockedWidth="233" FloatingTop="379" FloatingLeft="-244" FloatingHeight="450" FloatingWidth="450"/>
+								</AutoHideGroup>
+								<AutoHideGroup IsVisible="True">
+									<wm:ToolWindowView ForceCreate="ForceCreate" IconIndex="0" IconResourceID="309" IconResourcePackage="0c6e6407-13fc-4878-869a-c8b4016c57fe" Name="ST:0:0:{b2bc9916-e3e6-43a8-ad5f-3bdb95f53db5}" IsVisible="True" DockedHeight="442" DockedWidth="294" FloatingTop="384" FloatingLeft="-164" FloatingHeight="450" FloatingWidth="450"/>
 								</AutoHideGroup>
 							</AutoHideChannel>
 							<AutoHideChannel Dock="Right" Orientation="Vertical" IsVisible="True">
 								<AutoHideGroup IsVisible="True">
-									<wm:ToolWindowView ForceCreate="ForceCreate" IconIndex="1" IconResourceID="6650" IconResourcePackage="da9fb551-c724-11d0-ae1f-00a0c90fffc3" Name="ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}" IsVisible="True" DockedHeight="384" DockedWidth="204.8" FloatingHeight="384" FloatingWidth="204.8"/>
+									<wm:ToolWindowView ForceCreate="ForceCreate" Name="ST:0:0:{ed485b08-5acf-4ce9-8e13-699174ea0201}" DockedWidth="254.8" FloatingTop="100" FloatingLeft="100" FloatingHeight="450" FloatingWidth="450"/>
+									<wm:ToolWindowView ForceCreate="ForceCreate" Name="ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}" DockedWidth="254.8" FloatingTop="100" FloatingLeft="100" FloatingHeight="450" FloatingWidth="450"/>
+									<wm:ToolWindowView ForceCreate="ForceCreate" IconIndex="2" IconResourceID="301" IconResourcePackage="cf6a5c16-83b0-4d04-b702-195c35c6e887" Name="ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}" IsVisible="True" DockedWidth="254.8" FloatingHeight="537.6" FloatingWidth="204.8"/>
+									<wm:ToolWindowView OnTopWhenLastInContext="False" ForceCreate="ForceCreate" IconIndex="1" IconResourceID="6650" IconResourcePackage="da9fb551-c724-11d0-ae1f-00a0c90fffc3" Name="ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}" IsVisible="True" DockedWidth="254.8" FloatingTop="365" FloatingLeft="1150" FloatingHeight="395" FloatingWidth="255"/>
+									<wm:ToolWindowView ForceCreate="ForceCreate" IconIndex="0" IconResourceID="1" IconResourcePackage="b80b010d-188c-4b19-b483-6c20d52071ae" Name="ST:0:0:{131369f2-062d-44a2-8671-91ff31efb4f4}" IsVisible="True" DockedWidth="254.8" FloatingHeight="537.6" FloatingWidth="204.8"/>
+									<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="ForceCreate" IconIndex="0" IconResourceID="4" IconResourcePackage="8d8529d3-625d-4496-8354-3dad630ecc1b" Name="ST:0:0:{74946827-37a0-11d2-a273-00c04f8ef4ff}" IsVisible="True" DockedWidth="254.8" FloatingHeight="537.6" FloatingWidth="204.8"/>
+									<wm:ToolWindowView ForceCreate="ForceCreate" Name="ST:0:0:{3addf8e2-81cc-41a0-9785-dbd2d86064bd}" DockedWidth="254.8" FloatingHeight="537.6" FloatingWidth="204.8"/>
+									<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="ForceCreate" Name="ST:0:0:{0db31cc8-2322-4f59-a610-1fdc8423df77}" DockedWidth="254.8" FloatingHeight="537.6" FloatingWidth="204.8"/>
+									<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="ForceCreate" Name="ST:0:0:{c9c0ae26-aa77-11d2-b3f0-0000f87570ee}" DockedWidth="254.8" FloatingHeight="537.6" FloatingWidth="204.8"/>
+									<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="ForceCreate" Name="ST:0:0:{de1fc918-f32e-4dd7-a915-1792a051f26b}" DockedWidth="254.8" FloatingHeight="537.6" FloatingWidth="204.8"/>
+									<wm:ToolWindowView ContextVisibilityEnabled="False" Name="ST:0:0:{07cd18b4-3ba1-11d2-890a-0060083196c6}" DockedWidth="254.8" FloatingHeight="537.6" FloatingWidth="204.8"/>
+									<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="ForceCreate" Name="ST:0:0:{2d7728c2-de0a-45b5-99aa-89b609dfde73}" DockedWidth="254.8" FloatingHeight="537.6" FloatingWidth="204.8"/>
+									<wm:ToolWindowView ContextVisibilityEnabled="False" Name="ST:0:0:{4a791147-19e4-11d3-b86b-00c04f79f802}" DockedWidth="254.8" FloatingHeight="537.6" FloatingWidth="204.8"/>
+									<wm:ToolWindowView ContextVisibilityEnabled="False" Name="ST:0:0:{73f6dd58-437e-11d3-b88e-00c04f79f802}" DockedWidth="254.8" FloatingHeight="537.6" FloatingWidth="204.8"/>
+									<wm:ToolWindowView ContextVisibilityEnabled="False" Name="ST:0:0:{57dc5d59-11c2-4955-a7b4-d7699d677e93}" DockedWidth="254.8" FloatingHeight="537.6" FloatingWidth="204.8"/>
+									<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="ForceCreate" Name="ST:0:0:{dd1ddd20-d59b-11da-a94d-0800200c9a66}" DockedWidth="254.8" FloatingHeight="537.6" FloatingWidth="204.8"/>
+									<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="ForceCreate" Name="ST:0:0:{a34b1c5d-6d37-4a0c-a8b0-99f8e8158b48}" DockedWidth="254.8" FloatingHeight="537.6" FloatingWidth="204.8"/>
 								</AutoHideGroup>
 							</AutoHideChannel>
 							<AutoHideChannel Dock="Top"/>
 							<AutoHideChannel Dock="Bottom" IsVisible="True">
 								<AutoHideGroup IsVisible="True">
-									<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="ForceCreate" Name="ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}" IsVisible="True" DockedHeight="192" DockedWidth="1024" FloatingHeight="192" FloatingWidth="614.4"/>
+									<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="ForceCreate" IconIndex="15" IconResourceID="6650" IconResourcePackage="4a9b7e50-aa16-11d0-a8c5-00a0c921a4d2" Name="ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}" IsVisible="True" DockedHeight="192" DockedWidth="1024" FloatingHeight="192" FloatingWidth="614.4"/>
 									<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="ForceCreate" Name="ST:0:0:{4a9b7e51-aa16-11d0-a8c5-00a0c921a4d2}" DockedHeight="192" DockedWidth="1024" FloatingHeight="192" FloatingWidth="614.4"/>
 									<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="ForceCreate" Name="ST:0:0:{be4d7042-ba3f-11d2-840e-00c04f9902c1}" DockedHeight="192" DockedWidth="1024" FloatingHeight="192" FloatingWidth="614.4"/>
 									<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="ForceCreate" Name="ST:0:0:{28836128-fc2c-11d2-a433-00c04f72d18a}" DockedHeight="192" DockedWidth="1024" FloatingHeight="192" FloatingWidth="614.4"/>
@@ -2052,6 +2299,8 @@ CSS 3.0;CSS 3.0</PropertyValue>
 							</AutoHideChannel>
 							<DockRoot IsVisible="True" DockedHeight="*" DockedWidth="*">
 								<DockGroup IsVisible="True" DockedHeight="*" DockedWidth="*">
+									<ViewBookmark Name="ST:0:0:{b2bc9916-e3e6-43a8-ad5f-3bdb95f53db5}"/>
+									<ViewBookmark Name="ST:0:0:{532ddd98-f6a6-4a76-a84e-4aea5211f733}"/>
 									<DockGroup Orientation="Vertical" DockedHeight="768" DockedWidth="174.08">
 										<TabGroup DockedHeight="768" DockedWidth="174.08">
 											<ViewBookmark Name="ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}" DockedHeight="768" DockedWidth="174.08"/>
@@ -2071,12 +2320,12 @@ CSS 3.0;CSS 3.0</PropertyValue>
 										<DocumentGroupContainer IsVisible="True" DockedHeight="*" DockedWidth="*">
 											<wm:WMDocumentGroup IsVisible="True">
 												<wm:ToolWindowView ForceCreate="DontForceCreate" Name="ST:0:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}" FloatingTop="100" FloatingLeft="100" FloatingHeight="400" FloatingWidth="400"/>
-												<wm:ToolWindowView ForceCreate="DontForceCreate" Name="ST:0:0:{387cb18d-6153-4156-9257-9ac3f9207bbe}" FloatingHeight="614.4" FloatingWidth="819.2"/>
 												<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="ForceCreate" Name="ST:0:0:{269a02dc-6af8-11d3-bdc4-00c04f688e50}" FloatingHeight="384" FloatingWidth="512"/>
 												<wm:ToolWindowView ContextVisibilityEnabled="False" Name="ST:0:0:{46c87f81-5a06-43a8-9e25-85d33bac49f8}" FloatingHeight="537.6" FloatingWidth="716.8"/>
 												<wm:ToolWindowView ForceCreate="ForceCreate" Name="ST:0:0:{99b8fa2f-ab90-4f57-9c32-949f146f1914}" FloatingHeight="614.4" FloatingWidth="819.2"/>
 												<wm:ToolWindowView ForceCreate="ForceCreate" Name="ST:0:0:{c79b74ff-f1d7-4c94-aefa-4d22bfe1b1f9}" FloatingHeight="614.4" FloatingWidth="819.2"/>
 												<wm:ToolWindowView ForceCreate="ForceCreate" Name="ST:0:0:{2553315d-efa1-4d33-9ed6-ffe62257ca21}" FloatingTop="0" FloatingLeft="0" FloatingHeight="600" FloatingWidth="800"/>
+												<wm:ToolWindowView ForceCreate="ForceCreate" Name="ST:0:0:{1820bae5-c385-4492-9de5-e35c9cf17b18}" FloatingTop="100" FloatingLeft="100" FloatingHeight="450" FloatingWidth="450"/>
 											</wm:WMDocumentGroup>
 										</DocumentGroupContainer>
 										<TabGroup>
@@ -2108,28 +2357,27 @@ CSS 3.0;CSS 3.0</PropertyValue>
 											<ViewBookmark Name="ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"/>
 										</TabGroup>
 									</DockGroup>
-									<DockGroup Orientation="Vertical" IsVisible="True" DockedHeight="537.6" DockedWidth="254.8">
-										<TabGroup IsVisible="True" DockedWidth="254.8">
-											<wm:ToolWindowView ForceCreate="ForceCreate" Name="ST:0:0:{ed485b08-5acf-4ce9-8e13-699174ea0201}" DockedWidth="254.8" FloatingTop="100" FloatingLeft="100" FloatingHeight="450" FloatingWidth="450"/>
-											<wm:ToolWindowView ForceCreate="ForceCreate" Name="ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}" IsSelected="True" IsVisible="True" DockedWidth="254.8" FloatingHeight="537.6" FloatingWidth="204.8"/>
-											<wm:ToolWindowView ForceCreate="ForceCreate" IconIndex="0" IconResourceID="1" IconResourcePackage="b80b010d-188c-4b19-b483-6c20d52071ae" Name="ST:0:0:{131369f2-062d-44a2-8671-91ff31efb4f4}" IsVisible="True" DockedWidth="254.8" FloatingHeight="537.6" FloatingWidth="204.8"/>
-											<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="ForceCreate" IconIndex="0" IconResourceID="4" IconResourcePackage="8d8529d3-625d-4496-8354-3dad630ecc1b" Name="ST:0:0:{74946827-37a0-11d2-a273-00c04f8ef4ff}" IsVisible="True" DockedWidth="254.8" FloatingHeight="537.6" FloatingWidth="204.8"/>
-											<wm:ToolWindowView ForceCreate="ForceCreate" Name="ST:0:0:{3addf8e2-81cc-41a0-9785-dbd2d86064bd}" DockedWidth="254.8" FloatingHeight="537.6" FloatingWidth="204.8"/>
-											<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="ForceCreate" Name="ST:0:0:{0db31cc8-2322-4f59-a610-1fdc8423df77}" DockedWidth="254.8" FloatingHeight="537.6" FloatingWidth="204.8"/>
-											<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="ForceCreate" Name="ST:0:0:{c9c0ae26-aa77-11d2-b3f0-0000f87570ee}" DockedWidth="254.8" FloatingHeight="537.6" FloatingWidth="204.8"/>
-											<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="ForceCreate" Name="ST:0:0:{de1fc918-f32e-4dd7-a915-1792a051f26b}" DockedWidth="254.8" FloatingHeight="537.6" FloatingWidth="204.8"/>
-											<wm:ToolWindowView ContextVisibilityEnabled="False" Name="ST:0:0:{07cd18b4-3ba1-11d2-890a-0060083196c6}" DockedWidth="254.8" FloatingHeight="537.6" FloatingWidth="204.8"/>
-											<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="ForceCreate" Name="ST:0:0:{2d7728c2-de0a-45b5-99aa-89b609dfde73}" DockedWidth="254.8" FloatingHeight="537.6" FloatingWidth="204.8"/>
-											<wm:ToolWindowView ContextVisibilityEnabled="False" Name="ST:0:0:{4a791147-19e4-11d3-b86b-00c04f79f802}" DockedWidth="254.8" FloatingHeight="537.6" FloatingWidth="204.8"/>
-											<wm:ToolWindowView ContextVisibilityEnabled="False" Name="ST:0:0:{73f6dd58-437e-11d3-b88e-00c04f79f802}" DockedWidth="254.8" FloatingHeight="537.6" FloatingWidth="204.8"/>
-											<wm:ToolWindowView ContextVisibilityEnabled="False" Name="ST:0:0:{57dc5d59-11c2-4955-a7b4-d7699d677e93}" DockedWidth="254.8" FloatingHeight="537.6" FloatingWidth="204.8"/>
-											<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="ForceCreate" Name="ST:0:0:{dd1ddd20-d59b-11da-a94d-0800200c9a66}" DockedWidth="254.8" FloatingHeight="537.6" FloatingWidth="204.8"/>
-											<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="ForceCreate" Name="ST:0:0:{a34b1c5d-6d37-4a0c-a8b0-99f8e8158b48}" DockedWidth="254.8" FloatingHeight="537.6" FloatingWidth="204.8"/>
+									<DockGroup Orientation="Vertical" DockedHeight="537.6" DockedWidth="254.8">
+										<TabGroup DockedWidth="254.8">
+											<ViewBookmark Name="ST:0:0:{ed485b08-5acf-4ce9-8e13-699174ea0201}" DockedWidth="254.8"/>
+											<ViewBookmark Name="ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}" DockedWidth="254.8"/>
+											<ViewBookmark Name="ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}" DockedWidth="254.8"/>
+											<ViewBookmark Name="ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}" DockedWidth="254.8"/>
+											<ViewBookmark Name="ST:0:0:{131369f2-062d-44a2-8671-91ff31efb4f4}" DockedWidth="254.8"/>
+											<ViewBookmark Name="ST:0:0:{74946827-37a0-11d2-a273-00c04f8ef4ff}" DockedWidth="254.8"/>
+											<ViewBookmark Name="ST:0:0:{3addf8e2-81cc-41a0-9785-dbd2d86064bd}" DockedWidth="254.8"/>
+											<ViewBookmark Name="ST:0:0:{0db31cc8-2322-4f59-a610-1fdc8423df77}" DockedWidth="254.8"/>
+											<ViewBookmark Name="ST:0:0:{c9c0ae26-aa77-11d2-b3f0-0000f87570ee}" DockedWidth="254.8"/>
+											<ViewBookmark Name="ST:0:0:{de1fc918-f32e-4dd7-a915-1792a051f26b}" DockedWidth="254.8"/>
+											<ViewBookmark Name="ST:0:0:{07cd18b4-3ba1-11d2-890a-0060083196c6}" DockedWidth="254.8"/>
+											<ViewBookmark Name="ST:0:0:{2d7728c2-de0a-45b5-99aa-89b609dfde73}" DockedWidth="254.8"/>
+											<ViewBookmark Name="ST:0:0:{4a791147-19e4-11d3-b86b-00c04f79f802}" DockedWidth="254.8"/>
+											<ViewBookmark Name="ST:0:0:{73f6dd58-437e-11d3-b88e-00c04f79f802}" DockedWidth="254.8"/>
+											<ViewBookmark Name="ST:0:0:{57dc5d59-11c2-4955-a7b4-d7699d677e93}" DockedWidth="254.8"/>
+											<ViewBookmark Name="ST:0:0:{dd1ddd20-d59b-11da-a94d-0800200c9a66}" DockedWidth="254.8"/>
+											<ViewBookmark Name="ST:0:0:{a34b1c5d-6d37-4a0c-a8b0-99f8e8158b48}" DockedWidth="254.8"/>
 										</TabGroup>
-										<TabGroup DockedHeight="384" DockedWidth="254.8">
-											<ViewBookmark Name="ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}" DockedHeight="384" DockedWidth="254.8"/>
-											<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="ForceCreate" Name="ST:0:0:{66dba47c-61df-11d2-aa79-00c04f990343}" DockedHeight="384" DockedWidth="254.8" FloatingHeight="384" FloatingWidth="204.8"/>
-										</TabGroup>
+										<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="ForceCreate" Name="ST:0:0:{66dba47c-61df-11d2-aa79-00c04f990343}" DockedHeight="384" DockedWidth="254.8" FloatingHeight="384" FloatingWidth="204.8"/>
 									</DockGroup>
 								</DockGroup>
 							</DockRoot>
@@ -2139,7 +2387,7 @@ CSS 3.0;CSS 3.0</PropertyValue>
 						<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="ForceCreate" Name="ST:0:0:{e830ec50-c2b5-11d2-9375-0080c747d9a0}" DockedHeight="192" DockedWidth="1024" FloatingHeight="76.8" FloatingWidth="337.92"/>
 					</wm:WMFloatSite>
 					<wm:WMFloatSite Id="e0acee3c-dd58-45c7-98a9-34de48009a43" FloatingHeight="153.6" FloatingWidth="337.92">
-						<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="ForceCreate" Name="ST:0:0:{cf2ddc32-8cad-11d2-9302-005345000000}" DockedHeight="192" DockedWidth="1024" FloatingHeight="153.6" FloatingWidth="337.92"/>
+						<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="ForceCreate" IconIndex="7" IconResourceID="6650" IconResourcePackage="da9fb551-c724-11d0-ae1f-00a0c90fffc3" Name="ST:0:0:{cf2ddc32-8cad-11d2-9302-005345000000}" DockedHeight="192" DockedWidth="1024" FloatingHeight="153.6" FloatingWidth="337.92"/>
 					</wm:WMFloatSite>
 					<wm:WMFloatSite Id="9a796448-f9b0-4975-a67c-73dc33b1057a" FloatingHeight="76.8" FloatingWidth="337.92">
 						<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="ForceCreate" Name="ST:0:0:{53024d34-0ef5-11d3-87e0-00c04f7971a5}" DockedHeight="192" DockedWidth="1024" FloatingHeight="76.8" FloatingWidth="337.92"/>
@@ -2206,6 +2454,11 @@ CSS 3.0;CSS 3.0</PropertyValue>
 					</wm:WMFloatSite>
 					<wm:WMFloatSite Id="37dc1a1a-ba93-4730-b25a-4662ab99f886">
 						<wm:ToolWindowView Name="ST:0:0:{ecdd9ee0-ac6b-11d0-89f9-00a0c9110055}"/>
+					</wm:WMFloatSite>
+					<wm:WMFloatSite Id="8ce7b155-47bd-4c58-a0ce-121260173246" FloatingTop="365" FloatingLeft="1150" FloatingHeight="395" FloatingWidth="255">
+						<TabGroup FloatingTop="365" FloatingLeft="1150" FloatingHeight="395" FloatingWidth="255">
+							<ViewBookmark Name="ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}" AccessOrder="1" ViewBookmarkType="Raft" FloatingHeight="395" FloatingWidth="255"/>
+						</TabGroup>
 					</wm:WMFloatSite>
 				</WindowProfile>
 			</Design>
