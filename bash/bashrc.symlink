@@ -1,1 +1,0 @@
-export PS1='\n\[$(tput sgr0)$(tput setaf 5)\]\w\[$(tput sgr0)$(tput setaf 2)\] $(__git_ps1 "[%s]") \[$(tput sgr0)\]\n$ '
