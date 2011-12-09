@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<ArrayOfExtensionInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ExtensionInformation>
+    <Name>Code alignment</Name>
+    <Identifier>2adcbb11-89c4-451e-97f2-14049154ccad</Identifier>
+  </ExtensionInformation>
+  <ExtensionInformation>
+    <Name>Collapse Solution</Name>
+    <Identifier>1a02465c-1e67-4566-940c-ecbb9709e320</Identifier>
+  </ExtensionInformation>
+  <ExtensionInformation>
+    <Name>ExtensionSync</Name>
+    <Identifier>887b3e11-719d-4912-94b2-f88168027643</Identifier>
+  </ExtensionInformation>
+  <ExtensionInformation>
+    <Name>Hide Main Menu</Name>
+    <Identifier>86f5f951-2c5d-4aa4-a906-e240571d78e6</Identifier>
+  </ExtensionInformation>
+  <ExtensionInformation>
+    <Name>Image Optimizer</Name>
+    <Identifier>bf95754f-93d3-42ff-bfe3-e05d23188b08</Identifier>
+  </ExtensionInformation>
+  <ExtensionInformation>
+    <Name>JSLint.VS2010</Name>
+    <Identifier>531da20f-aec5-4382-a317-0f70a217a572</Identifier>
+  </ExtensionInformation>
+  <ExtensionInformation>
+    <Name>NuGet Package Manager</Name>
+    <Identifier>NuPackToolsVsix.Microsoft.67e54e40-0ae3-42c5-a949-fddf5739e7a5</Identifier>
+  </ExtensionInformation>
+  <ExtensionInformation>
+    <Name>Open Data Protocol Visualizer</Name>
+    <Identifier>DataServices..CF2C3680-3691-4DF9-905E-1FC3D5513942</Identifier>
+  </ExtensionInformation>
+  <ExtensionInformation>
+    <Name>Productivity Power Tools</Name>
+    <Identifier>VSProPack.Microsoft.f4ef2e6e-e531-48d5-940d-eb955306da9a</Identifier>
+  </ExtensionInformation>
+  <ExtensionInformation>
+    <Name>Regex Tester</Name>
+    <Identifier>dcad2d98-1e91-4090-81a0-ec0641347bf8</Identifier>
+  </ExtensionInformation>
+  <ExtensionInformation>
+    <Name>Visual Studio PerfWatson</Name>
+    <Identifier>Microsoft.VisualStudio.PerfWatson</Identifier>
+  </ExtensionInformation>
+  <ExtensionInformation>
+    <Name>VsVim</Name>
+    <Identifier>VsVim.Microsoft.e214908b-0458-4ae2-a583-4310f29687c3</Identifier>
+  </ExtensionInformation>
+  <ExtensionInformation>
+    <Name>Web Essentials</Name>
+    <Identifier>2fdda986-1296-4315-9486-1b2aedf70fed</Identifier>
+  </ExtensionInformation>
+  <ExtensionInformation>
+    <Name>WoVS Default Browser Switcher</Name>
+    <Identifier>Clarius.WoVS.Extensions.DefaultBrowserSwitcher</Identifier>
+  </ExtensionInformation>
+  <ExtensionInformation>
+    <Name>ZenCoding</Name>
+    <Identifier>1fb4fbd3-bd5f-4899-9f7e-5dc7c09d84dd</Identifier>
+  </ExtensionInformation>
+</ArrayOfExtensionInformation>
