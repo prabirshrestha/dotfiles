@@ -496,13 +496,16 @@
 				<PropertyValue name="JScriptOnlyUseTabEnterForCompletion">-1</PropertyValue>
 				<PropertyValue name="JScriptInsertSpaceAfterSemicolonInFor">-1</PropertyValue>
 				<PropertyValue name="JScriptPlaceOpenBraceOnNewLineForControlBlocks">0</PropertyValue>
+				<PropertyValue name="JScriptHideExternalUnderscores">0</PropertyValue>
 				<PropertyValue name="JScriptInsertSpaceBeforeAfterBinaryOperators">-1</PropertyValue>
+				<PropertyValue name="JScriptInsertSpaceAfterAnonymousFunctionKeyword">-1</PropertyValue>
 				<PropertyValue name="JScriptFormatOnPaste">-1</PropertyValue>
 				<PropertyValue name="JScriptFormatCompletedStatementOnSemiColon">-1</PropertyValue>
 				<PropertyValue name="JScriptPlaceOpenOnNewLineForFunctions">0</PropertyValue>
 				<PropertyValue name="JScriptValidationErrorLevel">1</PropertyValue>
 				<PropertyValue name="JScriptShowErrors">-1</PropertyValue>
 				<PropertyValue name="JScriptValidationWarningLevel">2</PropertyValue>
+				<PropertyValue name="JScriptInsertSpaceAfterBeforeNonEmptyParens">0</PropertyValue>
 				<PropertyValue name="JScriptInsertSpaceAfterComma">-1</PropertyValue>
 				<PropertyValue name="JScriptFormatCompletedLineOnEnter">-1</PropertyValue>
 			</ToolsOptionsSubCategory>
@@ -659,23 +662,23 @@
 				<Alias Name="props" Definition="View.PropertiesWindow"/>
 				<Alias Name="memory1" Definition="Debug.Memory1"/>
 				<Alias Name="memory2" Definition="Debug.Memory2"/>
-				<Alias Name="Lcase" Definition="Edit.MakeLowercase"/>
 				<Alias Name="memory3" Definition="Debug.Memory3"/>
-				<Alias Name="kb" Definition="Debug.ListCallStack"/>
-				<Alias Name="locals" Definition="Debug.Locals"/>
+				<Alias Name="Lcase" Definition="Edit.MakeLowercase"/>
 				<Alias Name="memory4" Definition="Debug.Memory4"/>
+				<Alias Name="locals" Definition="Debug.Locals"/>
+				<Alias Name="kb" Definition="Debug.ListCallStack"/>
 				<Alias Name="da" Definition="Debug.ListMemory /Ansi"/>
-				<Alias Name="DelEOL" Definition="Edit.DeleteToEOL"/>
 				<Alias Name="db" Definition="Debug.ListMemory /Format:OneByte"/>
+				<Alias Name="DelEOL" Definition="Edit.DeleteToEOL"/>
 				<Alias Name="dc" Definition="Debug.ListMemory /Format:FourBytes /Ansi"/>
 				<Alias Name="dd" Definition="Debug.ListMemory /Format:FourBytes"/>
 				<Alias Name="df" Definition="Debug.ListMemory /Format:Float"/>
-				<Alias Name="AddProj" Definition="File.AddNewProject"/>
 				<Alias Name="WordWrap" Definition="Edit.ToggleWordWrap"/>
+				<Alias Name="AddProj" Definition="File.AddNewProject"/>
 				<Alias Name="dq" Definition="Debug.ListMemory /Format:EightBytes"/>
 				<Alias Name="du" Definition="Debug.ListMemory /Unicode"/>
-				<Alias Name="ListMembers" Definition="Edit.ListMembers"/>
 				<Alias Name="designer" Definition="View.ViewDesigner"/>
+				<Alias Name="ListMembers" Definition="Edit.ListMembers"/>
 				<Alias Name="code" Definition="View.ViewCode"/>
 				<Alias Name="ParamInfo" Definition="Edit.ParameterInfo"/>
 				<Alias Name="DelHSp" Definition="Edit.DeleteHorizontalWhiteSpace"/>
@@ -687,14 +690,14 @@
 				<Alias Name="TileV" Definition="Window.TileVertically"/>
 				<Alias Name="OutlineDefs" Definition="Edit.CollapsetoDefinitions"/>
 				<Alias Name="CloseAll" Definition="Window.CloseAllDocuments"/>
-				<Alias Name="InsertFile" Definition="Edit.InsertFileAsText"/>
 				<Alias Name="ToggleBook" Definition="Edit.ToggleBookmark"/>
+				<Alias Name="InsertFile" Definition="Edit.InsertFileAsText"/>
 				<Alias Name="autos" Definition="Debug.Autos"/>
 				<Alias Name="SaveAll" Definition="File.SaveAll"/>
 				<Alias Name="new" Definition="File.NewFile"/>
 				<Alias Name="d" Definition="Debug.ListMemory"/>
-				<Alias Name="navigate" Definition="View.WebBrowser"/>
 				<Alias Name="rtc" Definition="Debug.RunToCursor"/>
+				<Alias Name="navigate" Definition="View.WebBrowser"/>
 				<Alias Name="g" Definition="Debug.Start"/>
 				<Alias Name="k" Definition="Debug.ListCallStack"/>
 				<Alias Name="format" Definition="Edit.FormatSelection"/>
@@ -702,10 +705,10 @@
 				<Alias Name="p" Definition="Debug.StepOver"/>
 				<Alias Name="q" Definition="Debug.StopDebugging"/>
 				<Alias Name="r" Definition="Debug.ListRegisters"/>
-				<Alias Name="~*kb" Definition="Debug.ListCallStack /AllThreads"/>
 				<Alias Name="t" Definition="Debug.StepInto"/>
-				<Alias Name="nf" Definition="File.NewFile"/>
+				<Alias Name="~*kb" Definition="Debug.ListCallStack /AllThreads"/>
 				<Alias Name="u" Definition="Debug.ListDisassembly"/>
+				<Alias Name="nf" Definition="File.NewFile"/>
 				<Alias Name="registers" Definition="Debug.Registers"/>
 				<Alias Name="LineCut" Definition="Edit.LineCut"/>
 				<Alias Name="memory" Definition="memory1"/>
@@ -715,9 +718,9 @@
 				<Alias Name="DelBOL" Definition="Edit.DeleteToBOL"/>
 				<Alias Name="~*k" Definition="Debug.ListCallStack /AllThreads"/>
 				<Alias Name="NextBook" Definition="Edit.NextBookmark"/>
-				<Alias Name="NewProj" Definition="File.NewProject"/>
-				<Alias Name="Ucase" Definition="Edit.MakeUppercase"/>
 				<Alias Name="TaskList" Definition="View.TaskList"/>
+				<Alias Name="Ucase" Definition="Edit.MakeUppercase"/>
+				<Alias Name="NewProj" Definition="File.NewProject"/>
 				<Alias Name="Untabify" Definition="Edit.UntabifySelectedLines"/>
 				<Alias Name="GotoBrace" Definition="Edit.GotoBrace"/>
 				<Alias Name="cls" Definition="Edit.ClearAll"/>
@@ -726,29 +729,29 @@
 				<Alias Name="log" Definition="Tools.LogCommandWindowOutput"/>
 				<Alias Name="print" Definition="File.Print"/>
 				<Alias Name="op" Definition="File.OpenProject"/>
-				<Alias Name="alias" Definition="Tools.Alias"/>
 				<Alias Name="eval" Definition="Debug.EvaluateStatement"/>
+				<Alias Name="alias" Definition="Tools.Alias"/>
 				<Alias Name="watch" Definition="Debug.Watch"/>
 				<Alias Name="cmd" Definition="View.CommandWindow"/>
-				<Alias Name="GotoLn" Definition="Edit.GoTo"/>
 				<Alias Name="help" Definition="Help.F1Help"/>
+				<Alias Name="GotoLn" Definition="Edit.GoTo"/>
 				<Alias Name="disasm" Definition="Debug.Disassembly"/>
 				<Alias Name="redo" Definition="Edit.Redo"/>
-				<Alias Name="LineDel" Definition="Edit.LineDelete"/>
-				<Alias Name="tabify" Definition="Edit.TabifySelectedLines"/>
 				<Alias Name="undo" Definition="Edit.Undo"/>
+				<Alias Name="tabify" Definition="Edit.TabifySelectedLines"/>
+				<Alias Name="LineDel" Definition="Edit.LineDelete"/>
 				<Alias Name="StopOutlining" Definition="Edit.CollapsetoDefinitions"/>
 				<Alias Name="pr" Definition="Debug.StepOut"/>
-				<Alias Name="FullScreen" Definition="View.FullScreen"/>
 				<Alias Name="SaveAs" Definition="File.SaveSelectedItemsAs"/>
+				<Alias Name="FullScreen" Definition="View.FullScreen"/>
 				<Alias Name="nav" Definition="navigate"/>
-				<Alias Name="exit" Definition="File.Exit"/>
 				<Alias Name="SwapAnchor" Definition="Edit.SwapAnchor"/>
-				<Alias Name="PrevBook" Definition="Edit.PreviousBookmark"/>
+				<Alias Name="exit" Definition="File.Exit"/>
 				<Alias Name="threads" Definition="Debug.Threads"/>
+				<Alias Name="PrevBook" Definition="Edit.PreviousBookmark"/>
 				<Alias Name="close" Definition="File.Close"/>
-				<Alias Name="bl" Definition="Debug.Breakpoints"/>
 				<Alias Name="toolbox" Definition="View.Toolbox"/>
+				<Alias Name="bl" Definition="Debug.Breakpoints"/>
 				<Alias Name="bp" Definition="Debug.ToggleBreakpoint"/>
 				<Alias Name="??" Definition="Debug.QuickWatch"/>
 				<Alias Name="StopFind" Definition="Edit.FindInFiles /stop"/>
@@ -760,16 +763,68 @@
 			<PropertyValue name="Dot&amp;fuscator Software Services.Arguments"/>
 			<PropertyValue name="Dot&amp;fuscator Software Services.InitialDirectory">$(TargetDir)</PropertyValue>
 			<PropertyValue name="Dot&amp;fuscator Software Services.SourceKeyName">Dot&amp;fuscator Software Services</PropertyValue>
-			<PropertyValue name="Dot&amp;fuscator Software Services.UseOutputWindow">true</PropertyValue>
+			<PropertyValue name="Dot&amp;fuscator Software Services.UseOutputWindow">false</PropertyValue>
 			<PropertyValue name="Dot&amp;fuscator Software Services.PromptForArguments">false</PropertyValue>
 			<PropertyValue name="Dot&amp;fuscator Software Services.CloseOnExit">false</PropertyValue>
-			<PropertyValue name="Dot&amp;fuscator Software Services.IsGUIapp">false</PropertyValue>
+			<PropertyValue name="Dot&amp;fuscator Software Services.IsGUIapp">true</PropertyValue>
 			<PropertyValue name="Dot&amp;fuscator Software Services.SaveAllDocs">true</PropertyValue>
 			<PropertyValue name="Dot&amp;fuscator Software Services.UseTaskList">false</PropertyValue>
 			<PropertyValue name="Dot&amp;fuscator Software Services.Unicode">false</PropertyValue>
 			<PropertyValue name="Dot&amp;fuscator Software Services.Package">{00000000-0000-0000-0000-000000000000}</PropertyValue>
 			<PropertyValue name="Dot&amp;fuscator Software Services.NameID">0</PropertyValue>
-			<PropertyValue name="ToolNames">Dot&amp;fuscator Software Services</PropertyValue>
+			<PropertyValue name="Create &amp;GUID.Command">%vsspv_windows_sdk_dir%\bin\NETFX 4.0 Tools\guidgen.exe</PropertyValue>
+			<PropertyValue name="Create &amp;GUID.Arguments"/>
+			<PropertyValue name="Create &amp;GUID.InitialDirectory">%vsspv_windows_sdk_dir%\bin\NETFX 4.0 Tools\</PropertyValue>
+			<PropertyValue name="Create &amp;GUID.SourceKeyName">Create GUID</PropertyValue>
+			<PropertyValue name="Create &amp;GUID.UseOutputWindow">false</PropertyValue>
+			<PropertyValue name="Create &amp;GUID.PromptForArguments">false</PropertyValue>
+			<PropertyValue name="Create &amp;GUID.CloseOnExit">false</PropertyValue>
+			<PropertyValue name="Create &amp;GUID.IsGUIapp">true</PropertyValue>
+			<PropertyValue name="Create &amp;GUID.SaveAllDocs">true</PropertyValue>
+			<PropertyValue name="Create &amp;GUID.UseTaskList">false</PropertyValue>
+			<PropertyValue name="Create &amp;GUID.Unicode">false</PropertyValue>
+			<PropertyValue name="Create &amp;GUID.Package">{DA9FB551-C724-11D0-AE1F-00A0C90FFFC3}</PropertyValue>
+			<PropertyValue name="Create &amp;GUID.NameID">14453</PropertyValue>
+			<PropertyValue name="Error Loo&amp;kup.Command">%vsspv_vs_install_directory%\Common7\Tools\errlook.exe</PropertyValue>
+			<PropertyValue name="Error Loo&amp;kup.Arguments"/>
+			<PropertyValue name="Error Loo&amp;kup.InitialDirectory">$(TargetDir)</PropertyValue>
+			<PropertyValue name="Error Loo&amp;kup.SourceKeyName">Error Loo&amp;kup</PropertyValue>
+			<PropertyValue name="Error Loo&amp;kup.UseOutputWindow">false</PropertyValue>
+			<PropertyValue name="Error Loo&amp;kup.PromptForArguments">false</PropertyValue>
+			<PropertyValue name="Error Loo&amp;kup.CloseOnExit">false</PropertyValue>
+			<PropertyValue name="Error Loo&amp;kup.IsGUIapp">true</PropertyValue>
+			<PropertyValue name="Error Loo&amp;kup.SaveAllDocs">true</PropertyValue>
+			<PropertyValue name="Error Loo&amp;kup.UseTaskList">false</PropertyValue>
+			<PropertyValue name="Error Loo&amp;kup.Unicode">false</PropertyValue>
+			<PropertyValue name="Error Loo&amp;kup.Package">{1B027A40-8F43-11D0-8D11-00A0C91BC942}</PropertyValue>
+			<PropertyValue name="Error Loo&amp;kup.NameID">1301</PropertyValue>
+			<PropertyValue name="ATL/MFC &amp;Trace Tool.Command">%vsspv_vs_install_directory%\Common7\Tools\AtlTraceTool8.exe</PropertyValue>
+			<PropertyValue name="ATL/MFC &amp;Trace Tool.Arguments"/>
+			<PropertyValue name="ATL/MFC &amp;Trace Tool.InitialDirectory">%vsspv_vs_install_directory%\Common7\Tools\</PropertyValue>
+			<PropertyValue name="ATL/MFC &amp;Trace Tool.SourceKeyName">MFC/ATL &amp;Trace Tool</PropertyValue>
+			<PropertyValue name="ATL/MFC &amp;Trace Tool.UseOutputWindow">false</PropertyValue>
+			<PropertyValue name="ATL/MFC &amp;Trace Tool.PromptForArguments">false</PropertyValue>
+			<PropertyValue name="ATL/MFC &amp;Trace Tool.CloseOnExit">false</PropertyValue>
+			<PropertyValue name="ATL/MFC &amp;Trace Tool.IsGUIapp">true</PropertyValue>
+			<PropertyValue name="ATL/MFC &amp;Trace Tool.SaveAllDocs">true</PropertyValue>
+			<PropertyValue name="ATL/MFC &amp;Trace Tool.UseTaskList">false</PropertyValue>
+			<PropertyValue name="ATL/MFC &amp;Trace Tool.Unicode">false</PropertyValue>
+			<PropertyValue name="ATL/MFC &amp;Trace Tool.Package">{F1C25864-3097-11D2-A5C5-00C04F7968B4}</PropertyValue>
+			<PropertyValue name="ATL/MFC &amp;Trace Tool.NameID">10052</PropertyValue>
+			<PropertyValue name="Spy&amp;++.Command">%vsspv_vs_install_directory%\Common7\Tools\spyxx.exe</PropertyValue>
+			<PropertyValue name="Spy&amp;++.Arguments"/>
+			<PropertyValue name="Spy&amp;++.InitialDirectory">%vsspv_vs_install_directory%\Common7\Tools\</PropertyValue>
+			<PropertyValue name="Spy&amp;++.SourceKeyName">Sp&amp;y++</PropertyValue>
+			<PropertyValue name="Spy&amp;++.UseOutputWindow">false</PropertyValue>
+			<PropertyValue name="Spy&amp;++.PromptForArguments">false</PropertyValue>
+			<PropertyValue name="Spy&amp;++.CloseOnExit">false</PropertyValue>
+			<PropertyValue name="Spy&amp;++.IsGUIapp">true</PropertyValue>
+			<PropertyValue name="Spy&amp;++.SaveAllDocs">true</PropertyValue>
+			<PropertyValue name="Spy&amp;++.UseTaskList">false</PropertyValue>
+			<PropertyValue name="Spy&amp;++.Unicode">false</PropertyValue>
+			<PropertyValue name="Spy&amp;++.Package">{F1C25864-3097-11D2-A5C5-00C04F7968B4}</PropertyValue>
+			<PropertyValue name="Spy&amp;++.NameID">10051</PropertyValue>
+			<PropertyValue name="ToolNames">Dot&amp;fuscator Software Services, Create &amp;GUID, Error Loo&amp;kup, ATL/MFC &amp;Trace Tool, Spy&amp;++</PropertyValue>
 		</Category>
 		<Category name="Environment_CallBrowser" Category="{50B05A5D-9174-48eb-851A-B1C616A0B43D}" Package="{DA9FB551-C724-11d0-AE1F-00A0C90FFFC3}" RegisteredName="Environment_CallBrowser" PackageName="Visual Studio Environment Package">
 			<PropertyValue name="CallBrowserSortAlphabetically">true</PropertyValue>
@@ -816,7 +871,7 @@
 						<Column Name="Bitmap" Width="17" Visibility="Visible" SortPriority="-1" SortDirection="Up"/>
 						<Column Name="ProviderKnowsOrder" Width="19" Visibility="Visible" SortPriority="-1" SortDirection="Up"/>
 						<Column Name="Checked" Width="28" Visibility="Invisible" SortPriority="-1" SortDirection="Up"/>
-						<Column Name="Description" Width="911" Visibility="Visible" SortPriority="0" SortDirection="Up"/>
+						<Column Name="Description" Width="484" Visibility="Visible" SortPriority="0" SortDirection="Up"/>
 						<Column Name="File" Width="120" Visibility="Visible" SortPriority="-1" SortDirection="Up"/>
 						<Column Name="Line" Width="70" Visibility="Visible" SortPriority="-1" SortDirection="Up"/>
 						<Column Name="Column" Width="70" Visibility="Visible" SortPriority="-1" SortDirection="Up"/>
@@ -914,7 +969,7 @@
 							<Item Name="Inactive Selected Text" Foreground="0x00544E3F" Background="0x00DBCDBF" BoldFont="No"/>
 						</Items>
 					</Category>
-					<Category GUID="{A27B4E24-A735-4D1D-B8E7-9716E1E3D8E0}" FontName="Consolas" FontSize="12" CharSet="0" FontIsDefault="No">
+					<Category GUID="{A27B4E24-A735-4D1D-B8E7-9716E1E3D8E0}" FontIsDefault="Yes">
 						<Items>
 							<Item Name="Plain Text" Foreground="0x00CCDCDC" Background="0x003F3F3F" BoldFont="No"/>
 							<Item Name="Selected Text" Foreground="0x0090DCCC" Background="0x008A9263" BoldFont="No"/>
@@ -1028,6 +1083,7 @@
 					<Scope Name="Query Designer" ID="{B2C40B32-3A37-4CA9-97B9-FA44248B69FF}"/>
 					<Scope Name="WebBrowser" ID="{E8B06F41-6D01-11D2-AA7D-00C04F990343}"/>
 					<Scope Name="DataSet Editor" ID="{B334A759-F450-40A5-BE2A-65937BCD5415}"/>
+					<Scope Name="Open Data Protocol Visualizer" ID="{9485765E-A761-4FB3-983C-EBA7D4DD9940}"/>
 					<Scope Name="Graph Document Editor" ID="{295A0962-5A59-4F4F-9E12-6BC670C15C3B}"/>
 					<Scope Name="F# Interactive" ID="{DEE22B65-9761-4A26-8FB2-759B971D6DFC}"/>
 					<Scope Name="View Designer" ID="{B968E165-98E0-41F0-8FBE-A8ED1D246A90}"/>
@@ -1387,13 +1443,14 @@
 					<add_toolbar Menu="{000D7B18-CDE4-49F0-B194-FE3E25BBF096}:0000007e" Name="GitExtensions" MenuType="toolbar"/>
 					<modify_toolbar Menu="{D309F791-903F-11D0-9EFC-00A0C911004F}:00000001" Visibility="auto" FullScreen="hide" Dock="top" Row="1" FloatRectangle="0,0,846,24" DockRectangle="0,0,846,24"/>
 					<modify_toolbar Menu="{D309F791-903F-11D0-9EFC-00A0C911004F}:0000000d" Visibility="show" FullScreen="hide" Dock="top" Row="1" FloatRectangle="0,0,96,24" DockRectangle="1,0,96,24"/>
-					<modify_toolbar Menu="{B85579AA-8BE0-4C4F-A850-90902B317571}:00004000" Visibility="auto" FullScreen="hide" Dock="top" Row="2" FloatRectangle="0,0,403,24" DockRectangle="35,0,403,24"/>
-					<modify_toolbar Menu="{9ADF33D0-8AAD-11D0-B606-00A0C922E851}:0000000e" Visibility="auto" FullScreen="hide" Dock="top" Row="2" FloatRectangle="0,0,418,24" DockRectangle="36,0,418,24"/>
+					<modify_toolbar Menu="{B85579AA-8BE0-4C4F-A850-90902B317571}:00004000" Visibility="hide" FullScreen="hide" Dock="top" Row="2" FloatRectangle="0,0,403,24" DockRectangle="37,0,403,24"/>
+					<modify_toolbar Menu="{9ADF33D0-8AAD-11D0-B606-00A0C922E851}:0000000e" Visibility="hide" FullScreen="hide" Dock="top" Row="2" FloatRectangle="0,0,418,24" DockRectangle="38,0,418,24"/>
 					<modify_toolbar Menu="{D7E8C5E1-BDB8-11D0-9C88-0000F8040A53}:00001077" Visibility="auto" FullScreen="hide" Dock="top" Row="2" FloatRectangle="0,0,317,24" DockRectangle="33,0,317,24"/>
 					<modify_toolbar Menu="{E8B06F42-6D01-11D2-AA7D-00C04F990343}:00000001" Visibility="auto" FullScreen="hide" Dock="top" Row="2" FloatRectangle="0,0,240,24" DockRectangle="15,0,240,24"/>
 					<modify_toolbar Menu="{E148F049-C570-4F55-84A6-6DA870AF229E}:00001838" Visibility="auto" FullScreen="hide" Dock="top" Row="2" FloatRectangle="0,0,193,24" DockRectangle="22,0,193,24"/>
 					<modify_toolbar Menu="{CB26E292-901A-419C-B79D-49BD45C43929}:00002710" Visibility="auto" FullScreen="hide" Dock="top" Row="2" FloatRectangle="0,0,271,24" DockRectangle="33,0,271,24"/>
 					<modify_toolbar Menu="{722BFC2E-B7E1-49CD-83C4-9EF342D46B72}:00000005" Visibility="show" FullScreen="hide" Dock="top" Row="1" FloatRectangle="0,0,133,24" DockRectangle="2,0,133,24"/>
+					<modify_toolbar Menu="{580373B2-1046-48BC-ACDA-F2C41C3C2857}:00001030" Visibility="hide" FullScreen="hide" Dock="top" Row="2" FloatRectangle="0,0,245,24" DockRectangle="29,0,245,24"/>
 					<modify_toolbar Menu="{000D7B18-CDE4-49F0-B194-FE3E25BBF096}:0000007e" Name="GitExtensions" Visibility="hide" FullScreen="hide" Dock="top" Row="4" FloatRectangle="0,0,23,24" DockRectangle="0,0,23,24"/>
 					<modify_toolbar Menu="{439E859A-722D-458A-8EF8-B9FC71D97A97}:00001000" Visibility="auto" FullScreen="hide" Dock="top" Row="2" FloatRectangle="0,0,390,24" DockRectangle="39,0,390,24"/>
 					<modify_toolbar Menu="{439E859A-722D-458A-8EF8-B9FC71D97A97}:00001001" Visibility="hide" FullScreen="hide" Dock="top" Row="2" FloatRectangle="0,0,155,24" DockRectangle="29,0,155,24"/>
@@ -1788,23 +1845,23 @@
 			<PropertyValue name="DeletedItem3.Tab">General</PropertyValue>
 			<PropertyValue name="DeletedItem4.ID">Pointer</PropertyValue>
 			<PropertyValue name="DeletedItem4.Name">Pointer</PropertyValue>
-			<PropertyValue name="DeletedItem4.TabID">XAML Common</PropertyValue>
+			<PropertyValue name="DeletedItem4.TabID">Common WPF Controls</PropertyValue>
 			<PropertyValue name="DeletedItem4.Tab">Common WPF Controls</PropertyValue>
 			<PropertyValue name="DeletedItem5.ID">Pointer</PropertyValue>
 			<PropertyValue name="DeletedItem5.Name">Pointer</PropertyValue>
-			<PropertyValue name="DeletedItem5.TabID">XAML Controls</PropertyValue>
+			<PropertyValue name="DeletedItem5.TabID">All WPF Controls</PropertyValue>
 			<PropertyValue name="DeletedItem5.Tab">All WPF Controls</PropertyValue>
 			<PropertyValue name="DeletedItem6.ID">Pointer</PropertyValue>
 			<PropertyValue name="DeletedItem6.Name">Pointer</PropertyValue>
-			<PropertyValue name="DeletedItem6.TabID">Silverlight Common</PropertyValue>
+			<PropertyValue name="DeletedItem6.TabID">Common Silverlight Controls</PropertyValue>
 			<PropertyValue name="DeletedItem6.Tab">Common Silverlight Controls</PropertyValue>
 			<PropertyValue name="DeletedItem7.ID">Pointer</PropertyValue>
 			<PropertyValue name="DeletedItem7.Name">Pointer</PropertyValue>
-			<PropertyValue name="DeletedItem7.TabID">Silverlight Controls</PropertyValue>
+			<PropertyValue name="DeletedItem7.TabID">All Silverlight Controls</PropertyValue>
 			<PropertyValue name="DeletedItem7.Tab">All Silverlight Controls</PropertyValue>
 			<PropertyValue name="DeletedItem8.ID">Pointer</PropertyValue>
 			<PropertyValue name="DeletedItem8.Name">Pointer</PropertyValue>
-			<PropertyValue name="DeletedItem8.TabID">MSVSTORibbonV10</PropertyValue>
+			<PropertyValue name="DeletedItem8.TabID">Office Ribbon Controls</PropertyValue>
 			<PropertyValue name="DeletedItem8.Tab">Office Ribbon Controls</PropertyValue>
 			<PropertyValue name="DeletedItem9.ID">Pointer</PropertyValue>
 			<PropertyValue name="DeletedItem9.Name">Pointer</PropertyValue>
@@ -2045,7 +2102,7 @@
 		</Category>
 		<Category name="Environment_WindowLayout" Category="{eb4ba109-a9db-4445-bd09-e7604bcdce84}" Package="{DA9FB551-C724-11d0-AE1F-00A0C90FFFC3}" RegisteredName="Environment_WindowLayout" PackageName="Visual Studio Environment Package">
 			<PropertyValue name="Version">7</PropertyValue>
-			<PropertyValue name="WindowProfileNames">Design|Debug|NoToolWin|Design-FullScreen</PropertyValue>
+			<PropertyValue name="WindowProfileNames">Design|NoToolWin|Debug|Design-FullScreen</PropertyValue>
 			<Design>
 				<WindowProfile xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:wm="clr-namespace:Microsoft.VisualStudio.Platform.WindowManagement;assembly=Microsoft.VisualStudio.Platform.WindowManagement" Name="Design" xmlns="clr-namespace:Microsoft.VisualStudio.PlatformUI.Shell;assembly=Microsoft.VisualStudio.Shell.ViewManager">
 					<MainSite IsVisible="True">
@@ -2102,7 +2159,7 @@
 									<DockGroup Orientation="Vertical" IsVisible="True" DockedHeight="*" DockedWidth="*">
 										<DocumentGroupContainer IsVisible="True" DockedHeight="*" DockedWidth="*" DockRestriction="DocumentGroup, Document">
 											<DocumentGroup IsVisible="True">
-												<wm:ToolWindowView ForceCreate="DontForceCreate" Name="ST:0:0:{387cb18d-6153-4156-9257-9ac3f9207bbe}" IsSelected="True" IsVisible="True" FloatingTop="76.8" FloatingLeft="102.4" FloatingHeight="537.6" FloatingWidth="716.8"/>
+												<wm:ToolWindowView ForceCreate="DontForceCreate" Name="ST:0:0:{387cb18d-6153-4156-9257-9ac3f9207bbe}" FloatingTop="76.8" FloatingLeft="102.4" FloatingHeight="537.6" FloatingWidth="716.8"/>
 												<wm:ToolWindowView ForceCreate="ForceCreate" Name="ST:0:0:{c79b74ff-f1d7-4c94-aefa-4d22bfe1b1f9}" FloatingTop="76.8" FloatingLeft="102.4" FloatingHeight="537.6" FloatingWidth="716.8"/>
 												<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="DontForceCreate" Name="ST:0:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}" FloatingTop="76.8" FloatingLeft="102.4" FloatingHeight="537.6" FloatingWidth="716.8"/>
 												<wm:ToolWindowView ContextVisibilityEnabled="False" Name="ST:0:0:{46c87f81-5a06-43a8-9e25-85d33bac49f8}" FloatingTop="76.8" FloatingLeft="102.4" FloatingHeight="537.6" FloatingWidth="716.8"/>
@@ -2164,7 +2221,7 @@
 											<wm:ToolWindowView ForceCreate="ForceCreate" Name="ST:0:0:{38ed9834-0c97-445b-bd1d-f78f3e08afac}" DockedWidth="262.8" FloatingTop="100" FloatingLeft="100" FloatingHeight="426" FloatingWidth="286"/>
 											<wm:ToolWindowView ForceCreate="ForceCreate" Name="ST:0:0:{402dc223-d700-4029-866f-acee803f3f0c}" DockedWidth="262.8" FloatingTop="100" FloatingLeft="100" FloatingHeight="426" FloatingWidth="286"/>
 											<wm:ToolWindowView ForceCreate="ForceCreate" Name="ST:0:0:{dd1ddd20-d59b-11da-a94d-0800200c9a66}" DockedWidth="262.8" FloatingTop="200" FloatingLeft="200" FloatingHeight="700" FloatingWidth="900"/>
-											<wm:ToolWindowView OnTopWhenLastInContext="False" ForceCreate="ForceCreate" IconIndex="1" IconResourceID="6650" IconResourcePackage="da9fb551-c724-11d0-ae1f-00a0c90fffc3" Name="ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}" DockedWidth="262.8" FloatingTop="400" FloatingLeft="2434" FloatingHeight="384" FloatingWidth="205"/>
+											<wm:ToolWindowView OnTopWhenLastInContext="False" ForceCreate="ForceCreate" IconIndex="1" IconResourceID="6650" IconResourcePackage="da9fb551-c724-11d0-ae1f-00a0c90fffc3" Name="ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}" IsVisible="True" DockedWidth="262.8" FloatingTop="400" FloatingLeft="2434" FloatingHeight="384" FloatingWidth="205"/>
 											<wm:ToolWindowView OnTopWhenLastInContext="False" ForceCreate="ForceCreate" IconIndex="2" IconResourceID="301" IconResourcePackage="cf6a5c16-83b0-4d04-b702-195c35c6e887" Name="ST:0:0:{81b8bf68-15eb-4fbd-85e7-455b191f316b}" IsVisible="True" DockedWidth="262.8" FloatingTop="100" FloatingLeft="100" FloatingHeight="450" FloatingWidth="450"/>
 											<wm:ToolWindowView ForceCreate="ForceCreate" IconIndex="2" IconResourceID="6650" IconResourcePackage="da9fb551-c724-11d0-ae1f-00a0c90fffc3" Name="ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}" IsSelected="True" IsVisible="True" DockedWidth="262.8" FloatingTop="76.8" FloatingLeft="819.2" FloatingHeight="537.6" FloatingWidth="204.8"/>
 											<wm:ToolWindowView ForceCreate="ForceCreate" IconIndex="0" IconResourceID="2" IconResourcePackage="8e01ec3e-2928-4aa5-b720-e28c163818e6" Name="ST:0:0:{131369f2-062d-44a2-8671-91ff31efb4f4}" IsVisible="True" DockedWidth="262.8" FloatingTop="76.8" FloatingLeft="819.2" FloatingHeight="537.6" FloatingWidth="204.8"/>
@@ -2270,168 +2327,6 @@
 					</FloatSite>
 				</WindowProfile>
 			</Design>
-			<Debug>
-				<WindowProfile xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:wm="clr-namespace:Microsoft.VisualStudio.Platform.WindowManagement;assembly=Microsoft.VisualStudio.Platform.WindowManagement" Name="Debug" xmlns="clr-namespace:Microsoft.VisualStudio.PlatformUI.Shell;assembly=Microsoft.VisualStudio.Shell.ViewManager">
-					<MainSite IsVisible="True">
-						<AutoHideRoot IsVisible="True" DockedHeight="*" DockedWidth="*">
-							<AutoHideChannel Orientation="Vertical"/>
-							<AutoHideChannel Dock="Right" Orientation="Vertical"/>
-							<AutoHideChannel Dock="Top"/>
-							<AutoHideChannel Dock="Bottom"/>
-							<DockRoot IsVisible="True" DockedHeight="*" DockedWidth="*">
-								<DockGroup IsVisible="True" DockedHeight="*" DockedWidth="*">
-									<TabGroup DockedHeight="652.8" DockedWidth="174.08">
-										<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="ForceCreate" Name="ST:0:0:{74946827-37a0-11d2-a273-00c04f8ef4ff}" DockedHeight="652.8" DockedWidth="174.08" FloatingTop="76.8" FloatingLeft="102.4" FloatingHeight="537.6" FloatingWidth="204.8"/>
-										<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="ForceCreate" Name="ST:0:0:{099ca9ea-0ae4-4e31-a7e4-fe09bd1715cc}" DockedHeight="652.8" DockedWidth="174.08" FloatingTop="76.8" FloatingLeft="102.4" FloatingHeight="537.6" FloatingWidth="204.8"/>
-										<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="ForceCreate" Name="ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}" DockedHeight="652.8" DockedWidth="174.08" FloatingTop="76.8" FloatingLeft="102.4" FloatingHeight="537.6" FloatingWidth="204.8"/>
-										<wm:ToolWindowView Name="ST:0:0:{9f3ec988-1174-4746-a66a-3969715d1fc7}" DockedHeight="652.8" DockedWidth="174.08" FloatingTop="76.8" FloatingLeft="102.4" FloatingHeight="537.6" FloatingWidth="204.8"/>
-										<wm:ToolWindowView ForceCreate="ForceCreate" Name="ST:0:0:{5b6781c0-e99d-11d0-9954-00a0c91bc8e5}" DockedHeight="652.8" DockedWidth="174.08" FloatingTop="76.8" FloatingLeft="102.4" FloatingHeight="537.6" FloatingWidth="204.8"/>
-										<wm:ToolWindowView OnTopWhenLastInContext="False" ForceCreate="ForceCreate" Name="ST:0:0:{25f7e850-ffa1-11d0-b63f-00a0c922e851}" DockedHeight="652.8" DockedWidth="174.08" FloatingTop="76.8" FloatingLeft="102.4" FloatingHeight="537.6" FloatingWidth="204.8"/>
-									</TabGroup>
-									<DockGroup Orientation="Vertical" IsVisible="True" DockedHeight="*" DockedWidth="*">
-										<TabGroup DockedHeight="153.6" DockedWidth="819.2">
-											<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="ForceCreate" Name="ST:1:0:{350f9856-a72b-11d2-8ad0-00c04f79e479}" DockedHeight="153.6" DockedWidth="819.2" FloatingTop="76.8" FloatingLeft="204.8" FloatingHeight="153.6" FloatingWidth="614.4"/>
-											<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="ForceCreate" Name="ST:2:0:{350f9856-a72b-11d2-8ad0-00c04f79e479}" DockedHeight="153.6" DockedWidth="819.2" FloatingTop="76.8" FloatingLeft="204.8" FloatingHeight="153.6" FloatingWidth="614.4"/>
-											<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="ForceCreate" Name="ST:3:0:{350f9856-a72b-11d2-8ad0-00c04f79e479}" DockedHeight="153.6" DockedWidth="819.2" FloatingTop="76.8" FloatingLeft="204.8" FloatingHeight="153.6" FloatingWidth="614.4"/>
-											<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="ForceCreate" Name="ST:4:0:{350f9856-a72b-11d2-8ad0-00c04f79e479}" DockedHeight="153.6" DockedWidth="819.2" FloatingTop="76.8" FloatingLeft="204.8" FloatingHeight="153.6" FloatingWidth="614.4"/>
-											<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="ForceCreate" Name="ST:0:0:{ca4b8ff5-bfc7-11d2-9929-00c04f68fdaf}" DockedHeight="153.6" DockedWidth="819.2" FloatingTop="76.8" FloatingLeft="204.8" FloatingHeight="153.6" FloatingWidth="614.4"/>
-											<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="ForceCreate" Name="ST:0:0:{51c76317-9037-4cf2-a20a-6206fd30b4a1}" DockedHeight="153.6" DockedWidth="819.2" FloatingTop="76.8" FloatingLeft="204.8" FloatingHeight="153.6" FloatingWidth="614.4"/>
-											<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="ForceCreate" Name="ST:0:0:{e62ce6a0-b439-11d0-a79d-00a0c9110051}" DockedHeight="153.6" DockedWidth="819.2" FloatingTop="76.8" FloatingLeft="204.8" FloatingHeight="153.6" FloatingWidth="614.4"/>
-											<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="ForceCreate" Name="ST:0:0:{37aba9be-445a-11d3-9949-00c04f68fd0a}" DockedHeight="153.6" DockedWidth="819.2" FloatingTop="76.8" FloatingLeft="204.8" FloatingHeight="153.6" FloatingWidth="614.4"/>
-										</TabGroup>
-										<DocumentGroupContainer IsVisible="True" DockedHeight="*" DockedWidth="*" DockRestriction="DocumentGroup, Document">
-											<DocumentGroup>
-												<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="DontForceCreate" Name="ST:0:0:{387cb18d-6153-4156-9257-9ac3f9207bbe}" FloatingTop="76.8" FloatingLeft="102.4" FloatingHeight="537.6" FloatingWidth="716.8"/>
-												<wm:ToolWindowView ForceCreate="ForceCreate" Name="ST:0:0:{c79b74ff-f1d7-4c94-aefa-4d22bfe1b1f9}" FloatingTop="76.8" FloatingLeft="102.4" FloatingHeight="537.6" FloatingWidth="716.8"/>
-												<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="DontForceCreate" Name="ST:0:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}" FloatingTop="76.8" FloatingLeft="102.4" FloatingHeight="537.6" FloatingWidth="716.8"/>
-												<wm:ToolWindowView ContextVisibilityEnabled="False" Name="ST:0:0:{46c87f81-5a06-43a8-9e25-85d33bac49f8}" FloatingTop="76.8" FloatingLeft="102.4" FloatingHeight="537.6" FloatingWidth="716.8"/>
-												<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="ForceCreate" Name="ST:0:0:{269a02dc-6af8-11d3-bdc4-00c04f688e50}" FloatingTop="76.8" FloatingLeft="102.4" FloatingHeight="384" FloatingWidth="512"/>
-												<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="ForceCreate" Name="ST:0:0:{99b8fa2f-ab90-4f57-9c32-949f146f1914}" FloatingTop="76.8" FloatingLeft="102.4" FloatingHeight="537.6" FloatingWidth="716.8"/>
-												<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="ForceCreate" Name="ST:0:0:{cf577b8c-4134-11d2-83e5-00c04f9902c1}" FloatingTop="192" FloatingLeft="327.68" FloatingHeight="384" FloatingWidth="358.4"/>
-												<wm:ToolWindowView ForceCreate="DontForceCreate" Name="ST:0:0:{1820bae5-c385-4492-9de5-e35c9cf17b18}" FloatingTop="100" FloatingLeft="100" FloatingHeight="450" FloatingWidth="450"/>
-												<ViewBookmark Name="D:0:0:{69205667-52D1-48B4-A469-5E6AA672C791}|Yelp\Tests\Metis.Yelp.Tests\Metis.Yelp.Tests.csproj|d:\prabir\documents\projects\thuzi\metis\src\yelp\tests\metis.yelp.tests\yelpapp\processresponse\givenafluenhttpresponsewitherrorstatusandresponseexceptionthen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}" ViewBookmarkType="DocumentWell"/>
-											</DocumentGroup>
-										</DocumentGroupContainer>
-										<DockGroup IsVisible="True" DockedHeight="119" DockedWidth="512">
-											<TabGroup IsVisible="True" DockedHeight="119" DockedWidth="512">
-												<wm:ToolWindowView ForceCreate="ForceCreate" Name="ST:0:0:{3822e751-eb69-4b0e-b301-595a9e4c74d5}" DockedHeight="119" DockedWidth="512" FloatingTop="100" FloatingLeft="100" FloatingHeight="450" FloatingWidth="450"/>
-												<wm:ToolWindowView OnTopWhenLastInContext="False" ForceCreate="ForceCreate" IconIndex="5" IconResourceID="5123" IconResourcePackage="c9dd4a57-47fb-11d2-83e7-00c04f9902c1" Name="ST:0:0:{f2e84780-2af1-11d1-a7fa-00a0c9110051}" IsVisible="True" DockedHeight="119" DockedWidth="512" FloatingTop="576" FloatingLeft="51.2" FloatingHeight="192" FloatingWidth="460.8"/>
-												<wm:ToolWindowView OnTopWhenLastInContext="False" ForceCreate="ForceCreate" IconIndex="4" IconResourceID="5123" IconResourcePackage="c9dd4a57-47fb-11d2-83e7-00c04f9902c1" Name="ST:0:0:{4a18f9d0-b838-11d0-93eb-00a0c90f2734}" IsVisible="True" DockedHeight="119" DockedWidth="512" FloatingTop="576" FloatingLeft="51.2" FloatingHeight="192" FloatingWidth="460.8"/>
-												<wm:ToolWindowView ForceCreate="ForceCreate" IconIndex="9" IconResourceID="5123" IconResourcePackage="c9dd4a57-47fb-11d2-83e7-00c04f9902c1" Name="ST:1:0:{90243340-bd7a-11d0-93ef-00a0c90f2734}" IsSelected="True" IsVisible="True" DockedHeight="119" DockedWidth="512" FloatingTop="576" FloatingLeft="51.2" FloatingHeight="192" FloatingWidth="614.4"/>
-												<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="ForceCreate" Name="ST:2:0:{90243340-bd7a-11d0-93ef-00a0c90f2734}" DockedHeight="119" DockedWidth="512" FloatingTop="576" FloatingLeft="51.2" FloatingHeight="192" FloatingWidth="614.4"/>
-												<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="ForceCreate" Name="ST:3:0:{90243340-bd7a-11d0-93ef-00a0c90f2734}" DockedHeight="119" DockedWidth="512" FloatingTop="576" FloatingLeft="51.2" FloatingHeight="192" FloatingWidth="614.4"/>
-												<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="ForceCreate" Name="ST:4:0:{90243340-bd7a-11d0-93ef-00a0c90f2734}" DockedHeight="119" DockedWidth="512" FloatingTop="576" FloatingLeft="51.2" FloatingHeight="192" FloatingWidth="614.4"/>
-												<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="ForceCreate" Name="ST:0:0:{0f887920-c2b6-11d2-9375-0080c747d9a0}" DockedHeight="119" DockedWidth="512" FloatingTop="576" FloatingLeft="51.2" FloatingHeight="192" FloatingWidth="614.4"/>
-												<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="ForceCreate" Name="ST:0:0:{0f887921-c2b6-11d2-9375-0080c747d9a0}" DockedHeight="119" DockedWidth="512" FloatingTop="576" FloatingLeft="51.2" FloatingHeight="192" FloatingWidth="614.4"/>
-												<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="ForceCreate" Name="ST:0:0:{68487888-204a-11d3-87eb-00c04f7971a5}" DockedHeight="119" DockedWidth="512" FloatingTop="576" FloatingLeft="51.2" FloatingHeight="192" FloatingWidth="614.4"/>
-												<wm:ToolWindowView ContextVisibilityEnabled="False" Name="ST:0:0:{73f6dd5b-437e-11d3-b88e-00c04f79f802}" DockedHeight="119" DockedWidth="512" FloatingTop="576" FloatingLeft="51.2" FloatingHeight="192" FloatingWidth="614.4"/>
-											</TabGroup>
-											<TabGroup DockedHeight="119" DockedWidth="100">
-												<ViewBookmark Name="ST:0:0:{53024d34-0ef5-11d3-87e0-00c04f7971a5}" DockedHeight="119" DockedWidth="100"/>
-												<ViewBookmark Name="ST:0:0:{e830ec50-c2b5-11d2-9375-0080c747d9a0}" DockedHeight="119" DockedWidth="100"/>
-												<ViewBookmark Name="ST:0:0:{cf2ddc32-8cad-11d2-9302-005345000000}" DockedHeight="119" DockedWidth="100"/>
-											</TabGroup>
-											<TabGroup IsVisible="True" DockedHeight="119" DockedWidth="512">
-												<wm:ToolWindowView ForceCreate="ForceCreate" Name="ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}" DockedHeight="119" DockedWidth="512" FloatingTop="100" FloatingLeft="100" FloatingHeight="450" FloatingWidth="450"/>
-												<wm:ToolWindowView ForceCreate="ForceCreate" Name="ST:0:0:{cdbdee54-b399-484b-b763-db2c3393d646}" DockedHeight="119" DockedWidth="512" FloatingTop="100" FloatingLeft="100" FloatingHeight="450" FloatingWidth="450"/>
-												<wm:ToolWindowView OnTopWhenLastInContext="False" ForceCreate="ForceCreate" IconIndex="3" IconResourceID="5123" IconResourcePackage="c9dd4a57-47fb-11d2-83e7-00c04f9902c1" Name="ST:0:0:{0504ff91-9d61-11d0-a794-00a0c9110051}" IsVisible="True" DockedHeight="119" DockedWidth="512" FloatingTop="576" FloatingLeft="409.6" FloatingHeight="192" FloatingWidth="460.8"/>
-												<wm:ToolWindowView Name="ST:0:0:{637792aa-f332-4bb5-be6c-066b0e88eced}" DockedHeight="119" DockedWidth="512" FloatingTop="576" FloatingLeft="409.6" FloatingHeight="192" FloatingWidth="460.8"/>
-												<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="ForceCreate" IconIndex="2" IconResourceID="5123" IconResourcePackage="c9dd4a57-47fb-11d2-83e7-00c04f9902c1" Name="ST:0:0:{be4d7042-ba3f-11d2-840e-00c04f9902c1}" IsVisible="True" DockedHeight="119" DockedWidth="512" FloatingTop="576" FloatingLeft="409.6" FloatingHeight="192" FloatingWidth="460.8"/>
-												<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="ForceCreate" IconIndex="10" IconResourceID="6650" IconResourcePackage="da9fb551-c724-11d0-ae1f-00a0c90fffc3" Name="ST:0:0:{28836128-fc2c-11d2-a433-00c04f72d18a}" IsVisible="True" DockedHeight="119" DockedWidth="512" FloatingTop="576" FloatingLeft="409.6" FloatingHeight="192" FloatingWidth="460.8"/>
-												<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="ForceCreate" IconIndex="16" IconResourceID="6650" IconResourcePackage="da9fb551-c724-11d0-ae1f-00a0c90fffc3" Name="ST:0:0:{ecb7191a-597b-41f5-9843-03a4cf275dde}" IsVisible="True" DockedHeight="119" DockedWidth="512" FloatingTop="576" FloatingLeft="409.6" FloatingHeight="192" FloatingWidth="460.8"/>
-												<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="ForceCreate" Name="ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}" IsVisible="True" DockedHeight="119" DockedWidth="512" FloatingTop="576" FloatingLeft="409.6" FloatingHeight="192" FloatingWidth="460.8"/>
-												<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="ForceCreate" Name="ST:0:0:{588470cc-84f8-4a57-9ac4-86bca0625ff4}" DockedHeight="119" DockedWidth="512" FloatingTop="576" FloatingLeft="409.6" FloatingHeight="192" FloatingWidth="460.8"/>
-												<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="ForceCreate" IconIndex="15" IconResourceID="6650" IconResourcePackage="4a9b7e50-aa16-11d0-a8c5-00a0c921a4d2" Name="ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}" IsSelected="True" IsVisible="True" DockedHeight="119" DockedWidth="512" FloatingTop="576" FloatingLeft="409.6" FloatingHeight="192" FloatingWidth="460.8"/>
-												<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="ForceCreate" Name="ST:0:0:{4a9b7e51-aa16-11d0-a8c5-00a0c921a4d2}" DockedHeight="119" DockedWidth="512" FloatingTop="576" FloatingLeft="409.6" FloatingHeight="192" FloatingWidth="460.8"/>
-												<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="ForceCreate" Name="ST:0:0:{5415ea3a-d813-4948-b51e-562082ce0887}" DockedHeight="119" DockedWidth="512" FloatingTop="576" FloatingLeft="409.6" FloatingHeight="192" FloatingWidth="460.8"/>
-												<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="ForceCreate" Name="ST:0:0:{a0c5197d-0ac7-4b63-97cd-8872a789d233}" DockedHeight="119" DockedWidth="512" FloatingTop="576" FloatingLeft="409.6" FloatingHeight="192" FloatingWidth="460.8"/>
-												<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="ForceCreate" Name="ST:0:0:{2456bd12-ecf7-4988-a4a6-67d49173f564}" DockedHeight="119" DockedWidth="512" FloatingTop="576" FloatingLeft="102.4" FloatingHeight="192" FloatingWidth="614.4"/>
-												<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="DontForceCreate" Name="ST:0:0:{2456bd12-ecf7-4988-a4a6-67d49173f565}" DockedHeight="119" DockedWidth="512" FloatingTop="576" FloatingLeft="102.4" FloatingHeight="192" FloatingWidth="614.4"/>
-												<wm:ToolWindowView ForceCreate="ForceCreate" Name="ST:0:0:{905da7d1-18fd-4a46-8d0f-a5ff58ada9de}" DockedHeight="119" DockedWidth="512" FloatingTop="576" FloatingLeft="102.4" FloatingHeight="192" FloatingWidth="614.4"/>
-												<wm:ToolWindowView ForceCreate="ForceCreate" Name="ST:0:0:{519e8a32-1c95-4a42-956f-2cee2f28eb0f}" DockedHeight="119" DockedWidth="512" FloatingTop="576" FloatingLeft="102.4" FloatingHeight="192" FloatingWidth="614.4"/>
-												<wm:ToolWindowView ForceCreate="ForceCreate" Name="ST:0:0:{92547016-2bd0-4dfe-bd4f-5b52bdce0037}" DockedHeight="119" DockedWidth="512" FloatingTop="576" FloatingLeft="102.4" FloatingHeight="192" FloatingWidth="614.4"/>
-												<wm:ToolWindowView Name="ST:0:0:{b869198c-f673-46d2-83ae-64f515277716}" DockedHeight="119" DockedWidth="512" FloatingTop="576" FloatingLeft="102.4" FloatingHeight="192" FloatingWidth="460.8"/>
-												<wm:ToolWindowView Name="ST:0:0:{b8399b49-7330-487b-9235-7d2e969d0a79}" DockedHeight="119" DockedWidth="512" FloatingTop="576" FloatingLeft="102.4" FloatingHeight="192" FloatingWidth="460.8"/>
-												<wm:ToolWindowView ForceCreate="ForceCreate" Name="ST:0:0:{778b5376-ad77-4751-acdc-f3d18343f8dd}" DockedHeight="119" DockedWidth="512" FloatingTop="576" FloatingLeft="102.4" FloatingHeight="192" FloatingWidth="460.8"/>
-											</TabGroup>
-										</DockGroup>
-									</DockGroup>
-									<TabGroup IsVisible="True" DockedHeight="652.8" DockedWidth="277.08">
-										<wm:ToolWindowView ForceCreate="ForceCreate" Name="ST:0:0:{d58d3d87-862e-47e9-9b82-d4c6f9186d92}" DockedHeight="652.8" DockedWidth="277.08" FloatingTop="100" FloatingLeft="100" FloatingHeight="450" FloatingWidth="450"/>
-										<wm:ToolWindowView ForceCreate="ForceCreate" Name="ST:0:0:{a34b1c5d-6d37-4a0c-a8b0-99f8e8158b48}" DockedHeight="652.8" DockedWidth="277.08" FloatingTop="100" FloatingLeft="100" FloatingHeight="450" FloatingWidth="450"/>
-										<wm:ToolWindowView ForceCreate="ForceCreate" Name="ST:0:0:{1cba9826-3184-4799-a184-784e41b56398}" DockedHeight="652.8" DockedWidth="277.08" FloatingTop="100" FloatingLeft="100" FloatingHeight="426" FloatingWidth="286"/>
-										<wm:ToolWindowView ForceCreate="ForceCreate" Name="ST:0:0:{38ed9834-0c97-445b-bd1d-f78f3e08afac}" DockedHeight="652.8" DockedWidth="277.08" FloatingTop="100" FloatingLeft="100" FloatingHeight="426" FloatingWidth="286"/>
-										<wm:ToolWindowView ForceCreate="ForceCreate" Name="ST:0:0:{402dc223-d700-4029-866f-acee803f3f0c}" DockedHeight="652.8" DockedWidth="277.08" FloatingTop="100" FloatingLeft="100" FloatingHeight="426" FloatingWidth="286"/>
-										<wm:ToolWindowView ForceCreate="ForceCreate" Name="ST:0:0:{dd1ddd20-d59b-11da-a94d-0800200c9a66}" DockedHeight="652.8" DockedWidth="277.08" FloatingTop="200" FloatingLeft="200" FloatingHeight="700" FloatingWidth="900"/>
-										<wm:ToolWindowView ForceCreate="ForceCreate" Name="ST:0:0:{81b8bf68-15eb-4fbd-85e7-455b191f316b}" IsVisible="True" DockedHeight="652.8" DockedWidth="277.08" FloatingTop="398" FloatingLeft="1066"/>
-										<wm:ToolWindowView ForceCreate="ForceCreate" IconIndex="0" IconResourceID="301" IconResourcePackage="eaafbf5a-96a0-4c7f-9edb-00a9caa8e754" Name="ST:0:0:{ed485b08-5acf-4ce9-8e13-699174ea0201}" IsVisible="True" DockedHeight="652.8" DockedWidth="277.08" FloatingTop="76.8" FloatingLeft="819.2" FloatingHeight="537.6" FloatingWidth="204.8"/>
-										<wm:ToolWindowView ForceCreate="ForceCreate" Name="ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}" IsSelected="True" IsVisible="True" DockedHeight="652.8" DockedWidth="277.08" FloatingTop="76.8" FloatingLeft="819.2" FloatingHeight="537.6" FloatingWidth="204.8"/>
-										<wm:ToolWindowView ForceCreate="ForceCreate" IconIndex="0" IconResourceID="2" IconResourcePackage="8e01ec3e-2928-4aa5-b720-e28c163818e6" Name="ST:0:0:{131369f2-062d-44a2-8671-91ff31efb4f4}" IsVisible="True" DockedHeight="652.8" DockedWidth="277.08" FloatingTop="76.8" FloatingLeft="819.2" FloatingHeight="537.6" FloatingWidth="204.8"/>
-										<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="ForceCreate" Name="ST:0:0:{c9c0ae26-aa77-11d2-b3f0-0000f87570ee}" DockedHeight="652.8" DockedWidth="277.08" FloatingTop="76.8" FloatingLeft="819.2" FloatingHeight="537.6" FloatingWidth="204.8"/>
-										<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="ForceCreate" Name="ST:0:0:{de1fc918-f32e-4dd7-a915-1792a051f26b}" DockedHeight="652.8" DockedWidth="277.08" FloatingTop="76.8" FloatingLeft="819.2" FloatingHeight="537.6" FloatingWidth="204.8"/>
-										<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="ForceCreate" Name="ST:0:0:{873151d0-cf2e-48cc-b4bf-ad0394f6a3c3}" DockedHeight="652.8" DockedWidth="277.08" FloatingTop="76.8" FloatingLeft="819.2" FloatingHeight="537.6" FloatingWidth="204.8"/>
-										<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="ForceCreate" Name="ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}" DockedHeight="652.8" DockedWidth="277.08" FloatingTop="76.8" FloatingLeft="819.2" FloatingHeight="537.6" FloatingWidth="204.8"/>
-										<wm:ToolWindowView ContextVisibilityEnabled="False" Name="ST:0:0:{ecdd9ee0-ac6b-11d0-89f9-00a0c9110055}" DockedHeight="652.8" DockedWidth="277.08" FloatingTop="76.8" FloatingLeft="819.2" FloatingHeight="537.6" FloatingWidth="204.8"/>
-										<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="ForceCreate" Name="ST:0:0:{2d7728c2-de0a-45b5-99aa-89b609dfde73}" DockedHeight="652.8" DockedWidth="277.08" FloatingTop="76.8" FloatingLeft="819.2" FloatingHeight="537.6" FloatingWidth="204.8"/>
-										<wm:ToolWindowView ForceCreate="ForceCreate" Name="ST:0:0:{3addf8e2-81cc-41a0-9785-dbd2d86064bd}" DockedHeight="652.8" DockedWidth="277.08" FloatingTop="76.8" FloatingLeft="819.2" FloatingHeight="537.6" FloatingWidth="204.8"/>
-										<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="ForceCreate" Name="ST:0:0:{0db31cc8-2322-4f59-a610-1fdc8423df77}" DockedHeight="652.8" DockedWidth="277.08" FloatingTop="76.8" FloatingLeft="819.2" FloatingHeight="537.6" FloatingWidth="204.8"/>
-										<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="ForceCreate" Name="ST:0:0:{66dba47c-61df-11d2-aa79-00c04f990343}" DockedHeight="652.8" DockedWidth="277.08" FloatingTop="76.8" FloatingLeft="819.2" FloatingHeight="537.6" FloatingWidth="204.8"/>
-										<wm:ToolWindowView ContextVisibilityEnabled="False" Name="ST:0:0:{4a791147-19e4-11d3-b86b-00c04f79f802}" DockedHeight="652.8" DockedWidth="277.08" FloatingTop="76.8" FloatingLeft="819.2" FloatingHeight="537.6" FloatingWidth="204.8"/>
-										<wm:ToolWindowView ContextVisibilityEnabled="False" Name="ST:0:0:{73f6dd58-437e-11d3-b88e-00c04f79f802}" DockedHeight="652.8" DockedWidth="277.08" FloatingTop="76.8" FloatingLeft="819.2" FloatingHeight="537.6" FloatingWidth="204.8"/>
-										<wm:ToolWindowView ContextVisibilityEnabled="False" Name="ST:0:0:{57dc5d59-11c2-4955-a7b4-d7699d677e93}" DockedHeight="652.8" DockedWidth="277.08" FloatingTop="76.8" FloatingLeft="819.2" FloatingHeight="537.6" FloatingWidth="204.8"/>
-										<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="ForceCreate" Name="ST:0:0:{07cd18b4-3ba1-11d2-890a-0060083196c6}" DockedHeight="652.8" DockedWidth="277.08" FloatingTop="76.8" FloatingLeft="819.2" FloatingHeight="537.6" FloatingWidth="204.8"/>
-									</TabGroup>
-								</DockGroup>
-							</DockRoot>
-						</AutoHideRoot>
-					</MainSite>
-					<FloatSite FloatingTop="153.6" FloatingLeft="204.8" FloatingHeight="76.8" FloatingWidth="337.92">
-						<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="ForceCreate" Name="ST:0:0:{53024d34-0ef5-11d3-87e0-00c04f7971a5}" DockedHeight="100" DockedWidth="100" FloatingTop="153.6" FloatingLeft="204.8" FloatingHeight="76.8" FloatingWidth="337.92"/>
-					</FloatSite>
-					<FloatSite FloatingTop="153.6" FloatingLeft="204.8" FloatingHeight="76.8" FloatingWidth="337.92">
-						<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="ForceCreate" Name="ST:0:0:{e830ec50-c2b5-11d2-9375-0080c747d9a0}" DockedHeight="100" DockedWidth="100" FloatingTop="153.6" FloatingLeft="204.8" FloatingHeight="76.8" FloatingWidth="337.92"/>
-					</FloatSite>
-					<FloatSite FloatingTop="153.6" FloatingLeft="204.8" FloatingHeight="153.6" FloatingWidth="337.92">
-						<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="ForceCreate" Name="ST:0:0:{cf2ddc32-8cad-11d2-9302-005345000000}" DockedHeight="100" DockedWidth="100" FloatingTop="153.6" FloatingLeft="204.8" FloatingHeight="153.6" FloatingWidth="337.92"/>
-					</FloatSite>
-					<FloatSite FloatingTop="94" FloatingLeft="0">
-						<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="DontForceCreate" IconIndex="0" IconResourceID="10969" IconResourcePackage="24e33dbf-cadf-4da8-acfe-566366fc8468" Name="ST:0:0:{eccc9e97-fd3b-4c15-af76-ef71a71d8b17}" IsSelected="True" FloatingTop="94" FloatingLeft="0"/>
-					</FloatSite>
-					<FloatSite>
-						<wm:ToolWindowView Name="ST:0:0:{fdffccf2-5f63-404f-86ad-33693f544948}"/>
-					</FloatSite>
-					<FloatSite FloatingTop="100" FloatingLeft="100" FloatingHeight="450" FloatingWidth="450">
-						<wm:ToolWindowView ForceCreate="ForceCreate" Name="ST:0:0:{1ea986c6-340f-42c8-892e-f5779818d569}" FloatingTop="100" FloatingLeft="100" FloatingHeight="450" FloatingWidth="450"/>
-					</FloatSite>
-					<FloatSite FloatingTop="100" FloatingLeft="100" FloatingHeight="450" FloatingWidth="450">
-						<wm:ToolWindowView ForceCreate="ForceCreate" Name="ST:0:0:{ab97f511-6af2-4d27-b468-e4048600093e}" FloatingTop="100" FloatingLeft="100" FloatingHeight="450" FloatingWidth="450"/>
-					</FloatSite>
-					<FloatSite FloatingTop="100" FloatingLeft="100" FloatingHeight="450" FloatingWidth="450">
-						<wm:ToolWindowView ForceCreate="ForceCreate" Name="ST:0:0:{0024bee0-bce9-484f-afa7-b5647916c26b}" FloatingTop="100" FloatingLeft="100" FloatingHeight="450" FloatingWidth="450"/>
-					</FloatSite>
-					<FloatSite FloatingTop="100" FloatingLeft="100" FloatingHeight="450" FloatingWidth="450">
-						<wm:ToolWindowView ForceCreate="ForceCreate" Name="ST:0:0:{e23045c1-967d-4e64-9ed1-d698de65807f}" FloatingTop="100" FloatingLeft="100" FloatingHeight="450" FloatingWidth="450"/>
-					</FloatSite>
-					<FloatSite FloatingTop="100" FloatingLeft="100" FloatingHeight="450" FloatingWidth="450">
-						<wm:ToolWindowView ForceCreate="ForceCreate" Name="ST:0:0:{435ad293-774d-49c6-9e2d-3740c322be52}" FloatingTop="100" FloatingLeft="100" FloatingHeight="450" FloatingWidth="450"/>
-					</FloatSite>
-					<FloatSite FloatingTop="100" FloatingLeft="100" FloatingHeight="450" FloatingWidth="450">
-						<wm:ToolWindowView ForceCreate="ForceCreate" Name="ST:0:0:{ae42d903-e5a3-417d-ba25-3ce77b315eed}" FloatingTop="100" FloatingLeft="100" FloatingHeight="450" FloatingWidth="450"/>
-					</FloatSite>
-					<FloatSite FloatingTop="100" FloatingLeft="100" FloatingHeight="450" FloatingWidth="450">
-						<wm:ToolWindowView ForceCreate="ForceCreate" Name="ST:0:0:{b2bc9916-e3e6-43a8-ad5f-3bdb95f53db5}" FloatingTop="100" FloatingLeft="100" FloatingHeight="450" FloatingWidth="450"/>
-					</FloatSite>
-					<FloatSite FloatingTop="100" FloatingLeft="100" FloatingHeight="450" FloatingWidth="450">
-						<wm:ToolWindowView ForceCreate="ForceCreate" Name="ST:0:0:{532ddd98-f6a6-4a76-a84e-4aea5211f733}" FloatingTop="100" FloatingLeft="100" FloatingHeight="450" FloatingWidth="450"/>
-					</FloatSite>
-					<FloatSite FloatingTop="100" FloatingLeft="100" FloatingHeight="450" FloatingWidth="450">
-						<wm:ToolWindowView ForceCreate="ForceCreate" Name="ST:0:0:{7dd08ad7-93b2-491f-a0e8-ee2bb4e78240}" FloatingTop="100" FloatingLeft="100" FloatingHeight="450" FloatingWidth="450"/>
-					</FloatSite>
-					<FloatSite FloatingTop="100" FloatingLeft="100" FloatingHeight="450" FloatingWidth="450">
-						<wm:ToolWindowView ForceCreate="ForceCreate" Name="ST:0:0:{888c821a-6430-40bd-9bfe-1610b91df560}" FloatingTop="100" FloatingLeft="100" FloatingHeight="450" FloatingWidth="450"/>
-					</FloatSite>
-				</WindowProfile>
-			</Debug>
 			<NoToolWin>
 				<WindowProfile xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:wm="clr-namespace:Microsoft.VisualStudio.Platform.WindowManagement;assembly=Microsoft.VisualStudio.Platform.WindowManagement" Name="NoToolWin" xmlns="clr-namespace:Microsoft.VisualStudio.PlatformUI.Shell;assembly=Microsoft.VisualStudio.Shell.ViewManager">
 					<MainSite IsVisible="True">
@@ -2618,6 +2513,168 @@
 					</FloatSite>
 				</WindowProfile>
 			</NoToolWin>
+			<Debug>
+				<WindowProfile xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:wm="clr-namespace:Microsoft.VisualStudio.Platform.WindowManagement;assembly=Microsoft.VisualStudio.Platform.WindowManagement" Name="Debug" xmlns="clr-namespace:Microsoft.VisualStudio.PlatformUI.Shell;assembly=Microsoft.VisualStudio.Shell.ViewManager">
+					<MainSite IsVisible="True">
+						<AutoHideRoot IsVisible="True" DockedHeight="*" DockedWidth="*">
+							<AutoHideChannel Orientation="Vertical"/>
+							<AutoHideChannel Dock="Right" Orientation="Vertical"/>
+							<AutoHideChannel Dock="Top"/>
+							<AutoHideChannel Dock="Bottom"/>
+							<DockRoot IsVisible="True" DockedHeight="*" DockedWidth="*">
+								<DockGroup IsVisible="True" DockedHeight="*" DockedWidth="*">
+									<TabGroup DockedHeight="652.8" DockedWidth="174.08">
+										<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="ForceCreate" Name="ST:0:0:{74946827-37a0-11d2-a273-00c04f8ef4ff}" DockedHeight="652.8" DockedWidth="174.08" FloatingTop="76.8" FloatingLeft="102.4" FloatingHeight="537.6" FloatingWidth="204.8"/>
+										<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="ForceCreate" Name="ST:0:0:{099ca9ea-0ae4-4e31-a7e4-fe09bd1715cc}" DockedHeight="652.8" DockedWidth="174.08" FloatingTop="76.8" FloatingLeft="102.4" FloatingHeight="537.6" FloatingWidth="204.8"/>
+										<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="ForceCreate" Name="ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}" DockedHeight="652.8" DockedWidth="174.08" FloatingTop="76.8" FloatingLeft="102.4" FloatingHeight="537.6" FloatingWidth="204.8"/>
+										<wm:ToolWindowView Name="ST:0:0:{9f3ec988-1174-4746-a66a-3969715d1fc7}" DockedHeight="652.8" DockedWidth="174.08" FloatingTop="76.8" FloatingLeft="102.4" FloatingHeight="537.6" FloatingWidth="204.8"/>
+										<wm:ToolWindowView ForceCreate="ForceCreate" Name="ST:0:0:{5b6781c0-e99d-11d0-9954-00a0c91bc8e5}" DockedHeight="652.8" DockedWidth="174.08" FloatingTop="76.8" FloatingLeft="102.4" FloatingHeight="537.6" FloatingWidth="204.8"/>
+										<wm:ToolWindowView OnTopWhenLastInContext="False" ForceCreate="ForceCreate" Name="ST:0:0:{25f7e850-ffa1-11d0-b63f-00a0c922e851}" DockedHeight="652.8" DockedWidth="174.08" FloatingTop="76.8" FloatingLeft="102.4" FloatingHeight="537.6" FloatingWidth="204.8"/>
+									</TabGroup>
+									<DockGroup Orientation="Vertical" IsVisible="True" DockedHeight="*" DockedWidth="*">
+										<TabGroup DockedHeight="153.6" DockedWidth="819.2">
+											<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="ForceCreate" Name="ST:1:0:{350f9856-a72b-11d2-8ad0-00c04f79e479}" DockedHeight="153.6" DockedWidth="819.2" FloatingTop="76.8" FloatingLeft="204.8" FloatingHeight="153.6" FloatingWidth="614.4"/>
+											<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="ForceCreate" Name="ST:2:0:{350f9856-a72b-11d2-8ad0-00c04f79e479}" DockedHeight="153.6" DockedWidth="819.2" FloatingTop="76.8" FloatingLeft="204.8" FloatingHeight="153.6" FloatingWidth="614.4"/>
+											<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="ForceCreate" Name="ST:3:0:{350f9856-a72b-11d2-8ad0-00c04f79e479}" DockedHeight="153.6" DockedWidth="819.2" FloatingTop="76.8" FloatingLeft="204.8" FloatingHeight="153.6" FloatingWidth="614.4"/>
+											<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="ForceCreate" Name="ST:4:0:{350f9856-a72b-11d2-8ad0-00c04f79e479}" DockedHeight="153.6" DockedWidth="819.2" FloatingTop="76.8" FloatingLeft="204.8" FloatingHeight="153.6" FloatingWidth="614.4"/>
+											<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="ForceCreate" Name="ST:0:0:{ca4b8ff5-bfc7-11d2-9929-00c04f68fdaf}" DockedHeight="153.6" DockedWidth="819.2" FloatingTop="76.8" FloatingLeft="204.8" FloatingHeight="153.6" FloatingWidth="614.4"/>
+											<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="ForceCreate" Name="ST:0:0:{51c76317-9037-4cf2-a20a-6206fd30b4a1}" DockedHeight="153.6" DockedWidth="819.2" FloatingTop="76.8" FloatingLeft="204.8" FloatingHeight="153.6" FloatingWidth="614.4"/>
+											<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="ForceCreate" Name="ST:0:0:{e62ce6a0-b439-11d0-a79d-00a0c9110051}" DockedHeight="153.6" DockedWidth="819.2" FloatingTop="76.8" FloatingLeft="204.8" FloatingHeight="153.6" FloatingWidth="614.4"/>
+											<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="ForceCreate" Name="ST:0:0:{37aba9be-445a-11d3-9949-00c04f68fd0a}" DockedHeight="153.6" DockedWidth="819.2" FloatingTop="76.8" FloatingLeft="204.8" FloatingHeight="153.6" FloatingWidth="614.4"/>
+										</TabGroup>
+										<DocumentGroupContainer IsVisible="True" DockedHeight="*" DockedWidth="*" DockRestriction="DocumentGroup, Document">
+											<DocumentGroup>
+												<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="DontForceCreate" Name="ST:0:0:{387cb18d-6153-4156-9257-9ac3f9207bbe}" FloatingTop="76.8" FloatingLeft="102.4" FloatingHeight="537.6" FloatingWidth="716.8"/>
+												<wm:ToolWindowView ForceCreate="ForceCreate" Name="ST:0:0:{c79b74ff-f1d7-4c94-aefa-4d22bfe1b1f9}" FloatingTop="76.8" FloatingLeft="102.4" FloatingHeight="537.6" FloatingWidth="716.8"/>
+												<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="DontForceCreate" Name="ST:0:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}" FloatingTop="76.8" FloatingLeft="102.4" FloatingHeight="537.6" FloatingWidth="716.8"/>
+												<wm:ToolWindowView ContextVisibilityEnabled="False" Name="ST:0:0:{46c87f81-5a06-43a8-9e25-85d33bac49f8}" FloatingTop="76.8" FloatingLeft="102.4" FloatingHeight="537.6" FloatingWidth="716.8"/>
+												<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="ForceCreate" Name="ST:0:0:{269a02dc-6af8-11d3-bdc4-00c04f688e50}" FloatingTop="76.8" FloatingLeft="102.4" FloatingHeight="384" FloatingWidth="512"/>
+												<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="ForceCreate" Name="ST:0:0:{99b8fa2f-ab90-4f57-9c32-949f146f1914}" FloatingTop="76.8" FloatingLeft="102.4" FloatingHeight="537.6" FloatingWidth="716.8"/>
+												<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="ForceCreate" Name="ST:0:0:{cf577b8c-4134-11d2-83e5-00c04f9902c1}" FloatingTop="192" FloatingLeft="327.68" FloatingHeight="384" FloatingWidth="358.4"/>
+												<wm:ToolWindowView ForceCreate="DontForceCreate" Name="ST:0:0:{1820bae5-c385-4492-9de5-e35c9cf17b18}" FloatingTop="100" FloatingLeft="100" FloatingHeight="450" FloatingWidth="450"/>
+												<ViewBookmark Name="D:0:0:{69205667-52D1-48B4-A469-5E6AA672C791}|Yelp\Tests\Metis.Yelp.Tests\Metis.Yelp.Tests.csproj|d:\prabir\documents\projects\thuzi\metis\src\yelp\tests\metis.yelp.tests\yelpapp\processresponse\givenafluenhttpresponsewitherrorstatusandresponseexceptionthen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}" ViewBookmarkType="DocumentWell"/>
+											</DocumentGroup>
+										</DocumentGroupContainer>
+										<DockGroup IsVisible="True" DockedHeight="119" DockedWidth="512">
+											<TabGroup IsVisible="True" DockedHeight="119" DockedWidth="512">
+												<wm:ToolWindowView ForceCreate="ForceCreate" Name="ST:0:0:{3822e751-eb69-4b0e-b301-595a9e4c74d5}" DockedHeight="119" DockedWidth="512" FloatingTop="100" FloatingLeft="100" FloatingHeight="450" FloatingWidth="450"/>
+												<wm:ToolWindowView OnTopWhenLastInContext="False" ForceCreate="ForceCreate" IconIndex="5" IconResourceID="5123" IconResourcePackage="c9dd4a57-47fb-11d2-83e7-00c04f9902c1" Name="ST:0:0:{f2e84780-2af1-11d1-a7fa-00a0c9110051}" IsVisible="True" DockedHeight="119" DockedWidth="512" FloatingTop="576" FloatingLeft="51.2" FloatingHeight="192" FloatingWidth="460.8"/>
+												<wm:ToolWindowView OnTopWhenLastInContext="False" ForceCreate="ForceCreate" IconIndex="4" IconResourceID="5123" IconResourcePackage="c9dd4a57-47fb-11d2-83e7-00c04f9902c1" Name="ST:0:0:{4a18f9d0-b838-11d0-93eb-00a0c90f2734}" IsVisible="True" DockedHeight="119" DockedWidth="512" FloatingTop="576" FloatingLeft="51.2" FloatingHeight="192" FloatingWidth="460.8"/>
+												<wm:ToolWindowView ForceCreate="ForceCreate" IconIndex="9" IconResourceID="5123" IconResourcePackage="c9dd4a57-47fb-11d2-83e7-00c04f9902c1" Name="ST:1:0:{90243340-bd7a-11d0-93ef-00a0c90f2734}" IsSelected="True" IsVisible="True" DockedHeight="119" DockedWidth="512" FloatingTop="576" FloatingLeft="51.2" FloatingHeight="192" FloatingWidth="614.4"/>
+												<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="ForceCreate" Name="ST:2:0:{90243340-bd7a-11d0-93ef-00a0c90f2734}" DockedHeight="119" DockedWidth="512" FloatingTop="576" FloatingLeft="51.2" FloatingHeight="192" FloatingWidth="614.4"/>
+												<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="ForceCreate" Name="ST:3:0:{90243340-bd7a-11d0-93ef-00a0c90f2734}" DockedHeight="119" DockedWidth="512" FloatingTop="576" FloatingLeft="51.2" FloatingHeight="192" FloatingWidth="614.4"/>
+												<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="ForceCreate" Name="ST:4:0:{90243340-bd7a-11d0-93ef-00a0c90f2734}" DockedHeight="119" DockedWidth="512" FloatingTop="576" FloatingLeft="51.2" FloatingHeight="192" FloatingWidth="614.4"/>
+												<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="ForceCreate" Name="ST:0:0:{0f887920-c2b6-11d2-9375-0080c747d9a0}" DockedHeight="119" DockedWidth="512" FloatingTop="576" FloatingLeft="51.2" FloatingHeight="192" FloatingWidth="614.4"/>
+												<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="ForceCreate" Name="ST:0:0:{0f887921-c2b6-11d2-9375-0080c747d9a0}" DockedHeight="119" DockedWidth="512" FloatingTop="576" FloatingLeft="51.2" FloatingHeight="192" FloatingWidth="614.4"/>
+												<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="ForceCreate" Name="ST:0:0:{68487888-204a-11d3-87eb-00c04f7971a5}" DockedHeight="119" DockedWidth="512" FloatingTop="576" FloatingLeft="51.2" FloatingHeight="192" FloatingWidth="614.4"/>
+												<wm:ToolWindowView ContextVisibilityEnabled="False" Name="ST:0:0:{73f6dd5b-437e-11d3-b88e-00c04f79f802}" DockedHeight="119" DockedWidth="512" FloatingTop="576" FloatingLeft="51.2" FloatingHeight="192" FloatingWidth="614.4"/>
+											</TabGroup>
+											<TabGroup DockedHeight="119" DockedWidth="100">
+												<ViewBookmark Name="ST:0:0:{53024d34-0ef5-11d3-87e0-00c04f7971a5}" DockedHeight="119" DockedWidth="100"/>
+												<ViewBookmark Name="ST:0:0:{e830ec50-c2b5-11d2-9375-0080c747d9a0}" DockedHeight="119" DockedWidth="100"/>
+												<ViewBookmark Name="ST:0:0:{cf2ddc32-8cad-11d2-9302-005345000000}" DockedHeight="119" DockedWidth="100"/>
+											</TabGroup>
+											<TabGroup IsVisible="True" DockedHeight="119" DockedWidth="512">
+												<wm:ToolWindowView ForceCreate="ForceCreate" Name="ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}" DockedHeight="119" DockedWidth="512" FloatingTop="100" FloatingLeft="100" FloatingHeight="450" FloatingWidth="450"/>
+												<wm:ToolWindowView ForceCreate="ForceCreate" Name="ST:0:0:{cdbdee54-b399-484b-b763-db2c3393d646}" DockedHeight="119" DockedWidth="512" FloatingTop="100" FloatingLeft="100" FloatingHeight="450" FloatingWidth="450"/>
+												<wm:ToolWindowView OnTopWhenLastInContext="False" ForceCreate="ForceCreate" IconIndex="3" IconResourceID="5123" IconResourcePackage="c9dd4a57-47fb-11d2-83e7-00c04f9902c1" Name="ST:0:0:{0504ff91-9d61-11d0-a794-00a0c9110051}" IsVisible="True" DockedHeight="119" DockedWidth="512" FloatingTop="576" FloatingLeft="409.6" FloatingHeight="192" FloatingWidth="460.8"/>
+												<wm:ToolWindowView Name="ST:0:0:{637792aa-f332-4bb5-be6c-066b0e88eced}" DockedHeight="119" DockedWidth="512" FloatingTop="576" FloatingLeft="409.6" FloatingHeight="192" FloatingWidth="460.8"/>
+												<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="ForceCreate" IconIndex="2" IconResourceID="5123" IconResourcePackage="c9dd4a57-47fb-11d2-83e7-00c04f9902c1" Name="ST:0:0:{be4d7042-ba3f-11d2-840e-00c04f9902c1}" IsVisible="True" DockedHeight="119" DockedWidth="512" FloatingTop="576" FloatingLeft="409.6" FloatingHeight="192" FloatingWidth="460.8"/>
+												<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="ForceCreate" IconIndex="10" IconResourceID="6650" IconResourcePackage="da9fb551-c724-11d0-ae1f-00a0c90fffc3" Name="ST:0:0:{28836128-fc2c-11d2-a433-00c04f72d18a}" IsVisible="True" DockedHeight="119" DockedWidth="512" FloatingTop="576" FloatingLeft="409.6" FloatingHeight="192" FloatingWidth="460.8"/>
+												<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="ForceCreate" IconIndex="16" IconResourceID="6650" IconResourcePackage="da9fb551-c724-11d0-ae1f-00a0c90fffc3" Name="ST:0:0:{ecb7191a-597b-41f5-9843-03a4cf275dde}" IsVisible="True" DockedHeight="119" DockedWidth="512" FloatingTop="576" FloatingLeft="409.6" FloatingHeight="192" FloatingWidth="460.8"/>
+												<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="ForceCreate" Name="ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}" IsVisible="True" DockedHeight="119" DockedWidth="512" FloatingTop="576" FloatingLeft="409.6" FloatingHeight="192" FloatingWidth="460.8"/>
+												<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="ForceCreate" Name="ST:0:0:{588470cc-84f8-4a57-9ac4-86bca0625ff4}" DockedHeight="119" DockedWidth="512" FloatingTop="576" FloatingLeft="409.6" FloatingHeight="192" FloatingWidth="460.8"/>
+												<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="ForceCreate" IconIndex="15" IconResourceID="6650" IconResourcePackage="4a9b7e50-aa16-11d0-a8c5-00a0c921a4d2" Name="ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}" IsSelected="True" IsVisible="True" DockedHeight="119" DockedWidth="512" FloatingTop="576" FloatingLeft="409.6" FloatingHeight="192" FloatingWidth="460.8"/>
+												<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="ForceCreate" Name="ST:0:0:{4a9b7e51-aa16-11d0-a8c5-00a0c921a4d2}" DockedHeight="119" DockedWidth="512" FloatingTop="576" FloatingLeft="409.6" FloatingHeight="192" FloatingWidth="460.8"/>
+												<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="ForceCreate" Name="ST:0:0:{5415ea3a-d813-4948-b51e-562082ce0887}" DockedHeight="119" DockedWidth="512" FloatingTop="576" FloatingLeft="409.6" FloatingHeight="192" FloatingWidth="460.8"/>
+												<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="ForceCreate" Name="ST:0:0:{a0c5197d-0ac7-4b63-97cd-8872a789d233}" DockedHeight="119" DockedWidth="512" FloatingTop="576" FloatingLeft="409.6" FloatingHeight="192" FloatingWidth="460.8"/>
+												<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="ForceCreate" Name="ST:0:0:{2456bd12-ecf7-4988-a4a6-67d49173f564}" DockedHeight="119" DockedWidth="512" FloatingTop="576" FloatingLeft="102.4" FloatingHeight="192" FloatingWidth="614.4"/>
+												<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="DontForceCreate" Name="ST:0:0:{2456bd12-ecf7-4988-a4a6-67d49173f565}" DockedHeight="119" DockedWidth="512" FloatingTop="576" FloatingLeft="102.4" FloatingHeight="192" FloatingWidth="614.4"/>
+												<wm:ToolWindowView ForceCreate="ForceCreate" Name="ST:0:0:{905da7d1-18fd-4a46-8d0f-a5ff58ada9de}" DockedHeight="119" DockedWidth="512" FloatingTop="576" FloatingLeft="102.4" FloatingHeight="192" FloatingWidth="614.4"/>
+												<wm:ToolWindowView ForceCreate="ForceCreate" Name="ST:0:0:{519e8a32-1c95-4a42-956f-2cee2f28eb0f}" DockedHeight="119" DockedWidth="512" FloatingTop="576" FloatingLeft="102.4" FloatingHeight="192" FloatingWidth="614.4"/>
+												<wm:ToolWindowView ForceCreate="ForceCreate" Name="ST:0:0:{92547016-2bd0-4dfe-bd4f-5b52bdce0037}" DockedHeight="119" DockedWidth="512" FloatingTop="576" FloatingLeft="102.4" FloatingHeight="192" FloatingWidth="614.4"/>
+												<wm:ToolWindowView Name="ST:0:0:{b869198c-f673-46d2-83ae-64f515277716}" DockedHeight="119" DockedWidth="512" FloatingTop="576" FloatingLeft="102.4" FloatingHeight="192" FloatingWidth="460.8"/>
+												<wm:ToolWindowView Name="ST:0:0:{b8399b49-7330-487b-9235-7d2e969d0a79}" DockedHeight="119" DockedWidth="512" FloatingTop="576" FloatingLeft="102.4" FloatingHeight="192" FloatingWidth="460.8"/>
+												<wm:ToolWindowView ForceCreate="ForceCreate" Name="ST:0:0:{778b5376-ad77-4751-acdc-f3d18343f8dd}" DockedHeight="119" DockedWidth="512" FloatingTop="576" FloatingLeft="102.4" FloatingHeight="192" FloatingWidth="460.8"/>
+											</TabGroup>
+										</DockGroup>
+									</DockGroup>
+									<TabGroup IsVisible="True" DockedHeight="652.8" DockedWidth="277.08">
+										<wm:ToolWindowView ForceCreate="ForceCreate" Name="ST:0:0:{d58d3d87-862e-47e9-9b82-d4c6f9186d92}" DockedHeight="652.8" DockedWidth="277.08" FloatingTop="100" FloatingLeft="100" FloatingHeight="450" FloatingWidth="450"/>
+										<wm:ToolWindowView ForceCreate="ForceCreate" Name="ST:0:0:{a34b1c5d-6d37-4a0c-a8b0-99f8e8158b48}" DockedHeight="652.8" DockedWidth="277.08" FloatingTop="100" FloatingLeft="100" FloatingHeight="450" FloatingWidth="450"/>
+										<wm:ToolWindowView ForceCreate="ForceCreate" Name="ST:0:0:{1cba9826-3184-4799-a184-784e41b56398}" DockedHeight="652.8" DockedWidth="277.08" FloatingTop="100" FloatingLeft="100" FloatingHeight="426" FloatingWidth="286"/>
+										<wm:ToolWindowView ForceCreate="ForceCreate" Name="ST:0:0:{38ed9834-0c97-445b-bd1d-f78f3e08afac}" DockedHeight="652.8" DockedWidth="277.08" FloatingTop="100" FloatingLeft="100" FloatingHeight="426" FloatingWidth="286"/>
+										<wm:ToolWindowView ForceCreate="ForceCreate" Name="ST:0:0:{402dc223-d700-4029-866f-acee803f3f0c}" DockedHeight="652.8" DockedWidth="277.08" FloatingTop="100" FloatingLeft="100" FloatingHeight="426" FloatingWidth="286"/>
+										<wm:ToolWindowView ForceCreate="ForceCreate" Name="ST:0:0:{dd1ddd20-d59b-11da-a94d-0800200c9a66}" DockedHeight="652.8" DockedWidth="277.08" FloatingTop="200" FloatingLeft="200" FloatingHeight="700" FloatingWidth="900"/>
+										<wm:ToolWindowView ForceCreate="ForceCreate" Name="ST:0:0:{81b8bf68-15eb-4fbd-85e7-455b191f316b}" IsVisible="True" DockedHeight="652.8" DockedWidth="277.08" FloatingTop="398" FloatingLeft="1066"/>
+										<wm:ToolWindowView ForceCreate="ForceCreate" IconIndex="0" IconResourceID="301" IconResourcePackage="eaafbf5a-96a0-4c7f-9edb-00a9caa8e754" Name="ST:0:0:{ed485b08-5acf-4ce9-8e13-699174ea0201}" IsVisible="True" DockedHeight="652.8" DockedWidth="277.08" FloatingTop="76.8" FloatingLeft="819.2" FloatingHeight="537.6" FloatingWidth="204.8"/>
+										<wm:ToolWindowView ForceCreate="ForceCreate" Name="ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}" IsSelected="True" IsVisible="True" DockedHeight="652.8" DockedWidth="277.08" FloatingTop="76.8" FloatingLeft="819.2" FloatingHeight="537.6" FloatingWidth="204.8"/>
+										<wm:ToolWindowView ForceCreate="ForceCreate" IconIndex="0" IconResourceID="2" IconResourcePackage="8e01ec3e-2928-4aa5-b720-e28c163818e6" Name="ST:0:0:{131369f2-062d-44a2-8671-91ff31efb4f4}" IsVisible="True" DockedHeight="652.8" DockedWidth="277.08" FloatingTop="76.8" FloatingLeft="819.2" FloatingHeight="537.6" FloatingWidth="204.8"/>
+										<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="ForceCreate" Name="ST:0:0:{c9c0ae26-aa77-11d2-b3f0-0000f87570ee}" DockedHeight="652.8" DockedWidth="277.08" FloatingTop="76.8" FloatingLeft="819.2" FloatingHeight="537.6" FloatingWidth="204.8"/>
+										<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="ForceCreate" Name="ST:0:0:{de1fc918-f32e-4dd7-a915-1792a051f26b}" DockedHeight="652.8" DockedWidth="277.08" FloatingTop="76.8" FloatingLeft="819.2" FloatingHeight="537.6" FloatingWidth="204.8"/>
+										<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="ForceCreate" Name="ST:0:0:{873151d0-cf2e-48cc-b4bf-ad0394f6a3c3}" DockedHeight="652.8" DockedWidth="277.08" FloatingTop="76.8" FloatingLeft="819.2" FloatingHeight="537.6" FloatingWidth="204.8"/>
+										<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="ForceCreate" Name="ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}" DockedHeight="652.8" DockedWidth="277.08" FloatingTop="76.8" FloatingLeft="819.2" FloatingHeight="537.6" FloatingWidth="204.8"/>
+										<wm:ToolWindowView ContextVisibilityEnabled="False" Name="ST:0:0:{ecdd9ee0-ac6b-11d0-89f9-00a0c9110055}" DockedHeight="652.8" DockedWidth="277.08" FloatingTop="76.8" FloatingLeft="819.2" FloatingHeight="537.6" FloatingWidth="204.8"/>
+										<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="ForceCreate" Name="ST:0:0:{2d7728c2-de0a-45b5-99aa-89b609dfde73}" DockedHeight="652.8" DockedWidth="277.08" FloatingTop="76.8" FloatingLeft="819.2" FloatingHeight="537.6" FloatingWidth="204.8"/>
+										<wm:ToolWindowView ForceCreate="ForceCreate" Name="ST:0:0:{3addf8e2-81cc-41a0-9785-dbd2d86064bd}" DockedHeight="652.8" DockedWidth="277.08" FloatingTop="76.8" FloatingLeft="819.2" FloatingHeight="537.6" FloatingWidth="204.8"/>
+										<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="ForceCreate" Name="ST:0:0:{0db31cc8-2322-4f59-a610-1fdc8423df77}" DockedHeight="652.8" DockedWidth="277.08" FloatingTop="76.8" FloatingLeft="819.2" FloatingHeight="537.6" FloatingWidth="204.8"/>
+										<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="ForceCreate" Name="ST:0:0:{66dba47c-61df-11d2-aa79-00c04f990343}" DockedHeight="652.8" DockedWidth="277.08" FloatingTop="76.8" FloatingLeft="819.2" FloatingHeight="537.6" FloatingWidth="204.8"/>
+										<wm:ToolWindowView ContextVisibilityEnabled="False" Name="ST:0:0:{4a791147-19e4-11d3-b86b-00c04f79f802}" DockedHeight="652.8" DockedWidth="277.08" FloatingTop="76.8" FloatingLeft="819.2" FloatingHeight="537.6" FloatingWidth="204.8"/>
+										<wm:ToolWindowView ContextVisibilityEnabled="False" Name="ST:0:0:{73f6dd58-437e-11d3-b88e-00c04f79f802}" DockedHeight="652.8" DockedWidth="277.08" FloatingTop="76.8" FloatingLeft="819.2" FloatingHeight="537.6" FloatingWidth="204.8"/>
+										<wm:ToolWindowView ContextVisibilityEnabled="False" Name="ST:0:0:{57dc5d59-11c2-4955-a7b4-d7699d677e93}" DockedHeight="652.8" DockedWidth="277.08" FloatingTop="76.8" FloatingLeft="819.2" FloatingHeight="537.6" FloatingWidth="204.8"/>
+										<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="ForceCreate" Name="ST:0:0:{07cd18b4-3ba1-11d2-890a-0060083196c6}" DockedHeight="652.8" DockedWidth="277.08" FloatingTop="76.8" FloatingLeft="819.2" FloatingHeight="537.6" FloatingWidth="204.8"/>
+									</TabGroup>
+								</DockGroup>
+							</DockRoot>
+						</AutoHideRoot>
+					</MainSite>
+					<FloatSite FloatingTop="153.6" FloatingLeft="204.8" FloatingHeight="76.8" FloatingWidth="337.92">
+						<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="ForceCreate" Name="ST:0:0:{53024d34-0ef5-11d3-87e0-00c04f7971a5}" DockedHeight="100" DockedWidth="100" FloatingTop="153.6" FloatingLeft="204.8" FloatingHeight="76.8" FloatingWidth="337.92"/>
+					</FloatSite>
+					<FloatSite FloatingTop="153.6" FloatingLeft="204.8" FloatingHeight="76.8" FloatingWidth="337.92">
+						<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="ForceCreate" Name="ST:0:0:{e830ec50-c2b5-11d2-9375-0080c747d9a0}" DockedHeight="100" DockedWidth="100" FloatingTop="153.6" FloatingLeft="204.8" FloatingHeight="76.8" FloatingWidth="337.92"/>
+					</FloatSite>
+					<FloatSite FloatingTop="153.6" FloatingLeft="204.8" FloatingHeight="153.6" FloatingWidth="337.92">
+						<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="ForceCreate" Name="ST:0:0:{cf2ddc32-8cad-11d2-9302-005345000000}" DockedHeight="100" DockedWidth="100" FloatingTop="153.6" FloatingLeft="204.8" FloatingHeight="153.6" FloatingWidth="337.92"/>
+					</FloatSite>
+					<FloatSite FloatingTop="94" FloatingLeft="0">
+						<wm:ToolWindowView ContextVisibilityEnabled="False" ForceCreate="DontForceCreate" IconIndex="0" IconResourceID="10969" IconResourcePackage="24e33dbf-cadf-4da8-acfe-566366fc8468" Name="ST:0:0:{eccc9e97-fd3b-4c15-af76-ef71a71d8b17}" IsSelected="True" FloatingTop="94" FloatingLeft="0"/>
+					</FloatSite>
+					<FloatSite>
+						<wm:ToolWindowView Name="ST:0:0:{fdffccf2-5f63-404f-86ad-33693f544948}"/>
+					</FloatSite>
+					<FloatSite FloatingTop="100" FloatingLeft="100" FloatingHeight="450" FloatingWidth="450">
+						<wm:ToolWindowView ForceCreate="ForceCreate" Name="ST:0:0:{1ea986c6-340f-42c8-892e-f5779818d569}" FloatingTop="100" FloatingLeft="100" FloatingHeight="450" FloatingWidth="450"/>
+					</FloatSite>
+					<FloatSite FloatingTop="100" FloatingLeft="100" FloatingHeight="450" FloatingWidth="450">
+						<wm:ToolWindowView ForceCreate="ForceCreate" Name="ST:0:0:{ab97f511-6af2-4d27-b468-e4048600093e}" FloatingTop="100" FloatingLeft="100" FloatingHeight="450" FloatingWidth="450"/>
+					</FloatSite>
+					<FloatSite FloatingTop="100" FloatingLeft="100" FloatingHeight="450" FloatingWidth="450">
+						<wm:ToolWindowView ForceCreate="ForceCreate" Name="ST:0:0:{0024bee0-bce9-484f-afa7-b5647916c26b}" FloatingTop="100" FloatingLeft="100" FloatingHeight="450" FloatingWidth="450"/>
+					</FloatSite>
+					<FloatSite FloatingTop="100" FloatingLeft="100" FloatingHeight="450" FloatingWidth="450">
+						<wm:ToolWindowView ForceCreate="ForceCreate" Name="ST:0:0:{e23045c1-967d-4e64-9ed1-d698de65807f}" FloatingTop="100" FloatingLeft="100" FloatingHeight="450" FloatingWidth="450"/>
+					</FloatSite>
+					<FloatSite FloatingTop="100" FloatingLeft="100" FloatingHeight="450" FloatingWidth="450">
+						<wm:ToolWindowView ForceCreate="ForceCreate" Name="ST:0:0:{435ad293-774d-49c6-9e2d-3740c322be52}" FloatingTop="100" FloatingLeft="100" FloatingHeight="450" FloatingWidth="450"/>
+					</FloatSite>
+					<FloatSite FloatingTop="100" FloatingLeft="100" FloatingHeight="450" FloatingWidth="450">
+						<wm:ToolWindowView ForceCreate="ForceCreate" Name="ST:0:0:{ae42d903-e5a3-417d-ba25-3ce77b315eed}" FloatingTop="100" FloatingLeft="100" FloatingHeight="450" FloatingWidth="450"/>
+					</FloatSite>
+					<FloatSite FloatingTop="100" FloatingLeft="100" FloatingHeight="450" FloatingWidth="450">
+						<wm:ToolWindowView ForceCreate="ForceCreate" Name="ST:0:0:{b2bc9916-e3e6-43a8-ad5f-3bdb95f53db5}" FloatingTop="100" FloatingLeft="100" FloatingHeight="450" FloatingWidth="450"/>
+					</FloatSite>
+					<FloatSite FloatingTop="100" FloatingLeft="100" FloatingHeight="450" FloatingWidth="450">
+						<wm:ToolWindowView ForceCreate="ForceCreate" Name="ST:0:0:{532ddd98-f6a6-4a76-a84e-4aea5211f733}" FloatingTop="100" FloatingLeft="100" FloatingHeight="450" FloatingWidth="450"/>
+					</FloatSite>
+					<FloatSite FloatingTop="100" FloatingLeft="100" FloatingHeight="450" FloatingWidth="450">
+						<wm:ToolWindowView ForceCreate="ForceCreate" Name="ST:0:0:{7dd08ad7-93b2-491f-a0e8-ee2bb4e78240}" FloatingTop="100" FloatingLeft="100" FloatingHeight="450" FloatingWidth="450"/>
+					</FloatSite>
+					<FloatSite FloatingTop="100" FloatingLeft="100" FloatingHeight="450" FloatingWidth="450">
+						<wm:ToolWindowView ForceCreate="ForceCreate" Name="ST:0:0:{888c821a-6430-40bd-9bfe-1610b91df560}" FloatingTop="100" FloatingLeft="100" FloatingHeight="450" FloatingWidth="450"/>
+					</FloatSite>
+				</WindowProfile>
+			</Debug>
 			<Design-FullScreen>
 				<WindowProfile xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:wm="clr-namespace:Microsoft.VisualStudio.Platform.WindowManagement;assembly=Microsoft.VisualStudio.Platform.WindowManagement" Name="Design-FullScreen" xmlns="clr-namespace:Microsoft.VisualStudio.PlatformUI.Shell;assembly=Microsoft.VisualStudio.Shell.ViewManager">
 					<MainSite IsVisible="True">
@@ -2835,9 +2892,6 @@
 		</Category>
 	</Category>
 	<Category name="Code Analysis" Category="{533A534C-AD06-4B18-BBBC-BFD7C74F58CE}" Package="{72391CE3-743A-4a55-8927-4217541F6517}" RegisteredName="Code Analysis" PackageName="StanPackage"/>
-	<Category name="PowerCommands_Commands" Category="{7a9e9816-5add-4cbd-9c46-1901a492640d}" Package="{24e33dbf-cadf-4da8-acfe-566366fc8468}" RegisteredName="PowerCommands_Commands" PackageName="Microsoft.PowerCommands.PowerCommandsPackage, PowerCommands, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
-		<PropertyValue name="DisabledCommands"/>
-	</Category>
 	<Category name="Debugger" Category="{EEDBF29A-5C8B-4E01-827C-263382C18CFE}" Package="{C9DD4A57-47FB-11D2-83E7-00C04F9902C1}" RegisteredName="Debugger" PackageName="Visual Studio Debugger">
 		<PropertyValue name="ConfirmDeleteAllBreakpoints">1</PropertyValue>
 		<PropertyValue name="StopAllProcesses">1</PropertyValue>
@@ -2972,22 +3026,6 @@
 		<PropertyValue name="SymbolIncludeListState"/>
 		<PropertyValue name="SymbolExcludeList"/>
 		<PropertyValue name="SymbolExcludeListState"/>
-	</Category>
-	<Category name="Code Contracts Editor Extensions_General" Category="{3b894609-478d-4dc4-bc64-0e3e9ce8dc23}" Package="{e58a49d1-8f41-4c65-9cc5-55489982e9ac}" RegisteredName="Code Contracts Editor Extensions_General" PackageName="ContractAdornments.VSServiceProvider, CodeContractsHelper, Version=1.4.31130.0, Culture=neutral, PublicKeyToken=null">
-		<PropertyValue name="Caching">True</PropertyValue>
-		<PropertyValue name="InheritanceOnMethods">True</PropertyValue>
-		<PropertyValue name="InheritanceOnProperties">True</PropertyValue>
-		<PropertyValue name="Logging">True</PropertyValue>
-		<PropertyValue name="Metadata">True</PropertyValue>
-		<PropertyValue name="OutputPath">C:\Users\Prabir Shrestha\AppData\Roaming\Microsoft\CodeContacts</PropertyValue>
-		<PropertyValue name="QuickInfo">True</PropertyValue>
-		<PropertyValue name="SignatureHelp">True</PropertyValue>
-		<PropertyValue name="SmartFormatting">True</PropertyValue>
-		<PropertyValue name="SyntaxColoring">True</PropertyValue>
-	</Category>
-	<Category name="PowerCommands_General" Category="{df0d89f1-c9a3-47bf-b277-42e0c178f1a0}" Package="{24e33dbf-cadf-4da8-acfe-566366fc8468}" RegisteredName="PowerCommands_General" PackageName="Microsoft.PowerCommands.PowerCommandsPackage, PowerCommands, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
-		<PropertyValue name="FormatOnSave">False</PropertyValue>
-		<PropertyValue name="RemoveAndSortUsingsOnSave">False</PropertyValue>
 	</Category>
 	<Category name="HTML Tag Specific" Category="{7583bb73-a453-40e8-8951-b6986ddb1d9b}" Package="{1B437D20-F8FE-11D2-A6AE-00104BCC7269}" RegisteredName="HTML Tag Specific" PackageName="Visual Studio HTM Editor Package"/>
 	<Category name="Performance" Category="{7A697B67-8D8F-43c2-A11C-57568FE3F513}" Package="{f4a63b2a-49ab-4b2d-aa59-a10f01026c89}" RegisteredName="Performance" PackageName="PerformancePackage">
