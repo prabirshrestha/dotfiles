@@ -1,0 +1,6 @@
+
+# source very .bash file in this rep
+for config_file in ~/.dotfiles/**/*.bash
+do
+    source "$config_file"
+done
