@@ -25,10 +25,6 @@
     <Identifier>531da20f-aec5-4382-a317-0f70a217a572</Identifier>
   </ExtensionInformation>
   <ExtensionInformation>
-    <Name>NuGet Package Manager</Name>
-    <Identifier>NuPackToolsVsix.Microsoft.67e54e40-0ae3-42c5-a949-fddf5739e7a5</Identifier>
-  </ExtensionInformation>
-  <ExtensionInformation>
     <Name>Open Data Protocol Visualizer</Name>
     <Identifier>DataServices..CF2C3680-3691-4DF9-905E-1FC3D5513942</Identifier>
   </ExtensionInformation>
