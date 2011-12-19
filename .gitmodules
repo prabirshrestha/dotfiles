@@ -43,6 +43,3 @@
 [submodule "vim/vim.symlink/bundle/xptemplate_personal_snippets"]
 	path = vim/vim.symlink/bundle/xptemplate_personal_snippets
 	url = git://github.com/prabirshrestha/xptemplate_personal_snippets.git
-[submodule "jake"]
-	path = jake
-	url = https://github.com/mde/jake.git
