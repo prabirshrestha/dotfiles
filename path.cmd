@@ -1,3 +1,2 @@
 @echo off
-@echo %USERPROFILE%\apps\node;%USERPROFILE%\apps\git;%USERPROFILE%\apps\git\cmd;%USERPROFILE%\apps\kdiff3;%USERPROFILE%\apps\pik;%USERPROFILE%\apps\vim\vim73;%USERPROFILE%\apps\SublimeText;%USERPROFILE%\apps\tortoisehg;%USERPROFILE%\apps\filezilla;
-@pause
+echo>>path.txt %USERPROFILE%\apps\git;%USERPROFILE%\apps\git\cmd;%USERPROFILE%\apps\kdiff3;%USERPROFILE%\apps\pik;%USERPROFILE%\apps\vim\vim73;%USERPROFILE%\apps\SublimeText;%USERPROFILE%\apps\tortoisehg;%USERPROFILE%\apps\filezilla;%USERPROFILE%\apps\curl;%USERPROFILE%\fdm;%USERPROFILE%\apps\git-tfs;%USERPROFILE%\apps\nuget;
