@@ -32,6 +32,8 @@
         prompt = false
 [difftool "kdiff3"]
         path = kdiff3
+[merge]
+        tool = kdiff3
 [mergetool]
         keepBackup = false
         prompt = false
