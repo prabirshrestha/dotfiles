@@ -29,6 +29,7 @@ runtime! autoload/pathogen.vim
 silent! call pathogen#helptags()
 silent! call pathogen#runtime_append_all_bundles()
 
+colorscheme prabirdark
 
 " ----------------------------------------------------------------------------
 "  Text Formatting
