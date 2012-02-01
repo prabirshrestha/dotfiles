@@ -1,0 +1,5 @@
+# source every .bash file in this repo
+for config_file in ~/.dotfiles/**/*.bash
+    do
+        source "$config_file"
+    done
