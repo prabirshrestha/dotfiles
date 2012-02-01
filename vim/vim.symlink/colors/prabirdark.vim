@@ -4,7 +4,9 @@
 " Last Change:	2010 Feb 18
 
 set background=dark
-set guifont=Consolas:h10
+if !has('gui_macvim')
+ set guifont=Consolas:h10
+endif
 hi clear
 if exists("syntax_on")
   syntax reset
