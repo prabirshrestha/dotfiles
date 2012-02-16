@@ -37,10 +37,6 @@
     <Identifier>VSProPack.Microsoft.f4ef2e6e-e531-48d5-940d-eb955306da9a</Identifier>
   </ExtensionInformation>
   <ExtensionInformation>
-    <Name>Regex Tester</Name>
-    <Identifier>dcad2d98-1e91-4090-81a0-ec0641347bf8</Identifier>
-  </ExtensionInformation>
-  <ExtensionInformation>
     <Name>Visual Studio PerfWatson</Name>
     <Identifier>Microsoft.VisualStudio.PerfWatson</Identifier>
   </ExtensionInformation>
