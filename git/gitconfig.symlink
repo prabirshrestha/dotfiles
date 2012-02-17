@@ -12,6 +12,8 @@
         w = whatchanged
         rank = shortlog -sn --no-meres
         tags = tag -n1 -l
+        dt = update-index --assume-unchanged
+        t = update-index --no-assume-unchanged
 [color]
         diff = auto
         status = auto
