@@ -51,9 +51,9 @@ HKLM,%UDHERE%,DisplayIcon,,"%11%\icon.ico"
 HKLM,%UDHERE%,UninstallString,,"rundll32.exe syssetup.dll,SetupInfObjectInstallAction DefaultUninstall 132 %17%\Console2Here.inf"
 
 HKCR,Directory\Shell\Console2Here,,,"%Console2HereAccel%"
-HKCR,Directory\Shell\Console2Here\command,,,"C:\Chocolatey\bin\Console.bat -d ""%1"""
+HKCR,Directory\Shell\Console2Here\command,,,"C:\Users\Prabir\Console2\Console -d ""%1"""
 HKCR,Drive\Shell\Console2Here,,,"%Console2HereAccel%"
-HKCR,Drive\Shell\Console2Here\command,,,"C:\Chocolatey\bin\Console.bat -d ""%1"""
+HKCR,Drive\Shell\Console2Here\command,,,"C:\Users\Prabir\Console2\Console -d ""%1"""
 
 [Console2Here.DelReg]
 HKLM,%UDHERE%
