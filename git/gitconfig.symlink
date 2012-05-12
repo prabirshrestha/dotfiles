@@ -7,7 +7,7 @@
         l = log
         ci = commit
         br = branch
-        st = status	
+        st = status     
         co = checkout
         w = whatchanged
         rank = shortlog -sn --no-meres
@@ -33,14 +33,14 @@
 [difftool]
         prompt = false
 [difftool "kdiff3"]
-        path = kdiff3
+    path = c:/Program Files (x86)/KDiff3/kdiff3.exe
+    keepBackup = false
+    trustExitCode = false
 [merge]
-        tool = kdiff3
-[mergetool]
-        keepBackup = false
-        prompt = false
+    tool = kdiff3
 [mergetool "kdiff3"]
-        tool = kdiff3
+    path = c:/Program Files (x86)/KDiff3/kdiff3.exe
+    keepBackup = false
+    trustExitCode = false
 [github]
         user = prabirshrestha
-
