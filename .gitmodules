@@ -46,3 +46,6 @@
 [submodule "vim/vim.symlink/bundle/jade"]
 	path = vim/vim.symlink/bundle/jade
 	url = https://github.com/digitaltoad/vim-jade.git
+[submodule "vim/vim.symlink/bundle/tabular"]
+	path = vim/vim.symlink/bundle/tabular
+	url = git://github.com/godlygeek/tabular.git
