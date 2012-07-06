@@ -7,6 +7,10 @@
 #
 # I'm hardcoding it to an installed rvm (using rvm's `rvm 1.8.7,ruby /hub/path`
 # syntax is way too slow). It should work fine for those without rvm, though.
+if [[ $ZSH_VERSION = *_NT_* ]]; then
+	alias git='C:/Users/prabir/AppData/Local/GitHub/PortableGit_70baf56a054209e5afe24abd9304204b637c5807/bin/git'
+fi
+
 if [[ -s $HOME/.rvm/scripts/rvm ]]
 then
   if $(which hub &> /dev/null) && [[ -s $HOME/.rvm/rubies/ruby-1.8.7-p334 ]]
