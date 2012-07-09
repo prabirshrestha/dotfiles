@@ -3,3 +3,5 @@ vim/vim.symlink/.netrwhist
 vim/edit_with_vim.reg
 path.txt
 
+*.orig
+*.swp
