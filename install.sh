@@ -1,4 +1,6 @@
 #!/bin/bash
+# curl https://raw.github.com/prabirshrestha/dotfiles/master/install.sh | bash
+
 set -e
 
 if [ -d ~/.dotfiles ]
