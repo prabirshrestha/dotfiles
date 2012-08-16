@@ -1,1 +1,8 @@
-*.zsh text=auto
+# Auto detect text files and perform LF normalization
+* text=auto
+
+*.cmd eol=crlf
+*.bat eol=crlf
+*.BAT eol=crlf
+*.CMD eol=crlf
+*.reg eol=crlf
