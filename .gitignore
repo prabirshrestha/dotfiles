@@ -3,5 +3,6 @@ vim/vim.symlink/.netrwhist
 vim/edit_with_vim.reg
 path.txt
 
+.DS_Store
 *.orig
 *.swp
