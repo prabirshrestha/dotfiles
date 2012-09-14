@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <key name="Software">
 	<key name="ConEmu">
-		<key name=".Vanilla" modified="2012-08-24 10:29:41">
+		<key name=".Vanilla" modified="2012-08-24 22:01:22">
 			<value name="KeyboardHooks" type="hex" data="01"/>
 			<value name="UseInjects" type="hex" data="01"/>
 			<value name="Update.CheckOnStartup" type="hex" data="01"/>
@@ -108,7 +108,7 @@
 			<value name="bgImageColors" type="dword" data="ffffffff"/>
 			<value name="bgOperation" type="hex" data="00"/>
 			<value name="bgPluginAllowed" type="hex" data="01"/>
-			<value name="AlphaValue" type="hex" data="c8"/>
+			<value name="AlphaValue" type="hex" data="e0"/>
 			<value name="AlphaValueSeparate" type="hex" data="01"/>
 			<value name="AlphaValueInactive" type="hex" data="89"/>
 			<value name="UserScreenTransparent" type="hex" data="00"/>
@@ -427,38 +427,51 @@
 			<value name="DndLKey" type="hex" data="00"/>
 			<value name="DndRKey" type="hex" data="a2"/>
 			<value name="WndDragKey" type="dword" data="00121101"/>
-				<key name="Tasks" modified="2012-08-24 10:29:12">
-				<value name="Count" type="dword" data="00000003"/>
-						<key name="Task1" modified="2012-08-24 10:29:12">
+				<key name="Tasks" modified="2012-08-24 22:01:19">
+				<value name="Count" type="dword" data="00000004"/>
+						<key name="Task1" modified="2012-08-24 22:01:19">
 					<value name="Name" type="string" data="{git-bash}"/>
 					<value name="GuiArgs" type="string" data=""/>
 					<value name="Active" type="dword" data="00000000"/>
 					<value name="Count" type="dword" data="00000001"/>
 					<value name="Cmd1" type="string" data="%localappdata%\GitHub\PortableGit_8810fd5c2c79c73adcc73fd0825f3b32fdb816e7\bin\sh.exe --login -i"/>
 				</key>
-						<key name="Task2" modified="2012-08-24 10:29:12">
+						<key name="Task2" modified="2012-08-24 22:01:19">
 					<value name="Name" type="string" data="{powershell}"/>
 					<value name="GuiArgs" type="string" data=""/>
 					<value name="Cmd1" type="string" data="powershell"/>
 					<value name="Active" type="dword" data="00000000"/>
 					<value name="Count" type="dword" data="00000001"/>
 				</key>
-						<key name="Task3" modified="2012-08-24 10:29:12">
+						<key name="Task3" modified="2012-08-24 22:01:19">
 					<value name="Name" type="string" data="{cmd.exe}"/>
 					<value name="GuiArgs" type="string" data=""/>
 					<value name="Cmd1" type="string" data="cmd.exe"/>
 					<value name="Active" type="dword" data="00000000"/>
 					<value name="Count" type="dword" data="00000001"/>
 				</key>
+						<key name="Task4" modified="2012-08-24 22:01:19">
+					<value name="Name" type="string" data="{vs2012}"/>
+					<value name="GuiArgs" type="string" data=""/>
+					<value name="Cmd1" type="string" data="%comspec% /k &quot;&quot;C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\Tools\VsDevCmd.bat&quot;&quot;"/>
+					<value name="Active" type="dword" data="00000000"/>
+					<value name="Count" type="dword" data="00000001"/>
+				</key>
 			</key>
-				<key name="Apps" modified="2012-08-24 10:29:12">
+				<key name="Apps" modified="2012-08-24 22:01:19">
 				<value name="Count" type="dword" data="00000000"/>
 			</key>
-			<value name="CmdLineHistory" type="multi"><line data="C:\Users\prabir\AppData\Local\GitHub\PortableGit_8810fd5c2c79c73adcc73fd0825f3b32fdb816e7\bin\sh.exe --login -i"/><line data="cmd -cur_console:n"/></value>
+			<value name="CmdLineHistory" type="multi"><line data="C:\Users\prabir\AppData\Local\GitHub\PortableGit_8810fd5c2c79c73adcc73fd0825f3b32fdb816e7\bin\sh.exe --login -i"/><line data="cmd -cur_console:n"/><line data="C:\Users\Prabir\ConEmuPack\ConEmu64.exe"/></value>
 		</key>
-		<key name="shell" modified="2012-08-24 10:26:30">
-			<value name="CmdLineHistory" type="multi"><line data="cmd -cur_console:n"/></value>
+		<key name="shell" modified="2012-08-24 21:28:13">
+			<value name="CmdLineHistory" type="multi"><line data="C:\Users\Prabir\ConEmuPack\ConEmu64.exe"/><line data="cmd -cur_console:n"/></value>
 			<value name="TabMargins" type="hex" data="00,00,00,00,19,00,00,00,00,00,00,00,00,00,00,00"/>
+			<value name="KeyboardHooks" type="hex" data="01"/>
+			<value name="UseInjects" type="hex" data="01"/>
+			<value name="Update.CheckOnStartup" type="hex" data="01"/>
+			<value name="Update.CheckHourly" type="hex" data="00"/>
+			<value name="Update.ConfirmDownload" type="hex" data="01"/>
+			<value name="Update.UseBuilds" type="hex" data="01"/>
 		</key>
 	</key>
 </key>

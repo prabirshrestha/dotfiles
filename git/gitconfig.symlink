@@ -46,3 +46,5 @@
     trustExitCode = false
 [github]
         user = prabirshrestha
+[push]
+	default = current
