@@ -1,0 +1,90 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=74F699334CF7F74F8C6775D0C28BCD2D/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=74F699334CF7F74F8C6775D0C28BCD2D/Shortcut/@EntryValue">na</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=74F699334CF7F74F8C6775D0C28BCD2D/Description/@EntryValue">Adds a Nancy After handler</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=74F699334CF7F74F8C6775D0C28BCD2D/Text/@EntryValue">After +=&#xD;
+	ctx =&gt; $END$;</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=74F699334CF7F74F8C6775D0C28BCD2D/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=74F699334CF7F74F8C6775D0C28BCD2D/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=74F699334CF7F74F8C6775D0C28BCD2D/Categories/=Nancy/@EntryIndexedValue">Nancy</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=74F699334CF7F74F8C6775D0C28BCD2D/Categories/=Imported_002011_002F12_002F2012/@EntryIndexedValue">Imported 11/12/2012</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=74F699334CF7F74F8C6775D0C28BCD2D/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=74F699334CF7F74F8C6775D0C28BCD2D/Scope/=E6E678D4B937A84D8C4585DDD2F27DB0/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=74F699334CF7F74F8C6775D0C28BCD2D/Scope/=E6E678D4B937A84D8C4585DDD2F27DB0/Type/@EntryValue">InCSharpExpression</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=74F699334CF7F74F8C6775D0C28BCD2D/Scope/=E6E678D4B937A84D8C4585DDD2F27DB0/CustomProperties/=minimumLanguageVersion/@EntryIndexedValue">3.0</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=21DBA5D3646AAA4391C898D614346C52/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=21DBA5D3646AAA4391C898D614346C52/Shortcut/@EntryValue">nb</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=21DBA5D3646AAA4391C898D614346C52/Description/@EntryValue">Adds a Nancy Before handler</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=21DBA5D3646AAA4391C898D614346C52/Text/@EntryValue">Before +=&#xD;
+	ctx =&gt; $END$;</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=21DBA5D3646AAA4391C898D614346C52/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=21DBA5D3646AAA4391C898D614346C52/Categories/=Nancy/@EntryIndexedValue">Nancy</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=21DBA5D3646AAA4391C898D614346C52/Categories/=Imported_002011_002F12_002F2012/@EntryIndexedValue">Imported 11/12/2012</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=21DBA5D3646AAA4391C898D614346C52/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=21DBA5D3646AAA4391C898D614346C52/Scope/=E6E678D4B937A84D8C4585DDD2F27DB0/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=21DBA5D3646AAA4391C898D614346C52/Scope/=E6E678D4B937A84D8C4585DDD2F27DB0/Type/@EntryValue">InCSharpExpression</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=21DBA5D3646AAA4391C898D614346C52/Scope/=E6E678D4B937A84D8C4585DDD2F27DB0/CustomProperties/=minimumLanguageVersion/@EntryIndexedValue">3.0</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=692D7A7B8056F04FBD8C2D184259CD81/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=692D7A7B8056F04FBD8C2D184259CD81/Shortcut/@EntryValue">ndelete</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=692D7A7B8056F04FBD8C2D184259CD81/Description/@EntryValue">Adds a Nancy Delete-handler</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=692D7A7B8056F04FBD8C2D184259CD81/Text/@EntryValue">Delete["/$path$"] = &#xD;
+	$_$ =&gt; $END$;</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=692D7A7B8056F04FBD8C2D184259CD81/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=692D7A7B8056F04FBD8C2D184259CD81/Categories/=Nancy/@EntryIndexedValue">Nancy</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=692D7A7B8056F04FBD8C2D184259CD81/Categories/=Imported_002011_002F12_002F2012/@EntryIndexedValue">Imported 11/12/2012</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=692D7A7B8056F04FBD8C2D184259CD81/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=692D7A7B8056F04FBD8C2D184259CD81/Scope/=C3001E7C0DA78E4487072B7E050D86C5/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=692D7A7B8056F04FBD8C2D184259CD81/Scope/=C3001E7C0DA78E4487072B7E050D86C5/Type/@EntryValue">InCSharpFile</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=692D7A7B8056F04FBD8C2D184259CD81/Scope/=C3001E7C0DA78E4487072B7E050D86C5/CustomProperties/=minimumLanguageVersion/@EntryIndexedValue">3.0</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=692D7A7B8056F04FBD8C2D184259CD81/Field/=path/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=692D7A7B8056F04FBD8C2D184259CD81/Field/=path/Order/@EntryValue">0</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=692D7A7B8056F04FBD8C2D184259CD81/Field/=_005F/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=692D7A7B8056F04FBD8C2D184259CD81/Field/=_005F/Order/@EntryValue">1</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=95DF7136A2C61844888E830ABD15EBAB/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=95DF7136A2C61844888E830ABD15EBAB/Shortcut/@EntryValue">nget</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=95DF7136A2C61844888E830ABD15EBAB/Description/@EntryValue">Adds a Nancy Get-handler</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=95DF7136A2C61844888E830ABD15EBAB/Text/@EntryValue">Get["/$path$"] = &#xD;
+	$_$ =&gt; $END$;</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=95DF7136A2C61844888E830ABD15EBAB/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=95DF7136A2C61844888E830ABD15EBAB/Categories/=Nancy/@EntryIndexedValue">Nancy</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=95DF7136A2C61844888E830ABD15EBAB/Categories/=Imported_002011_002F12_002F2012/@EntryIndexedValue">Imported 11/12/2012</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=95DF7136A2C61844888E830ABD15EBAB/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=95DF7136A2C61844888E830ABD15EBAB/Scope/=C3001E7C0DA78E4487072B7E050D86C5/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=95DF7136A2C61844888E830ABD15EBAB/Scope/=C3001E7C0DA78E4487072B7E050D86C5/Type/@EntryValue">InCSharpFile</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=95DF7136A2C61844888E830ABD15EBAB/Scope/=C3001E7C0DA78E4487072B7E050D86C5/CustomProperties/=minimumLanguageVersion/@EntryIndexedValue">3.0</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=95DF7136A2C61844888E830ABD15EBAB/Field/=path/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=95DF7136A2C61844888E830ABD15EBAB/Field/=path/Order/@EntryValue">0</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=95DF7136A2C61844888E830ABD15EBAB/Field/=_005F/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=95DF7136A2C61844888E830ABD15EBAB/Field/=_005F/Order/@EntryValue">1</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B82D3D7032575D4C84B92217083298C8/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B82D3D7032575D4C84B92217083298C8/Shortcut/@EntryValue">npost</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B82D3D7032575D4C84B92217083298C8/Description/@EntryValue">Adds a Nancy Post-handler</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B82D3D7032575D4C84B92217083298C8/Text/@EntryValue">Post["/$path$"] = &#xD;
+	$_$ =&gt; $END$;</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B82D3D7032575D4C84B92217083298C8/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B82D3D7032575D4C84B92217083298C8/Categories/=Nancy/@EntryIndexedValue">Nancy</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B82D3D7032575D4C84B92217083298C8/Categories/=Imported_002011_002F12_002F2012/@EntryIndexedValue">Imported 11/12/2012</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B82D3D7032575D4C84B92217083298C8/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B82D3D7032575D4C84B92217083298C8/Scope/=C3001E7C0DA78E4487072B7E050D86C5/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B82D3D7032575D4C84B92217083298C8/Scope/=C3001E7C0DA78E4487072B7E050D86C5/Type/@EntryValue">InCSharpFile</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B82D3D7032575D4C84B92217083298C8/Scope/=C3001E7C0DA78E4487072B7E050D86C5/CustomProperties/=minimumLanguageVersion/@EntryIndexedValue">3.0</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B82D3D7032575D4C84B92217083298C8/Field/=path/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B82D3D7032575D4C84B92217083298C8/Field/=path/Order/@EntryValue">0</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B82D3D7032575D4C84B92217083298C8/Field/=_005F/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B82D3D7032575D4C84B92217083298C8/Field/=_005F/Order/@EntryValue">1</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=68AFACEE9FF3464DAC0D804CA33012A8/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=68AFACEE9FF3464DAC0D804CA33012A8/Shortcut/@EntryValue">nput</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=68AFACEE9FF3464DAC0D804CA33012A8/Description/@EntryValue">Adds a Nancy Put-handler</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=68AFACEE9FF3464DAC0D804CA33012A8/Text/@EntryValue">Put["/$path$"] = &#xD;
+	$_$ =&gt; $END$;</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=68AFACEE9FF3464DAC0D804CA33012A8/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=68AFACEE9FF3464DAC0D804CA33012A8/Categories/=Nancy/@EntryIndexedValue">Nancy</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=68AFACEE9FF3464DAC0D804CA33012A8/Categories/=Imported_002011_002F12_002F2012/@EntryIndexedValue">Imported 11/12/2012</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=68AFACEE9FF3464DAC0D804CA33012A8/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=68AFACEE9FF3464DAC0D804CA33012A8/Scope/=C3001E7C0DA78E4487072B7E050D86C5/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=68AFACEE9FF3464DAC0D804CA33012A8/Scope/=C3001E7C0DA78E4487072B7E050D86C5/Type/@EntryValue">InCSharpFile</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=68AFACEE9FF3464DAC0D804CA33012A8/Scope/=C3001E7C0DA78E4487072B7E050D86C5/CustomProperties/=minimumLanguageVersion/@EntryIndexedValue">3.0</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=68AFACEE9FF3464DAC0D804CA33012A8/Field/=path/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=68AFACEE9FF3464DAC0D804CA33012A8/Field/=path/Order/@EntryValue">0</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=68AFACEE9FF3464DAC0D804CA33012A8/Field/=_005F/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=68AFACEE9FF3464DAC0D804CA33012A8/Field/=_005F/Order/@EntryValue">1</s:Int64></wpf:ResourceDictionary>
