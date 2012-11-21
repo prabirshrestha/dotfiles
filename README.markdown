@@ -35,5 +35,5 @@ symlinked without extension into `$HOME` when you run `rake install`.
 
 ## thanks
 
-Fork of [Holman's dotfiles](https://github.com/holman/dotfiles) which supports all 3 major
-OS - Mac OSX, Linux and Windows.
+Fork of [Holman's dotfiles](https://github.com/holman/dotfiles) which has been supported to work
+on all 3 major OS - Mac OSX, Linux and Windows and of coure my own customizations.
