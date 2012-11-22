@@ -1,4 +1,4 @@
-# prabir's does dotfiles
+# prabir does dotfiles
 
 ## dotfiles
 
