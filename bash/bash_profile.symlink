@@ -3,3 +3,4 @@ for config_file in ~/.dotfiles/**/*.bash
     do
         source "$config_file"
     done
+[[ -s ~/.nvm/nvm.sh ]] && . ~/.nvm/nvm.sh # This loads NVM

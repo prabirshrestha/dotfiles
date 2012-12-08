@@ -28,9 +28,14 @@ ZSH_THEME="robbyrussell"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git brew gem gnu-utils jake sublime osx)
+plugins=(git brew gem gnu-utils jake sublime rvm osx)
 
 source $ZSH/oh-my-zsh.sh
+unsetopt correct_all
 
 # Customize to your needs...
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/.rvm/bin:$HOME/.rvm/bin
+
+# source every .zsh file in this rep
+for config_file ($HOME/.dotfiles/zsh/**/*.zsh) source $config_file
+
