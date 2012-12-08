@@ -1,0 +1,6 @@
+
+# NVM
+[[ -s "$HOME/.nvm" ]] && . "$HOME/.nvm/nvm.sh" # This loads NVM into a shell se$
+
+# Bash For RVM
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
