@@ -49,3 +49,6 @@
 [submodule "vim/vim.symlink/bundle/javascript"]
 	path = vim/vim.symlink/bundle/javascript
 	url = git://github.com/pangloss/vim-javascript.git
+[submodule "vim/vim.symlink/bundle/xptemplate_personal_snippets"]
+	path = vim/vim.symlink/bundle/xptemplate_personal_snippets
+	url = https://github.com/prabirshrestha/xptemplate_personal_snippets.git
