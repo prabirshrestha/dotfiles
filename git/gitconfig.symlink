@@ -10,7 +10,7 @@
         st = status     
         co = checkout
         w = whatchanged
-        rank = shortlog -sn --no-meres
+        rank = shortlog -sn --no-merges
         tags = tag -n1 -l
         dt = update-index --assume-unchanged
         t = update-index --no-assume-unchanged
