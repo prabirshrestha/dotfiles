@@ -39,3 +39,8 @@ export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 # source every .zsh file in this rep
 for config_file ($HOME/.dotfiles/zsh/**/*.zsh) source $config_file
 
+#export CC=/usr/local/bin/gcc-4.2
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+export ANDROID_HOME=~/android-sdk
