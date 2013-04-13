@@ -1,4 +1,22 @@
+# add this to iterm2 Send text at start
+# tmux attach -t hack || tmux new -s hack; exit
+
 # Change the prefix to Ctrl-a
 unbind C-b
 set -g prefix C-a
+
+# enable pretty colors
+set -g default-terminal "screen-256color"
+
+# increase scroll-back history
+set -g history-limit 5000
+
+# use vim key bindings
+setw -g mode-keys vi
+
+# start window index at 1
+set -g base-index 1
+
+# start pane index at 1
+set -g pane-base-index 1
 
