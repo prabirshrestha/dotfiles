@@ -1,0 +1,4 @@
+# Change the prefix to Ctrl-a
+unbind C-b
+set -g prefix C-a
+
