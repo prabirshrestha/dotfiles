@@ -66,7 +66,7 @@ set -g status-left-length 40
 
 #Sets the appearance of the left sidebar
 set -g status-left "#[fg=colour39]❐ #S #[fg=yellow]✓ #(whoami)"
- 
+
 #Sets the appearance of the center
 setw -g window-status-fg colour238
 setw -g window-status-bg default
@@ -79,13 +79,13 @@ setw -g window-status-activity-fg white
 setw -g window-status-bell-fg white
 setw -g window-status-bell-bg red
 setw -g window-status-bell-attr bold
-  
- #Sets the appearance of the right sidebar, i.e time and clock.
- set -g status-right "#[fg=colour136, brigth]ℹ %d %b %r"
- set -g status-utf8 on
- set -g status-interval 60
- set -g status-justify centre
- setw -g monitor-activity on
- set -g visual-activity on
- setw -g mode-keys vi
- #set-option -g default-command "reattach-to-user-namespace -l zsh"]
+
+#Sets the appearance of the right sidebar, i.e time and clock.
+set -g status-right "#[fg=colour136, brigth]ℹ #(~/.dotfiles/bash/battery -o tmux) %d %b %r"
+set -g status-utf8 on
+set -g status-interval 60
+set -g status-justify centre
+setw -g monitor-activity on
+set -g visual-activity on
+setw -g mode-keys vi
+#set-option -g default-command "reattach-to-user-namespace -l zsh"]
