@@ -58,3 +58,6 @@
 [submodule "vim/vim.symlink/bundle/ag"]
 	path = vim/vim.symlink/bundle/ag
 	url = https://github.com/epmatsw/ag.vim.git
+[submodule "tmux/tmux-powerline"]
+	path = tmux/tmux-powerline
+	url = https://github.com/erikw/tmux-powerline.git
