@@ -1,0 +1,32 @@
+#!/bin/bash
+
+WIDTH=10
+INTERVAL=1
+
+calc_lines() {
+  ACTIVE_LINES=$(($CPU/$WIDTH))
+  LINES=""
+  for (( i = 0; i < $WIDTH; i++ )); do
+    if [[ $i < $ACTIVE_LINES ]]; then
+      LINES="$LINES|"
+    else
+      LINES="$LINES "
+    fi
+  done
+}
+
+if [[ $OSTYPE =~ darwin* ]]; then
+  # OS X
+  cpu_info=$(iostat -n0 -c1 | tail -n1)
+  CPU=$(echo $cpu_info | cut -d' ' -f1)
+  LOAD=$(echo $cpu_info | cut -d' ' -f4-6)
+ 
+elif [[ $OSTYPE =~ linux* ]]; then
+  # Linux
+  CPU=$(vmstat 1 ${INTERVAL} | tail -n1 | awk '{print $13}')
+  LOAD=$(awk '{print $1,$2,$3}' /proc/loadavg)
+ 
+fi
+
+calc_lines
+echo -n "[${LINES}] ${CPU}% ${LOAD}"

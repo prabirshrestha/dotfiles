@@ -1,0 +1,21 @@
+#!/bin/bash
+
+if [[ $OSTYPE =~ darwin* ]]; then
+  # OS X
+  mem_info=($(vm_stat))
+  WIRED="${mem_info[24]%?}"
+  ACTIVE="${mem_info[14]%?}"
+  INACTIVE="${mem_info[17]%?}"
+  FREE="${mem_info[11]%?}"
+ 
+  TOTAL_MEM=$(( ($WIRED + $ACTIVE + $INACTIVE + $FREE) * 4096 / 1024 / 1024 ))
+  FREE_MEM=$(( ($INACTIVE + $FREE) * 4096 / 1024 / 1024 ))
+  USED_MEM=$(( ($WIRED + $ACTIVE) * 4096 / 1024 / 1024 ))
+elif [[ $OSTYPE =~ linux* ]]; then
+  # Linux
+  mem_info=($(free -m))
+  TOTAL_MEM=${mem_info[7]}
+  USED_MEM=${mem_info[15]}
+fi
+
+echo -n "${USED_MEM}/${TOTAL_MEM}MB"

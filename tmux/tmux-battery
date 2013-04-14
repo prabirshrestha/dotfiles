@@ -1,0 +1,78 @@
+#!/bin/bash
+# Mostly taken from github.com/richoH/dotfiles
+
+HEART_FULL=♥
+HEART_EMPTY=♡
+
+linux_get_bat ()
+{
+    bf=$(cat $BAT_FULL)
+    bn=$(cat $BAT_NOW)
+    echo $(( 100 * $bn / $bf ))
+}
+
+battery_status()
+{
+case $(uname -s) in
+    "Linux")
+        BATPATH=/sys/class/power_supply/BAT0
+        STATUS=$BATPATH/status
+        BAT_FULL=$BATPATH/energy_full
+        BAT_NOW=$BATPATH/energy_now
+        if [ "$1" = `cat $STATUS` -o "$1" = "" ]; then
+            linux_get_bat
+        fi
+        ;;
+    "Darwin")
+        case $1 in
+            "Discharging")
+                ext="No";;
+            "Charging")
+                ext="Yes";;
+        esac
+
+        ioreg -c AppleSmartBattery -w0 | \
+        grep -o '"[^"]*" = [^ ]*' | \
+        sed -e 's/= //g' -e 's/"//g' | \
+        sort | \
+        while read key value; do
+            case $key in
+                "MaxCapacity")
+                    export maxcap=$value;;
+                "CurrentCapacity")
+                    export curcap=$value;;
+                "ExternalConnected")
+                    if [ "$value" = "No" ]; then
+                      export battery_state='-'
+                    else
+                      export battery_state='+'
+                    fi
+                ;;
+                "FullyCharged")
+                    if [ "$value" = "Yes" ]; then
+                      export battery_state='='
+                    fi
+                ;;
+            esac
+            if [[ -n "$maxcap" && -n $curcap ]]; then
+              battery_percent=$(echo $(( 100 * $curcap / $maxcap )))
+              echo "$battery_state$battery_percent"
+                break
+            fi
+        done
+esac
+}
+
+if [ imvirt ]; then
+  echo -n $HEART_FULL
+  echo -n "~~"
+else
+  BATTERY_STATUS=`battery_status $1`
+  num=$(echo $BATTERY_STATUS | grep -oE "[[:digit:]]{1,}")
+  if [ $num -gt 80 ]; then
+    echo -n $HEART_FULL
+  else
+    echo -n $HEART_EMPTY
+  fi
+  echo -n "${BATTERY_STATUS}%"
+fi
