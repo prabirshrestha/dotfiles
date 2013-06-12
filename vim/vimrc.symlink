@@ -26,6 +26,10 @@ endif
 "  Pathogen Bundle Support
 " ----------------------------------------------------------------------------
 runtime! autoload/pathogen.vim
+" To disable a plugin, add it's bundle name to the following list
+let g:pathogen_disabled = []
+"call add(g:pathogen_disabled, 'supertab')
+"call add(g:pathogen_disabled, 'xptemplate')
 silent! call pathogen#helptags()
 silent! call pathogen#runtime_append_all_bundles()
 
@@ -119,19 +123,21 @@ au BufNewFile,BufRead *.cshtml set filetype=html
 " ----------------------------------------------------------------------------
 
 " avoid key conflict
-let g:SuperTabMappingForward = '<Plug>supertabKey'
+"let g:SuperTabMappingForward = '<Plug>supertabKey'
 
 " if nothing matched in xpt, try supertab
-let g:xptemplate_fallback = '<Plug>supertabKey'
+"let g:xptemplate_fallback = '<Plug>supertabKey'
+
+"let g:xptemplate_fallback_condition = '\V\c<Tab>'
 
 " xpt uses <Tab> as trigger key
 let g:xptemplate_key = '<Tab>'
 
 " " use <tab>/<S-tab> to navigate through pum. Optional
-" let g:xptemplate_pum_tab_nav = 1
+let g:xptemplate_pum_tab_nav = 1
 
 " " xpt triggers only when you typed whole name of a snippet. Optional
-" let g:xptemplate_minimal_prefix = 'full'
+"let g:xptemplate_minimal_prefix = 'full'
 
 " tmux will only forward escape sequences to the terminal if surrounded by a
 " DCS sequence
