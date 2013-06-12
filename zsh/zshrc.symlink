@@ -30,7 +30,9 @@ ZSH_THEME="robbyrussell"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git brew gem gnu-utils jake sublime rvm osx)
+export ZSH_TMUX_AUTOSTART=true
+export ZSH_TMUX_AUTOCONNECT=false
+plugins=(git brew encode64 gem gnu-utils last-working-dir mvn npm jake sublime urltools rvm web-search tmux osx)
 
 source $ZSH/oh-my-zsh.sh
 unsetopt correct_all
@@ -43,6 +45,6 @@ for config_file ($HOME/.dotfiles/zsh/**/*.zsh) source $config_file
 
 #export CC=/usr/local/bin/gcc-4.2
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+PATH=$PATH:$HOME/.rvm/bin:$HOME/android-sdk/tools # Add RVM to PATH for scripting
 
 export ANDROID_HOME=~/android-sdk
