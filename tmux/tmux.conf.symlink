@@ -68,6 +68,8 @@ set -g window-status-format "#[fg=white,bg=colour234] #I #W "
 set -g window-status-current-format "#[fg=colour234,bg=colour39]⮀#[fg=colour25,bg=colour39,noreverse,bold] #I ⮁ #W #[fg=colour39,bg=colour234,nobold]⮀"
 set -g status-right "#[fg=colour136, brigth]ℹ #(~/.dotfiles/bash/battery -o tmux) #[fg=colour235,bg=colour252,bold] %d %b#[fg=colour252,bg=colour238,nobold]⮀#[fg=colour245,bg=colour238,bold]%r"
 
+setw -g monitory-activity on
+set -g visual-activity on
 # Enable mouse support in ~/.tmux.conf
 set-option -g mouse-select-pane on
 set-option -g mouse-select-window on
