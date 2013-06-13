@@ -32,6 +32,7 @@ ZSH_THEME="robbyrussell"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 export ZSH_TMUX_AUTOSTART=true
 export ZSH_TMUX_AUTOCONNECT=false
+export ZSH_TMUX_AUTOQUIT=true
 plugins=(git brew encode64 gem gnu-utils last-working-dir mvn npm jake sublime urltools rvm web-search tmux osx)
 
 source $ZSH/oh-my-zsh.sh
