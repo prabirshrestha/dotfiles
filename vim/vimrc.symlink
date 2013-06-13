@@ -28,7 +28,7 @@ endif
 runtime! autoload/pathogen.vim
 " To disable a plugin, add it's bundle name to the following list
 let g:pathogen_disabled = []
-call add(g:pathogen_disabled, 'supertab')
+"call add(g:pathogen_disabled, 'supertab')
 silent! call pathogen#helptags()
 silent! call pathogen#runtime_append_all_bundles()
 
@@ -134,3 +134,8 @@ au BufNewFile,BufRead *.cshtml set filetype=html
 
 
  let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+
+ set omnifunc=syntaxcomplete#Complete
+ set wildmenu
+ set wildmode=list:longest,full
+ let g:SuperTabDefaultCompletionType = "context"
