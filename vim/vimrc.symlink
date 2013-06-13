@@ -1,7 +1,7 @@
 set nocompatible
 set noswapfile
 
-" 
+"
 
 " ----------------------------------------------------------------------------
 "  Windows Compatible
@@ -28,8 +28,7 @@ endif
 runtime! autoload/pathogen.vim
 " To disable a plugin, add it's bundle name to the following list
 let g:pathogen_disabled = []
-"call add(g:pathogen_disabled, 'supertab')
-"call add(g:pathogen_disabled, 'xptemplate')
+call add(g:pathogen_disabled, 'supertab')
 silent! call pathogen#helptags()
 silent! call pathogen#runtime_append_all_bundles()
 
@@ -73,7 +72,7 @@ set number                 " line numbers
 set wildmenu               " turn on wild menu
 set wildmode=list:longest,full
 set ch=2                   " command line height
-set backspace=indent,eol,start 
+set backspace=indent,eol,start
 set whichwrap+=<,>,h,l,[,] " backspace and cursor keys wrap to
 set shortmess=filtIoOA     " shorten messages
 set report=0               " tell us about changes
@@ -106,7 +105,7 @@ endfunction
 map ,s :call StripWhitespace ()<CR>
 
 " ---------------------------------------------------------------------------
-" Use english for spellchecking, but don't spellcheck by default 
+" Use english for spellchecking, but don't spellcheck by default
 " ---------------------------------------------------------------------------
 if version >= 700
   set spl=en spell
@@ -120,32 +119,11 @@ endif
 au BufNewFile,BufRead *.cshtml set filetype=html
 
 
-" ----------------------------------------------------------------------------
-" Supertab and XPTemplate support
-" ----------------------------------------------------------------------------
-
-" avoid key conflict
-"let g:SuperTabMappingForward = '<Plug>supertabKey'
-
-" if nothing matched in xpt, try supertab
-"let g:xptemplate_fallback = '<Plug>supertabKey'
-
-"let g:xptemplate_fallback_condition = '\V\c<Tab>'
-
-" xpt uses <Tab> as trigger key
-let g:xptemplate_key = '<Tab>'
-
-" " use <tab>/<S-tab> to navigate through pum. Optional
-let g:xptemplate_pum_tab_nav = 1
-
-" " xpt triggers only when you typed whole name of a snippet. Optional
-"let g:xptemplate_minimal_prefix = 'full'
-
 " tmux will only forward escape sequences to the terminal if surrounded by a
 " DCS sequence
 " "
 " http://sourceforge.net/mailarchive/forum.php?thread_name=AANLkTinkbdoZ8eNR1X2UobLTeww1jFrvfJxTMfKSq-L%2B%40mail.gmail.com&forum_name=tmux-users
-"  
+"
  if exists('$TMUX')
    let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
    let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
@@ -153,3 +131,6 @@ let g:xptemplate_pum_tab_nav = 1
    let &t_SI = "\<Esc>]50;CursorShape=1\x7"
    let &t_EI = "\<Esc>]50;CursorShape=0\x7"
  endif
+
+
+ let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'

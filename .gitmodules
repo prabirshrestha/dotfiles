@@ -34,9 +34,6 @@
 [submodule "vim/vim.symlink/bundle/mru"]
 	path = vim/vim.symlink/bundle/mru
 	url = https://github.com/vim-scripts/mru.vim.git
-[submodule "vim/vim.symlink/bundle/xptemplate"]
-	path = vim/vim.symlink/bundle/xptemplate
-	url = https://github.com/drmingdrmer/xptemplate.git
 [submodule "hg/hg-git.symlink"]
 	path = hg/hg-git.symlink
 	url = https://github.com/schacon/hg-git.git
@@ -49,9 +46,6 @@
 [submodule "vim/vim.symlink/bundle/javascript"]
 	path = vim/vim.symlink/bundle/javascript
 	url = git://github.com/pangloss/vim-javascript.git
-[submodule "vim/vim.symlink/bundle/xptemplate_personal_snippets"]
-	path = vim/vim.symlink/bundle/xptemplate_personal_snippets
-	url = https://github.com/prabirshrestha/xptemplate_personal_snippets.git
 [submodule "vim/vim.symlink/bundle/ctrlp"]
 	path = vim/vim.symlink/bundle/ctrlp
 	url = https://github.com/kien/ctrlp.vim.git
