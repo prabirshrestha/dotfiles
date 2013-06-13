@@ -58,3 +58,6 @@
 [submodule "vim/vim.symlink/bundle/typescript-vim"]
 	path = vim/vim.symlink/bundle/typescript-vim
 	url = https://github.com/leafgarland/typescript-vim.git
+[submodule "vim/vim.symlink/bundle/autocomplpop"]
+	path = vim/vim.symlink/bundle/autocomplpop
+	url = https://github.com/vim-scripts/AutoComplPop.git
