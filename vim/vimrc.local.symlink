@@ -1,0 +1,4 @@
+" vim: set syntax=vim:
+
+au BufNewFile,BufRead *.jst set filetype=html
+
