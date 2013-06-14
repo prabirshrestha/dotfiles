@@ -42,3 +42,7 @@ nnoremap <leader>v V`]`
 " strip all trailing whitespace in the current file
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 
+" Use shift-H and shift-L for move to beginning/end
+nnoremap H 0
+nnoremap L $
+
