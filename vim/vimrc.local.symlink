@@ -36,3 +36,6 @@ nmap <silent> // :nohlsearch<CR>
 " Remap fast jj to escape 
 inoremap jj <ESC>
 
+" reselect what was just pasted
+nnoremap <leader>v V`]`
+
