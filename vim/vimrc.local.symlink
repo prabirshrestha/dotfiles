@@ -32,3 +32,7 @@ endif
 
 "Clear current search highlight by double tapping //
 nmap <silent> // :nohlsearch<CR>
+
+" Remap fast jj to escape 
+inoremap jj <ESC>
+
