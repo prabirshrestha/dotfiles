@@ -30,3 +30,5 @@ if has('autocmd')
     autocmd GUIEnter * set visualbell t_vb=
 endif
 
+"Clear current search highlight by double tapping //
+nmap <silent> // :nohlsearch<CR>

@@ -33,15 +33,15 @@
 [difftool]
         prompt = false
 [difftool "kdiff3"]
-    path = c:/Program Files (x86)/KDiff3/kdiff3.exe
-    #path = /Applications/kdiff3.app/Contents/MacOS/kdiff3
+    #path = c:/Program Files (x86)/KDiff3/kdiff3.exe
+    path = /Applications/kdiff3.app/Contents/MacOS/kdiff3
     keepBackup = false
     trustExitCode = false
 [merge]
     tool = kdiff3
 [mergetool "kdiff3"]
-    path = c:/Program Files (x86)/KDiff3/kdiff3.exe
-    #path = /Applications/kdiff3.app/Contents/MacOS/kdiff3
+    #path = c:/Program Files (x86)/KDiff3/kdiff3.exe
+    path = /Applications/kdiff3.app/Contents/MacOS/kdiff3
     keepBackup = false
     trustExitCode = false
 [github]
