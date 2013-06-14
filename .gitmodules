@@ -1,63 +1,12 @@
-[submodule "vim/vim.symlink/bundle/nerdtree"]
-	path = vim/vim.symlink/bundle/nerdtree
-	url = https://github.com/scrooloose/nerdtree.git
 [submodule "powershell/powershell.symlink/posh-git"]
 	path = powershell/powershell.symlink/posh-git
 	url = https://github.com/dahlbyk/posh-git.git
 [submodule "powershell/powershell.symlink/posh-hg"]
 	path = powershell/powershell.symlink/posh-hg
 	url = https://github.com/JeremySkinner/posh-hg.git
-[submodule "vim/vim.symlink/bundle/nerdcommenter"]
-	path = vim/vim.symlink/bundle/nerdcommenter
-	url = https://github.com/scrooloose/nerdcommenter.git
-[submodule "vim/vim.symlink/bundle/supertab"]
-	path = vim/vim.symlink/bundle/supertab
-	url = https://github.com/ervandew/supertab.git
-[submodule "vim/vim.symlink/bundle/closetag"]
-	path = vim/vim.symlink/bundle/closetag
-	url = https://github.com/docunext/closetag.vim.git
-[submodule "vim/vim.symlink/bundle/delmitMate"]
-	path = vim/vim.symlink/bundle/delmitMate
-	url = https://github.com/Raimondi/delimitMate.git
-[submodule "vim/vim.symlink/bundle/easymotion"]
-	path = vim/vim.symlink/bundle/easymotion
-	url = https://github.com/Lokaltog/vim-easymotion.git
-[submodule "vim/vim.symlink/bundle/markdown"]
-	path = vim/vim.symlink/bundle/markdown
-	url = https://github.com/tpope/vim-markdown.git
-[submodule "vim/vim.symlink/bundle/rake"]
-	path = vim/vim.symlink/bundle/rake
-	url = https://github.com/tpope/vim-rake.git
-[submodule "vim/vim.symlink/bundle/surround"]
-	path = vim/vim.symlink/bundle/surround
-	url = https://github.com/tpope/vim-surround.git
-[submodule "vim/vim.symlink/bundle/mru"]
-	path = vim/vim.symlink/bundle/mru
-	url = https://github.com/vim-scripts/mru.vim.git
 [submodule "hg/hg-git.symlink"]
 	path = hg/hg-git.symlink
 	url = https://github.com/schacon/hg-git.git
-[submodule "vim/vim.symlink/bundle/jade"]
-	path = vim/vim.symlink/bundle/jade
-	url = https://github.com/digitaltoad/vim-jade.git
-[submodule "vim/vim.symlink/bundle/tabular"]
-	path = vim/vim.symlink/bundle/tabular
-	url = git://github.com/godlygeek/tabular.git
-[submodule "vim/vim.symlink/bundle/javascript"]
-	path = vim/vim.symlink/bundle/javascript
-	url = git://github.com/pangloss/vim-javascript.git
-[submodule "vim/vim.symlink/bundle/ctrlp"]
-	path = vim/vim.symlink/bundle/ctrlp
-	url = https://github.com/kien/ctrlp.vim.git
-[submodule "vim/vim.symlink/bundle/ag"]
-	path = vim/vim.symlink/bundle/ag
-	url = https://github.com/epmatsw/ag.vim.git
 [submodule "tmux/tmux-powerline"]
 	path = tmux/tmux-powerline
 	url = https://github.com/erikw/tmux-powerline.git
-[submodule "vim/vim.symlink/bundle/typescript-vim"]
-	path = vim/vim.symlink/bundle/typescript-vim
-	url = https://github.com/leafgarland/typescript-vim.git
-[submodule "vim/vim.symlink/bundle/autocomplpop"]
-	path = vim/vim.symlink/bundle/autocomplpop
-	url = https://github.com/vim-scripts/AutoComplPop.git
