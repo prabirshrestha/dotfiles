@@ -33,9 +33,12 @@ endif
 "Clear current search highlight by double tapping //
 nmap <silent> // :nohlsearch<CR>
 
-" Remap fast jj to escape 
+" Remap fast jj to escape
 inoremap jj <ESC>
 
 " reselect what was just pasted
 nnoremap <leader>v V`]`
+
+" strip all trailing whitespace in the current file
+nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 
