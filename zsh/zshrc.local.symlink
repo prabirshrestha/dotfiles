@@ -4,3 +4,7 @@ for config_file ($HOME/.dotfiles/zsh/**/*.zsh) source $config_file
 
 plugins=(git brew encode62 gem gnu-utils last-working-dir mvn npm jake sublime urltools web-search tmux osx)
 
+# enable vi bindings
+bindkey -v
+bindkey -M viins 'jj' vi-cmd-mode
+
