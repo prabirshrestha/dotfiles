@@ -1,4 +1,8 @@
 " vim: set syntax=vim:
 
+au BufNewFile,BufRead *.ejs set filetype=html
 au BufNewFile,BufRead *.jst set filetype=html
 
+let g:indent_guides_auto_colors = 0
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=236
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=239
