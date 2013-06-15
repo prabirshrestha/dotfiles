@@ -46,3 +46,17 @@ nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 nnoremap H 0
 nnoremap L $
 
+" If the current buffer has never been saved, it will have no name,
+" call the file browser to save it, otherwise just save it.
+command -nargs=0 -bar Update if &modified
+                           \|    if empty(bufname('%'))
+                           \|        browse confirm write
+                           \|    else
+                           \|        confirm write
+                           \|    endif
+                           \|endif
+" Use CTRL-S for saving, also in Insert mode
+noremap <C-S> :Update<CR>
+vnoremap <C-S> <C-C>:Update<CR>
+inoremap <C-S> <C-O>:Update<CR>
+

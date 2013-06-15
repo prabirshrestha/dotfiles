@@ -8,3 +8,5 @@ plugins=(git brew encode62 gem gnu-utils last-working-dir mvn npm jake sublime u
 bindkey -v
 bindkey -M viins 'jj' vi-cmd-mode
 
+stty -ixon -ixoff
+
