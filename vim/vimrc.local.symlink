@@ -60,3 +60,6 @@ noremap <C-S> :Update<CR>
 vnoremap <C-S> <C-C>:Update<CR>
 inoremap <C-S> <C-O>:Update<CR>
 
+" Close GitDiff
+nnoremap <Leader>D :Gedit<CR><C-w>h :q<CR><C-w>k
+
