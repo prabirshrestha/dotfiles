@@ -63,3 +63,6 @@ inoremap <C-S> <C-O>:Update<CR>
 " Close GitDiff
 nnoremap <Leader>D :Gedit<CR><C-w>h :q<CR><C-w>k
 
+" Toggle line numbers
+nnoremap <C-n> :call NumbersToggle()<cr>
+
