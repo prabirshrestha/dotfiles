@@ -52,6 +52,16 @@ bind -r L resize-pane -R 5
 bind -r C-h select-window -t:-
 bind -r C-l select-window -t:+
 
+# remapping copy paste to vim
+# unbind [
+bind Escape copy-mode
+unbind p
+bind p paste-buffer
+bind -t vi-copy 'v' begin-selection
+bind -t vi-copy 'y' copy-selection
+
+
+# status bar
 set -g status-interval 2
 set -g status-left-length 52
 set -g status-right-length 451
