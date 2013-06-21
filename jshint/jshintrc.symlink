@@ -9,5 +9,13 @@
     "trailing": true,   // no trailing whitespace is allowed
     "undef": true,      // prevent the use of undeclared variables
 
-    "sub": true         // allow all subscript notation, including '[]'
+    "sub": true,        // allow all subscript notation, including '[]'
+
+    "indent": 4,        // enforce indent to 4 spaces
+    "newcap": true,     // capitalize names of constructor function
+    "noarg": true,      // prohibit the use of agruments.caller or agruments.callee
+    "unused": true,     // warns when u never use variables
+
+    "jquery": true,     // jquery globals
+    "node": true        // node globals
 }
