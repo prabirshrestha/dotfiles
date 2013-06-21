@@ -1,0 +1,13 @@
+{
+    "browser": true,    // standard globals like 'window'
+    "devel": true,      // development globals, e.g. 'console'
+
+    "es5": true,        // allow ES5 syntax
+
+    "latedef": true,    // prohibit variable use before definition ("hoisting")
+    "noempty": true,    // prohibit empty blocks
+    "trailing": true,   // no trailing whitespace is allowed
+    "undef": true,      // prevent the use of undeclared variables
+
+    "sub": true         // allow all subscript notation, including '[]'
+}
