@@ -1,0 +1,9 @@
+Windows Registry Editor Version 5.00
+[HKEY_CLASSES_ROOT\Directory\shell\Console2]
+@="Open Console2 Here"
+[HKEY_CLASSES_ROOT\Directory\shell\Console2\command]
+@="C:\\Users\\Prabir\\Console2\\Console.exe"
+[HKEY_CLASSES_ROOT\Directory\Background\shell\Console2]
+@="Open Console2 Here"
+[HKEY_CLASSES_ROOT\Directory\Background\shell\Console2\command]
+@="C:\\Users\\Prabir\\Console2\\Console.exe"
