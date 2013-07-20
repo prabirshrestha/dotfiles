@@ -78,6 +78,7 @@ let g:syntastic_warning_symbol = '!'
 let g:syntastic_check_on_open = 1
 
 " vim-scripts/indenthtml.vim
+:let g:html_indent_inctags = "html,body,head,tbody"
 :let g:html_indent_script1 = "inc"
 :let g:html_indent_style1 = "inc"
 
