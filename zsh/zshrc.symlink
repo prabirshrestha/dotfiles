@@ -53,7 +53,7 @@ prompt_context() {
 }
 
 # recommended by brew doctor
-export PATH=/usr/local/bin:$PATH
+export PATH=/usr/local/bin:$HOME/.dotfiles/bin:$PATH
 
 # enable vi bindings
 bindkey -v
