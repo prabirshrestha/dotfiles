@@ -84,6 +84,8 @@ set -g visual-activity on
 set-option -g mouse-select-pane on
 set-option -g mouse-select-window on
 set-window-option -g mode-mouse on
+# mouse can be used to resize panes (by dragging dividers)
+set -g mouse-resize-pane on
 
 # # status bar color
 # set -g status-fg white
