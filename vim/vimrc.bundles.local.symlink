@@ -1,3 +1,4 @@
 Bundle 'vim-scripts/indenthtml.vim'
 Bundle 'mattn/zencoding-vim'
 Bundle 'g3orge/vim-voogle'
+Bundle 'gregsexton/gitv'
