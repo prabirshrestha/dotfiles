@@ -1,5 +1,7 @@
 " vim: set syntax=vim:
 
+set nowrap
+
 au BufNewFile,BufRead *.ejs set filetype=html
 au BufNewFile,BufRead *.jst set filetype=html
 
