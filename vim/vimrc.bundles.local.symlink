@@ -20,7 +20,9 @@ silent! python import sys, vim;
 
 " Python plugin bundles
 if (has('python') || has('python3')) && s:python_ver >= 260
-  Bundle 'SirVer/ultisnips'
+    Bundle "git://github.com/SirVer/ultisnips.git"
+    Bundle "prabirshrestha/vim-my-ultisnips"
+    "Bundle 'honza/vim-snippets'
 else
   Bundle 'garbas/vim-snipmate'
 endif
