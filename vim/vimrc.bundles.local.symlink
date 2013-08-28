@@ -1,3 +1,9 @@
+let g:spf13_bundle_groups=['general', 'programming', 'javascript', 'html', 'misc']
+"let g:override_spf13_bundles=1
+"let g:spf13_no_autochdir = 1
+
+Bundle 'Valloric/YouCompleteMe'
+
 Bundle 'vim-scripts/indenthtml.vim'
 Bundle 'mattn/emmet-vim'
 Bundle 'g3orge/vim-voogle'
@@ -7,3 +13,15 @@ Bundle 'nosami/Omnisharp'
 Bundle 'tpope/vim-dispatch'
 Bundle 'ervandew/supertab'
 Bundle 'christoomey/vim-tmux-navigator'
+
+let s:python_ver = 0
+silent! python import sys, vim;
+\ vim.command("let s:python_ver="+"".join(map(str,sys.version_info[0:3])))
+
+" Python plugin bundles
+if (has('python') || has('python3')) && s:python_ver >= 260
+  Bundle 'SirVer/ultisnips'
+else
+  Bundle 'garbas/vim-snipmate'
+endif
+
