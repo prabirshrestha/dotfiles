@@ -6,7 +6,6 @@ let g:spf13_bundle_groups=['general', 'programming', 'javascript', 'html', 'misc
 let g:spf13_use_powerline=1
 "let g:spf13_use_old_powerline=1
 
-
 Bundle 'Valloric/YouCompleteMe'
 
 Bundle 'vim-scripts/indenthtml.vim'
@@ -16,7 +15,6 @@ Bundle 'gregsexton/gitv'
 Bundle 'digitaltoad/vim-jade'
 Bundle 'nosami/Omnisharp'
 Bundle 'tpope/vim-dispatch'
-Bundle 'ervandew/supertab'
 Bundle 'christoomey/vim-tmux-navigator'
 
 let s:python_ver = 0
@@ -26,11 +24,11 @@ silent! python import sys, vim;
 " Python plugin bundles
 if (has('python') || has('python3')) && s:python_ver >= 260
     Bundle "git://github.com/SirVer/ultisnips.git"
-    "Bundle "prabirshrestha/vim-my-ultisnips"
     "Bundle 'honza/vim-snippets'
 else
   Bundle 'garbas/vim-snipmate'
 endif
 
 Bundle 'marijnh/tern_for_vim'
+Bundle 'vim-scripts/TaskList.vim'
 
