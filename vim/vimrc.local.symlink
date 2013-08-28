@@ -95,7 +95,7 @@ nnoremap <leader>ft :OmniSharpFindType<cr>
 nnoremap <leader>fs :OmniSharpFindSymbol<cr>
 nnoremap <leader>fu :OmniSharpFindUsages<cr>
 nnoremap <leader>fm :OmniSharpFindMembersInBuffer<cr>
-nnoremap <leader>tt :OmniSharpTypeLookup<cr>
+nnoremap <leader>tl :OmniSharpTypeLookup<cr>
 "I find contextual code actions so useful that I have it mapped to the spacebar
 nnoremap <space> :OmniSharpGetCodeActions<cr>
 
@@ -115,6 +115,9 @@ nnoremap <leader>th :OmniSharpHighlightTypes<cr>
 
 "Don't ask to save when changing buffers (i.e. when jumping to a type definition)
 set hidden
+
+"let g:UltiSnipsDontReverseSearchPath=1
+let g:snips_author="Prabir Shrestha"
 
 " YCM and Utilsnips
 let g:ycm_key_list_select_completion = ['<C-TAB>', '<Down>']
