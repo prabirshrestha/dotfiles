@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <key name="Software">
 	<key name="ConEmu">
-		<key name=".Vanilla" modified="2012-12-12 20:42:01">
-			<value name="KeyboardHooks" type="hex" data="01"/>
-			<value name="UseInjects" type="hex" data="01"/>
-			<value name="Update.CheckOnStartup" type="hex" data="01"/>
-			<value name="Update.CheckHourly" type="hex" data="00"/>
-			<value name="Update.ConfirmDownload" type="hex" data="01"/>
-			<value name="Update.UseBuilds" type="hex" data="01"/>
-			<value name="TabMargins" type="hex" data="00,00,00,00,19,00,00,00,00,00,00,00,00,00,00,00"/>
+		<key name=".Vanilla" modified="2013-09-09 21:44:13" build="130827">
 			<value name="ColorTable00" type="dword" data="00000000"/>
 			<value name="ColorTable01" type="dword" data="00800000"/>
 			<value name="ColorTable02" type="dword" data="00008000"/>
@@ -51,45 +44,62 @@
 			<value name="ExtendFontNormalIdx" type="hex" data="01"/>
 			<value name="ExtendFontBoldIdx" type="hex" data="0c"/>
 			<value name="ExtendFontItalicIdx" type="hex" data="0d"/>
-			<value name="CursorType" type="hex" data="01"/>
-			<value name="CursorColor" type="hex" data="01"/>
-			<value name="CursorBlink" type="hex" data="01"/>
-			<value name="CursorBlockInactive" type="hex" data="01"/>
-			<value name="CursorIgnoreSize" type="hex" data="00"/>
-			<value name="CursorFixedSize" type="hex" data="19"/>
-			<value name="CursorMinSize" type="hex" data="02"/>
+			<value name="CursorTypeActive" type="dword" data="000232c1"/>
+			<value name="CursorTypeInactive" type="dword" data="00823283"/>
 			<value name="ClipboardDetectLineEnd" type="hex" data="01"/>
 			<value name="ClipboardBashMargin" type="hex" data="00"/>
 			<value name="ClipboardTrimTrailing" type="hex" data="02"/>
 			<value name="ClipboardEOL" type="hex" data="00"/>
+			<value name="ClipboardArrowStart" type="hex" data="01"/>
 			<value name="ClipboardAllLines" type="hex" data="01"/>
 			<value name="ClipboardFirstLine" type="hex" data="01"/>
 			<value name="ClipboardClickPromptPosition" type="hex" data="02"/>
+			<value name="ClipboardDeleteLeftWord" type="hex" data="02"/>
 			<value name="TrueColorerSupport" type="hex" data="01"/>
 			<value name="FadeInactive" type="hex" data="01"/>
 			<value name="FadeInactiveLow" type="hex" data="00"/>
 			<value name="FadeInactiveHigh" type="hex" data="d0"/>
 			<value name="ConVisible" type="hex" data="00"/>
 			<value name="ConInMode" type="dword" data="ffffffff"/>
+			<value name="UseInjects" type="hex" data="01"/>
+			<value name="SetDefaultTerminal" type="hex" data="00"/>
+			<value name="SetDefaultTerminalStartup" type="hex" data="00"/>
+			<value name="DefaultTerminalNoInjects" type="hex" data="00"/>
+			<value name="DefaultTerminalConfirm" type="hex" data="01"/>
+			<value name="DefaultTerminalApps" type="string" data="explorer.exe"/>
 			<value name="ProcessAnsi" type="hex" data="01"/>
+			<value name="ConsoleExceptionHandler" type="hex" data="00"/>
 			<value name="UseClink" type="hex" data="01"/>
 			<value name="StartType" type="hex" data="02"/>
-			<value name="CmdLine" type="string" data="&quot;&quot;C:\Program Files (x86)\Git\bin\sh.exe&quot;&quot; --login -i"/>
+			<value name="CmdLine" type="string" data=""/>
 			<value name="StartTasksFile" type="string" data=""/>
 			<value name="StartTasksName" type="string" data="{git-bash}"/>
 			<value name="StartFarFolders" type="hex" data="00"/>
 			<value name="StartFarEditors" type="hex" data="00"/>
-			<value name="StoreTaskbarkTasks" type="hex" data="01"/>
+			<value name="StoreTaskbarkTasks" type="hex" data="00"/>
 			<value name="StoreTaskbarCommands" type="hex" data="00"/>
+			<value name="SaveCmdHistory" type="hex" data="00"/>
+			<value name="CmdLineHistory" type="multi"/>
+			<value name="SingleInstance" type="hex" data="00"/>
+			<value name="ShowHelpTooltips" type="hex" data="01"/>
 			<value name="Multi" type="hex" data="01"/>
+			<value name="Multi.ShowButtons" type="hex" data="01"/>
+			<value name="Multi.NumberInCaption" type="hex" data="00"/>
 			<value name="Multi.CloseConfirm" type="hex" data="00"/>
+			<value name="Multi.CloseEditViewConfirm" type="hex" data="00"/>
 			<value name="Multi.NewConfirm" type="hex" data="01"/>
 			<value name="Multi.UseArrows" type="hex" data="00"/>
 			<value name="Multi.UseNumbers" type="hex" data="01"/>
 			<value name="Multi.UseWinTab" type="hex" data="00"/>
 			<value name="Multi.AutoCreate" type="hex" data="00"/>
 			<value name="Multi.LeaveOnClose" type="hex" data="00"/>
+			<value name="Multi.HideOnClose" type="hex" data="00"/>
+			<value name="Multi.MinByEsc" type="hex" data="02"/>
+			<value name="MapShiftEscToEsc" type="hex" data="01"/>
 			<value name="Multi.Iterate" type="hex" data="01"/>
+			<value name="Multi.SplitWidth" type="hex" data="04"/>
+			<value name="Multi.SplitHeight" type="hex" data="04"/>
+			<value name="KeyboardHooks" type="hex" data="01"/>
 			<value name="FontName" type="string" data="Lucida Console"/>
 			<value name="FontName2" type="string" data="Lucida Console"/>
 			<value name="FontAutoSize" type="hex" data="00"/>
@@ -98,7 +108,7 @@
 			<value name="FontSizeX2" type="dword" data="00000000"/>
 			<value name="FontSizeX3" type="dword" data="00000000"/>
 			<value name="FontCharSet" type="hex" data="00"/>
-			<value name="Anti-aliasing" type="dword" data="00000004"/>
+			<value name="Anti-aliasing" type="dword" data="00000003"/>
 			<value name="FontBold" type="hex" data="00"/>
 			<value name="FontItalic" type="hex" data="00"/>
 			<value name="Monospace" type="hex" data="01"/>
@@ -108,9 +118,9 @@
 			<value name="bgImageColors" type="dword" data="ffffffff"/>
 			<value name="bgOperation" type="hex" data="00"/>
 			<value name="bgPluginAllowed" type="hex" data="01"/>
-			<value name="AlphaValue" type="hex" data="e0"/>
-			<value name="AlphaValueSeparate" type="hex" data="01"/>
-			<value name="AlphaValueInactive" type="hex" data="89"/>
+			<value name="AlphaValue" type="hex" data="ff"/>
+			<value name="AlphaValueSeparate" type="hex" data="00"/>
+			<value name="AlphaValueInactive" type="hex" data="ff"/>
 			<value name="UserScreenTransparent" type="hex" data="00"/>
 			<value name="ColorKeyTransparent" type="hex" data="00"/>
 			<value name="ColorKeyValue" type="dword" data="00010101"/>
@@ -119,14 +129,18 @@
 			<value name="ConWnd Width" type="dword" data="00000050"/>
 			<value name="ConWnd Height" type="dword" data="00000019"/>
 			<value name="Cascaded" type="hex" data="01"/>
-			<value name="ConWnd X" type="dword" data="000001ea"/>
-			<value name="ConWnd Y" type="dword" data="00000109"/>
+			<value name="ConWnd X" type="dword" data="0000039c"/>
+			<value name="ConWnd Y" type="dword" data="00000265"/>
 			<value name="16bit Height" type="dword" data="00000000"/>
 			<value name="AutoSaveSizePos" type="hex" data="00"/>
+			<value name="IntegralSize" type="hex" data="00"/>
 			<value name="QuakeStyle" type="hex" data="00"/>
+			<value name="QuakeAnimation" type="dword" data="0000012c"/>
 			<value name="HideCaption" type="hex" data="00"/>
+			<value name="HideChildCaption" type="hex" data="01"/>
+			<value name="FocusInChildWindows" type="hex" data="01"/>
 			<value name="HideCaptionAlways" type="hex" data="00"/>
-			<value name="HideCaptionAlwaysFrame" type="hex" data="01"/>
+			<value name="HideCaptionAlwaysFrame" type="hex" data="ff"/>
 			<value name="HideCaptionAlwaysDelay" type="dword" data="000007d0"/>
 			<value name="HideCaptionAlwaysDisappear" type="dword" data="000007d0"/>
 			<value name="DownShowHiddenMessage" type="hex" data="00"/>
@@ -140,10 +154,14 @@
 			<value name="ComSpec.Bits" type="hex" data="00"/>
 			<value name="ComSpec.UpdateEnv" type="hex" data="00"/>
 			<value name="ComSpec.EnvAddPath" type="hex" data="01"/>
+			<value name="ComSpec.EnvAddExePath" type="hex" data="01"/>
+			<value name="ComSpec.UncPaths" type="hex" data="00"/>
 			<value name="ComSpec.Path" type="string" data=""/>
 			<value name="ConsoleTextSelection" type="hex" data="01"/>
 			<value name="CTS.AutoCopy" type="hex" data="01"/>
+			<value name="CTS.IBeam" type="hex" data="01"/>
 			<value name="CTS.EndOnTyping" type="hex" data="00"/>
+			<value name="CTS.EndOnKeyPress" type="hex" data="00"/>
 			<value name="CTS.Freeze" type="hex" data="00"/>
 			<value name="CTS.SelectBlock" type="hex" data="01"/>
 			<value name="CTS.SelectText" type="hex" data="01"/>
@@ -211,6 +229,10 @@
 			<value name="StatusBar.Hide.WSize" type="hex" data="01"/>
 			<value name="StatusBar.Hide.WClient" type="hex" data="01"/>
 			<value name="StatusBar.Hide.WWork" type="hex" data="01"/>
+			<value name="StatusBar.Hide.Style" type="hex" data="01"/>
+			<value name="StatusBar.Hide.StyleEx" type="hex" data="01"/>
+			<value name="StatusBar.Hide.hFore" type="hex" data="01"/>
+			<value name="StatusBar.Hide.hFocus" type="hex" data="01"/>
 			<value name="StatusBar.Hide.ABuf" type="hex" data="00"/>
 			<value name="StatusBar.Hide.CPos" type="hex" data="00"/>
 			<value name="StatusBar.Hide.CSize" type="hex" data="00"/>
@@ -229,17 +251,23 @@
 			<value name="StatusBar.Hide.Sync" type="hex" data="00"/>
 			<value name="StatusBar.Hide.Proc" type="hex" data="00"/>
 			<value name="StatusBar.Hide.Title" type="hex" data="01"/>
+			<value name="StatusBar.Hide.Resize" type="hex" data="00"/>
 			<value name="Tabs" type="hex" data="01"/>
+			<value name="TabsLocation" type="hex" data="00"/>
+			<value name="OneTabPerGroup" type="hex" data="00"/>
+			<value name="ActivateSplitMouseOver" type="hex" data="00"/>
 			<value name="TabSelf" type="hex" data="01"/>
 			<value name="TabLazy" type="hex" data="01"/>
 			<value name="TabRecent" type="hex" data="01"/>
+			<value name="TabDblClick" type="dword" data="00000001"/>
+			<value name="TabBtnDblClick" type="dword" data="00000000"/>
 			<value name="TabsOnTaskBar" type="hex" data="02"/>
+			<value name="TaskBarOverlay" type="hex" data="01"/>
 			<value name="TabCloseMacro" type="string" data=""/>
 			<value name="TabFontFace" type="string" data="Tahoma"/>
 			<value name="TabFontCharSet" type="dword" data="00000000"/>
 			<value name="TabFontHeight" type="dword" data="00000010"/>
 			<value name="SaveAllEditors" type="string" data=""/>
-			<value name="TabFrame" type="hex" data="01"/>
 			<value name="ToolbarAddSpace" type="dword" data="00000000"/>
 			<value name="TabConsole" type="string" data="&lt;%c&gt; %s"/>
 			<value name="TabSkipWords" type="string" data="Administrator:|Администратор:"/>
@@ -255,7 +283,7 @@
 			<value name="TryToCenter" type="hex" data="00"/>
 			<value name="CenterConsolePad" type="dword" data="00000000"/>
 			<value name="ShowScrollbar" type="hex" data="02"/>
-			<value name="ScrollBarAppearDelay" type="dword" data="000003e8"/>
+			<value name="ScrollBarAppearDelay" type="dword" data="00000064"/>
 			<value name="ScrollBarDisappearDelay" type="dword" data="000003e8"/>
 			<value name="IconID" type="dword" data="00000001"/>
 			<value name="MainTimerElapse" type="dword" data="0000000a"/>
@@ -267,6 +295,7 @@
 			<value name="SnapToDesktopEdges" type="hex" data="00"/>
 			<value name="AlwaysOnTop" type="hex" data="00"/>
 			<value name="SleepInBackground" type="hex" data="00"/>
+			<value name="MinimizeOnLoseFocus" type="hex" data="00"/>
 			<value name="DisableFarFlashing" type="hex" data="00"/>
 			<value name="DisableAllFlashing" type="hex" data="00"/>
 			<value name="FindText" type="string" data=""/>
@@ -303,6 +332,10 @@
 			<value name="PanView.UsePicView2" type="hex" data="01"/>
 			<value name="PanView.RestoreOnStartup" type="hex" data="00"/>
 			<value name="Update.VerLocation" type="string" data=""/>
+			<value name="Update.CheckOnStartup" type="hex" data="00"/>
+			<value name="Update.CheckHourly" type="hex" data="00"/>
+			<value name="Update.ConfirmDownload" type="hex" data="01"/>
+			<value name="Update.UseBuilds" type="hex" data="02"/>
 			<value name="Update.UseProxy" type="hex" data="00"/>
 			<value name="Update.Proxy" type="string" data=""/>
 			<value name="Update.ProxyUser" type="string" data=""/>
@@ -314,9 +347,25 @@
 			<value name="Update.PostUpdateCmd" type="string" data="echo Last successful update&gt;ConEmuUpdate.info &amp;&amp; date /t&gt;&gt;ConEmuUpdate.info &amp;&amp; time /t&gt;&gt;ConEmuUpdate.info"/>
 			<value name="Multi.Modifier" type="dword" data="0000005b"/>
 			<value name="Multi.ArrowsModifier" type="dword" data="0000005b"/>
-			<value name="MinimizeRestore" type="dword" data="00105b43"/>
+			<value name="KeyMacroVersion" type="hex" data="02"/>
+			<value name="MinimizeRestore" type="dword" data="000011c0"/>
 			<value name="MinimizeRestore2" type="dword" data="00000000"/>
+			<value name="GlobalRestore" type="dword" data="00000000"/>
 			<value name="ForcedFullScreen" type="dword" data="12115b0d"/>
+			<value name="SwitchGuiFocus" type="dword" data="00000000"/>
+			<value name="SetFocusGui" type="dword" data="00000000"/>
+			<value name="SetFocusChild" type="dword" data="00000000"/>
+			<value name="ChildSystemMenu" type="dword" data="00000000"/>
+			<value name="Multi.NewSplitV" type="dword" data="0010114f"/>
+			<value name="Multi.NewSplitH" type="dword" data="00101145"/>
+			<value name="Multi.SplitSizeVU" type="dword" data="00105d26"/>
+			<value name="Multi.SplitSizeVD" type="dword" data="00105d28"/>
+			<value name="Multi.SplitSizeHL" type="dword" data="00105d25"/>
+			<value name="Multi.SplitSizeHR" type="dword" data="00105d27"/>
+			<value name="Multi.SplitFocusU" type="dword" data="00005d26"/>
+			<value name="Multi.SplitFocusD" type="dword" data="00005d28"/>
+			<value name="Multi.SplitFocusL" type="dword" data="00005d25"/>
+			<value name="Multi.SplitFocusR" type="dword" data="00005d27"/>
 			<value name="Multi.NewConsole" type="dword" data="00005b57"/>
 			<value name="Multi.NewConsoleShift" type="dword" data="00105b57"/>
 			<value name="Multi.NewConsolePopup" type="dword" data="00005b4e"/>
@@ -328,26 +377,39 @@
 			<value name="Multi.AltCon" type="dword" data="00005b41"/>
 			<value name="Multi.Scroll" type="dword" data="00005b53"/>
 			<value name="Multi.Close" type="dword" data="00005b2e"/>
+			<value name="CloseTabKey" type="dword" data="00125b2e"/>
+			<value name="CloseGroupKey" type="dword" data="00000000"/>
+			<value name="CloseGroupPrcKey" type="dword" data="00000000"/>
+			<value name="TerminateProcessKey" type="dword" data="00105b2e"/>
+			<value name="DuplicateRootKey" type="dword" data="00000000"/>
+			<value name="CloseConEmuKey" type="dword" data="00005b73"/>
 			<value name="Multi.Rename" type="dword" data="00005d52"/>
 			<value name="Multi.MoveLeft" type="dword" data="00125b25"/>
 			<value name="Multi.MoveRight" type="dword" data="00125b27"/>
-			<value name="TerminateProcessKey" type="dword" data="00105b2e"/>
 			<value name="Multi.CmdKey" type="dword" data="00005b58"/>
 			<value name="CTS.VkBlockStart" type="dword" data="00000000"/>
 			<value name="CTS.VkTextStart" type="dword" data="00000000"/>
-			<value name="Multi.ShowTabsList" type="dword" data="8080807b"/>
+			<value name="CTS.VkCopyAll" type="dword" data="00000000"/>
+			<value name="Multi.ShowTabsList" type="dword" data="00000000"/>
+			<value name="Multi.ShowTabsList2" type="dword" data="00005d7b"/>
 			<value name="ClipboardVkAllLines" type="dword" data="0000102d"/>
 			<value name="ClipboardVkFirstLine" type="dword" data="00001156"/>
+			<value name="DeleteWordToLeft" type="dword" data="00001108"/>
 			<value name="FindTextKey" type="dword" data="00005d46"/>
 			<value name="ScreenshotKey" type="dword" data="00005b48"/>
 			<value name="ScreenshotFullKey" type="dword" data="00105b48"/>
 			<value name="ShowStatusBarKey" type="dword" data="00005d53"/>
 			<value name="ShowTabBarKey" type="dword" data="00005d54"/>
+			<value name="ShowCaptionKey" type="dword" data="00005d43"/>
 			<value name="AlwaysOnTopKey" type="dword" data="00000000"/>
 			<value name="Key.TabMenu" type="dword" data="00005d20"/>
+			<value name="Key.TabMenu2" type="dword" data="00001002"/>
+			<value name="Key.TabPane1" type="dword" data="00005d09"/>
+			<value name="Key.TabPane2" type="dword" data="00105d09"/>
 			<value name="Key.Maximize" type="dword" data="00001278"/>
 			<value name="Key.FullScreen" type="dword" data="0000120d"/>
 			<value name="Key.SysMenu" type="dword" data="00001220"/>
+			<value name="Key.SysMenu2" type="dword" data="00001102"/>
 			<value name="Key.BufUp" type="dword" data="00001126"/>
 			<value name="Key.BufDn" type="dword" data="00001128"/>
 			<value name="Key.BufPgUp" type="dword" data="00001121"/>
@@ -355,12 +417,21 @@
 			<value name="Key.PicViewSlide" type="dword" data="80808013"/>
 			<value name="Key.PicViewSlower" type="dword" data="808080bd"/>
 			<value name="Key.PicViewFaster" type="dword" data="808080bb"/>
+			<value name="FontLargerKey" type="dword" data="000011d0"/>
+			<value name="FontSmallerKey" type="dword" data="000011d1"/>
+			<value name="PasteFileKey" type="dword" data="00101146"/>
+			<value name="PastePathKey" type="dword" data="00101144"/>
+			<value name="PasteCygwinKey" type="dword" data="00005d2d"/>
+			<value name="Key.JumpPrevMonitor" type="dword" data="00105b25"/>
+			<value name="Key.JumpNextMonitor" type="dword" data="00105b27"/>
+			<value name="Key.TileToLeft" type="dword" data="00005b25"/>
+			<value name="Key.TileToRIght" type="dword" data="00005b27"/>
 			<value name="KeyMacro01" type="dword" data="00000000"/>
-			<value name="KeyMacro01.Text" type="string" data="FontSetSize(1,2)"/>
+			<value name="KeyMacro01.Text" type="string" data=""/>
 			<value name="KeyMacro02" type="dword" data="00000000"/>
-			<value name="KeyMacro02.Text" type="string" data="FontSetSize(1,-2)"/>
+			<value name="KeyMacro02.Text" type="string" data=""/>
 			<value name="KeyMacro03" type="dword" data="00000000"/>
-			<value name="KeyMacro03.Text" type="string" data="Tabs(8)"/>
+			<value name="KeyMacro03.Text" type="string" data=""/>
 			<value name="KeyMacro04" type="dword" data="00000000"/>
 			<value name="KeyMacro04.Text" type="string" data=""/>
 			<value name="KeyMacro05" type="dword" data="00000000"/>
@@ -427,90 +498,36 @@
 			<value name="DndLKey" type="hex" data="00"/>
 			<value name="DndRKey" type="hex" data="a2"/>
 			<value name="WndDragKey" type="dword" data="00121101"/>
-				<key name="Tasks" modified="2012-12-12 20:42:01">
-				<value name="Count" type="dword" data="00000004"/>
-						<key name="Task1" modified="2012-12-12 20:42:01">
+				<key name="Tasks" modified="2013-09-09 21:44:14" build="130827">
+				<value name="Count" type="dword" data="00000003"/>
+						<key name="Task1" modified="2013-09-09 21:44:14" build="130827">
 					<value name="Name" type="string" data="{git-bash}"/>
 					<value name="GuiArgs" type="string" data=""/>
+					<value name="Cmd1" type="string" data="&quot;C:\Program Files (x86)\Git\bin\sh.exe&quot; --login -i"/>
 					<value name="Active" type="dword" data="00000000"/>
 					<value name="Count" type="dword" data="00000001"/>
-					<value name="Cmd1" type="string" data="&quot;C:\Program Files (x86)\Git\bin\sh.exe&quot; --login -i"/>
 				</key>
-						<key name="Task2" modified="2012-12-12 20:42:01">
+						<key name="Task2" modified="2013-09-09 21:44:14" build="130827">
+					<value name="Name" type="string" data="{cmd}"/>
+					<value name="GuiArgs" type="string" data=""/>
+					<value name="Cmd1" type="string" data="cmd"/>
+					<value name="Active" type="dword" data="00000000"/>
+					<value name="Count" type="dword" data="00000001"/>
+				</key>
+						<key name="Task3" modified="2013-09-09 21:44:14" build="130827">
 					<value name="Name" type="string" data="{powershell}"/>
 					<value name="GuiArgs" type="string" data=""/>
 					<value name="Cmd1" type="string" data="powershell"/>
 					<value name="Active" type="dword" data="00000000"/>
 					<value name="Count" type="dword" data="00000001"/>
 				</key>
-						<key name="Task3" modified="2012-12-12 20:42:01">
-					<value name="Name" type="string" data="{cmd.exe}"/>
-					<value name="GuiArgs" type="string" data=""/>
-					<value name="Cmd1" type="string" data="cmd.exe"/>
-					<value name="Active" type="dword" data="00000000"/>
-					<value name="Count" type="dword" data="00000001"/>
-				</key>
-						<key name="Task4" modified="2012-12-12 20:42:01">
-					<value name="Name" type="string" data="{vs2012}"/>
-					<value name="GuiArgs" type="string" data=""/>
-					<value name="Cmd1" type="string" data="%comspec% /k &quot;&quot;C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\Tools\VsDevCmd.bat&quot;&quot;"/>
-					<value name="Active" type="dword" data="00000000"/>
-					<value name="Count" type="dword" data="00000001"/>
-				</key>
 			</key>
-				<key name="Apps" modified="2012-12-12 20:42:01">
+				<key name="Apps" modified="2013-09-09 21:44:14" build="130827">
 				<value name="Count" type="dword" data="00000000"/>
 			</key>
-			<value name="CmdLineHistory" type="multi"><line data="&quot;&quot;C:\Program Files (x86)\Git\bin\sh.exe&quot;&quot; --login -i"/><line data="cmd -cur_console:n"/><line data="C:\Users\Prabir\ConEmuPack\ConEmu64.exe"/></value>
-			<value name="SetDefaultTerminal" type="hex" data="00"/>
-			<value name="DefaultTerminalNoInjects" type="hex" data="00"/>
-			<value name="DefaultTerminalConfirm" type="hex" data="01"/>
-			<value name="DefaultTerminalApps" type="string" data="explorer.exe"/>
-			<value name="Multi.NumberInCaption" type="hex" data="00"/>
-			<value name="Multi.CloseEditViewConfirm" type="hex" data="00"/>
-			<value name="Multi.SplitWidth" type="hex" data="04"/>
-			<value name="Multi.SplitHeight" type="hex" data="04"/>
-			<value name="ComSpec.UncPaths" type="hex" data="00"/>
-			<value name="CTS.EndOnKeyPress" type="hex" data="00"/>
-			<value name="StatusBar.Hide.Style" type="hex" data="01"/>
-			<value name="StatusBar.Hide.StyleEx" type="hex" data="01"/>
-			<value name="StatusBar.Hide.hFore" type="hex" data="01"/>
-			<value name="StatusBar.Hide.hFocus" type="hex" data="01"/>
-			<value name="TabsLocation" type="hex" data="00"/>
-			<value name="TabDblClick" type="dword" data="00000001"/>
-			<value name="TaskBarOverlay" type="hex" data="01"/>
-			<value name="GlobalRestore" type="dword" data="00000000"/>
-			<value name="Multi.NewSplitV" type="dword" data="0010114f"/>
-			<value name="Multi.NewSplitH" type="dword" data="00101145"/>
-			<value name="CloseTabKey" type="dword" data="00125b2e"/>
-			<value name="CloseGroupKey" type="dword" data="00000000"/>
-			<value name="DuplicateRootKey" type="dword" data="00000000"/>
-			<value name="CloseConEmuKey" type="dword" data="00005b73"/>
-			<value name="Multi.ShowTabsList2" type="dword" data="00005d7b"/>
-			<value name="DeleteWordToLeft" type="dword" data="00001108"/>
-			<value name="ShowCaptionKey" type="dword" data="00005d43"/>
-			<value name="Key.TabMenu2" type="dword" data="00001002"/>
-			<value name="Key.TabPane1" type="dword" data="00005d09"/>
-			<value name="Key.TabPane2" type="dword" data="00105d09"/>
-			<value name="Key.SysMenu2" type="dword" data="00001102"/>
-			<value name="FontLargerKey" type="dword" data="000011d0"/>
-			<value name="FontSmallerKey" type="dword" data="000011d1"/>
-			<value name="PasteFileKey" type="dword" data="00101146"/>
-			<value name="PastePathKey" type="dword" data="00101144"/>
-			<value name="PasteCygwinKey" type="dword" data="00005d2d"/>
-				<key name="Colors" modified="2012-12-12 20:42:01">
+				<key name="Colors" modified="2013-09-09 21:44:14" build="130827">
 				<value name="Count" type="dword" data="00000000"/>
 			</key>
-		</key>
-		<key name="shell" modified="2012-08-24 21:28:13">
-			<value name="CmdLineHistory" type="multi"><line data="C:\Users\Prabir\ConEmuPack\ConEmu64.exe"/><line data="cmd -cur_console:n"/></value>
-			<value name="TabMargins" type="hex" data="00,00,00,00,19,00,00,00,00,00,00,00,00,00,00,00"/>
-			<value name="KeyboardHooks" type="hex" data="01"/>
-			<value name="UseInjects" type="hex" data="01"/>
-			<value name="Update.CheckOnStartup" type="hex" data="01"/>
-			<value name="Update.CheckHourly" type="hex" data="00"/>
-			<value name="Update.ConfirmDownload" type="hex" data="01"/>
-			<value name="Update.UseBuilds" type="hex" data="01"/>
 		</key>
 	</key>
 </key>
