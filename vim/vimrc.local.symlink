@@ -95,7 +95,7 @@ nnoremap <space> :OmniSharpGetCodeActions<cr>
 
 " rename with dialog
 nnoremap nm :OmniSharpRename<cr>
-nnoremap <F2> :OmniSharpRename<cr>      
+nnoremap <F2> :OmniSharpRename<cr>
 " rename without dialog - with cursor on the symbol to rename... ':Rename newname'
 command! -nargs=1 Rename :call OmniSharp#RenameTo("<args>")
 " Force OmniSharp to reload the solution. Useful when switching branches etc.
@@ -116,6 +116,10 @@ let g:snips_author="Prabir Shrestha"
 " YCM and Utilsnips
 "let g:ycm_key_list_select_completion = ['<C-TAB>', '<Down>']
 "let g:ycm_key_list_previous_completion = ['<C-S-TAB>', '<Up>']
+
+let g:UltiSnipsExpandTrigger="<c-j>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 
 let g:syntastic_javascript_checkers = ['jshint']
 let g:syntastic_enable_signs=1
