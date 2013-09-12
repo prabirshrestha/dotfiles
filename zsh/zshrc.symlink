@@ -62,6 +62,9 @@ bindkey -M viins 'jj' vi-cmd-mode
 [ -f ~/.nvm/nvm.sh ] && { source ~/.nvm/nvm.sh; nvm use default > /dev/null }
 eval "$(rbenv init -)"
 
+ANDROID_HOME=$HOME/android-sdk
+export PATH=$PATH:$HOME/android-sdk/tools
+
 for config_file ($HOME/.dotfiles/zsh/**/*.zsh) source $config_file
 # DO NOT EDIT BELOW THIS LINE
 
