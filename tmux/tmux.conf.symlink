@@ -96,6 +96,8 @@ bind -n C-\ run "(tmux display-message -p '#{pane_current_command}' | grep -iq v
 
 set-option -g renumber-windows on
 
+setw -g aggressive-resize on
+
 # # status bar color
 # set -g status-fg white
 # set -g status-bg black
