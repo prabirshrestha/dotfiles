@@ -4,3 +4,6 @@ for config_file in ~/.dotfiles/**/*.bash
         source "$config_file"
     done
 [[ -s ~/.nvm/nvm.sh ]] && . ~/.nvm/nvm.sh # This loads NVM
+
+ANDROID_HOME=$HOME/android-sdk                                                                           │I/Web Console(16954): Endpoint saved GIF89a���������������������!���������,��������������D��; at
+export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
