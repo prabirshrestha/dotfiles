@@ -64,6 +64,8 @@ eval "$(rbenv init -)"
 
 ANDROID_HOME=$HOME/android-sdk
 export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
+alias pra="phonegap run android"
+alias adblogconsole="adb logcat -c && adb logcat | grep Console"
 
 for config_file ($HOME/.dotfiles/zsh/**/*.zsh) source $config_file
 # DO NOT EDIT BELOW THIS LINE
