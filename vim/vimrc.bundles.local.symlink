@@ -33,4 +33,5 @@ endif
 Bundle 'marijnh/tern_for_vim'
 Bundle 'vim-scripts/TaskList.vim'
 Bundle 'DataWraith/auto_mkdir'
+Bundle 'wavded/vim-stylus'
 
