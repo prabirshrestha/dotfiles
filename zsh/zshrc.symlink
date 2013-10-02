@@ -44,7 +44,7 @@ ZSH_THEME="agnoster"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git brew npm jake sublime web-search tmux tmuxinator vundle osx gem gnu-utils last-working-dir mvn urltools vi-mode vagrant bower)
+plugins=(git brew npm nvm jake sublime web-search tmux tmuxinator vundle osx gem gnu-utils last-working-dir mvn urltools vi-mode vagrant bower)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -59,7 +59,6 @@ export PATH=/usr/local/bin:$HOME/.dotfiles/bin:$PATH
 bindkey -v
 bindkey -M viins 'jj' vi-cmd-mode
 
-[ -f ~/.nvm/nvm.sh ] && { source ~/.nvm/nvm.sh; nvm use default > /dev/null }
 eval "$(rbenv init -)"
 
 ANDROID_HOME=$HOME/android-sdk
