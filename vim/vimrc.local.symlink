@@ -70,6 +70,9 @@ nnoremap <C-n> :call NumbersToggle()<cr>
 
 set foldlevel=99
 
+" NERDTree
+let NERDTreeQuitOnOpen=0
+
 " OmniSharp
 "Set the type lookup function to use the preview window instead of the status line
 let g:OmniSharp_typeLookupInPreview = 1
