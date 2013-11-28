@@ -1,5 +1,7 @@
 " vim: set syntax=vim:
 
+colorscheme solarized
+
 set nowrap
 
 au BufNewFile,BufRead *.ejs set filetype=html
