@@ -6,7 +6,7 @@
 [alias]
         l = log
         ci = commit
-        br = branch
+	br = "!f() { git fetch && git checkout -b $1 --track origin/$1; }; f"
         st = status     
         co = checkout
         w = whatchanged
