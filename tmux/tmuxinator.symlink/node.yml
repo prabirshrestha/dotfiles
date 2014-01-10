@@ -3,18 +3,6 @@
 name: node
 root: .
 
-# Optional tmux socket
-# socket_name: foo
-
-# Runs before everything. Use it to start daemons etc.
-# pre: sudo /etc/rc.d/mysqld start
-
-# Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
-# pre_window: rbenv shell 2.0.0-p247
-
-# Pass command line options to tmux. Useful for specifying a different tmux.conf.
-# tmux_options: -f ~/.tmux.mac.conf
-
 windows:
   - editor:
         layout: d13d,204x63,0,0[204x45,0,0,0,204x17,0,46{102x17,0,46,1,101x17,103,46,2}]
