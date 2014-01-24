@@ -13,6 +13,8 @@ Bundle 'marijnh/tern_for_vim'
 Bundle 'vim-scripts/indenthtml.vim'
 Bundle 'digitaltoad/vim-jade'
 
+Bundle 'geekjuice/vim-mocha'
+
 Bundle 'mattn/emmet-vim'
 Bundle 'wavded/vim-stylus'
 

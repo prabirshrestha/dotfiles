@@ -60,3 +60,10 @@ let g:html_indent_style1  = "inc"
    let &t_SI = "\<Esc>]50;CursorShape=1\x7"
    let &t_EI = "\<Esc>]50;CursorShape=0\x7"
  endif
+
+"
+" Mocha.vim mappings
+"autocmd Filetype javascript map <Leader>rt :call mocha#RunCurrentSpecFile()<CR>
+autocmd Filetype javascript map <Leader>rs :call mocha#RunNearestSpec()<CR>
+"autocmd Filetype javascript map <Leader>rl :call mocha#RunLastSpec()<CR>
+"autocmd Filetype javascript map <Leader>ra :call mocha#RunAllSpecs()<CR>
