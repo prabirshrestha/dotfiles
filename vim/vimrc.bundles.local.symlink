@@ -1,40 +1,22 @@
-let g:spf13_bundle_groups=['general', 'programming', 'javascript', 'html', 'misc']
-"let g:override_spf13_bundles=1
-let g:spf13_no_autochdir = 1
-let g:spf13_no_views =1
-
+let g:spf13_bundle_groups=['general', 'programming', 'javascript', 'html', 'misc', 'youcompleteme']
+let g:override_spf13_bundles = 1
 let g:airline_powerline_fonts=1
-"let g:spf13_use_powerline=1
-"let g:spf13_use_old_powerline=1
 
-Bundle 'Valloric/YouCompleteMe'
-
-Bundle 'vim-scripts/indenthtml.vim'
-Bundle 'mattn/emmet-vim'
-Bundle 'g3orge/vim-voogle'
-Bundle 'gregsexton/gitv'
-Bundle 'digitaltoad/vim-jade'
-Bundle 'nosami/Omnisharp'
 Bundle 'tpope/vim-dispatch'
+
 Bundle 'christoomey/vim-tmux-navigator'
 
-let s:python_ver = 0
-silent! python import sys, vim;
-\ vim.command("let s:python_ver="+"".join(map(str,sys.version_info[0:3])))
-
-" Python plugin bundles
-if (has('python') || has('python3')) && s:python_ver >= 260
-    Bundle "git://github.com/SirVer/ultisnips.git"
-    "Bundle 'honza/vim-snippets'
-else
-  Bundle 'garbas/vim-snipmate'
-endif
+Bundle 'Valloric/YouCompleteMe'
+Bundle 'SirVer/ultisnips'
 
 Bundle 'marijnh/tern_for_vim'
-Bundle 'vim-scripts/TaskList.vim'
-Bundle 'DataWraith/auto_mkdir'
+Bundle 'vim-scripts/indenthtml.vim'
+Bundle 'digitaltoad/vim-jade'
+
+Bundle 'mattn/emmet-vim'
 Bundle 'wavded/vim-stylus'
-Bundle 'tacahiroy/ctrlp-funky'
-Bundle 'kien/rainbow_parentheses.vim'
-Bundle 'ivalkeen/vim-ctrlp-tjump'
+
+Bundle 'DataWraith/auto_mkdir'
+
+Bundle 'g3orge/vim-voogle'
 
