@@ -34,4 +34,7 @@ Bundle 'marijnh/tern_for_vim'
 Bundle 'vim-scripts/TaskList.vim'
 Bundle 'DataWraith/auto_mkdir'
 Bundle 'wavded/vim-stylus'
+Bundle 'tacahiroy/ctrlp-funky'
+Bundle 'kien/rainbow_parentheses.vim'
+Bundle 'ivalkeen/vim-ctrlp-tjump'
 

@@ -144,4 +144,8 @@ let g:syntastic_check_on_open = 1
 nnoremap <silent> <leader>gv :Gitv<CR>
 nnoremap <silent> <leader>gV :Gitv!<CR>
 
-
+" ctrlp-extensions
+let g:ctrlp_extensions = ['funky', ]
+nnoremap <Leader>fu :CtrlPFunky<Cr>
+nnoremap <c-]> :CtrlPtjump<cr>
+vnoremap <c-]> :CtrlPtjumpVisual<cr>
