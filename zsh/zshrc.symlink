@@ -53,7 +53,7 @@ prompt_context() {
 }
 
 # recommended by brew doctor
-export PATH=/usr/local/bin:/usr/local/sbin:$HOME/.dotfiles/bin:$PATH
+export PATH=/usr/local/bin:/usr/local/sbin:$HOME/.dotfiles/bin:/Applications/Xcode.app/Contents/Developer/usr/bin/:$PATH
 alias vi=/usr/local/bin/vim
 
 # enable vi bindings
