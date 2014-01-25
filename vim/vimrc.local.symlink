@@ -25,6 +25,9 @@ nnoremap <leader>v V`]
 
 set clipboard=
 
+" NERDTree
+let NERDTreeQuitOnOpen=0
+
 let g:ycm_add_preview_to_completeopt = 1
 let g:ycm_confirm_extra_conf         = 0
 "don't autoselect first item in omnicomplete, show if only one item (for
