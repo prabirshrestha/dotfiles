@@ -3,6 +3,13 @@
 " Remap fast jj to escape
 inoremap jj <ESC>
 
+# mouse resize splits using vim under tmux http://superuser.com/a/550482
+set mouse+=a
+if &term =~ '^screen'
+    " tmux knows the extended mouse mode
+    set ttymouse=xterm2
+endif
+
 " If the current buffer has never been saved, it will have no name,
 " call the file browser to save it, otherwise just save it.
 command -nargs=0 -bar Update if &modified
