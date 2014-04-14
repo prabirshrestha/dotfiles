@@ -44,6 +44,11 @@
     path = /Applications/kdiff3.app/Contents/MacOS/kdiff3
     keepBackup = false
     trustExitCode = false
+[mergetool "p4merge"]
+    cmd = /Applications/p4merge.app/Contents/MacOS/p4merge "$BASE" "$LOCAL" "$REMOTE" "$MERGED"
+    keepTemporaries = false
+    trustExitCode = false
+    keepBackup = false
 [github]
         user = prabirshrestha
 [push]
