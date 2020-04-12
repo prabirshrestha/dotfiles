@@ -6,6 +6,25 @@ pcall(require, "luarocks.loader")
 local gears = require("gears")
 local awful = require("awful")
 require("awful.autofocus")
+
+-- {{{ Variables
+local altkey = "Mod1"
+-- Default modkey.
+-- Usually, Mod4 is the key with a logo between Control and Alt.
+-- If you do not like this or do not have such a key,
+-- I suggest you to remap Mod4 to another key using xmodmap or other tools.
+-- However, you can use another modifier like Mod1, but it may interact with others.
+local superkey = "Mod4"
+local modkey = "Mod1"
+
+local home = os.getenv("HOME")
+local exec = awful.util.spawn
+local sexec = awful.util.spwan_with_shell
+local scount = screen.count()
+-- }}}
+
+
+
 -- Widget and layout library
 local wibox = require("wibox")
 -- Theme handling library
@@ -46,18 +65,14 @@ end
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
 beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
+beautiful.font = "Fira Code 14"
+beautiful.get().hotkeys_font = "Fira Code Bold 14"
+beautiful.get().hotkeys_description_font = "Fira Code 14"
 
 -- This is used later as the default terminal and editor to run.
 terminal = "alacritty"
 editor = os.getenv("EDITOR") or "gvim"
 editor_cmd = terminal .. " -e " .. editor
-
--- Default modkey.
--- Usually, Mod4 is the key with a logo between Control and Alt.
--- If you do not like this or do not have such a key,
--- I suggest you to remap Mod4 to another key using xmodmap or other tools.
--- However, you can use another modifier like Mod1, but it may interact with others.
-modkey = "Mod1"
 
 -- Table of layouts to cover with awful.layout.inc, order matters.
 awful.layout.layouts = {
@@ -94,7 +109,12 @@ mymainmenu = awful.menu({ items = { { "awesome", myawesomemenu, beautiful.awesom
                                     { "Firefox", "firefox" },
                                     { "Gvim", "gvim" },
                                     { "open terminal", terminal }
-                                  }
+                                  },
+                          theme = {
+                              width = 250,
+                              height = 30,
+                              font = "Fira Code 14"
+                          }
                         })
 
 mylauncher = awful.widget.launcher({ image = beautiful.awesome_icon,
@@ -198,7 +218,7 @@ awful.screen.connect_for_each_screen(function(s)
     }
 
     -- Create the wibox
-    s.mywibox = awful.wibar({ position = "top", screen = s })
+    s.mywibox = awful.wibar({ position = "top", screen = s, height=30 })
 
     -- Add widgets to the wibox
     s.mywibox:setup {
