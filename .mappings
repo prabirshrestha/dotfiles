@@ -7,3 +7,5 @@
 
 [linux]
 ".config/awesome"="~/.config/awesome"
+".config/bspwm"="~/.config/bspwm"
+".config/sxhkd"="~/.config/sxhkd"
