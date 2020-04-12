@@ -3,3 +3,4 @@
 ".vimrc"="~/.vimrc"
 ".gitconfig"="~/.gitconfig"
 ".tmux.conf"="~/.tmux.conf"
+".zshrc"="~/.zshrc"
