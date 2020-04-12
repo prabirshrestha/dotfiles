@@ -1,3 +1,4 @@
 [general]
 ".vimrc"="~/.vimrc"
 ".gitconfig"="~/.gitconfig"
+".tmux.conf"="~/.tmux.conf"
