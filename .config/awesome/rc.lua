@@ -48,8 +48,8 @@ end
 beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
-terminal = "xterm"
-editor = os.getenv("EDITOR") or "vim" or "nano"
+terminal = "alacritty"
+editor = os.getenv("EDITOR") or "gvim"
 editor_cmd = terminal .. " -e " .. editor
 
 -- Default modkey.
@@ -91,6 +91,7 @@ myawesomemenu = {
 }
 
 mymainmenu = awful.menu({ items = { { "awesome", myawesomemenu, beautiful.awesome_icon },
+                                    { "Firefox", "firefox" },
                                     { "Gvim", "gvim" },
                                     { "open terminal", terminal }
                                   }
