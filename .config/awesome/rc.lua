@@ -70,7 +70,7 @@ beautiful.get().hotkeys_font = "Fira Code Bold 14"
 beautiful.get().hotkeys_description_font = "Fira Code 14"
 
 -- This is used later as the default terminal and editor to run.
-terminal = "alacritty"
+terminal = "xterm"
 editor = os.getenv("EDITOR") or "vim"
 editor_cmd = terminal .. " -e " .. editor
 
