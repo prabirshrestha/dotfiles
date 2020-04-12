@@ -71,7 +71,7 @@ beautiful.get().hotkeys_description_font = "Fira Code 14"
 
 -- This is used later as the default terminal and editor to run.
 terminal = "alacritty"
-editor = os.getenv("EDITOR") or "gvim"
+editor = os.getenv("EDITOR") or "vim"
 editor_cmd = terminal .. " -e " .. editor
 
 -- Table of layouts to cover with awful.layout.inc, order matters.
@@ -108,6 +108,7 @@ myawesomemenu = {
 mymainmenu = awful.menu({ items = { { "awesome", myawesomemenu, beautiful.awesome_icon },
                                     { "Firefox", "firefox" },
                                     { "Gvim", "gvim" },
+                                    { "WezTerm", "wezterm" },
                                     { "open terminal", terminal }
                                   },
                           theme = {

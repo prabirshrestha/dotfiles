@@ -5,6 +5,7 @@
 ".tmux.conf"="~/.tmux.conf"
 ".zshrc"="~/.zshrc"
 ".config/alacritty"="~/.config/alacritty"
+".config/wezterm"="~/.config/wezterm"
 
 [linux]
 ".config/awesome"="~/.config/awesome"
