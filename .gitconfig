@@ -1,0 +1,6 @@
+[core]
+    # git config --global core.commentchar ;
+    editor=vim
+[user]
+	email = mail@prabir.me
+	name = Prabir Shrestha

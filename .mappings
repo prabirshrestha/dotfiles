@@ -1,1 +1,3 @@
 [general]
+".vimrc"="~/.vimrc"
+".gitconfig"="~/.gitconfig"
