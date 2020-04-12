@@ -4,6 +4,7 @@
 ".gitconfig"="~/.gitconfig"
 ".tmux.conf"="~/.tmux.conf"
 ".zshrc"="~/.zshrc"
+".config/alacritty"="~/.config/alacritty"
 
 [linux]
 ".config/awesome"="~/.config/awesome"
