@@ -3,9 +3,9 @@ local wezterm = require("wezterm")
 local launch_menu = {}
 
 if wezterm.target_triple == "x86_64-pc-windows-msvc" then
-    table.insert(launch_menu, { label = "PowerShell", args = {"powershell.exe", "-NoLogo"} })
+    table.insert(launch_menu, { label = "powerShell", args = {"powershell.exe", "-NoLogo"} })
 else
-    table.insert(launch_menu, { label = "Bash", args = {"bash", "-l"} })
+    table.insert(launch_menu, { label = "bash", args = {"bash", "-l"} })
 end
 
 return {
