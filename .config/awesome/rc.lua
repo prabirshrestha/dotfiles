@@ -356,8 +356,8 @@ globalkeys = gears.table.join(
     awful.key({ modkey }, "p", function() menubar.show() end,
               {description = "show the menubar", group = "launcher"}),
 
-    awful.key({ }, "#122", function () awful.util.spawn("amixer -D pulse sset Master 5%-") end),
-    awful.key({ }, "#123", function () awful.util.spawn("amixer -D pulse sset Master 5%+") end),
+    awful.key({ }, "#122", function () awful.util.spawn("amixer -D pulse sset Master 20%-") end),
+    awful.key({ }, "#123", function () awful.util.spawn("amixer -D pulse sset Master 20%+") end),
 
     awful.key({ }, "#232", function () awful.util.spawn("xbacklight -dec 20") end),
     awful.key({ }, "#233", function () awful.util.spawn("xbacklight -inc 20") end)
