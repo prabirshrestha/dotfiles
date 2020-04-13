@@ -70,9 +70,14 @@ beautiful.get().hotkeys_font = "Fira Code Bold 14"
 beautiful.get().hotkeys_description_font = "Fira Code 14"
 
 -- This is used later as the default terminal and editor to run.
-terminal = "xterm"
 editor = os.getenv("EDITOR") or "vim"
-editor_cmd = terminal .. " -e " .. editor
+if gears.filesystem.file_executable("/usr/bin/wezterm") then
+    terminal = "wezterm"
+    editor_cmd = terminal .. " start " .. editor
+else
+    terminal = "xterm"
+    editor_cmd = terminal .. " -e " .. editor
+end
 
 -- Table of layouts to cover with awful.layout.inc, order matters.
 awful.layout.layouts = {
@@ -108,7 +113,7 @@ myawesomemenu = {
 mymainmenu = awful.menu({ items = { { "awesome", myawesomemenu, beautiful.awesome_icon },
                                     { "Files", "nemo" },
                                     { "Web", "firefox" },
-                                    { "Terminal", "wezterm" },
+                                    { "Terminal", terminal },
                                   },
                           theme = {
                               width = 250,
