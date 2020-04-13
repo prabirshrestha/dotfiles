@@ -114,6 +114,7 @@ mymainmenu = awful.menu({ items = { { "awesome", myawesomemenu, beautiful.awesom
                                     { "Files", "nemo" },
                                     { "Web", "firefox" },
                                     { "Terminal", terminal },
+                                    { "Virtual Box", "virtualbox" },
                                   },
                           theme = {
                               width = 250,
