@@ -349,7 +349,10 @@ globalkeys = gears.table.join(
               {description = "lua execute prompt", group = "awesome"}),
     -- Menubar
     awful.key({ modkey }, "p", function() menubar.show() end,
-              {description = "show the menubar", group = "launcher"})
+              {description = "show the menubar", group = "launcher"}),
+
+    awful.key({ }, "#232", function () awful.util.spawn("xbacklight -dec 20") end),
+    awful.key({ }, "#233", function () awful.util.spawn("xbacklight -inc 20") end)
 )
 
 clientkeys = gears.table.join(
