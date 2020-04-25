@@ -8,6 +8,8 @@ stty -ixon
 alias pbcopy='xsel --clipboard --input'
 alias pbpaste='xsel --clipboard --output'
 
+alias open='xdg-open'
+
 # alias
 alias ls='ls -Gp'
 alias vi='nvim'
