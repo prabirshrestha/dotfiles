@@ -83,7 +83,6 @@ call plug#begin(s:settings['plugins_dir'])
   Plug 'prabirshrestha/quickpick-filetypes.vim'
   Plug 'prabirshrestha/quickpick-npm.vim'
 
-  Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary' }
   Plug 'ctrlpvim/ctrlp.vim'
   Plug 'dbeecham/ctrlp-commandpalette.vim', { 'on': ['CtrlPCommandPalette'] }
   Plug 'okcompute/vim-ctrlp-session'
