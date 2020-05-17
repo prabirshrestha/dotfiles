@@ -6,6 +6,7 @@ if wezterm.target_triple == "x86_64-pc-windows-msvc" then
     table.insert(launch_menu, { label = "powerShell", args = {"powershell.exe", "-NoLogo"} })
 else
     table.insert(launch_menu, { label = "bash", args = {"bash", "-l"} })
+    table.insert(launch_menu, { label = "fish", args = {"fish", "-l"} })
 end
 
 return {
