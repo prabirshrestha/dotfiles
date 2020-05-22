@@ -1,8 +1,10 @@
 local wezterm = require("wezterm")
 
 local launch_menu = {}
+local default_prog = { "/usr/bin/bash", "-l" }
 
 if wezterm.target_triple == "x86_64-pc-windows-msvc" then
+    default_prog = { "cmd.exe" }
     table.insert(launch_menu, { label = "powerShell", args = {"powershell.exe", "-NoLogo"} })
 else
     table.insert(launch_menu, { label = "bash", args = {"bash", "-l"} })
@@ -10,7 +12,7 @@ else
 end
 
 return {
-    default_prog = { "/usr/bin/bash", "-l" },
+    default_prog = default_prog,
     font = wezterm.font_with_fallback({
         "Fira Code",
     }),
