@@ -112,7 +112,7 @@ myawesomemenu = {
 
 mymainmenu = awful.menu({ items = { { "awesome", myawesomemenu, beautiful.awesome_icon },
                                     { "Files", "nemo" },
-                                    { "Web", "firefox" },
+                                    { "Web", "firefox-developer-edition" },
                                     { "Terminal", terminal },
                                     { "Virtual Box", "virtualbox" },
                                   },
