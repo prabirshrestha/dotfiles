@@ -1,4 +1,6 @@
-# curl -Lk https://gist.githubusercontent.com/prabirshrestha/279d8b179d9353fe8694/raw/.bash_profile -o ~/.bash_profile
+# curl -Lk https://raw.githubusercontent.com/prabirshrestha/dotfiles/master/.bash_profile -o ~/.bash_profile
+stty -ixon
+
 unameOut="$(uname -s)"
 case "${unameOut}" in
     Linux*)     platform=linux;;
@@ -9,15 +11,15 @@ case "${unameOut}" in
 esac
 
 [[ -s ~/.nvm/nvm.sh ]] && . ~/.nvm/nvm.sh # This loads NVM
-export PATH="$HOME/.cargo/bin:$HOME/go/bin:$HOME/Library/Python/3.7/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$HOME/go/bin:$HOME/Library/Python/3.8/bin:$PATH"
 export PATH="$HOME/.config/nvim/plugins/vim-themis/bin:$PATH"
 
-stty -ixon
-
-alias pbcopy='xsel --clipboard --input'
-alias pbpaste='xsel --clipboard --output'
-
-alias open='xdg-open'
+if [ "$platform" != "mac" ]
+then
+    alias pbcopy='xsel --clipboard --input'
+    alias pbpaste='xsel --clipboard --output'
+    alias open='xdg-open'
+fi
 
 # alias
 alias ls='ls -Gp'
