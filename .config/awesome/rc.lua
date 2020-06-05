@@ -353,8 +353,9 @@ globalkeys = gears.table.join(
               end,
               {description = "lua execute prompt", group = "awesome"}),
     -- Menubar
-    awful.key({ modkey }, "p", function() menubar.show() end,
-              {description = "show the menubar", group = "launcher"}),
+    -- awful.key({ modkey }, "p", function() menubar.show() end,
+    --           {description = "show the menubar", group = "launcher"}),
+	awful.key({ modkey }, "p", function () awful.util.spawn("rofi -show run") end),
 
     awful.key({ }, "#122", function () awful.util.spawn("amixer -D pulse sset Master 20%-") end),
     awful.key({ }, "#123", function () awful.util.spawn("amixer -D pulse sset Master 20%+") end),
