@@ -1,4 +1,13 @@
 # curl -Lk https://gist.githubusercontent.com/prabirshrestha/279d8b179d9353fe8694/raw/.bash_profile -o ~/.bash_profile
+unameOut="$(uname -s)"
+case "${unameOut}" in
+    Linux*)     platform=linux;;
+    Darwin*)    platform=mac;;
+    CYGWIN*)    platform=cygwin;;
+    MINGW*)     platform=mingw;;
+    *)          platform="UNKNOWN:${unameOut}"
+esac
+
 [[ -s ~/.nvm/nvm.sh ]] && . ~/.nvm/nvm.sh # This loads NVM
 export PATH="$HOME/.cargo/bin:$HOME/go/bin:$HOME/Library/Python/3.7/bin:$PATH"
 export PATH="$HOME/.config/nvim/plugins/vim-themis/bin:$PATH"
