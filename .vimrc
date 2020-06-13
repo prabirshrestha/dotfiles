@@ -54,7 +54,6 @@ call plug#begin(s:settings['plugins_dir'])
   Plug 'cohama/lexima.vim'
   Plug 'justinmk/vim-gtfo'
   Plug 'lambdalisue/gina.vim'
-  Plug 'cohama/agit.vim', { 'on': ['Agit', 'AgitFile'] }
   Plug 'mattn/emmet-vim'
   Plug 'sgur/vim-editorconfig'
   Plug 'tpope/vim-commentary'
@@ -120,7 +119,7 @@ if has('gui_running') | set guioptions=Mc! | endif
 if exists('g:neovide')
   set guifont=Fira\ Code\ Retina:h18
 else
-  set guifont=Fira\ Code\ Retina:h12
+  set guifont=FiraCode\ 12
 endif
 
 set mouse=a                         " automatically enable mouse usage
