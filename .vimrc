@@ -69,6 +69,7 @@ call plug#begin(s:settings['plugins_dir'])
   Plug 'prabirshrestha/asyncomplete.vim'
   Plug 'prabirshrestha/asyncomplete-lsp.vim'
   Plug 'prabirshrestha/asyncomplete-file.vim'
+  Plug 'prabirshrestha/asyncomplete-emmet.vim'
   Plug 'yami-beta/asyncomplete-omni.vim'
   Plug 'prabirshrestha/asyncomplete-buffer.vim'
   Plug 'Shougo/neco-syntax' | Plug 'prabirshrestha/asyncomplete-necosyntax.vim'
@@ -286,6 +287,12 @@ augroup configure_lsp
   au!
   autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
 augroup END
+
+au User asyncomplete_setup call asyncomplete#register_source(asyncomplete#sources#emmet#get_source_options({
+    \ 'name': 'emmet',
+    \ 'whitelist': ['html'],
+    \ 'completor': function('asyncomplete#sources#emmet#completor'),
+    \ }))
 " }}}
 
 " vim-lookup {{{
