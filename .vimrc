@@ -43,7 +43,7 @@ call plug#begin(s:settings_plugin_dir)
   Plug 'tpope/vim-commentary'
   Plug 'dominickng/fzf-session.vim'
 
-  Plug 'thinca/vim-themis'
+  Plug 'thinca/vim-themis', { 'filetype': 'vim' }
   Plug 'cohama/lexima.vim'
   Plug 'sheerun/vim-polyglot'
   Plug 'lambdalisue/vim-backslash', { 'filetype': 'vim' }
@@ -217,12 +217,12 @@ inoremap <right> <nop>
 nnoremap <left> :bp<CR>
 nnoremap <right> :bn<CR>
 
+" fzf {{{
 map <C-p> :execute system('git rev-parse --is-inside-work-tree') =~ 'true' ? 'GFiles' : 'Files'<CR>
-
 let g:fzf_session_path = expand(s:settings_data_dir, '/fzfsession')
-
 " <leader>s for Rg search
-noremap <leader>s :Rg
+noremap <leader>s :Rg 
+
 let g:fzf_layout = { 'down': '~40%' }
 command! -bang -nargs=* Rg
   \ call fzf#vim#grep(
@@ -230,8 +230,7 @@ command! -bang -nargs=* Rg
   \   <bang>0 ? fzf#vim#with_preview('up:60%')
   \           : fzf#vim#with_preview('right:50%:hidden', '?'),
   \   <bang>0)
-
-let g:sneak#s_next = 1
+" }}}
 
 " Prevent accidental writes to buffers that shouldn't be edited
 autocmd BufRead *.orig set readonly
