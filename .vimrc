@@ -217,7 +217,7 @@ inoremap <right> <nop>
 nnoremap <left> :bp<CR>
 nnoremap <right> :bn<CR>
 
-map <C-p> :Files<CR>
+map <C-p> :execute system('git rev-parse --is-inside-work-tree') =~ 'true' ? 'GFiles' : 'Files'<CR>
 
 let g:fzf_session_path = expand(s:settings_data_dir, '/fzfsession')
 
