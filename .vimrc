@@ -36,7 +36,9 @@ call plug#begin(s:settings_plugin_dir)
   Plug 'junegunn/fzf.vim'
   Plug 'DataWraith/auto_mkdir'
   Plug 'Lokaltog/vim-easymotion', { 'on': ['<Plug>(easymotion-s)'] }
+  Plug 'ryanoasis/vim-devicons'
   Plug 'lambdalisue/fern.vim'
+  Plug 'lambdalisue/fern-renderer-devicons.vim'
   Plug 'lambdalisue/gina.vim'
   Plug 'tpope/vim-commentary'
   Plug 'dominickng/fzf-session.vim'
@@ -66,7 +68,7 @@ call plug#end()
 
 if has('gui_running')
   set guioptions=Mc!
-  silent! set guifont=FiraCode\ 12
+  silent! set guifont=FiraCode Nerd\ Font\ 12
 endif
 
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
@@ -307,6 +309,11 @@ if has('win32') | let g:gtfo#terminals = { 'win' : 'cmd /k' } | endif
 " vim-easymotion {{{
 let g:EasyMotion_keys='hklyuiopnm,qwertzxcvbasdgjf'
 nmap s <Plug>(easymotion-s)
+
+" }}}
+
+" fern {{{
+let g:fern#renderer = "devicons"
 " }}}
 
 if filereadable(expand('~/.vimrc.local')) | source ~/.vimrc.local | endif

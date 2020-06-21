@@ -14,6 +14,7 @@ subject](http://zachholman.com/2010/08/dotfiles-are-meant-to-be-forked/).
 
 ```bash
 pacman -Syu --noconfirm --needed git
+yay -Sy nerd-fonts-fira-code
 cd ~/
 curl -Lk https://github.com/ubnt-intrepid/dot/releases/download/v0.1.4/dot-v0.1.4-x86_64-unknown-linux-musl.tar.gz -o dot.tar.gz
 tar -xvf ./dot.tar.gz

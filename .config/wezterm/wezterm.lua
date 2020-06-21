@@ -14,6 +14,7 @@ end
 return {
     default_prog = default_prog,
     font = wezterm.font_with_fallback({
+        "FiraCode Nerd Font",
         "Fira Code",
     }),
     font_size = 18.0,
