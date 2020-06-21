@@ -38,6 +38,8 @@ call plug#begin(s:settings_plugin_dir)
   Plug 'Lokaltog/vim-easymotion', { 'on': ['<Plug>(easymotion-s)'] }
   Plug 'lambdalisue/fern.vim'
   Plug 'lambdalisue/gina.vim'
+  Plug 'tpope/vim-commentary'
+  Plug 'dominickng/fzf-session.vim'
 
   Plug 'thinca/vim-themis'
   Plug 'cohama/lexima.vim'
@@ -50,6 +52,7 @@ call plug#begin(s:settings_plugin_dir)
   Plug 'rust-lang/rust.vim'
   Plug 'plasticboy/vim-markdown'
 
+  Plug 'prabirshrestha/callbag.vim'
   Plug 'prabirshrestha/async.vim'
   Plug 'prabirshrestha/vim-lsp'
   Plug 'mattn/vim-lsp-settings'
@@ -213,6 +216,8 @@ nnoremap <left> :bp<CR>
 nnoremap <right> :bn<CR>
 
 map <C-p> :Files<CR>
+
+let g:fzf_session_path = expand(s:settings_data_dir, '/fzfsession')
 
 " <leader>s for Rg search
 noremap <leader>s :Rg
