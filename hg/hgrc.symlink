@@ -1,3 +1,0 @@
-[extensions]
-hgext.bookmarks =
-hggit = ~/.hg-git/hggit
