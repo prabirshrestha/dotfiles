@@ -139,6 +139,7 @@ set incsearch
 set ignorecase
 set smartcase
 set gdefault
+set hlsearch
 " Clear current search highlighting by fast //
 nmap <silent> // :nohlsearch<CR>
 
