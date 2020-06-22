@@ -284,6 +284,17 @@ let g:EasyMotion_keys='hklyuiopnm,qwertzxcvbasdgjf'
 nmap s <Plug>(easymotion-s)
 " }}}
 
+" gina.vim {{{
+let g:gina#command#blame#formatter#format = "%in %au %=on %ti"
+let s:gina_cmd_opt = {'noremap': 1, 'silent': 1}
+call gina#custom#mapping#nmap('blame', 'dd', '<Plug>(gina-diff-tab)')
+call gina#custom#mapping#nmap('blame', 'ee', '<Plug>(gina-blame-echo)')
+call gina#custom#mapping#nmap('log', 'dd', '<Plug>(gina-diff-tab)')
+call gina#custom#mapping#nmap('status', '<C-]>', ':<C-U>Gina commit<CR>', s:gina_cmd_opt)
+call gina#custom#mapping#nmap('/.*', 'q', ':<C-U>bd<CR>', s:gina_cmd_opt)
+call gina#custom#mapping#nmap('/.*', '<C-t>', '<Plug>(gina-edit-tab)')
+" }}}
+
 " fern {{{
 let g:fern#renderer = "devicons"
 " }}}
