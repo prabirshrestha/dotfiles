@@ -68,7 +68,11 @@ call plug#end()
 
 if has('gui_running')
   set guioptions=Mc!
-  silent! set guifont=FiraCode Nerd\ Font\ 12
+  if has('win32')
+    silent! set guifont=FiraCode_Nerd_Font_Mono:h14
+  else
+    silent! set guifont=FiraCode\ Nerd\ Font\ h14
+  endif
 endif
 
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
