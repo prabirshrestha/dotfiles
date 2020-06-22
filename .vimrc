@@ -64,6 +64,8 @@ call plug#begin(s:settings_plugin_dir)
   Plug 'hrsh7th/vim-vsnip'
   Plug 'hrsh7th/vim-vsnip-integ'
   Plug 'prabirshrestha/vsnip-snippets'
+
+  Plug 'prabirshrestha/split-term.vim', { 'branch': 'vim8', 'on': ['Term', 'VTerm', 'TTerm']  }
 call plug#end()
 
 if has('gui_running')
