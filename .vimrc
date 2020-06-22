@@ -32,8 +32,6 @@ call plug#begin(s:settings_plugin_dir)
   Plug 'justinmk/vim-gtfo'
   Plug 'andymass/vim-matchup'
   Plug 'airblade/vim-rooter'
-  Plug 'junegunn/fzf'
-  Plug 'junegunn/fzf.vim'
   Plug 'DataWraith/auto_mkdir'
   Plug 'Lokaltog/vim-easymotion', { 'on': ['<Plug>(easymotion-s)'] }
   Plug 'ryanoasis/vim-devicons'
@@ -41,7 +39,6 @@ call plug#begin(s:settings_plugin_dir)
   Plug 'lambdalisue/fern-renderer-devicons.vim'
   Plug 'lambdalisue/gina.vim'
   Plug 'tpope/vim-commentary'
-  Plug 'dominickng/fzf-session.vim'
 
   Plug 'thinca/vim-themis', { 'filetype': 'vim' }
   Plug 'cohama/lexima.vim'
@@ -65,6 +62,7 @@ call plug#begin(s:settings_plugin_dir)
   Plug 'hrsh7th/vim-vsnip-integ'
   Plug 'prabirshrestha/vsnip-snippets'
 
+  Plug 'prabirshresth/vim-fz', { 'branch': 'rg-column' }
   Plug 'prabirshrestha/split-term.vim', { 'branch': 'vim8', 'on': ['Term', 'VTerm', 'TTerm']  }
 call plug#end()
 
@@ -182,22 +180,7 @@ endif
 " Keyboard shortcuts
 nnoremap ; :
 
-" Ctrl+c and Ctrl+j as Esc
-" Ctrl-j is a little awkward unfortunately:
-" https://github.com/neovim/neovim/issues/5916
-" So we also map Ctrl+k
-inoremap <C-j> <Esc>
-
-nnoremap <C-k> <Esc>
-inoremap <C-k> <Esc>
-vnoremap <C-k> <Esc>
-snoremap <C-k> <Esc>
-xnoremap <C-k> <Esc>
-cnoremap <C-k> <Esc>
-onoremap <C-k> <Esc>
-lnoremap <C-k> <Esc>
-tnoremap <C-k> <Esc>
-
+" Ctrl+c as Esc
 nnoremap <C-c> <Esc>
 inoremap <C-c> <Esc>
 vnoremap <C-c> <Esc>
@@ -220,19 +203,18 @@ inoremap <right> <nop>
 nnoremap <left> :bp<CR>
 nnoremap <right> :bn<CR>
 
-" fzf {{{
-map <C-p> :execute system('git rev-parse --is-inside-work-tree') =~ 'true' ? 'GFiles' : 'Files'<CR>
-let g:fzf_session_path = expand(s:settings_data_dir, '/fzfsession')
-" <leader>s for Rg search
-noremap <leader>s :Rg 
+" fuzzy picker {{{
+nnoremap <C-p> :execute system('git rev-parse --is-inside-work-tree') =~ 'true'
+      \ ? fz#run({ 'type': 'cmd', 'cmd': 'git ls-files' })
+      \ : 'Fz'<CR>
 
-let g:fzf_layout = { 'down': '~40%' }
+noremap <leader>s :Rg 
 command! -bang -nargs=* Rg
-  \ call fzf#vim#grep(
-  \   'rg --column --line-number --no-heading --color=always '.shellescape(<q-args>), 1,
-  \   <bang>0 ? fzf#vim#with_preview('up:60%')
-  \           : fzf#vim#with_preview('right:50%:hidden', '?'),
-  \   <bang>0)
+  \ call fz#run({
+  \   'type': 'cmd',
+  \   'output': 'rgcolumn',
+  \   'cmd': 'rg --column --line-number --no-heading --color=auto '.shellescape(<q-args>),
+  \ })
 " }}}
 
 " Prevent accidental writes to buffers that shouldn't be edited
@@ -263,17 +245,6 @@ autocmd! CompleteDone * if !pumvisible() | pclose | endif
 
 au! FileType rust setlocal tabstop=4 softtabstop=4 colorcolumn=100
 
-" Use K to show documentation in preview window or popup window
-nnoremap <silent> K :call <SID>show_documentation()<CR>
-
-function! s:show_documentation()
-  if (index(['vim','help'], &filetype) >= 0)
-    execute 'h '.expand('<cword>')
-  else
-    execute "normal \<plug>(lsp-hover)"
-  endif
-endfunction
-
 "let g:lsp_log_verbose = 1
 "let g:lsp_log_file = expand(s:settings_data_dir . '/lsp.log')
 "let g:asyncomplete_log_file = expand(s:settings_data_dir. '/asyncomplete.log')
@@ -287,7 +258,7 @@ function! s:on_lsp_buffer_enabled() abort
   nmap <buffer> <leader>rn <plug>(lsp-rename)
   nmap <silent> [g <Plug>(lsp-previous-diagnostic)
   nmap <silent> ]g <Plug>(lsp-next-diagnostic)
-  "nmap <buffer> K <plug>(lsp-hover)
+  nmap <buffer> K <plug>(lsp-hover)
 
   nnoremap <buffer> gs :<C-u>LspDocumentSymbol<CR>
   nnoremap <buffer> gS :<C-u>LspWorkspaceSymbol<CR>
@@ -295,7 +266,7 @@ function! s:on_lsp_buffer_enabled() abort
   vnoremap <buffer> gQ :LspDocumentRangeFormat<CR>
   nnoremap <buffer> <leader>ca :LspCodeAction<CR>
   xnoremap <buffer> <leader>ca :LspCodeAction<CR>
-  autocmd! BufWritePre *.rs call execute('LspDocumentFormatSync')
+  autocmd! BufWritePre *.rs,*.go call execute('LspDocumentFormatSync')
 endfunction
 
 augroup configure_lsp
@@ -311,7 +282,6 @@ if has('win32') | let g:gtfo#terminals = { 'win' : 'cmd /k' } | endif
 " vim-easymotion {{{
 let g:EasyMotion_keys='hklyuiopnm,qwertzxcvbasdgjf'
 nmap s <Plug>(easymotion-s)
-
 " }}}
 
 " fern {{{
