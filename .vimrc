@@ -71,7 +71,7 @@ if has('gui_running')
   if has('win32')
     silent! set guifont=FiraCode_Nerd_Font_Mono:h14
   else
-    silent! set guifont=FiraCode\ Nerd\ Font\ h14
+    silent! set guifont=Fira\ Code\ Nerd\ Font\ weight=450\ 15
   endif
 endif
 
