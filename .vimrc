@@ -207,6 +207,13 @@ inoremap <right> <nop>
 nnoremap <left> :bp<CR>
 nnoremap <right> :bn<CR>
 
+nnoremap ]q :cnext<CR>
+nnoremap [q :cprevious<CR>
+nnoremap ]l :lnext<CR>
+nnoremap [l :lprevious<CR>
+nnoremap ]b :bnext<CR>
+nnoremap [b :bprevious<CR>
+
 " fuzzy picker {{{
 nnoremap <C-p> :execute system('git rev-parse --is-inside-work-tree') =~ 'true'
       \ ? fz#run({ 'type': 'cmd', 'cmd': 'git ls-files' })
