@@ -35,6 +35,7 @@ call plug#begin(s:settings_plugin_dir)
   Plug 'DataWraith/auto_mkdir'
   Plug 'Lokaltog/vim-easymotion', { 'on': ['<Plug>(easymotion-s)'] }
   Plug 'ryanoasis/vim-devicons'
+  Plug 'preservim/nerdtree'
   Plug 'lambdalisue/fern.vim'
   Plug 'lambdalisue/fern-renderer-devicons.vim'
   Plug 'lambdalisue/gina.vim'
@@ -43,6 +44,7 @@ call plug#begin(s:settings_plugin_dir)
   Plug 'thinca/vim-themis', { 'filetype': 'vim' }
   Plug 'cohama/lexima.vim'
   Plug 'sheerun/vim-polyglot'
+  Plug 'Shougo/context_filetype.vim'
   Plug 'lambdalisue/vim-backslash', { 'filetype': 'vim' }
   Plug 'lambdalisue/vim-findent'
   Plug 'tweekmonster/helpful.vim'
@@ -58,11 +60,13 @@ call plug#begin(s:settings_plugin_dir)
   Plug 'mattn/vim-lsp-icons'
   Plug 'prabirshrestha/asyncomplete.vim'
 	Plug 'prabirshrestha/asyncomplete-lsp.vim'
+  Plug 'prabirshrestha/asyncomplete-buffer.vim'
   Plug 'hrsh7th/vim-vsnip'
   Plug 'hrsh7th/vim-vsnip-integ'
   Plug 'prabirshrestha/vsnip-snippets'
 
-  Plug 'prabirshresth/vim-fz', { 'branch': 'rg-column' }
+  Plug 'mattn/vim-fz'
+  Plug 'prabirshrestha/vim-fz-extras'
   Plug 'prabirshrestha/split-term.vim', { 'branch': 'vim8', 'on': ['Term', 'VTerm', 'TTerm']  }
 call plug#end()
 
@@ -219,13 +223,7 @@ nnoremap <C-p> :execute system('git rev-parse --is-inside-work-tree') =~ 'true'
       \ ? fz#run({ 'type': 'cmd', 'cmd': 'git ls-files' })
       \ : 'Fz'<CR>
 
-noremap <leader>s :Rg 
-command! -bang -nargs=* Rg
-  \ call fz#run({
-  \   'type': 'cmd',
-  \   'output': 'rgcolumn',
-  \   'cmd': 'rg --column --line-number --no-heading --color=auto '.shellescape(<q-args>),
-  \ })
+nmap <leader>s <Plug>(fz-extras-rg)
 " }}}
 
 " Prevent accidental writes to buffers that shouldn't be edited
@@ -238,6 +236,16 @@ if has("autocmd")
 endif
 
 " asyncomplete.vim,vim-lsp,vsnip {{{
+call asyncomplete#register_source(asyncomplete#sources#buffer#get_source_options({
+    \ 'name': 'buffer',
+    \ 'allowlist': ['*'],
+    \ 'blocklist': ['vim'],
+    \ 'completor': function('asyncomplete#sources#buffer#completor'),
+    \ 'config': {
+    \    'max_buffer_size': 5000000,
+    \  },
+    \ }))
+
 let g:vsnip_snippet_dir = expand(s:settings_plugin_dir . '/vsnip-snippets/vsnips')
 
 imap <expr> <Tab> vsnip#available(1) ? '<Plug>(vsnip-expand-or-jump)' : pumvisible() ? "\<C-n>" : "\<Tab>"
@@ -261,6 +269,7 @@ au! FileType rust setlocal tabstop=4 softtabstop=4 colorcolumn=100
 "let g:asyncomplete_log_file = expand(s:settings_data_dir. '/asyncomplete.log')
 " let g:lsp_highlight_references_enabled = 1
 " let g:lsp_diagnostics_echo_cursor = 1
+" let g:lsp_diagnostics_float_cursor = 1
 function! s:on_lsp_buffer_enabled() abort
   setlocal omnifunc=lsp#complete
   setlocal signcolumn=yes
@@ -311,6 +320,12 @@ call gina#custom#mapping#nmap('/.*', '<C-t>', '<Plug>(gina-edit-tab)')
 
 " fern {{{
 let g:fern#renderer = "devicons"
+" }}}
+
+" vim-backslash {{{
+let g:vim_backslash#preventers = [
+  \ { -> context_filetype#get_filetype() !=# 'vim' },
+  \]
 " }}}
 
 if filereadable(expand('~/.vimrc.local')) | source ~/.vimrc.local | endif
