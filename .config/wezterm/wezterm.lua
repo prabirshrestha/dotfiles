@@ -1,7 +1,7 @@
 local wezterm = require("wezterm")
 
 local launch_menu = {}
-local default_prog = { "/usr/bin/bash", "-l" }
+local default_prog = { "/bin/bash", "-l" }
 
 if wezterm.target_triple == "x86_64-pc-windows-msvc" then
     default_prog = { "cmd.exe" }
