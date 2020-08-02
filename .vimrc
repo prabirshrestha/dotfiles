@@ -59,7 +59,7 @@ call plug#begin(s:settings_plugin_dir)
   Plug 'mattn/vim-lsp-settings'
   Plug 'mattn/vim-lsp-icons'
   Plug 'prabirshrestha/asyncomplete.vim'
-	Plug 'prabirshrestha/asyncomplete-lsp.vim'
+  Plug 'prabirshrestha/asyncomplete-lsp.vim'
   Plug 'prabirshrestha/asyncomplete-buffer.vim'
   Plug 'hrsh7th/vim-vsnip'
   Plug 'hrsh7th/vim-vsnip-integ'
@@ -296,6 +296,13 @@ augroup configure_lsp
   au!
   autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
 augroup END
+" }}}
+
+" vim-fz {{{
+if executable('fzf')
+  let g:fz_command = 'fzf'
+  let g:fz_command_options_action='--expect=%s'
+endif
 " }}}
 
 " vim-gtfo {{{
