@@ -327,6 +327,15 @@ call gina#custom#mapping#nmap('/.*', '<C-t>', '<Plug>(gina-edit-tab)')
 
 " fern {{{
 let g:fern#renderer = "devicons"
+
+function! s:init_fern() abort
+  nmap <buffer><silent> q :bd<CR>
+endfunction
+
+augroup fern-custom
+  autocmd! *
+  autocmd FileType fern call s:init_fern()
+augroup END
 " }}}
 
 " vim-backslash {{{
