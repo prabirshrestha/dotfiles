@@ -36,8 +36,8 @@ call plug#begin(s:settings_plugin_dir)
   Plug 'Lokaltog/vim-easymotion', { 'on': ['<Plug>(easymotion-s)'] }
   Plug 'ryanoasis/vim-devicons'
   Plug 'preservim/nerdtree'
-  Plug 'lambdalisue/fern.vim'
-  Plug 'lambdalisue/fern-renderer-devicons.vim'
+  " Plug 'lambdalisue/fern.vim'
+  " Plug 'lambdalisue/fern-renderer-devicons.vim'
   Plug 'lambdalisue/gina.vim'
   Plug 'tpope/vim-commentary'
 
@@ -325,6 +325,11 @@ call gina#custom#mapping#nmap('/.*', 'q', ':<C-U>bd<CR>', s:gina_cmd_opt)
 call gina#custom#mapping#nmap('/.*', '<C-t>', '<Plug>(gina-edit-tab)')
 " }}}
 
+" nerdtree {{{
+nnoremap <silent> <leader>e :NERDTreeFind<CR>
+nnoremap <silent> <leader>E :NERDTreeToggle<CR>
+" }}}
+
 " fern {{{
 let g:fern#renderer = "devicons"
 
@@ -350,7 +355,7 @@ function! s:init_fern() abort
 
   nmap <buffer> I <Plug>(fern-action-hide-toggle)
 
-  nmap <buffer> q :<C-u>quit<CR>
+  nmap <buffer> q :bd<CR>
 endfunction
 
 augroup fern-custom

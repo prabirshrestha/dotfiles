@@ -4,3 +4,14 @@
 [user]
 	email = mail@prabir.me
 	name = Prabir Shrestha
+
+[diff]
+    tool = kdiff3
+[difftool "kdiff3"]
+    path = c:/Program Files/KDiff3/kdiff3.exe
+[merge]
+    tool = kdiff3
+[mergetool "kdiff3"]
+    path = c:/Program Files/KDiff3/kdiff3.exe
+    keepBackup = false
+    trustExitCode = false
