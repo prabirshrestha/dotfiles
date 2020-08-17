@@ -248,13 +248,15 @@ call asyncomplete#register_source(asyncomplete#sources#buffer#get_source_options
 
 let g:vsnip_snippet_dir = expand(s:settings_plugin_dir . '/vsnip-snippets/vsnips')
 
-imap <expr> <Tab> vsnip#available(1) ? '<Plug>(vsnip-expand-or-jump)' : pumvisible() ? "\<C-n>" : "\<Tab>"
-smap <expr> <Tab> vsnip#available(1) ? '<Plug>(vsnip-expand-or-jump)' : pumvisible() ? "\<C-n>" : "\<Tab>"
-imap <expr> <S-Tab> vsnip#available(1) ? '<Plug>(vsnip-jump-prev)' : pumvisible() ? "\<C-p>" : "\<S-Tab>"
-smap <expr> <S-Tab> vsnip#available(1) ? '<Plug>(vsnip-jump-prev)' : pumvisible() ? "\<C-p>" : "\<S-Tab>"
-inoremap <expr> <CR> pumvisible() ? asyncomplete#close_popup() : "\<CR>"
-inoremap <expr> <C-y> pumvisible() ? asyncomplete#close_popup() : "\<C-y>"
-inoremap <expr> <C-e> pumvisible() ? asyncomplete#cancel_popup() : "\<C-e>"
+if !has('vsvim')
+  imap <expr> <Tab> vsnip#available(1) ? '<Plug>(vsnip-expand-or-jump)' : pumvisible() ? "\<C-n>" : "\<Tab>"
+  smap <expr> <Tab> vsnip#available(1) ? '<Plug>(vsnip-expand-or-jump)' : pumvisible() ? "\<C-n>" : "\<Tab>"
+  imap <expr> <S-Tab> vsnip#available(1) ? '<Plug>(vsnip-jump-prev)' : pumvisible() ? "\<C-p>" : "\<S-Tab>"
+  smap <expr> <S-Tab> vsnip#available(1) ? '<Plug>(vsnip-jump-prev)' : pumvisible() ? "\<C-p>" : "\<S-Tab>"
+  inoremap <expr> <CR> pumvisible() ? asyncomplete#close_popup() : "\<CR>"
+  inoremap <expr> <C-y> pumvisible() ? asyncomplete#close_popup() : "\<C-y>"
+  inoremap <expr> <C-e> pumvisible() ? asyncomplete#cancel_popup() : "\<C-e>"
+endif
 
 " Move up and down in autocomplete with <c-j> and <c-k>
 inoremap <expr> <C-j> ("\<C-n>")
