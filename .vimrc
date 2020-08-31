@@ -269,8 +269,7 @@ au! FileType rust setlocal tabstop=4 softtabstop=4 colorcolumn=100
 "let g:lsp_log_verbose = 1
 "let g:lsp_log_file = expand(s:settings_data_dir . '/lsp.log')
 "let g:asyncomplete_log_file = expand(s:settings_data_dir. '/asyncomplete.log')
-" let g:lsp_highlight_references_enabled = 1
-" let g:lsp_diagnostics_echo_cursor = 1
+let g:lsp_diagnostics_echo_cursor = 1
 " let g:lsp_diagnostics_float_cursor = 1
 function! s:on_lsp_buffer_enabled() abort
   setlocal omnifunc=lsp#complete
