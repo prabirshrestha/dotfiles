@@ -1,6 +1,8 @@
 # curl -Lk https://raw.githubusercontent.com/prabirshrestha/dotfiles/master/.bash_profile -o ~/.bash_profile
 stty -ixon
 
+export PS1='$(pwd)$ '
+
 unameOut="$(uname -s)"
 case "${unameOut}" in
     Linux*)     platform=linux;;
@@ -13,7 +15,7 @@ esac
 [[ -s ~/.nvm/nvm.sh ]] && . ~/.nvm/nvm.sh # This loads NVM
 export PATH="$HOME/.cargo/bin:$HOME/go/bin:$HOME/Library/Python/3.8/bin:$PATH"
 export PATH="$HOME/.config/nvim/plugins/vim-themis/bin:$PATH"
-export PATH="/opt/pkg/bin:$PATH"
+#export PATH="/opt/pkg/bin:$PATH"
 
 if [ "$platform" != "mac" ]
 then

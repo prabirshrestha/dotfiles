@@ -13,7 +13,7 @@ stty -ixon
 [[ -s ~/.nvm/nvm.sh ]] && . ~/.nvm/nvm.sh # This loads NVM
 export PATH="$HOME/.cargo/bin:$HOME/go/bin:$HOME/Library/Python/3.7/bin:$PATH"
 export PATH="$HOME/.config/nvim/plugins/vim-themis/bin:$PATH"
-export PATH="/opt/pkg/bin:$PATH"
+#export PATH="/opt/pkg/bin:$PATH"
 
 # alias
 alias ls='ls -Gp'
