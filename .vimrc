@@ -185,6 +185,7 @@ endif
 
 " Keyboard shortcuts
 nnoremap ; :
+vnoremap ; :
 
 " Ctrl+c as Esc
 nnoremap <C-c> <Esc>
