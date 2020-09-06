@@ -5,7 +5,7 @@ local default_prog = { "/bin/bash", "-l" }
 
 if wezterm.target_triple == "x86_64-pc-windows-msvc" then
     default_prog = { "cmd.exe" }
-    table.insert(launch_menu, { label = "powerShell", args = {"powershell.exe", "-NoLogo"} })
+    table.insert(launch_menu, { label = "PowerShell", args = {"powershell.exe", "-NoLogo"} })
 
     -- Find installed visual studio version(s) and add their compilation
     -- environment command prompts to the menu
