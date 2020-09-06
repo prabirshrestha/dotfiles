@@ -220,7 +220,7 @@ nnoremap [b :bprevious<CR>
 " fuzzy picker {{{
 nnoremap <C-p> :execute system('git rev-parse --is-inside-work-tree') =~ 'true'
       \ ? fz#run({ 'type': 'cmd', 'cmd': 'git ls-files', 'message': 'Fz>git ls-files' })
-      \ : 'Fz'<CR>
+      \ : fz#run({'message': 'Fz'})<CR>
 
 nmap <leader>s <Plug>(fz-extras-rg)
 " }}}
@@ -265,11 +265,16 @@ autocmd! CompleteDone * if !pumvisible() | pclose | endif
 
 au! FileType rust setlocal tabstop=4 softtabstop=4 colorcolumn=100
 
+
 "let g:lsp_log_verbose = 1
 "let g:lsp_log_file = expand(s:settings_data_dir . '/lsp.log')
 "let g:asyncomplete_log_file = expand(s:settings_data_dir. '/asyncomplete.log')
 let g:lsp_diagnostics_echo_cursor = 1
-" let g:lsp_diagnostics_float_cursor = 1
+
+hi! LspErrorHighlight guifg=#dc322f guibg=NONE guisp=#dc322f gui=undercurl cterm=undercurl
+hi! LspInfoHighlight guifg=#2aa198 guibg=NONE guisp=#2aa198 gui=undercurl cterm=undercurl
+hi! LspWarningHighlight guifg=#b58900 guibg=NONE guisp=#b58900 gui=undercurl cterm=undercurl
+
 function! s:on_lsp_buffer_enabled() abort
   setlocal omnifunc=lsp#complete
   setlocal signcolumn=yes
