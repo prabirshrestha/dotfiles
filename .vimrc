@@ -219,7 +219,7 @@ nnoremap [b :bprevious<CR>
 
 " fuzzy picker {{{
 nnoremap <C-p> :execute system('git rev-parse --is-inside-work-tree') =~ 'true'
-      \ ? fz#run({ 'type': 'cmd', 'cmd': 'git ls-files' })
+      \ ? fz#run({ 'type': 'cmd', 'cmd': 'git ls-files', 'message': 'Fz>git ls-files' })
       \ : 'Fz'<CR>
 
 nmap <leader>s <Plug>(fz-extras-rg)
