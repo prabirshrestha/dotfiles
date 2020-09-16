@@ -65,6 +65,8 @@ call plug#begin(s:settings_plugin_dir)
 
   Plug 'mattn/vim-fz'
   Plug 'prabirshrestha/vim-fz-extras'
+  Plug 'prabirshrestha/quickpick.vim'
+  Plug 'prabirshrestha/quickpick-colorscheme.vim'
   Plug 'prabirshrestha/split-term.vim', { 'branch': 'vim8', 'on': ['Term', 'VTerm', 'TTerm']  }
 call plug#end()
 
