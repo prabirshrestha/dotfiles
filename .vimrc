@@ -50,6 +50,7 @@ call plug#begin(s:settings_plugin_dir)
   Plug 'stephpy/vim-yaml'
   Plug 'rust-lang/rust.vim'
   Plug 'plasticboy/vim-markdown'
+  Plug 'dhruvasagar/vim-table-mode'
 
   Plug 'prabirshrestha/callbag.vim'
   Plug 'prabirshrestha/async.vim'
@@ -339,6 +340,10 @@ nnoremap <silent> <leader>E :NERDTreeToggle<CR>
 
 " vim-backslash {{{
 let g:vim_backslash#preventers = [{ -> context_filetype#get_filetype() !=# 'vim' }]
+" }}}
+
+" vim-table-mode {{{
+let g:table_mode_corner='|'
 " }}}
 
 if filereadable(expand('~/.vimrc.local')) | source ~/.vimrc.local | endif
