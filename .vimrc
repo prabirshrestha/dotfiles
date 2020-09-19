@@ -38,6 +38,7 @@ call plug#begin(s:settings_plugin_dir)
   Plug 'preservim/nerdtree'
   Plug 'lambdalisue/gina.vim'
   Plug 'tpope/vim-commentary'
+  Plug 'tpope/vim-surround'
 
   Plug 'thinca/vim-themis', { 'filetype': 'vim' }
   Plug 'cohama/lexima.vim'
