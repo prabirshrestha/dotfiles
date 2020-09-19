@@ -238,15 +238,15 @@ if has("autocmd")
 endif
 
 " asyncomplete.vim,vim-lsp,vsnip {{{
-call asyncomplete#register_source(asyncomplete#sources#buffer#get_source_options({
-    \ 'name': 'buffer',
-    \ 'allowlist': ['*'],
-    \ 'blocklist': ['vim'],
-    \ 'completor': function('asyncomplete#sources#buffer#completor'),
-    \ 'config': {
-    \    'max_buffer_size': 5000000,
-    \  },
-    \ }))
+" call asyncomplete#register_source(asyncomplete#sources#buffer#get_source_options({
+"     \ 'name': 'buffer',
+"     \ 'allowlist': ['*'],
+"     \ 'blocklist': ['vim'],
+"     \ 'completor': function('asyncomplete#sources#buffer#completor'),
+"     \ 'config': {
+"     \    'max_buffer_size': 5000000,
+"     \  },
+"     \ }))
 
 let g:vsnip_snippet_dir = expand(s:settings_plugin_dir . '/vsnip-snippets/vsnips')
 
@@ -258,16 +258,14 @@ if !has('vsvim')
   inoremap <expr> <CR> pumvisible() ? asyncomplete#close_popup() : "\<CR>"
   inoremap <expr> <C-y> pumvisible() ? asyncomplete#close_popup() : "\<C-y>"
   inoremap <expr> <C-e> pumvisible() ? asyncomplete#cancel_popup() : "\<C-e>"
+  " Move up and down in autocomplete with <c-j> and <c-k>
+  inoremap <expr> <C-j> ("\<C-n>")
+  inoremap <expr> <C-k> ("\<C-p>")
+
+  autocmd! CompleteDone * if !pumvisible() | pclose | endif
 endif
 
-" Move up and down in autocomplete with <c-j> and <c-k>
-inoremap <expr> <C-j> ("\<C-n>")
-inoremap <expr> <C-k> ("\<C-p>")
-
-autocmd! CompleteDone * if !pumvisible() | pclose | endif
-
 au! FileType rust setlocal tabstop=4 softtabstop=4 colorcolumn=100
-
 
 "let g:lsp_log_verbose = 1
 "let g:lsp_log_file = expand(s:settings_data_dir . '/lsp.log')
