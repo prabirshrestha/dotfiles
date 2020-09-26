@@ -31,7 +31,7 @@ local config = {
         "Fira Code",
         "Consolas"
     }),
-    font_size = 18.0,
+    font_size = 14.0,
     launch_menu = launch_menu,
     colors = {
         foreground = "#839496",
@@ -44,6 +44,10 @@ local config = {
         brights = {"#002b36","#cb4b16","#586e75","#657b83","#839496","#6c71c4","#93a1a1","#fdf6e3"},
     },
     set_environment_variables = env,
+    keys = {
+        { key = "_", mods = "ALT|SHIFT", action=wezterm.action{SplitVertical={SpawnCommand={Domain=0}}} },
+        { key = "|", mods = "ALT|SHIFT", action=wezterm.action{SplitHorizontal={SpawnCommand={Domain=0}}} },
+    }
 }
 
 
