@@ -68,6 +68,7 @@ local config = {
         { key = "8", mods = "LEADER", action=wezterm.action{ActivateTab=7}},
         { key = "9", mods = "LEADER", action=wezterm.action{ActivateTab=8}},
         { key = "&", mods = "LEADER|SHIFT", action="CloseCurrentTab"},
+        { key = "x", mods = "LEADER", action="CloseCurrentPane"},
     }
 }
 
