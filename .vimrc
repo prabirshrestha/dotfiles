@@ -71,6 +71,7 @@ call plug#begin(s:settings_plugin_dir)
   Plug 'prabirshrestha/quickpick.vim'
   Plug 'prabirshrestha/quickpick-colorscheme.vim'
   Plug 'prabirshrestha/split-term.vim', { 'branch': 'vim8', 'on': ['Term', 'VTerm', 'TTerm']  }
+  Plug 'dyng/ctrlsf.vim'
 call plug#end()
 
 if has('gui_running')
@@ -215,7 +216,6 @@ inoremap <right> <nop>
 nnoremap <left> :bp<CR>
 nnoremap <right> :bn<CR>
 
-nnoremap ]q :cnext<CR>
 nnoremap [q :cprevious<CR>
 nnoremap ]l :lnext<CR>
 nnoremap [l :lprevious<CR>
@@ -227,7 +227,15 @@ nnoremap <C-p> :execute system('git rev-parse --is-inside-work-tree') =~ 'true'
       \ ? fz#run({ 'type': 'cmd', 'cmd': 'git ls-files', 'message': 'Fz>git ls-files' })
       \ : fz#run({'message': 'Fz'})<CR>
 
-nmap <leader>s <Plug>(fz-extras-rg)
+" nmap <leader>s <Plug>(fz-extras-rg)
+nmap     <C-F>f <Plug>CtrlSFPrompt
+vmap     <C-F>f <Plug>CtrlSFVwordPath
+vmap     <C-F>F <Plug>CtrlSFVwordExec
+nmap     <C-F>n <Plug>CtrlSFCwordPath
+nmap     <C-F>p <Plug>CtrlSFPwordPath
+nnoremap <C-F>o :CtrlSFOpen<CR>
+nnoremap <C-F>t :CtrlSFToggle<CR>
+inoremap <C-F>t <Esc>:CtrlSFToggle<CR>
 " }}}
 
 " Prevent accidental writes to buffers that shouldn't be edited
