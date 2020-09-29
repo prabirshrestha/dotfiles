@@ -6,3 +6,5 @@ path.txt
 .DS_Store
 *.orig
 *.swp
+
+scoop/persist/clink/profile/.history

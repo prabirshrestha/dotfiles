@@ -9,3 +9,6 @@
 [linux]
 ".config/awesome"="~/.config/awesome"
 ".xprofile"="~/.xprofile"
+
+[windows]
+"scoop/persist/clink/profile"="~/scoop/persist/clink/profile"
