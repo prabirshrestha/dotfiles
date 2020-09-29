@@ -7,4 +7,4 @@ path.txt
 *.orig
 *.swp
 
-scoop/persist/clink/profile/.history
+clink/.history
