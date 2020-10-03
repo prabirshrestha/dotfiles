@@ -9,7 +9,7 @@ local config = {
         "Fira Code",
         "Consolas"
     }),
-    font_size = 12.0,
+    font_size = 14.0,
     launch_menu = {},
     leader = { key="a", mods="CTRL" },
     keys = {
