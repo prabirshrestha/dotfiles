@@ -67,8 +67,8 @@ local config = {
         { key = "7", mods = "LEADER", action=wezterm.action{ActivateTab=6}},
         { key = "8", mods = "LEADER", action=wezterm.action{ActivateTab=7}},
         { key = "9", mods = "LEADER", action=wezterm.action{ActivateTab=8}},
-        { key = "&", mods = "LEADER|SHIFT", action="CloseCurrentTab"},
-        { key = "x", mods = "LEADER", action="CloseCurrentPane"},
+        { key = "&", mods = "LEADER|SHIFT", action=wezterm.action{CloseCurrentTab={confirm=true}}},
+        { key = "x", mods = "LEADER", action=wezterm.action{CloseCurrentPane={confirm=true}}},
     }
 }
 
@@ -76,5 +76,7 @@ local config = {
 if wezterm.target_triple == "x86_64-pc-windows-msvc" then
     config.term = ""
 end
+
+config.front_end = "Software"
 
 return config
