@@ -162,7 +162,7 @@ set ttyfast
 set lazyredraw
 set synmaxcol=500
 set laststatus=2
-set relativenumber " Relative line numbers
+set norelativenumber " Relative line numbers
 
 set number " Also show current absolute line
 set diffopt+=iwhite " No whitespace in vimdiff
