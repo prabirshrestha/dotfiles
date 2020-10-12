@@ -69,7 +69,9 @@ call plug#begin(s:settings_plugin_dir)
   Plug 'mattn/vim-fz'
   Plug 'prabirshrestha/vim-fz-extras'
   Plug 'prabirshrestha/quickpick.vim'
+  Plug 'prabirshrestha/quickpick-lsp.vim'
   Plug 'prabirshrestha/quickpick-colorscheme.vim'
+  Plug 'prabirshrestha/quickpick-filetypes.vim'
   Plug 'prabirshrestha/split-term.vim', { 'branch': 'vim8', 'on': ['Term', 'VTerm', 'TTerm']  }
   Plug 'dyng/ctrlsf.vim'
 call plug#end()
@@ -270,9 +272,11 @@ if !has('vsvim')
   smap <expr> <Tab> vsnip#available(1) ? '<Plug>(vsnip-expand-or-jump)' : pumvisible() ? "\<C-n>" : "\<Tab>"
   imap <expr> <S-Tab> vsnip#available(1) ? '<Plug>(vsnip-jump-prev)' : pumvisible() ? "\<C-p>" : "\<S-Tab>"
   smap <expr> <S-Tab> vsnip#available(1) ? '<Plug>(vsnip-jump-prev)' : pumvisible() ? "\<C-p>" : "\<S-Tab>"
+
   inoremap <expr> <CR> pumvisible() ? asyncomplete#close_popup() : "\<CR>"
   inoremap <expr> <C-y> pumvisible() ? asyncomplete#close_popup() : "\<C-y>"
   inoremap <expr> <C-e> pumvisible() ? asyncomplete#cancel_popup() : "\<C-e>"
+
   " Move up and down in autocomplete with <c-j> and <c-k>
   inoremap <expr> <C-j> ("\<C-n>")
   inoremap <expr> <C-k> ("\<C-p>")
