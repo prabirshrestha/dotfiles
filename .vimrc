@@ -65,6 +65,7 @@ call plug#begin(s:settings_plugin_dir)
   Plug 'hrsh7th/vim-vsnip'
   Plug 'hrsh7th/vim-vsnip-integ'
   Plug 'prabirshrestha/vsnip-snippets'
+  Plug 'vim-test/vim-test'
 
   Plug 'mattn/vim-fz'
   Plug 'prabirshrestha/vim-fz-extras'
@@ -219,6 +220,9 @@ nnoremap <left> :bp<CR>
 nnoremap <right> :bn<CR>
 
 nnoremap [q :cprevious<CR>
+nnoremap ]q :cnext<CR>
+nnoremap [Q :cfirst<CR>
+nnoremap ]Q :clast<CR>
 nnoremap ]l :lnext<CR>
 nnoremap [l :lprevious<CR>
 nnoremap ]b :bnext<CR>
@@ -321,6 +325,14 @@ augroup configure_lsp
   au!
   autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
 augroup END
+" }}}
+
+" vim-test {{{
+nnoremap <leader>tn :TestNearest<CR>
+nnoremap <leader>tf :TestFile<CR>
+nnoremap <leader>ts :TestSuite<CR>
+nnoremap <leader>tl :TestLast<CR>
+nnoremap <leader>tv :TestVisit<CR>
 " }}}
 
 " vim-fz {{{
