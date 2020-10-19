@@ -4,11 +4,6 @@ local config = {
     check_for_updates = false,
     color_scheme = "Builtin Solarized Dark",
     default_prog = { '/bin/bash', '-l' },
-    font = wezterm.font_with_fallback({
-        "FiraCode Nerd Font",
-        "Fira Code",
-        "Consolas"
-    }),
     font_size = 14.0,
     launch_menu = {},
     leader = { key="a", mods="CTRL" },

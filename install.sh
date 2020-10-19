@@ -1,2 +1,2 @@
 brew tap wez/wezterm
-brew install wezterm
+brew install wezterm --HEAD
