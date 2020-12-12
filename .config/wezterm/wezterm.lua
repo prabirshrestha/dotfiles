@@ -4,12 +4,12 @@ local config = {
     check_for_updates = false,
     color_scheme = "Builtin Solarized Dark",
     default_prog = { '/bin/bash', '-l' },
-    font_size = 14.0,
+    font_size = 16.0,
     launch_menu = {},
     leader = { key="a", mods="CTRL" },
     keys = {
         -- Send "CTRL-A" to the terminal when pressing CTRL-A, CTRL-A
-        { key = "a",   mods="LEADER|CTRL",    action=wezterm.action{SendString="\x01"}},
+        { key = "a", mods = "LEADER|CTRL",  action=wezterm.action{SendString="\x01"}},
         { key = "-", mods = "LEADER",       action=wezterm.action{SplitVertical={domain="CurrentPaneDomain"}}},
         { key = "\\",mods = "LEADER",       action=wezterm.action{SplitHorizontal={domain="CurrentPaneDomain"}}},
         { key = "z", mods = "LEADER",       action="TogglePaneZoomState" },
