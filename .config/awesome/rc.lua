@@ -37,6 +37,14 @@ local hotkeys_popup = require("awful.hotkeys_popup")
 -- when client with a matching name is opened:
 require("awful.hotkeys_popup.keys")
 
+separator = wibox.widget.textbox()
+separator.text  = " : "
+
+small_separator = wibox.widget.textbox()
+small_separator.text = " "
+
+local battery_widget = require("awesome-wm-widgets.battery-widget.battery")
+
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
 -- another config (This code will only ever execute for the fallback config)
@@ -240,6 +248,11 @@ awful.screen.connect_for_each_screen(function(s)
             layout = wibox.layout.fixed.horizontal,
             mykeyboardlayout,
             wibox.widget.systray(),
+			separator,
+            battery_widget({
+                path_to_icons = home .. "/.config/awesome/arc-icon-theme/Arc/status/symbolic/",
+	    	}),
+			separator,
             mytextclock,
             s.mylayoutbox,
         },
