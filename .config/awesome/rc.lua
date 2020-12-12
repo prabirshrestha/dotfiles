@@ -43,7 +43,12 @@ separator.text  = " : "
 small_separator = wibox.widget.textbox()
 small_separator.text = " "
 
+local brightnessarc_widget = require("awesome-wm-widgets.brightnessarc-widget.brightnessarc")
 local battery_widget = require("awesome-wm-widgets.battery-widget.battery")
+local cpu_widget = require("awesome-wm-widgets.cpu-widget.cpu-widget")
+local fs_widget = require("awesome-wm-widgets.fs-widget.fs-widget")
+local volumearc_widget = require("awesome-wm-widgets.volumearc-widget.volumearc")
+local volumebar_widget = require("awesome-wm-widgets.volumebar-widget.volumebar")
 
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
@@ -249,10 +254,22 @@ awful.screen.connect_for_each_screen(function(s)
             mykeyboardlayout,
             wibox.widget.systray(),
 			separator,
+			brightnessarc_widget({
+                get_brightness_cmd = 'xbacklight -get',
+                inc_brightness_cmd = 'xbacklight -inc 5',
+                dec_brightness_cmd = 'xbacklight -dec 5',
+                path_to_icons = home .. "/.config/awesome/arc-icon-theme/Arc/status/symbolic/",
+			}),
+			separator,
             battery_widget({
                 path_to_icons = home .. "/.config/awesome/arc-icon-theme/Arc/status/symbolic/",
 	    	}),
 			separator,
+            volumebar_widget({
+                shape = 'rounded_bar', -- octogon, hexagon, powerline, etc
+            }),
+			cpu_widget({ enable_kill_button = true }),
+            fs_widget(),
             mytextclock,
             s.mylayoutbox,
         },
