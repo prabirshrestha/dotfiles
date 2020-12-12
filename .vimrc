@@ -138,9 +138,9 @@ set shiftwidth=4                    " Use indents of 4 spaces
 set expandtab                       " Tabs are spaces, not tabs
 set tabstop=4                       " An indentation every four columns
 set softtabstop=4                   " Let backspace delete indent
-nnoremap <silent> <leader>t2     :setl shiftwidth=2 softtabstop=2<CR>
-nnoremap <silent> <leader>t4     :setl shiftwidth=4 softtabstop=4<CR>
-nnoremap <silent> <leader>t8     :setl shiftwidth=8 softtabstop=8<CR>
+nnoremap <silent> <leader>t2     :setl shiftwidth=2 softtabstop=2 tabstop=2<CR>
+nnoremap <silent> <leader>t4     :setl shiftwidth=4 softtabstop=4 tabstop=4<CR>
+nnoremap <silent> <leader>t8     :setl shiftwidth=8 softtabstop=8 tabstop=8<CR>
 
 " Wrapping options
 set formatoptions=tc " wrap text and comments using textwidth
