@@ -3,6 +3,11 @@ local wezterm = require("wezterm")
 local config = {
     check_for_updates = false,
     color_scheme = "Builtin Solarized Dark",
+    inactive_pane_hsb = {
+        hue = 1.0,
+        saturation = 1.0,
+        brightness = 1.0,
+    },
     default_prog = { '/bin/bash', '-l' },
     font_size = 16.0,
     launch_menu = {},
