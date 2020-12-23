@@ -187,6 +187,9 @@ nnoremap <leader>ev :e $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 " }}}
 
+" CD to current directory of the file
+nnoremap <leader>cd :cd %:p:h<cr>
+
 if executable('rg')
   set grepprg=rg\ --no-heading\ --vimgrep
   set grepformat=%f:%l:%c:%m
@@ -294,6 +297,7 @@ au! FileType rust setlocal tabstop=4 softtabstop=4 colorcolumn=100
 "let g:lsp_log_file = expand(s:settings_data_dir . '/lsp.log')
 "let g:asyncomplete_log_file = expand(s:settings_data_dir. '/asyncomplete.log')
 let g:lsp_diagnostics_echo_cursor = 1
+let g:lsp_format_sync_timeout = 1000
 
 hi! LspErrorHighlight guifg=#dc322f guibg=NONE guisp=#dc322f gui=undercurl cterm=undercurl
 hi! LspInfoHighlight guifg=#2aa198 guibg=NONE guisp=#2aa198 gui=undercurl cterm=undercurl
