@@ -123,11 +123,19 @@ myawesomemenu = {
    { "quit", function() awesome.quit() end },
 }
 
+local SYSTEMCTL = "systemctl -q --no-block"
+powermenu = {
+    { "Sleep", SYSTEMCTL .. " suspend"},
+    { "Restart", SYSTEMCTL .. " reboot"},
+    { "Shutdown", SYSTEMCTL .. " poweroff"}
+}
+
 mymainmenu = awful.menu({ items = { { "awesome", myawesomemenu, beautiful.awesome_icon },
                                     { "Files", "nemo" },
                                     { "Web", "firefox-developer-edition" },
                                     { "Terminal", terminal },
                                     { "Virtual Box", "virtualbox" },
+                                    { "Power", powermenu }
                                   },
                           theme = {
                               width = 250,
