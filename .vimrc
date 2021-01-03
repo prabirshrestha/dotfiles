@@ -293,9 +293,9 @@ endif
 
 au! FileType rust setlocal tabstop=4 softtabstop=4 colorcolumn=100
 
-"let g:lsp_log_verbose = 1
-"let g:lsp_log_file = expand(s:settings_data_dir . '/lsp.log')
-"let g:asyncomplete_log_file = expand(s:settings_data_dir. '/asyncomplete.log')
+" let g:lsp_log_verbose = 1
+" let g:lsp_log_file = expand(s:settings_data_dir . '/lsp.log')
+" let g:asyncomplete_log_file = expand(s:settings_data_dir. '/asyncomplete.log')
 let g:lsp_diagnostics_echo_cursor = 1
 let g:lsp_format_sync_timeout = 1000
 
@@ -322,6 +322,7 @@ function! s:on_lsp_buffer_enabled() abort
   vnoremap <buffer> gQ :LspDocumentRangeFormat<CR>
   nnoremap <buffer> <leader>ca :LspCodeAction<CR>
   xnoremap <buffer> <leader>ca :LspCodeAction<CR>
+  nnoremap <buffer> <leader>cl :LspCodeLens<CR>
   autocmd! BufWritePre *.rs,*.go call execute('LspDocumentFormatSync')
 endfunction
 
