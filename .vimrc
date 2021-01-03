@@ -96,7 +96,6 @@ if !has('gui_running') | set t_Co=256 | endif
 set termguicolors
 set background=dark
 silent! colorscheme solarized8
-let g:lightline = { 'colorscheme': 'solarized' }
 
 set mouse=a                           " automatically enable mouse usage
 set noerrorbells visualbell t_vb=     " no annoying sound on errors
@@ -302,6 +301,32 @@ let g:lsp_format_sync_timeout = 1000
 hi! LspErrorHighlight guifg=#dc322f guibg=NONE guisp=#dc322f gui=undercurl cterm=undercurl
 hi! LspInfoHighlight guifg=#2aa198 guibg=NONE guisp=#2aa198 gui=undercurl cterm=undercurl
 hi! LspWarningHighlight guifg=#b58900 guibg=NONE guisp=#b58900 gui=undercurl cterm=undercurl
+
+let g:lightline = {
+  \ 'colorscheme': 'solarized',
+  \ 'active': {
+  \   'left': [
+  \     ['mode', 'paste'],
+  \     ['lsp_progress'],
+  \   ],
+  \ },
+  \ 'component_function': {
+  \   'lsp_progress': 'MyLspProgress'
+  \ },
+  \ }
+
+let g:lsp_work_done_progress_enabled = 1
+function! MyLspProgress() abort
+  let l:progress = lsp#get_progress()
+  if empty(l:progress) | return '' | endif
+  let l:progress = l:progress[len(l:progress) - 1]
+  return l:progress['server'] . ': ' . l:progress['message']
+endfunction
+
+augroup my_lightline_lsp
+  autocmd!
+  autocmd User lsp_progress_updated call lightline#update()
+augroup END
 
 function! s:on_lsp_buffer_enabled() abort
   setlocal omnifunc=lsp#complete
