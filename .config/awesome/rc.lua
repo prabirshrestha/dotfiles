@@ -123,12 +123,11 @@ myawesomemenu = {
    { "quit", function() awesome.quit() end },
 }
 
-local SYSTEMCTL = "systemctl -q --no-block"
 powermenu = {
     { "Logout",     function() awesome.quit() end, beautiful.logout_ico },
     { "Sleep",      "systemctl -q --no-block suspend"},
     { "Restart",    "systemctl -q --no-block reboot"},
-    { "Shutdown",   "systemctl -q --noblock poweroff"}
+    { "Shutdown",   "systemctl -q --no-block poweroff"}
 }
 
 mymainmenu = awful.menu({ items = { { "awesome", myawesomemenu, beautiful.awesome_icon },
