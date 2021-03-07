@@ -57,6 +57,7 @@ call plug#begin(s:settings_plugin_dir)
   Plug 'prabirshrestha/callbag.vim'
   Plug 'prabirshrestha/async.vim'
   Plug 'prabirshrestha/vim-lsp'
+  Plug 'hrsh7th/vim-vital-vs'
   Plug 'mattn/vim-lsp-settings'
   Plug 'mattn/vim-lsp-icons'
   Plug 'prabirshrestha/asyncomplete.vim'
@@ -295,8 +296,10 @@ au! FileType rust setlocal tabstop=4 softtabstop=4 colorcolumn=100
 " let g:lsp_log_verbose = 1
 " let g:lsp_log_file = expand(s:settings_data_dir . '/lsp.log')
 " let g:asyncomplete_log_file = expand(s:settings_data_dir. '/asyncomplete.log')
+let g:lsp_preview_float = 1
 let g:lsp_diagnostics_echo_cursor = 1
 let g:lsp_format_sync_timeout = 1000
+let g:lsp_documentation_float_docked = 1
 
 hi! LspErrorHighlight guifg=#dc322f guibg=NONE guisp=#dc322f gui=undercurl cterm=undercurl
 hi! LspInfoHighlight guifg=#2aa198 guibg=NONE guisp=#2aa198 gui=undercurl cterm=undercurl
@@ -315,7 +318,7 @@ let g:lightline = {
   \ },
   \ }
 
-let g:lsp_work_done_progress_enabled = 1
+let g:lsp_work_done_progress_enabled = 0
 function! MyLspProgress() abort
   let l:progress = lsp#get_progress()
   if empty(l:progress) | return '' | endif
@@ -333,16 +336,16 @@ function! s:on_lsp_buffer_enabled() abort
   setlocal signcolumn=yes
   if exists('+tagfunc') | setlocal tagfunc=lsp#tagfunc | endif
   nmap <buffer> gd <plug>(lsp-definition)
+  nmap <buffer> gs <plug>(lsp-document-symbol-search)
+  nmap <buffer> gS <plug>(lsp-workspace-symbol-search)
   nmap <buffer> gr <plug>(lsp-references)
   nmap <buffer> gi <plug>(lsp-implementation)
   nmap <buffer> gt <plug>(lsp-type-definition)
   nmap <buffer> <leader>rn <plug>(lsp-rename)
-  nmap <silent> [g <Plug>(lsp-previous-diagnostic)
-  nmap <silent> ]g <Plug>(lsp-next-diagnostic)
+  nmap <buffer> [g <Plug>(lsp-previous-diagnostic)
+  nmap <buffer> ]g <Plug>(lsp-next-diagnostic)
   nmap <buffer> K <plug>(lsp-hover)
 
-  nnoremap <buffer> gs :<C-u>LspDocumentSymbol<CR>
-  nnoremap <buffer> gS :<C-u>LspWorkspaceSymbol<CR>
   nnoremap <buffer> gQ :<C-u>LspDocumentFormat<CR>
   vnoremap <buffer> gQ :LspDocumentRangeFormat<CR>
   nnoremap <buffer> <leader>ca :LspCodeAction<CR>

@@ -13,6 +13,7 @@ case "${unameOut}" in
 esac
 
 [[ -s ~/.nvm/nvm.sh ]] && . ~/.nvm/nvm.sh # This loads NVM
+[[ -s /usr/share/z.lua/z.lua ]] && eval "$(lua /usr/share/z.lua/z.lua --init bash)"
 export PATH="$HOME/.cargo/bin:$HOME/go/bin:$HOME/Library/Python/3.8/bin:$PATH"
 export PATH="$HOME/.config/nvim/plugins/vim-themis/bin:$PATH"
 #export PATH="/opt/pkg/bin:$PATH"
@@ -22,6 +23,7 @@ then
     alias pbcopy='xsel --clipboard --input'
     alias pbpaste='xsel --clipboard --output'
     alias open='xdg-open'
+    export WINDOWID=$(xdotool getwindowfocus)
 fi
 
 # alias
