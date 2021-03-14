@@ -54,6 +54,7 @@ gpr() {
     git checkout pr${1}
 }
 
+
 # fe [FUZZY PATTERN] - Open the selected file with the default editor
 #   - Bypass fuzzy finder if there's only one match (--select-1)
 #   - Exit if there's no match (--exit-0)
@@ -84,6 +85,10 @@ fdr() {
   }
   local DIR=$(get_parent_dirs $(realpath "${1:-$PWD}") | fzf-tmux --tac)
   cd "$DIR"
+}
+
+fco() {
+    git checkout "$(git branch --all | fzf | tr -d ' ')"
 }
 
 # fcs - get git commit sha
