@@ -132,9 +132,10 @@ powermenu = {
 
 mymainmenu = awful.menu({ items = { { "awesome", myawesomemenu, beautiful.awesome_icon },
                                     { "Files", "nemo" },
-                                    { "Web", "firefox-developer-edition" },
                                     { "Terminal", terminal },
+                                    { "Sqlite Browser", "sqlitebrowser" },
                                     { "Virtual Box", "virtualbox" },
+                                    { "Web", "firefox-developer-edition" },
                                     { "Power", powermenu }
                                   },
                           theme = {
