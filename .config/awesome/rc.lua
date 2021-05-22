@@ -127,7 +127,12 @@ powermenu = {
     { "Logout",     function() awesome.quit() end, beautiful.logout_ico },
     { "Sleep",      "systemctl -q --no-block suspend"},
     { "Restart",    "systemctl -q --no-block reboot"},
-    { "Shutdown",   "systemctl -q --no-block poweroff"}
+    { "Shutdown",   function ()
+            awful.menu({ items = {
+                { "Cancel", function() do end end } },
+                { "Ok", function() awful.spawn("systemctl -q --no-block poweroff") end }
+            }):show()
+    end}
 }
 
 mymainmenu = awful.menu({ items = { { "awesome", myawesomemenu, beautiful.awesome_icon },
