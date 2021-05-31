@@ -12,8 +12,9 @@ case "${unameOut}" in
     *)          platform="UNKNOWN:${unameOut}"
 esac
 
+if which zoxide >/dev/null; then eval "$(zoxide init bash)"; fi
 [[ -s ~/.nvm/nvm.sh ]] && . ~/.nvm/nvm.sh # This loads NVM
-[[ -s /usr/share/z.lua/z.lua ]] && eval "$(lua /usr/share/z.lua/z.lua --init bash)"
+# [[ -s /usr/share/z.lua/z.lua ]] && eval "$(lua /usr/share/z.lua/z.lua --init bash)"
 export PATH="$HOME/.cargo/bin:$HOME/go/bin:$HOME/Library/Python/3.8/bin:$PATH"
 export PATH="$HOME/.config/nvim/plugins/vim-themis/bin:$PATH"
 #export PATH="/opt/pkg/bin:$PATH"
