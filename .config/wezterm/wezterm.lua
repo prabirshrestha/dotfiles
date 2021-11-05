@@ -10,6 +10,7 @@ local config = {
     },
     default_prog = { '/bin/bash', '-l' },
     font_size = 16.0,
+    window_decorations = "NONE",
     launch_menu = {},
     leader = { key="a", mods="CTRL" },
     keys = {
