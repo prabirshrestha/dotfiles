@@ -47,8 +47,7 @@ local brightnessarc_widget = require("awesome-wm-widgets.brightnessarc-widget.br
 local battery_widget = require("awesome-wm-widgets.battery-widget.battery")
 local cpu_widget = require("awesome-wm-widgets.cpu-widget.cpu-widget")
 local fs_widget = require("awesome-wm-widgets.fs-widget.fs-widget")
-local volumearc_widget = require("awesome-wm-widgets.volumearc-widget.volumearc")
-local volumebar_widget = require("awesome-wm-widgets.volumebar-widget.volumebar")
+local volume_widget = require('awesome-wm-widgets.volume-widget.volume')
 
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
@@ -279,9 +278,7 @@ awful.screen.connect_for_each_screen(function(s)
                 path_to_icons = home .. "/.config/awesome/arc-icon-theme/Arc/status/symbolic/",
 	    	}),
 			separator,
-            volumebar_widget({
-                shape = 'rounded_bar', -- octogon, hexagon, powerline, etc
-            }),
+            volume_widget(),
 			cpu_widget({ enable_kill_button = true }),
             fs_widget(),
             mytextclock,
@@ -401,11 +398,12 @@ globalkeys = gears.table.join(
     --           {description = "show the menubar", group = "launcher"}),
 	awful.key({ modkey }, "p", function () awful.util.spawn("rofi -show run") end),
 
-    awful.key({ }, "#122", function () awful.util.spawn("amixer -D pulse sset Master 20%-") end),
-    awful.key({ }, "#123", function () awful.util.spawn("amixer -D pulse sset Master 20%+") end),
+    awful.key({}, "XF86AudioLowerVolume", function () awful.util.spawn("amixer -D pulse sset Master 20%-") end),
+    awful.key({}, "XF86AudioRaiseVolume", function () awful.util.spawn("amixer -D pulse sset Master 20%+") end),
+    awful.key({}, "XF86AudioMute", function () awful.util.spawn("amixer -D pulse sset Master toggle", false) end),
 
-    awful.key({ }, "#232", function () awful.util.spawn("xbacklight -dec 20") end),
-    awful.key({ }, "#233", function () awful.util.spawn("xbacklight -inc 20") end)
+    awful.key({}, "#232", function () awful.util.spawn("xbacklight -dec 20") end),
+    awful.key({}, "#233", function () awful.util.spawn("xbacklight -inc 20") end)
 )
 
 clientkeys = gears.table.join(
