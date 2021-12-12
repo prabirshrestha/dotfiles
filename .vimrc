@@ -317,7 +317,7 @@ let g:lightline = {
   \ },
   \ }
 
-let g:lsp_work_done_progress_enabled = 0
+let g:lsp_work_done_progress_enabled = 1
 function! MyLspProgress() abort
   let l:progress = lsp#get_progress()
   if empty(l:progress) | return '' | endif
