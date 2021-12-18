@@ -402,8 +402,8 @@ globalkeys = gears.table.join(
     awful.key({}, "XF86AudioRaiseVolume", function () awful.util.spawn("amixer -D pulse sset Master 20%+") end),
     awful.key({}, "XF86AudioMute", function () awful.util.spawn("amixer -D pulse sset Master toggle", false) end),
 
-    awful.key({}, "#232", function () awful.util.spawn("xbacklight -dec 20") end),
-    awful.key({}, "#233", function () awful.util.spawn("xbacklight -inc 20") end)
+    awful.key({}, "#232", function () awful.util.spawn("xbacklight -dec 10") end),
+    awful.key({}, "#233", function () awful.util.spawn("xbacklight -inc 10") end)
 )
 
 clientkeys = gears.table.join(
