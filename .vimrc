@@ -28,7 +28,7 @@ call plug#begin(s:settings_plugin_dir)
   Plug 'lifepillar/vim-solarized8'
 
   Plug 'itchyny/lightline.vim'
-  Plug 'editorconfig/editorconfig-vim'
+  Plug 'tpope/vim-sleuth'
   Plug 'justinmk/vim-gtfo'
   Plug 'andymass/vim-matchup'
   Plug 'airblade/vim-rooter'
@@ -351,6 +351,9 @@ function! s:on_lsp_buffer_enabled() abort
   xnoremap <buffer> <leader>ca :LspCodeAction<CR>
   nnoremap <buffer> <leader>cl :LspCodeLens<CR>
   autocmd! BufWritePre *.rs,*.go call execute('LspDocumentFormatSync')
+
+  nnoremap <buffer> <expr><c-f> lsp#scroll(+4)
+  nnoremap <buffer> <expr><c-d> lsp#scroll(-4)
 endfunction
 
 augroup configure_lsp
