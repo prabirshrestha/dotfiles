@@ -40,6 +40,7 @@ call plug#begin(s:settings_plugin_dir)
   Plug 'tpope/vim-commentary'
   Plug 'tpope/vim-surround'
   Plug 'tyru/open-browser.vim'
+  Plug 'skanehira/vsession'
 
   Plug 'thinca/vim-themis', { 'filetype': 'vim' }
   Plug 'cohama/lexima.vim'
@@ -385,6 +386,10 @@ if has('win32') | let g:gtfo#terminals = { 'win' : 'cmd /k' } | endif
 " vim-easymotion {{{
 let g:EasyMotion_keys='hklyuiopnm,qwertzxcvbasdgjf'
 nmap s <Plug>(easymotion-s)
+" }}}
+
+" vsession {{{
+let g:vsession_path = expand(s:settings_data_dir . '/vsession')
 " }}}
 
 " gina.vim {{{
