@@ -39,6 +39,7 @@ call plug#begin(s:settings_plugin_dir)
   Plug 'lambdalisue/gina.vim'
   Plug 'tpope/vim-commentary'
   Plug 'tpope/vim-surround'
+  Plug 'tyru/open-browser.vim'
 
   Plug 'thinca/vim-themis', { 'filetype': 'vim' }
   Plug 'cohama/lexima.vim'
