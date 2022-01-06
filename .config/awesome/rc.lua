@@ -140,6 +140,7 @@ mymainmenu = awful.menu({ items = { { "awesome", myawesomemenu, beautiful.awesom
                                     { "Sqlite Browser", "sqlitebrowser" },
                                     { "Virtual Box", "virtualbox" },
                                     { "Web", "firefox-developer-edition" },
+                                    { "RDP", "remmina" },
                                     { "Power", powermenu }
                                   },
                           theme = {
