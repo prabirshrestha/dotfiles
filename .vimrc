@@ -35,7 +35,8 @@ call plug#begin(s:settings_plugin_dir)
   Plug 'DataWraith/auto_mkdir'
   Plug 'Lokaltog/vim-easymotion', { 'on': ['<Plug>(easymotion-s)'] }
   Plug 'ryanoasis/vim-devicons'
-  Plug 'preservim/nerdtree'
+  " Plug 'preservim/nerdtree'
+  Plug 'lambdalisue/fern.vim'
   Plug 'lambdalisue/gina.vim'
   Plug 'tpope/vim-commentary'
   Plug 'tpope/vim-surround'
@@ -406,8 +407,24 @@ call gina#custom#mapping#nmap('/.*', '<C-t>', '<Plug>(gina-edit-tab)')
 " }}}
 
 " nerdtree {{{
-nnoremap <silent> <leader>e :NERDTreeFind<CR>
-nnoremap <silent> <leader>E :NERDTreeToggle<CR>
+" nnoremap <silent> <leader>e :NERDTreeFind<CR>
+" nnoremap <silent> <leader>E :NERDTreeToggle<CR>
+" }}}
+
+" fern.vim {{{
+let g:fern#drawer_keep = 1
+let g:fern#default_hidden = 1
+let g:fern#default_exclude = '.git$'
+nnoremap <silent> <leader>e :Fern . -drawer<CR>
+function! s:fern_init() abort
+  nnoremap <buffer> <silent> q :bd<CR>
+  map <buffer> <silent> <C-x> <Plug>(fern-action-open:split)
+  map <buffer> <silent> <C-v> <Plug>(fern-action-open:vsplit)
+endfunction
+augroup fern-settings
+  au!
+  au FileType fern call s:fern_init()
+augroup END
 " }}}
 
 " vim-backslash {{{
