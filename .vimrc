@@ -55,6 +55,7 @@ call plug#begin(s:settings_plugin_dir)
   Plug 'plasticboy/vim-markdown'
   Plug 'dhruvasagar/vim-table-mode'
   Plug 'mattn/vim-maketable'
+  Plug 'shinespark/vim-list2tree'
 
   Plug 'prabirshrestha/vital.vim', { 'branch': 'popup' }
   Plug 'prabirshrestha/callbag.vim'
