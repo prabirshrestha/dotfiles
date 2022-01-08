@@ -39,6 +39,8 @@ local config = {
         { key = "9", mods = "LEADER",       action=wezterm.action{ActivateTab=8}},
         { key = "&", mods = "LEADER|SHIFT", action=wezterm.action{CloseCurrentTab={confirm=true}}},
         { key = "x", mods = "LEADER",       action=wezterm.action{CloseCurrentPane={confirm=true}}},
+
+        { key = "n", mods="SHIFT|CTRL",     action="ToggleFullScreen" },
     },
     set_environment_variables = {},
 }
