@@ -8,3 +8,5 @@ path.txt
 *.swp
 
 clink/.history
+clink/clink_history*
+clink/clink.log
