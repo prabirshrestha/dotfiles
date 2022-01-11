@@ -41,7 +41,8 @@ call plug#begin(s:settings_plugin_dir)
   Plug 'tpope/vim-commentary'
   Plug 'tpope/vim-surround'
   Plug 'tyru/open-browser.vim'
-  Plug 'skanehira/vsession'
+  " Plug 'skanehira/vsession'
+  Plug 'prabirshrestha/vsession', { 'branch': 'save-last-on-leave' }
 
   Plug 'thinca/vim-themis', { 'filetype': 'vim' }
   Plug 'cohama/lexima.vim'
@@ -393,6 +394,7 @@ nmap s <Plug>(easymotion-s)
 
 " vsession {{{
 let g:vsession_path = expand(s:settings_data_dir . '/vsession')
+nnoremap <leader>s :LoadSession<CR>
 " }}}
 
 " gina.vim {{{
