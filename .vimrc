@@ -41,8 +41,7 @@ call plug#begin(s:settings_plugin_dir)
   Plug 'tpope/vim-commentary'
   Plug 'tpope/vim-surround'
   Plug 'tyru/open-browser.vim'
-  " Plug 'skanehira/vsession'
-  Plug 'prabirshrestha/vsession', { 'branch': 'save-last-on-leave' }
+  Plug 'skanehira/vsession'
 
   Plug 'thinca/vim-themis', { 'filetype': 'vim' }
   Plug 'cohama/lexima.vim'
