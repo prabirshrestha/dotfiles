@@ -416,7 +416,7 @@ call gina#custom#mapping#nmap('/.*', '<C-t>', '<Plug>(gina-edit-tab)')
 let g:fern#drawer_keep = 1
 let g:fern#default_hidden = 1
 let g:fern#default_exclude = '.git$'
-nnoremap <silent> <leader>e :Fern . -drawer<CR>
+nnoremap <silent> <leader>e :Fern . -drawer -reveal=% -toggle<CR>
 function! s:fern_init() abort
   nnoremap <buffer> <silent> q :bd<CR>
   map <buffer> <silent> <C-x> <Plug>(fern-action-open:split)
