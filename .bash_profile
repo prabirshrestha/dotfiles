@@ -16,6 +16,7 @@ if hash zoxide 2>/dev/null; then eval "$(zoxide init bash)"; fi
 [[ -s ~/.nvm/nvm.sh ]] && . ~/.nvm/nvm.sh # This loads NVM
 export PATH="$HOME/.cargo/bin:$HOME/go/bin:$HOME/Library/Python/3.8/bin:$PATH"
 export PATH="$HOME/.config/nvim/plugins/vim-themis/bin:$PATH"
+export PATH="$HOME/.dotfiles/bin:$PATH"
 #export PATH="/opt/pkg/bin:$PATH"
 
 if [ "$platform" != "mac" ]
