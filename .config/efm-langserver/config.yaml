@@ -1,0 +1,18 @@
+version: 2
+root-markers:
+  - .git/
+
+tools:
+  prettier: &prettier
+    format-command: 'prettier --stdin-filepath ${INPUT}'
+    format-stdin: true
+
+languages:
+  javascript:
+    - <<: *prettier
+  javascriptreact:
+    - <<: *prettier
+  typescript:
+    - <<: *prettier
+  typescriptreact:
+    - <<: *prettier

@@ -309,6 +309,13 @@ hi! LspErrorHighlight guifg=#dc322f guibg=NONE guisp=#dc322f gui=undercurl cterm
 hi! LspInfoHighlight guifg=#2aa198 guibg=NONE guisp=#2aa198 gui=undercurl cterm=undercurl
 hi! LspWarningHighlight guifg=#b58900 guibg=NONE guisp=#b58900 gui=undercurl cterm=undercurl
 
+let g:lsp_settings = {
+  \  'efm-langserver': {
+  \    'disabled': 0,
+  \    'args': ['-c='.expand('~/.config/efm-langserver/config.yaml')],
+  \  },
+\}
+
 let g:lightline = {
   \ 'colorscheme': 'solarized',
   \ 'active': {
@@ -356,6 +363,7 @@ function! s:on_lsp_buffer_enabled() abort
   xnoremap <buffer> <leader>ca :LspCodeAction<CR>
   nnoremap <buffer> <leader>cl :LspCodeLens<CR>
   autocmd! BufWritePre *.rs,*.go call execute('LspDocumentFormatSync')
+  autocmd! BufWritePre *.ts,*.tsx call execute('LspDocumentFormatSync --server=efm-langserver')
 
   nnoremap <buffer> <expr><c-f> lsp#scroll(+4)
   nnoremap <buffer> <expr><c-d> lsp#scroll(-4)

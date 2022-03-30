@@ -5,6 +5,7 @@
 ".tmux.conf"="~/.tmux.conf"
 ".zshrc"="~/.zshrc"
 ".config/wezterm"="~/.config/wezterm"
+".config/efm-langserver"="~/.config/efm-langserver"
 
 [linux]
 ".config/awesome"="~/.config/awesome"
