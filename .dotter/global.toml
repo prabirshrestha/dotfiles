@@ -1,7 +1,9 @@
 [helpers]
 
 [default]
-depends = ["cargo"]
+depends = [
+  "cargo",
+]
 
 [default.files]
 
