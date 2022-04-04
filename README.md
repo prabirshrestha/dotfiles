@@ -13,21 +13,20 @@ subject](http://zachholman.com/2010/08/dotfiles-are-meant-to-be-forked/).
 ## install
 
 ```bash
-pacman -Syu --noconfirm --needed git
-yay -Sy nerd-fonts-fira-code
+paru -Sy --noconfirm dotter-rs-bin git
 cd ~/
-curl -Lk https://github.com/ubnt-intrepid/dot/releases/download/v0.1.4/dot-v0.1.4-x86_64-unknown-linux-musl.tar.gz -o dot.tar.gz
-tar -xvf ./dot.tar.gz
-rm ./dot.tar.gz
-sudo mv ./dot /bin/
-dot init prabirshrestha/dotfiles
+git clone https://github.com/prabirshrestha/dotfiles.git .dotfiles
+cd .dotfiles
+dotter -v
 ```
 
 This will clone the repo and symlink the appropriate files in `.dotfiles` to your
-home directory. Everything is configured and tweaked within `~/.mappings`,
+home directory. Everything is configured and tweaked within `~/.dotter`,
 though.
 
 ## thanks
 
 Fork of [Holman's dotfiles](https://github.com/holman/dotfiles) which has been supported to work
 on all 3 major OS - Mac OSX, Linux and Windows and of coure my own customizations.
+
+[Dotter](https://github.com/SuperCuber/dotter) tool to help with dotfiles automation.
