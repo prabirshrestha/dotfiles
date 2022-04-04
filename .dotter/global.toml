@@ -1,8 +1,11 @@
 [helpers]
 
 [default]
-depends = []
+depends = ["cargo"]
 
 [default.files]
 
 [default.variables]
+
+[cargo.files]
+".cargo/config" = "~/.cargo/config"

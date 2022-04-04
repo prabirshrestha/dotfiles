@@ -1,0 +1,8 @@
+{{#if (is_executable "sccache")}}
+[build]
+{{#if (eq dotter.os "unix")}}
+rustc-wrapper = "/home/{{env_var "USERNAME"}}/.cargo/bin/sccache"
+{{else}}
+rustc-wrapper = "C:/Users/{{env_var "USERNAME"}}/.cargo/bin/sccache"
+{{/if}}
+{{/if}}
