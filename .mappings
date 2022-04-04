@@ -1,5 +1,4 @@
 [general]
-".bash_profile"="~/.bash_profile"
 ".gitconfig"="~/.gitconfig"
 ".tmux.conf"="~/.tmux.conf"
 ".zshrc"="~/.zshrc"
