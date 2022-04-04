@@ -6,6 +6,7 @@ depends = [
 ]
 
 [default.files]
+".vimrc" = { type = "symbolic" , target = "~/.vimrc" }
 
 [default.variables]
 
