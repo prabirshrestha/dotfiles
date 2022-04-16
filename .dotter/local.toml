@@ -1,5 +1,6 @@
 includes = []
 packages = [
+  "awesomewm",
   "bash",
   "cargo",
   "git",

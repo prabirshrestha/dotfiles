@@ -272,11 +272,11 @@ awful.screen.connect_for_each_screen(function(s)
                 get_brightness_cmd = 'xbacklight -get',
                 inc_brightness_cmd = 'xbacklight -inc 5',
                 dec_brightness_cmd = 'xbacklight -dec 5',
-                path_to_icons = home .. "/.config/awesome/arc-icon-theme/Arc/status/symbolic/",
+                -- path_to_icons = home .. "/.config/awesome/arc-icon-theme/Arc/status/symbolic/",
 			}),
 			separator,
             battery_widget({
-                path_to_icons = home .. "/.config/awesome/arc-icon-theme/Arc/status/symbolic/",
+                -- path_to_icons = home .. "/.config/awesome/arc-icon-theme/Arc/status/symbolic/",
 	    	}),
 			separator,
             volume_widget(),

@@ -1,3 +1,6 @@
+[awesomewm.files]
+".config/awesome" = { type = "symbolic" , target = "~/.config/awesome" }
+
 [bash.files]
 ".bash_profile" = { type = "symbolic", target = "~/.bash_profile" }
 
