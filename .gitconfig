@@ -1,10 +1,20 @@
-[core]
-    # git config --global core.commentchar ;
-    editor=vim
 [user]
-	email = mail@prabir.me
-	name = Prabir Shrestha
+    email = mail@prabir.me
+    name = Prabir Shrestha
 
+[core]
+    {{#if (is_executable "delta")}}
+    pager = delta
+    {{/if}}
+    {{#if (eq dotter.os "windows")}}
+    symlinks = true
+    autocrlf = true
+    {{else}}
+    autocrlf = input
+    {{/if}}
+    editor=vim
+
+{{#if (eq dotter.os "windows")}}
 [diff]
     tool = kdiff3
 [difftool "kdiff3"]
@@ -15,3 +25,4 @@
     path = c:/Program Files/KDiff3/kdiff3.exe
     keepBackup = false
     trustExitCode = false
+{{/if}}

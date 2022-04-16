@@ -14,15 +14,14 @@ subject](http://zachholman.com/2010/08/dotfiles-are-meant-to-be-forked/).
 
 ```bash
 paru -Sy --noconfirm dotter-rs-bin git
-cd ~/
-git clone https://github.com/prabirshrestha/dotfiles.git .dotfiles
-cd .dotfiles
-dotter -v
+git clone https://github.com/prabirshrestha/dotfiles.git ~/.dotfiles
+cd ~/.dotter && ./configure
 ```
 
 This will clone the repo and symlink the appropriate files in `.dotfiles` to your
 home directory. Everything is configured and tweaked within `~/.dotter`,
 though.
+
 
 ## thanks
 

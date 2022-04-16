@@ -1,15 +1,26 @@
-[helpers]
-
-[default]
-depends = [
-  "cargo",
-]
-
-[default.files]
+[bash.files]
 ".bash_profile" = { type = "symbolic", target = "~/.bash_profile" }
-".vimrc" = { type = "symbolic" , target = "~/.vimrc" }
-
-[default.variables]
 
 [cargo.files]
 ".cargo/config" = "~/.cargo/config"
+
+[git.files]
+".gitconfig" = "~/.gitconfig"
+
+[nvim.files]
+".config/nvim/init.vim" = { type = "symbolic" , target = "~/.config/nvim/init.vim" }
+
+[xorg.files]
+".xprofile" = { type = "symbolic" , target = "~/.xprofile" }
+
+[tmux.files]
+".tmux.conf" = { type = "symbolic" , target = "~/.tmux.conf" }
+
+[vim.files]
+".vimrc" = { type = "symbolic" , target = "~/.vimrc" }
+
+[wezterm.files]
+".config/wezterm" = { type = "symbolic" , target = "~/.config/wezterm" }
+
+[zsh.files]
+".zshrc" = { type = "symbolic" , target = "~/.zshrc" }

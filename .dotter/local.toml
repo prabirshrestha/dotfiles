@@ -1,0 +1,12 @@
+includes = []
+packages = [
+  "bash",
+  "cargo",
+  "git",
+  "nvim",
+  "xorg",
+  "tmux",
+  "vim",
+  "wezterm",
+  "zsh"
+]
