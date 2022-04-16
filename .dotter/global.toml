@@ -7,11 +7,17 @@
 [cargo.files]
 ".cargo/config" = "~/.cargo/config"
 
+[efm-langserver.files]
+".config/efm-langserver" = { type = "symbolic" , target = "~/.config/efm-langserver" }
+
 [git.files]
 ".gitconfig" = "~/.gitconfig"
 
 [nvim.files]
 ".config/nvim/init.vim" = { type = "symbolic" , target = "~/.config/nvim/init.vim" }
+
+[rofi.files]
+".config/rofi" = { type = "symbolic" , target = "~/.config/rofi" }
 
 [xorg.files]
 ".xprofile" = { type = "symbolic" , target = "~/.xprofile" }
