@@ -1,0 +1,15 @@
+includes = []
+packages = [
+  "awesomewm",
+  "bash",
+  "cargo",
+  "efm-langserver",
+  "git",
+  "nvim",
+  "rofi",
+  "xorg",
+  "tmux",
+  "vim",
+  "wezterm",
+  "zsh"
+]

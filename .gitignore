@@ -1,3 +1,6 @@
+.dotter/cache.toml
+.dotter/cache/
+
 vim/vim.symlink/.netrwhist
 
 vim/edit_with_vim.reg
