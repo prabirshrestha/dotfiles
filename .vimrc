@@ -163,7 +163,7 @@ set hlsearch
 " Clear current search highlighting by fast //
 nmap <silent> // :nohlsearch<CR>
 
-set nofoldenable
+"set nofoldenable
 
 set ttyfast
 " https://github.com/vim/vim/issues/1735#issuecomment-383353563

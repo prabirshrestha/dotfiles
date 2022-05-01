@@ -12,6 +12,7 @@ local config = {
     font_size = 16.0,
     launch_menu = {},
     leader = { key="a", mods="CTRL" },
+    disable_default_key_bindings = true,
     keys = {
         -- Send "CTRL-A" to the terminal when pressing CTRL-A, CTRL-A
         { key = "a", mods = "LEADER|CTRL",  action=wezterm.action{SendString="\x01"}},
@@ -40,6 +41,8 @@ local config = {
         { key = "x", mods = "LEADER",       action=wezterm.action{CloseCurrentPane={confirm=true}}},
 
         { key = "n", mods="SHIFT|CTRL",     action="ToggleFullScreen" },
+        { key="v",   mods="SHIFT|CTRL",     action="Paste"},
+        { key="c",   mods="SHIFT|CTRL",     action="Copy"},
     },
     set_environment_variables = {},
 }
