@@ -135,6 +135,7 @@ powermenu = {
 }
 
 mymainmenu = awful.menu({ items = { { "awesome", myawesomemenu, beautiful.awesome_icon },
+                                    { "Apps", "rofi -modi drun -show drun -show-icons -width 22 -no-click-to-exit" },
                                     { "Files", "nemo" },
                                     { "Terminal", terminal },
                                     { "Sqlite Browser", "sqlitebrowser" },

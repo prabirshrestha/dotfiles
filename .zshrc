@@ -46,3 +46,7 @@ gpr() {
 autoload -U +X bashcompinit && bashcompinit
 
 complete -o nospace -C /usr/local/bin/nomad nomad
+
+# Generated for envman. Do not edit.
+[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
+
