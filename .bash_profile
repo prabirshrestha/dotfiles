@@ -3,6 +3,8 @@ stty -ixon
 
 export PS1='$(pwd)$ '
 
+export EDITOR="vim"
+
 unameOut="$(uname -s)"
 case "${unameOut}" in
     Linux*)     platform=linux;;
@@ -17,6 +19,7 @@ if hash zoxide 2>/dev/null; then eval "$(zoxide init bash)"; fi
 export PATH="$HOME/.cargo/bin:$HOME/go/bin:$HOME/Library/Python/3.8/bin:$PATH"
 export PATH="$HOME/.config/nvim/plugins/vim-themis/bin:$PATH"
 export PATH="$HOME/.dotfiles/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 #export PATH="/opt/pkg/bin:$PATH"
 
 if [ "$platform" != "mac" ]
@@ -29,7 +32,7 @@ fi
 
 # alias
 alias ls='ls -Gp'
-alias vi='nvim'
+alias vi='vim'
 alias v='vim'
 
 # git alias
@@ -39,7 +42,7 @@ alias gb='git branch'
 alias gba='git branch -a'
 alias gca='git commit -a'
 alias gclean='git clean -xdf'
-alias gcm='git checkout master'
+alias gcm='git checkout main || git checkout master'
 alias gco='git checkout'
 alias gcp='git cherry-pick'
 alias gf='git fetch'
