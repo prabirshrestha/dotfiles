@@ -36,7 +36,7 @@ call plug#begin(s:settings_plugin_dir)
   Plug 'Lokaltog/vim-easymotion', { 'on': ['<Plug>(easymotion-s)'] }
   Plug 'ryanoasis/vim-devicons'
   " Plug 'preservim/nerdtree'
-  Plug 'obaland/vfiler.vim'
+  Plug 'obaland/vfiler.vim', { 'on': ['VFiler'] }
   Plug 'lambdalisue/fern.vim'
   Plug 'lambdalisue/gina.vim'
   Plug 'tpope/vim-commentary'
@@ -306,6 +306,7 @@ let g:lsp_diagnostics_echo_cursor = 1
 let g:lsp_format_sync_timeout = 1000
 let g:lsp_documentation_float_docked = 1
 let g:lsp_inlay_hints_enabled = 0
+let g:lsp_semantic_enabled = 1
 
 hi! LspErrorHighlight guifg=#dc322f guibg=NONE guisp=#dc322f gui=undercurl cterm=undercurl
 hi! LspInfoHighlight guifg=#2aa198 guibg=NONE guisp=#2aa198 gui=undercurl cterm=undercurl
