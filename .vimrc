@@ -36,6 +36,7 @@ call plug#begin(s:settings_plugin_dir)
   Plug 'Lokaltog/vim-easymotion', { 'on': ['<Plug>(easymotion-s)'] }
   Plug 'ryanoasis/vim-devicons'
   " Plug 'preservim/nerdtree'
+  Plug 'obaland/vfiler.vim'
   Plug 'lambdalisue/fern.vim'
   Plug 'lambdalisue/gina.vim'
   Plug 'tpope/vim-commentary'
@@ -304,6 +305,7 @@ let g:lsp_preview_float = 1
 let g:lsp_diagnostics_echo_cursor = 1
 let g:lsp_format_sync_timeout = 1000
 let g:lsp_documentation_float_docked = 1
+let g:lsp_inlay_hints_enabled = 0
 
 hi! LspErrorHighlight guifg=#dc322f guibg=NONE guisp=#dc322f gui=undercurl cterm=undercurl
 hi! LspInfoHighlight guifg=#2aa198 guibg=NONE guisp=#2aa198 gui=undercurl cterm=undercurl
@@ -446,4 +448,12 @@ let g:table_mode_corner='|'
 
 if filereadable(expand('~/.vimrc.local')) | source ~/.vimrc.local | endif
 
+au BufNewFile,BufRead *.py
+    \ set tabstop=4 |
+    \ set softtabstop=4 |
+    \ set shiftwidth=4 |
+    \ set textwidth=79 |
+    \ set expandtab |
+    \ set autoindent |
+    \ set fileformat=unix
 " vim: set sw=2 ts=2 sts=2 et tw=78 foldmarker={{{,}}} foldmethod=marker spell:
