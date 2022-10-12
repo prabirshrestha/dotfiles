@@ -26,6 +26,7 @@ silent! exec 'source ' . s:settings_plug_path
 let g:plug_shallow = 0
 call plug#begin(s:settings_plugin_dir)
   Plug 'lifepillar/vim-solarized8'
+  if !has('nvim') | Plug 'rhysd/vim-healthcheck' | endif
 
   Plug 'itchyny/lightline.vim'
   Plug 'tpope/vim-sleuth'
@@ -36,7 +37,8 @@ call plug#begin(s:settings_plugin_dir)
   Plug 'Lokaltog/vim-easymotion', { 'on': ['<Plug>(easymotion-s)'] }
   Plug 'ryanoasis/vim-devicons'
   " Plug 'preservim/nerdtree'
-  Plug 'obaland/vfiler.vim', { 'on': ['VFiler'] }
+  Plug 'obaland/vfiler.vim'
+  Plug 'obaland/vfiler-column-devicons'
   Plug 'lambdalisue/fern.vim'
   Plug 'lambdalisue/gina.vim'
   Plug 'tpope/vim-commentary'
