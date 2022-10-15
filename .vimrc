@@ -166,7 +166,7 @@ set hlsearch
 " Clear current search highlighting by fast //
 nmap <silent> // :nohlsearch<CR>
 
-"set nofoldenable
+set nofoldenable
 
 set ttyfast
 " https://github.com/vim/vim/issues/1735#issuecomment-383353563
@@ -361,11 +361,15 @@ function! s:on_lsp_buffer_enabled() abort
   nmap <buffer> [g <Plug>(lsp-previous-diagnostic)
   nmap <buffer> ]g <Plug>(lsp-next-diagnostic)
   nmap <buffer> K <plug>(lsp-hover)
+  if has('nvim')
+    nnoremap <buffer> <leader>ca :LspCodeAction<CR>
+    xnoremap <buffer> <leader>ca :LspCodeAction<CR>
+  else
+    nmap <buffer> ca <Plug>(lsp-code-action-float)
+  endif
 
   nnoremap <buffer> gQ :<C-u>LspDocumentFormat<CR>
   vnoremap <buffer> gQ :LspDocumentRangeFormat<CR>
-  nnoremap <buffer> <leader>ca :LspCodeAction<CR>
-  xnoremap <buffer> <leader>ca :LspCodeAction<CR>
   nnoremap <buffer> <leader>cl :LspCodeLens<CR>
   autocmd! BufWritePre *.rs,*.go call execute('LspDocumentFormatSync')
   autocmd! BufWritePre *.ts,*.tsx call execute('LspDocumentFormatSync --server=efm-langserver')
