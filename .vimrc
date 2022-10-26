@@ -32,7 +32,7 @@ call plug#begin(s:settings_plugin_dir)
   Plug 'tpope/vim-sleuth'
   Plug 'justinmk/vim-gtfo'
   Plug 'andymass/vim-matchup'
-  Plug 'airblade/vim-rooter'
+  " Plug 'airblade/vim-rooter'
   Plug 'DataWraith/auto_mkdir'
   Plug 'Lokaltog/vim-easymotion', { 'on': ['<Plug>(easymotion-s)'] }
   Plug 'ryanoasis/vim-devicons'
@@ -282,10 +282,12 @@ endif
 let g:vsnip_snippet_dir = expand(s:settings_plugin_dir . '/vsnip-snippets/vsnips')
 
 if !has('vsvim')
-  imap <expr> <Tab> vsnip#available(1) ? '<Plug>(vsnip-expand-or-jump)' : pumvisible() ? "\<C-n>" : "\<Tab>"
-  smap <expr> <Tab> vsnip#available(1) ? '<Plug>(vsnip-expand-or-jump)' : pumvisible() ? "\<C-n>" : "\<Tab>"
-  imap <expr> <S-Tab> vsnip#available(1) ? '<Plug>(vsnip-jump-prev)' : pumvisible() ? "\<C-p>" : "\<S-Tab>"
-  smap <expr> <S-Tab> vsnip#available(1) ? '<Plug>(vsnip-jump-prev)' : pumvisible() ? "\<C-p>" : "\<S-Tab>"
+  " imap <expr> <Tab> vsnip#available(1) ? '<Plug>(vsnip-expand-or-jump)' : pumvisible() ? "\<C-n>" : "\<Tab>"
+  " smap <expr> <Tab> vsnip#available(1) ? '<Plug>(vsnip-expand-or-jump)' : pumvisible() ? "\<C-n>" : "\<Tab>"
+  " imap <expr> <S-Tab> vsnip#available(1) ? '<Plug>(vsnip-jump-prev)' : pumvisible() ? "\<C-p>" : "\<S-Tab>"
+  " smap <expr> <S-Tab> vsnip#available(1) ? '<Plug>(vsnip-jump-prev)' : pumvisible() ? "\<C-p>" : "\<S-Tab>"
+  inoremap <silent><expr> <TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
+  inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
   inoremap <expr> <CR> pumvisible() ? asyncomplete#close_popup() : "\<CR>"
   inoremap <expr> <C-y> pumvisible() ? asyncomplete#close_popup() : "\<C-y>"
@@ -303,6 +305,7 @@ au! FileType rust setlocal tabstop=4 softtabstop=4 colorcolumn=100
 " let g:lsp_log_verbose = 1
 " let g:lsp_log_file = expand(s:settings_data_dir . '/lsp.log')
 " let g:asyncomplete_log_file = expand(s:settings_data_dir. '/asyncomplete.log')
+let g:lsp_use_native_client = 1
 let g:lsp_preview_float = 1
 let g:lsp_diagnostics_echo_cursor = 1
 let g:lsp_format_sync_timeout = 1000
