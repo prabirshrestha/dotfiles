@@ -13,3 +13,5 @@ rustc-wrapper = "/home/{{env_var "USERNAME"}}/.cargo/bin/sccache"
 rustc-wrapper = "C:/Users/{{env_var "USERNAME"}}/.cargo/bin/sccache"
 {{/if}}
 {{/if}}
+[registries.crates-io]
+protocol = "sparse"
