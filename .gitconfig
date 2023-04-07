@@ -18,11 +18,11 @@
 [diff]
     tool = kdiff3
 [difftool "kdiff3"]
-    path = c:/Program Files/KDiff3/kdiff3.exe
+    path = C:/Users/prshrest/scoop/shims/kdiff3.exe
 [merge]
     tool = kdiff3
 [mergetool "kdiff3"]
-    path = c:/Program Files/KDiff3/kdiff3.exe
+    path = C:/Users/prshrest/scoop/shims/kdiff3.exe
     keepBackup = false
     trustExitCode = false
 {{/if}}
