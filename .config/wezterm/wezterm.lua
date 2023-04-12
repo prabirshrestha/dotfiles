@@ -41,8 +41,8 @@ local config = {
         { key = "x", mods = "LEADER",       action=wezterm.action{CloseCurrentPane={confirm=true}}},
 
         { key = "n", mods="SHIFT|CTRL",     action="ToggleFullScreen" },
-        { key="v",   mods="SHIFT|CTRL",     action="Paste"},
-        { key="c",   mods="SHIFT|CTRL",     action="Copy"},
+        { key="v",   mods="SHIFT|CTRL",     action=wezterm.action.PasteFrom 'Clipboard'},
+        { key="c",   mods="SHIFT|CTRL",     action=wezterm.action.CopyTo 'Clipboard'},
     },
     set_environment_variables = {},
 }
