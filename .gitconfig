@@ -14,6 +14,14 @@
     {{/if}}
     editor=vim
 
+{{#if (eq dotter.os "unix")}}
+[merge]
+    tool = vimdiff
+    conflictstyle = diff3
+[mergetool]
+    prompt = false
+{{/if}}
+
 {{#if (eq dotter.os "windows")}}
 [diff]
     tool = kdiff3
