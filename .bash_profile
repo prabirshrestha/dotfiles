@@ -22,6 +22,15 @@ export PATH="$HOME/.dotfiles/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 #export PATH="/opt/pkg/bin:$PATH"
 
+# if [ "$platform" == "mac" ]
+# then
+#   if [ -d "$(echo /usr/local/Cellar/rocksdb/*/lib)" ]
+#   then
+#     export ROCKSDB_LIB_DIR="$(echo /usr/local/Cellar/rocksdb/*/lib)"
+#     export ROCKSDB_STATIC=1
+#   fi
+# fi
+
 if [ "$platform" != "mac" ]
 then
     alias pbcopy='xsel --clipboard --input'
@@ -132,3 +141,8 @@ fstash() {
     fi
   done
 }
+. "$HOME/.cargo/env"
+
+# proto
+export PROTO_ROOT="$HOME/.proto"
+export PATH="$PROTO_ROOT/bin:$PATH"

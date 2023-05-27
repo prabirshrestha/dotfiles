@@ -50,3 +50,7 @@ complete -o nospace -C /usr/local/bin/nomad nomad
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
 
+
+# proto
+export PROTO_ROOT="$HOME/.proto"
+export PATH="$PROTO_ROOT/bin:$PATH"
