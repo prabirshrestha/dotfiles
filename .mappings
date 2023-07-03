@@ -8,6 +8,8 @@
 [linux]
 ".config/awesome"="~/.config/awesome"
 ".config/rofi"="~/.config/rofi"
+".config/bspwm"="~/.config/bspwm"
+".config/sxhkd"="~/.config/sxhkd"
 ".xprofile"="~/.xprofile"
 
 [windows]

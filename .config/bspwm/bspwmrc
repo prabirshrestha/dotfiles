@@ -1,0 +1,28 @@
+#!/bin/bash
+
+killall -q sxhkd
+while pgrep -u $UID -x sxhkd >/dev/null; do sleep 1; done
+sxhkd &
+
+killall -q polybar
+while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
+polybar &
+
+killall -q picom
+while pgrep -u $UID -x picom >/dev/null; do sleep 1; done
+picom &
+
+# Monitors
+for monitor in $(bspc query -M)
+do
+    # set the workspaces on each monitor to 1-9
+    bspc monitor $monitor -d 1 2 3 4 5 6 7 8 9
+    ##polybar hidden when fullscreen for vlc, youtube, mpv ...
+    #xdo below -t $(xdo id -n root) $(xdo id -a polybar-main_$monitor)
+done
+
+# BSPWM configuration
+bspc config border_radius 20
+bspc config border_width 3
+bspc config window_gap 5
+bspc config split_ratio 0.50

@@ -1,0 +1,60 @@
+# quit or restart
+alt + ctrl + {q,r}
+    bspc {quit, wm -r}
+
+# reload sxhkd configuration
+super + Escape
+    pkill -USR1 -x sxhkd
+
+# program launcher
+alt + space
+    rofi -modi run,drun -show drun -show-icons
+    # rofi -show run
+alt + p
+    rofi -modi run,drun -show drun -show-icons
+    # rofi -show run
+
+# switch workspace
+alt + ctrl + {Left,Right}
+	bspc desktop -f {prev.local,next.local}
+
+# switch to numbered desktop
+alt + {1-9}
+	bspc desktop --focus {1-9}
+
+# move current node to numbered desktop
+alt + shift + {1-9}
+	bspc node --to-desktop {1-9}
+
+# change monitor
+alt + {comma,period}
+    bspc monitor --focus {next,prev}
+
+# move to monitor
+alt + shift + {comma,period}
+    bspc monitor --m {next,prev}
+
+# fullscreen toggle
+alt + f
+    bspc desktop --layout next
+
+# resize
+alt + control + shift + {h,j,k,l}
+  bspc node -z {left -20 0 || bspc node -z right -20 0, \
+                bottom 0 20 || bspc node -z top 0 20,\
+                top 0 -20 || bspc node -z bottom 0 -20,\
+                right 20 0 || bspc node -z left 20 0}
+
+# change focus
+alt + {j,k}
+    bspc node --focus {next.local,prev.local}
+
+# close window
+alt + shift + c
+    bspc node -c
+alt + F4
+	bspc node -c
+
+# alt+tab
+alt + Tab
+	rofi -show windowcd -show-icons

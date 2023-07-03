@@ -4,6 +4,9 @@
 [bash.files]
 ".bash_profile" = { type = "symbolic", target = "~/.bash_profile" }
 
+[bspwm.files]
+".config/bspwm" = { type = "symbolic" , target = "~/.config/bspwm" }
+
 [cargo.files]
 ".cargo/config" = "~/.cargo/config"
 
@@ -16,8 +19,17 @@
 [nvim.files]
 ".config/nvim/init.vim" = { type = "symbolic" , target = "~/.config/nvim/init.vim" }
 
+[picom.files]
+".config/picom" = { type = "symbolic" , target = "~/.config/picom" }
+
+[polybar.files]
+".config/polybar" = { type = "symbolic" , target = "~/.config/polybar" }
+
 [rofi.files]
 ".config/rofi" = { type = "symbolic" , target = "~/.config/rofi" }
+
+[sxhkd.files]
+".config/sxhkd" = { type = "symbolic" , target = "~/.config/sxhkd" }
 
 [xorg.files]
 ".xprofile" = { type = "symbolic" , target = "~/.xprofile" }
