@@ -20,6 +20,7 @@ if hash zoxide 2>/dev/null; then eval "$(zoxide init bash)"; fi
 export PATH="$HOME/.cargo/bin:$HOME/go/bin:$HOME/Library/Python/3.8/bin:$PATH"
 export PATH="$HOME/.config/nvim/plugins/vim-themis/bin:$PATH"
 export PATH="$HOME/.dotfiles/bin:$PATH"
+export PATH="$HOME/.proto/tools/node/globals/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.moon/bin:$PATH"
 #export PATH="/opt/pkg/bin:$PATH"
@@ -32,6 +33,8 @@ export PATH="$HOME/.moon/bin:$PATH"
 #     export ROCKSDB_STATIC=1
 #   fi
 # fi
+#
+#.
 
 if [ "$platform" != "mac" ]
 then
@@ -143,7 +146,3 @@ fstash() {
     fi
   done
 }
-
-# proto
-export PROTO_ROOT="$HOME/.proto"
-export PATH="$PROTO_ROOT/bin:$PATH"
