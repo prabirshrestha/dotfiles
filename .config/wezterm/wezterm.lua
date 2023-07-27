@@ -1,6 +1,7 @@
 local wezterm = require("wezterm")
 
 local config = {
+    audible_bell = "Disabled",
     check_for_updates = false,
     color_scheme = "Builtin Solarized Dark",
     inactive_pane_hsb = {
