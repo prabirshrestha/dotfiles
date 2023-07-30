@@ -1,8 +1,0 @@
-# NVM
-[[ -s "$HOME/.nvm" ]] && . "$HOME/.nvm/nvm.sh" # This loads NVM into a shell se$
-
-# Bash For RVM
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
-
-ANDROID_HOME=$HOME/android-sdk
-export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools

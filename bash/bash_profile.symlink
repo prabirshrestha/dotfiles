@@ -1,9 +1,0 @@
-# source every .bash file in this repo
-for config_file in ~/.dotfiles/**/*.bash
-    do
-        source "$config_file"
-    done
-[[ -s ~/.nvm/nvm.sh ]] && . ~/.nvm/nvm.sh # This loads NVM
-
-ANDROID_HOME=$HOME/android-sdk
-export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
