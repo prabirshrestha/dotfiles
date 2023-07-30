@@ -26,6 +26,12 @@ rustup-init
 cargo install dotter
 ```
 
+or 
+
+```bash
+./install
+```
+
 ### Windows
 
 ```cmd

@@ -13,8 +13,6 @@ if [ "$platform" == "mac" ]; then
   echo "Detected MacOS"
   if ! command -v brew &> /dev/null; then
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-  else
-    echo "Homebrew already installed"
   fi
   brew install \
     rustup \
@@ -27,4 +25,8 @@ if [ "$platform" == "mac" ]; then
   if command -v rustup &> /dev/null; then
     rustup component add rust-src
   fi
+  if ! command -v dotter &> /dev/null; then
+    cargo install dotter
+  fi
+
 fi
