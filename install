@@ -1,0 +1,30 @@
+#!/bin/bash
+
+unameOut="$(uname -s)"
+case "${unameOut}" in
+  Linux*)     platform=linux;;
+  Darwin*)    platform=mac;;
+  CYGWIN*)    platform=cygwin;;
+  MINGW*)     platform=mingw;;
+  *)          platform="UNKNOWN:${unameOut}"
+esac
+
+if [ "$platform" == "mac" ]; then
+  echo "Detected MacOS"
+  if ! command -v brew &> /dev/null; then
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  else
+    echo "Homebrew already installed"
+  fi
+  brew install \
+    rustup \
+    node \
+    pnpm \
+    vim \
+    wezterm \
+    zoxide \
+    ;
+  if command -v rustup &> /dev/null; then
+    rustup component add rust-src
+  fi
+fi
