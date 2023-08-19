@@ -161,7 +161,7 @@ set formatoptions+=b " auto-wrap in insert mode, and do not wrap old long lines
 set incsearch
 set ignorecase
 set smartcase
-set gdefault
+set nogdefault
 set hlsearch
 " Clear current search highlighting by fast //
 nmap <silent> // :nohlsearch<CR>
