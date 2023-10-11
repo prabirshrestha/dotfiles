@@ -68,6 +68,12 @@ alias gp='git push origin HEAD'
 alias gs='git status'
 alias gup='git fetch && git rebase'
 
+swap-ctrl-caps() {
+  if which setxkbmap >/dev/null; then setxkbmap -option "ctrl:swapcaps"; fi
+}
+
+swap-ctrl-caps
+
 gpr() {
     git fetch origin pull/${1}/head:pr${1}
     git checkout pr${1}
