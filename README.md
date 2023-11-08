@@ -21,9 +21,7 @@ paru -Sy --noconfirm dotter-rs-bin git
 ### Mac
 
 ```bash
-brew install rustup
-rustup-init
-cargo install dotter
+bash <(curl -s https://raw.githubusercontent.com/prabirshrestha/dotfiles/main/install)
 ```
 
 or 
