@@ -47,8 +47,11 @@ elif [ "$platform" == "linux" ]; then
     fi
     paru -Sy --noconfirm \
       bspwm \
+      dotter-rs-bin \
+      git \
       google-chrome \
       gvim \
+      linux-headers \
       wezterm \
       xsel
   else
