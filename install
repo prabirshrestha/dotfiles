@@ -52,6 +52,7 @@ elif [ "$platform" == "linux" ]; then
       google-chrome \
       gvim \
       linux-headers \
+      lua \
       wezterm \
       xsel
   else
