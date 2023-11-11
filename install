@@ -32,5 +32,27 @@ if [ "$platform" == "mac" ]; then
   if ! command -v dotter &> /dev/null; then
     cargo install dotter
   fi
-
+elif [ "$platform" == "linux" ]; then
+  echo "Linux Detected"
+  if [ -f "/etc/arch-release" ]; then
+    echo "ArchLinux detected"
+    if ! command -v paru &> /dev/null; then
+      if command -v yay &> /dev/null; then
+        yay -Sy --noconfirm paru-bin
+      fi
+    fi
+    if ! command -v paru &> /dev/null; then
+      echo "Please install paru"
+      exit 1
+    fi
+    paru -Sy --noconfirm \
+      bspwm \
+      google-chrome \
+      gvim \
+      wezterm \
+      xsel
+  else
+    echo "Unsupported Linux Distro"
+    exit 1
+  fi
 fi
