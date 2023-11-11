@@ -154,3 +154,4 @@ fstash() {
     fi
   done
 }
+. "$HOME/.cargo/env"

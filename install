@@ -16,11 +16,13 @@ if [ "$platform" == "mac" ]; then
   fi
   brew install \
     fzf \
+    gh \
     node \
     nomad \
     pnpm \
     rustup \
     vim \
+    utm \
     wezterm \
     zoxide \
     ;
