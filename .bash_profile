@@ -70,7 +70,9 @@ alias gs='git status'
 alias gup='git fetch && git rebase'
 
 swap-ctrl-caps() {
-  if which setxkbmap >/dev/null; then setxkbmap -option "ctrl:swapcaps"; fi
+  if [ "$XDG_SESSION_TYPE" == "x11" ]; then
+   if which setxkbmap >/dev/null; then setxkbmap -option "ctrl:swapcaps"; fi
+  fi
 }
 
 swap-ctrl-caps
