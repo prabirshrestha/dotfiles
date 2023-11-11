@@ -46,6 +46,7 @@ elif [ "$platform" == "linux" ]; then
       exit 1
     fi
     paru -Sy --noconfirm \
+      age \
       bspwm \
       dotter-rs-bin \
       git \
@@ -53,6 +54,7 @@ elif [ "$platform" == "linux" ]; then
       gvim \
       linux-headers \
       lua \
+      unzip \
       wezterm \
       xsel
   else
