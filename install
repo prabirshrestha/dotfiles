@@ -29,7 +29,7 @@ if [ "$platform" == "mac" ]; then
     zoxide \
     ;
   if command -v rustup &> /dev/null; then
-    rustup component add rust-src
+    rustup component add rust-src rust-analyzer
   fi
   if ! command -v dotter &> /dev/null; then
     cargo install dotter
