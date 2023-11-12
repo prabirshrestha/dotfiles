@@ -15,11 +15,13 @@ if [ "$platform" == "mac" ]; then
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   fi
   brew install \
+    ffmpeg \
     fzf \
     gh \
     node \
     nomad \
     pnpm \
+    ripgrep \
     rustup \
     vim \
     utm \
