@@ -14,7 +14,11 @@ case "${unameOut}" in
     *)          platform="UNKNOWN:${unameOut}"
 esac
 
-export PATH="/opt/homebrew/bin:$PATH"
+
+if [ "$platform" == "mac" ]; then
+  export BASH_SILENCE_DEPRECATION_WARNING=1
+  export PATH="/opt/homebrew/bin:$PATH"
+fi
 
 if hash zoxide 2>/dev/null; then eval "$(zoxide init bash)"; fi
 if hash just 2>/dev/null; then source <(just --completions bash); fi
