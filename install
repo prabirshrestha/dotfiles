@@ -26,6 +26,7 @@ if [ "$platform" == "mac" ]; then
     vim \
     utm \
     wezterm \
+    wget \
     zoxide \
     ;
   if command -v rustup &> /dev/null; then
