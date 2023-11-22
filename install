@@ -57,6 +57,10 @@ elif [ "$platform" == "linux" ]; then
       gvim \
       linux-headers \
       lua \
+      picom \
+      polybar \
+      rofi \
+      sxhkd \
       unzip \
       wezterm \
       xsel
