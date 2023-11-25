@@ -16,6 +16,7 @@ if [ "$platform" == "mac" ]; then
     eval "$(/opt/homebrew/bin/brew shellenv)"
   fi
   brew install \
+    age \
     ffmpeg \
     fzf \
     gh \
