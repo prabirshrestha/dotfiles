@@ -56,7 +56,7 @@ elif [ "$platform" == "linux" ]; then
     fi
     if ! command -v paru &> /dev/null; then
       sudo pacman -S --needed --noconfirm base-devel git
-      git clone https://aur.archlinux.org/paru-bin.git /tmp/paru-bin
+      su "$USERNAME" -c "git clone https://aur.archlinux.org/paru-bin.git /tmp/paru-bin"
       pushd /tmp/paru-bin
       su "$USERNAME" -c "makepkg -si"
       popd
