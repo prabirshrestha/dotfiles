@@ -48,6 +48,7 @@ elif [ "$platform" == "linux" ]; then
         echo 'user found'
       else
         useradd -m -G wheel "$USERNAME"
+        passwd "$USERNAME"
       fi
       pacman -Sy sudo --noconfirm
       sed -i '/%wheel ALL=(ALL:ALL) ALL/s/^#//' /etc/sudoers
