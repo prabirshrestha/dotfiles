@@ -49,12 +49,16 @@ elif [ "$platform" == "linux" ]; then
       else
         useradd -m -G wheel "$USERNAME"
       fi
-      pacman -Sy sudo --noconfirm
-      sed -i 's/^#\s*\(%wheel\s*ALL=(ALL)\s*NOPASSWD:\s*ALL\)/\1/' /etc/sudoers
+    else
+      USERNAME=$(whomai)
     fi
     if ! command -v paru &> /dev/null; then
-      echo "Please install paru"
-      exit 1
+      sudo pacman -S --needed base-devel
+      git clone https://aur.archlinux.org/paru-bin.git /tmp/paru-bin
+      pushd /tmp/paru-bin
+      su "$USERNAME" -c "makepkg -si"
+      popd
+      rm -rf /tmp/paru-bin
     fi
     paru -Sy --noconfirm \
       age \
@@ -68,10 +72,12 @@ elif [ "$platform" == "linux" ]; then
       picom \
       polybar \
       rofi \
+      sudo \
       sxhkd \
       unzip \
       wezterm \
       xsel
+    sed -i 's/^#\s*\(%wheel\s*ALL=(ALL)\s*NOPASSWD:\s*ALL\)/\1/' /etc/sudoers
   else
     echo "Unsupported Linux Distro"
     exit 1
