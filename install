@@ -63,7 +63,7 @@ elif [ "$platform" == "linux" ]; then
       popd
       rm -rf /tmp/paru-bin
     fi
-    paru -Sy --noconfirm \
+    sudo -u "$USERNAME" paru -Sy --noconfirm \
       age \
       bspwm \
       dotter-rs-bin \
