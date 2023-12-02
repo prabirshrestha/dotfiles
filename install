@@ -85,7 +85,7 @@ elif [ "$platform" == "linux" ]; then
         dotter-rs-bin
     fi
     sudo -u "$USERNAME" paru -Sy --noconfirm xorg xfce4 sddm
-    sudo -u "$USERNAME" systemctl --noconfirm enable sddm
+    sudo -u "$USERNAME" systemctl enable sddm
   else
     echo "Unsupported Linux Distro"
     exit 1
