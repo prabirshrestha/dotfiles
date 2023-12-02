@@ -1,5 +1,6 @@
 #!/bin/bash
 
+arch="$(uname -m)"
 unameOut="$(uname -s)"
 case "${unameOut}" in
   Linux*)     platform=linux;;
@@ -66,7 +67,7 @@ elif [ "$platform" == "linux" ]; then
     sudo -u "$USERNAME" paru -Sy --noconfirm \
       age \
       bspwm \
-      dotter-rs-bin \
+      curl \
       git \
       google-chrome \
       gvim \
@@ -79,6 +80,10 @@ elif [ "$platform" == "linux" ]; then
       unzip \
       wezterm \
       xsel
+    if [[ $arch != "aarch64" ]]; then
+      sudo -u "$USERNAME" paru -Sy --noconfirm \
+        dotter-rs-bin
+    fi
   else
     echo "Unsupported Linux Distro"
     exit 1
