@@ -50,7 +50,7 @@ elif [ "$platform" == "linux" ]; then
         useradd -m -G wheel "$USERNAME"
       fi
       pacman -Sy sudo --noconfirm
-      sed -i 's/^#\s*\(%wheel\s*ALL=(ALL)\s*NOPASSWD:\s*ALL\)/\1/' /etc/sudoers
+      sed -i '/%wheel ALL=(ALL:ALL) ALL/s/^#//' /etc/sudoers
     else
       USERNAME=$(whomai)
     fi
