@@ -46,6 +46,17 @@ elif [ "$platform" == "linux" ]; then
         yay -Sy --noconfirm paru-bin
       fi
     fi
+
+    if [ "$EUID" -eq 0 ]; then
+      read -p "Enter non-root username: " $USERNAME
+      if id "$USERNAME" >/dev/null 2>&1; then
+        echo 'user found'
+      else
+        useradd -m -G wheel "$USERNAME"
+      fi
+      pacman -Sy sudo --noconfirm
+      sed -i 's/^#\s*\(%wheel\s*ALL=(ALL)\s*NOPASSWD:\s*ALL\)/\1/' /etc/sudoers
+    fi
     if ! command -v paru &> /dev/null; then
       echo "Please install paru"
       exit 1
