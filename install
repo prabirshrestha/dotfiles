@@ -68,6 +68,7 @@ elif [ "$platform" == "linux" ]; then
       age \
       bspwm \
       curl \
+      chromium \
       git \
       google-chrome \
       gvim \
