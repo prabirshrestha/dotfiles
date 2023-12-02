@@ -41,14 +41,9 @@ elif [ "$platform" == "linux" ]; then
   echo "Linux Detected"
   if [ -f "/etc/arch-release" ]; then
     echo "ArchLinux detected"
-    if ! command -v paru &> /dev/null; then
-      if command -v yay &> /dev/null; then
-        yay -Sy --noconfirm paru-bin
-      fi
-    fi
 
     if [ "$EUID" -eq 0 ]; then
-      read -p "Enter non-root username: " $USERNAME
+      read -p "Enter non-root username: " USERNAME
       if id "$USERNAME" >/dev/null 2>&1; then
         echo 'user found'
       else
