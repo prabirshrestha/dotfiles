@@ -19,11 +19,13 @@ if [ "$platform" == "mac" ]; then
   brew tap homebrew/cask-versions
   brew install \
     age \
+    docker \
     ffmpeg \
     fzf \
     gh \
     node \
     nomad \
+    orbstack \
     pnpm \
     ripgrep \
     rustup \
