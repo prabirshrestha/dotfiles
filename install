@@ -29,6 +29,7 @@ if [ "$platform" == "mac" ]; then
     pnpm \
     ripgrep \
     rustup \
+    sops \
     utm \
     vim \
     vlc \
