@@ -21,7 +21,7 @@ if [ "$platform" == "mac" ]; then
 fi
 
 if hash zoxide 2>/dev/null; then eval "$(zoxide init bash)"; fi
-if hash just 2>/dev/null; then source <(just --completions bash); fi
+#if hash just 2>/dev/null; then source <(just --completions bash); fi
 [[ -s ~/.nvm/nvm.sh ]] && . ~/.nvm/nvm.sh # This loads NVM
 [[ -s ~/.cargo/env ]] && . ~/.cargo/env
 export PATH="$HOME/.cargo/bin:$HOME/go/bin:$HOME/Library/Python/3.8/bin:$PATH"
