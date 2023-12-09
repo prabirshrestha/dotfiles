@@ -23,6 +23,7 @@ if [ "$platform" == "mac" ]; then
     ffmpeg \
     fzf \
     gh \
+    just \
     node \
     nomad \
     orbstack \
