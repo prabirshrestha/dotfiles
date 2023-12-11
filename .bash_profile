@@ -31,6 +31,8 @@ export PATH="$HOME/.proto/bin:$HOME/.proto/shims:$HOME/.proto/tools/node/globals
 export PATH="$HOME/.local/bin:$PATH"
 #export PATH="/opt/pkg/bin:$PATH"
 
+if hash nomad 2>/dev/null; then complete -C nomad nomad; fi
+
 # if [ "$platform" == "mac" ]
 # then
 #   if [ -d "$(echo /usr/local/Cellar/rocksdb/*/lib)" ]
