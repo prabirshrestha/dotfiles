@@ -27,9 +27,12 @@ if hash zoxide 2>/dev/null; then eval "$(zoxide init bash)"; fi
 export PATH="$HOME/.cargo/bin:$HOME/go/bin:$HOME/Library/Python/3.8/bin:$PATH"
 export PATH="$HOME/.config/nvim/plugins/vim-themis/bin:$PATH"
 export PATH="$HOME/.dotfiles/bin:$PATH"
-export PATH="$HOME/.proto/bin:$HOME/.proto/shims:$HOME/.proto/tools/node/globals/bin:$PATH"
+# export PATH="$HOME/.proto/bin:$HOME/.proto/shims:$HOME/.proto/tools/node/globals/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 #export PATH="/opt/pkg/bin:$PATH"
+# proto
+export PROTO_HOME="$HOME/.proto"
+export PATH="$PROTO_HOME/shims:$PROTO_HOME/bin:$PATH"
 
 if hash nomad 2>/dev/null; then complete -C nomad nomad; fi
 
