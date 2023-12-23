@@ -20,6 +20,7 @@ if [ "$platform" == "mac" ]; then
   brew install \
     age \
     docker \
+    dotter \
     ffmpeg \
     fzf \
     gh \
@@ -40,9 +41,6 @@ if [ "$platform" == "mac" ]; then
     ;
   if command -v rustup &> /dev/null; then
     rustup component add rust-src rust-analyzer
-  fi
-  if ! command -v dotter &> /dev/null; then
-    cargo install dotter
   fi
 elif [ "$platform" == "linux" ]; then
   echo "Linux Detected"
