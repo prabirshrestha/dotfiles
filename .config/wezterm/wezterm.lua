@@ -9,7 +9,6 @@ local config = {
         saturation = 1.0,
         brightness = 1.0,
     },
-    default_prog = { '/bin/bash', '-l' },
     font_size = 16.0,
     launch_menu = {},
     leader = { key="a", mods="CTRL" },
@@ -49,9 +48,8 @@ local config = {
 }
 
 if wezterm.target_triple == "x86_64-pc-windows-msvc" then
-    config.front_end = "Software" -- OpenGL doesn't work quite well with RDP.
-    config.term = "" -- Set to empty so FZF works on windows
-    config.default_prog = { "cmd.exe" }
+    -- config.front_end = "Software" -- OpenGL doesn't work quite well with RDP.
+    -- config.term = "" -- Set to empty so FZF works on windows
     table.insert(config.launch_menu, { label = "PowerShell", args = {"powershell.exe", "-NoLogo"} })
 
     -- Find installed visual studio version(s) and add their compilation
@@ -64,6 +62,7 @@ if wezterm.target_triple == "x86_64-pc-windows-msvc" then
         })
     end
 else
+    config.default_prog = { '/bin/bash', '-l' }
     table.insert(config.launch_menu, { label = "bash", args = {"bash", "-l"} })
     table.insert(config.launch_menu, { label = "fish", args = {"fish", "-l"} })
 end
