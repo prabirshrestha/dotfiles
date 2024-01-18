@@ -45,6 +45,7 @@ if [ "$platform" == "mac" ]; then
   if command -v python3 &> /dev/null; then
     pyton3 -m pip install --user --upgrade llm
     llm install llm-gpt4all
+    llm models default mistral-7b-instruct-v0
   fi
 elif [ "$platform" == "linux" ]; then
   echo "Linux Detected"
