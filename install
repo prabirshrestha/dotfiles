@@ -42,6 +42,10 @@ if [ "$platform" == "mac" ]; then
   if command -v rustup &> /dev/null; then
     rustup component add rust-src rust-analyzer
   fi
+  if command -v python3 &> /dev/null; then
+    pyton3 -m pip install --user --upgrade llm
+    llm install llm-gpt4all
+  fi
 elif [ "$platform" == "linux" ]; then
   echo "Linux Detected"
   if [ -f "/etc/arch-release" ]; then
