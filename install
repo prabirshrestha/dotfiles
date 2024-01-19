@@ -46,6 +46,8 @@ if [ "$platform" == "mac" ]; then
     pyton3 -m pip install --user --upgrade llm
     llm install llm-gpt4all
     llm models default mistral-7b-instruct-v0
+    llm install llm-sentence-transformers
+    llm embed-models default sentence-transformers/all-MiniLM-L6-v2
   fi
 elif [ "$platform" == "linux" ]; then
   echo "Linux Detected"
