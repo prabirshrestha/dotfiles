@@ -43,5 +43,8 @@
 [wezterm.files]
 ".config/wezterm" = { type = "symbolic" , target = "~/.config/wezterm" }
 
+[zed.files]
+".config/zed" = { type = "symbolic" , target = "~/.config/zed" }
+
 [zsh.files]
 ".zshrc" = { type = "symbolic" , target = "~/.zshrc" }

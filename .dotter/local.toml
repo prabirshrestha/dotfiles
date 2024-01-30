@@ -15,5 +15,6 @@ packages = [
   "tmux",
   "vim",
   "wezterm",
+  "zed",
   "zsh"
 ]
