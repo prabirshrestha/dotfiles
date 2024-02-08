@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 arch="$(uname -m)"
 unameOut="$(uname -s)"
