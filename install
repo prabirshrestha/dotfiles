@@ -78,6 +78,7 @@ elif [ "$platform" == "linux" ]; then
     fi
     sudo -u "$USERNAME" paru -Sy --noconfirm \
       age \
+      anaconda \
       bspwm \
       curl \
       chromium \
