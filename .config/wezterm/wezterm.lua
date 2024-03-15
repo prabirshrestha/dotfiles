@@ -41,8 +41,11 @@ local config = {
         { key = "x", mods = "LEADER",       action=wezterm.action{CloseCurrentPane={confirm=true}}},
 
         { key = "n", mods="SHIFT|CTRL",     action="ToggleFullScreen" },
-        { key="v",   mods="SHIFT|CTRL",     action=wezterm.action.PasteFrom 'Clipboard'},
-        { key="c",   mods="SHIFT|CTRL",     action=wezterm.action.CopyTo 'Clipboard'},
+        { key ="v",  mods="SHIFT|CTRL",    action=wezterm.action.PasteFrom 'Clipboard'},
+        { key ="c",  mods="SHIFT|CTRL",    action=wezterm.action.CopyTo 'Clipboard'},
+        { key = "+", mods="SHIFT|CTRL",     action="IncreaseFontSize" },
+        { key = "-", mods="SHIFT|CTRL",     action="DecreaseFontSize" },
+        { key = "0", mods="SHIFT|CTRL",     action="ResetFontSize" },
     },
     set_environment_variables = {},
 }
