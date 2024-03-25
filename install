@@ -20,6 +20,7 @@ if [ "$platform" == "mac" ]; then
   brew tap homebrew/cask-versions
   brew install \
     age \
+    cargo-watch \
     docker \
     dotter \
     ffmpeg \
