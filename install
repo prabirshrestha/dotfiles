@@ -67,7 +67,7 @@ elif [ "$platform" == "linux" ]; then
       pacman -Sy sudo --noconfirm
       sed -i '/%wheel ALL=(ALL:ALL) ALL/s/^#//' /etc/sudoers
     else
-      USERNAME=$(whomai)
+      USERNAME=$(whoami)
     fi
     if ! command -v paru &> /dev/null; then
       sudo pacman -S --needed --noconfirm base-devel git
