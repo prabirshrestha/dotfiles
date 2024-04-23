@@ -22,6 +22,7 @@ if [ "$platform" == "mac" ]; then
   brew tap homebrew/cask-versions
   brew install \
     age \
+    ava \
     cargo-watch \
     docker \
     dotter \
