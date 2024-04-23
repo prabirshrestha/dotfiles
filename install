@@ -26,6 +26,7 @@ if [ "$platform" == "mac" ]; then
     docker \
     dotter \
     ffmpeg \
+    fnm \
     fzf \
     gh \
     just \
