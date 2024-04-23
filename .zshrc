@@ -13,6 +13,7 @@ stty -ixon
 [[ -s ~/.nvm/nvm.sh ]] && . ~/.nvm/nvm.sh # This loads NVM
 export PATH="$HOME/.cargo/bin:$HOME/go/bin:$HOME/Library/Python/3.7/bin:$PATH"
 export PATH="$HOME/.config/nvim/plugins/vim-themis/bin:$PATH"
+export PATH="/opt/homebrew/bin:$PATH"
 #export PATH="/opt/pkg/bin:$PATH"
 
 # alias
@@ -45,7 +46,7 @@ gpr() {
 
 autoload -U +X bashcompinit && bashcompinit
 
-complete -o nospace -C /usr/local/bin/nomad nomad
+if hash zoxide 2>/dev/null; then eval "$(zoxide init zsh)"; fi
 
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"

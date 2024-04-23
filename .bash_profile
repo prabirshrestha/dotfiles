@@ -19,7 +19,6 @@ if [ "$platform" == "mac" ]; then
   export BASH_SILENCE_DEPRECATION_WARNING=1
   export PATH="/opt/homebrew/bin:$PATH"
   export PATH="/opt/homebrew/anaconda3/bin:$PATH"
-  export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
 fi
 
 if hash zoxide 2>/dev/null; then eval "$(zoxide init bash)"; fi
