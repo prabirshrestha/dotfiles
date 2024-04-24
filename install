@@ -42,6 +42,7 @@ if [ "$platform" == "mac" ]; then
     vlc \
     wezterm \
     wget \
+    yq \
     zoxide \
     ;
   if command -v rustup &> /dev/null; then
