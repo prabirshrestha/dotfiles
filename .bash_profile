@@ -22,7 +22,6 @@ if [ "$platform" == "mac" ]; then
 fi
 
 if hash zoxide 2>/dev/null; then eval "$(zoxide init bash)"; fi
-if hash fnm 2>/dev/null; then eval "$(fnm env --use-on-cd)"; fi
 #if hash just 2>/dev/null; then source <(just --completions bash); fi
 [[ -s ~/.cargo/env ]] && . ~/.cargo/env
 export PATH="$HOME/.cargo/bin:$HOME/go/bin:$HOME/Library/Python/3.8/bin:$PATH"
@@ -34,6 +33,8 @@ export PATH="$HOME/.local/bin:$PATH"
 # proto
 export PROTO_HOME="$HOME/.proto"
 export PATH="$PROTO_HOME/shims:$PROTO_HOME/bin:$PATH"
+# register after proto
+if hash fnm 2>/dev/null; then eval "$(fnm env --use-on-cd)"; fi
 
 if hash nomad 2>/dev/null; then complete -C nomad nomad; fi
 
