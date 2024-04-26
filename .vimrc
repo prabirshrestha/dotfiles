@@ -383,8 +383,10 @@ function! s:on_lsp_buffer_enabled() abort
   autocmd! BufWritePre *.rs,*.go call execute('LspDocumentFormatSync')
   autocmd! BufWritePre *.ts,*.tsx call execute('LspDocumentFormatSync --server=efm-langserver')
 
-  nnoremap <buffer> <expr><c-f> lsp#scroll(+4)
-  nnoremap <buffer> <expr><c-d> lsp#scroll(-4)
+  if !has('nvim')
+    nmap <expr><buffer> <c-u> popup_list()->empty() ? '<c-u>' : lsp#scroll(-4)
+    nmap <expr><buffer> <c-d> popup_list()->empty() ? '<c-d>' : lsp#scroll(+4)
+  endif
 endfunction
 
 augroup configure_lsp
