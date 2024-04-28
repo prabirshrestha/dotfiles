@@ -33,6 +33,7 @@ if [ "$platform" == "mac" ]; then
     gh \
     hyperfine \
     just \
+    mice \
     node \
     nomad \
     pnpm \
