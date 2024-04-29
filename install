@@ -52,8 +52,16 @@ if [ "$platform" == "mac" ]; then
     rustup component add rust-src rust-analyzer
   fi
 
-  if [[ "$(scutil --get ComputerName)" != *"Work"* ]]; then
-    brew install orbstack
+  if [[ "$(scutil --get ComputerName)" == *"Work"* ]]; then
+    brew install \
+      gettext \
+      azure-data-studio \
+      azure-cli \
+      ;
+  else
+    brew install \
+      orbstack \
+      ;
   fi
 elif [ "$platform" == "linux" ]; then
   echo "Linux Detected"
