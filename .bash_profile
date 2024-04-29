@@ -17,7 +17,7 @@ esac
 
 if [ "$platform" == "mac" ]; then
   export BASH_SILENCE_DEPRECATION_WARNING=1
-  export PATH="/opt/homebrew/bin:$PATH"
+  export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
   export PATH="/opt/homebrew/anaconda3/bin:$PATH"
   export PATH="$(brew --prefix llvm)/bin:$PATH"
 
