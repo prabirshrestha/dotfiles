@@ -169,3 +169,7 @@ fstash() {
     fi
   done
 }
+
+start-openwebui() {
+  docker run -d --network=host -v open-webui:/app/backend/data -e OLLAMA_API_BASE_URL=http://localhost:11434/api --restart always --name open-webui ghcr.io/open-webui/open-webui:main
+}
