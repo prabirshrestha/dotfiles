@@ -27,6 +27,7 @@ if [ "$platform" == "mac" ]; then
     docker \
     docker-compose \
     dotter \
+    efm-langserver \
     ffmpeg \
     flameshot \
     fnm \
