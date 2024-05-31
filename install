@@ -37,6 +37,8 @@ if [ "$platform" == "mac" ]; then
     jq \
     just \
     keycastr \
+    lazydocker \
+    miniconda \
     node \
     nomad \
     pnpm \
