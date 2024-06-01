@@ -40,7 +40,6 @@ if [ "$platform" == "mac" ]; then
     lazydocker \
     miniconda \
     node \
-    nomad \
     pnpm \
     ripgrep \
     rustup \
@@ -53,6 +52,9 @@ if [ "$platform" == "mac" ]; then
     yq \
     zoxide \
     ;
+
+  brew tap hashicorp/tap
+  brew install hashicorp/tap/nomad
   if command -v rustup &> /dev/null; then
     rustup component add rust-src rust-analyzer
   fi
