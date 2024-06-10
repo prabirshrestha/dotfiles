@@ -70,6 +70,7 @@ if [ "$platform" == "mac" ]; then
       ;
   else
     brew install \
+      betterzip \
       orbstack \
       ;
   fi
