@@ -54,3 +54,5 @@ if hash zoxide 2>/dev/null; then eval "$(zoxide init zsh)"; fi
 # proto
 export PROTO_HOME="$HOME/.proto"
 export PATH="$PROTO_HOME/shims:$PROTO_HOME/bin:$PATH"
+
+[[ -s ~/.grit/bin/env ]] && . ~/.grit/bin/env
