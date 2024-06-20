@@ -38,6 +38,7 @@ if [ "$platform" == "mac" ]; then
     just \
     keycastr \
     lazydocker \
+    lnav \
     miniconda \
     node \
     pnpm \
@@ -58,6 +59,8 @@ if [ "$platform" == "mac" ]; then
   if command -v rustup &> /dev/null; then
     rustup component add rust-src rust-analyzer
   fi
+
+  brew install --cask nikitabobko/tap/aerospace
 
   if [[ "$(scutil --get ComputerName)" == *"Work"* ]]; then
     brew install \
