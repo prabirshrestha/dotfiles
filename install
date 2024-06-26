@@ -45,6 +45,7 @@ if [ "$platform" == "mac" ]; then
     ripgrep \
     rustup \
     sops \
+    tree \
     utm \
     vim \
     vlc \
