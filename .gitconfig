@@ -1,6 +1,6 @@
 [user]
-    email = mail@prabir.me
     name = Prabir Shrestha
+    email = mail@prabir.me
 
 [core]
     {{#if (is_executable "delta")}}

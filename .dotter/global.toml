@@ -7,9 +7,6 @@
 [bspwm.files]
 ".config/bspwm" = { type = "symbolic" , target = "~/.config/bspwm" }
 
-[cargo.files]
-".cargo/config" = "~/.cargo/config"
-
 [efm-langserver.files]
 ".config/efm-langserver" = { type = "symbolic" , target = "~/.config/efm-langserver" }
 
