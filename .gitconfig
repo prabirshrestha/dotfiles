@@ -12,7 +12,9 @@
     {{else}}
     autocrlf = input
     {{/if}}
-    editor=vim
+    editor = vim
+    untrackedCache = true
+    fsmonitor = true
 
 {{#if (eq dotter.os "unix")}}
 [merge]
