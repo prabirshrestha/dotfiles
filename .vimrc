@@ -131,9 +131,6 @@ vnoremap > >gv
 
 set nojoinspaces
 set signcolumn=no
-set printfont=:h10
-set printencoding=utf-8
-set printoptions=paper:letter
 set splitright
 set splitbelow
 
