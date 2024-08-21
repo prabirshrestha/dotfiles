@@ -21,6 +21,7 @@ alias gs "git status"
 alias gp "git push"
 alias gup "git fetch --all && git rebase"
 alias gca "git commit -a"
+alias gco "git checkout"
 alias satyrn "open /Applications/satyrn.app"
 
 fish_add_path ~/.proto/bin/shims
