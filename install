@@ -29,6 +29,7 @@ if [ "$platform" == "mac" ]; then
     dotter \
     efm-langserver \
     ffmpeg \
+    fish \
     flameshot \
     fnm \
     fzf \
