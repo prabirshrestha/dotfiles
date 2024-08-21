@@ -70,13 +70,15 @@ if wezterm.target_triple == "x86_64-pc-windows-msvc" then
         })
     end
 else
+    local fish_bin_path = "/bin/fish"
     if file_exists("/opt/homebrew/bin/fish") then
+        fish_bin_path = "/opt/homebrew/bin/fish"
         config.default_prog = { '/opt/homebrew/bin/fish', '-l' }
     else
         config.default_prog = { '/bin/bash', '-l' }
     end
+    table.insert(config.launch_menu, { label = "fish", args = {fish_bin_path, "-l"} })
     table.insert(config.launch_menu, { label = "bash", args = {"bash", "-l"} })
-    table.insert(config.launch_menu, { label = "fish", args = {"fish", "-l"} })
 end
 
 return config
