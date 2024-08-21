@@ -20,6 +20,7 @@ if [ "$platform" == "mac" ]; then
   export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
   export PATH="/opt/homebrew/anaconda3/bin:$PATH"
   export PATH="$(brew --prefix llvm)/bin:$PATH"
+  export PATH="$(brew --prefix python)/libexec/bin:$PATH"
 fi
 
 if hash zoxide 2>/dev/null; then eval "$(zoxide init bash)"; fi
