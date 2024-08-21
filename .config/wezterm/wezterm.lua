@@ -1,5 +1,10 @@
 local wezterm = require("wezterm")
 
+local function file_exists(path)
+    local f = io.open(path, "r")
+    if f~=nil then io.close(f) return true else return false end
+end
+
 local config = {
     audible_bell = "Disabled",
     check_for_updates = false,
@@ -65,7 +70,11 @@ if wezterm.target_triple == "x86_64-pc-windows-msvc" then
         })
     end
 else
-    config.default_prog = { '/bin/bash', '-l' }
+    if file_exists("/opt/homebrew/bin/fish") then
+        config.default_prog = { '/opt/homebrew/bin/fish', '-l' }
+    else
+        config.default_prog = { '/bin/bash', '-l' }
+    end
     table.insert(config.launch_menu, { label = "bash", args = {"bash", "-l"} })
     table.insert(config.launch_menu, { label = "fish", args = {"fish", "-l"} })
 end
