@@ -10,6 +10,9 @@
 [efm-langserver.files]
 ".config/efm-langserver" = { type = "symbolic" , target = "~/.config/efm-langserver" }
 
+[fish.files]
+".config/fish" = { type = "symbolic", target = "~/.config/fish" }
+
 [git.files]
 ".gitconfig" = "~/.gitconfig"
 
