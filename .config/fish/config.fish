@@ -18,6 +18,7 @@ type -q zoxide; and zoxide init fish | source
 
 alias g "git"
 alias gs "git status"
+alias gb "git branch"
 alias gp "git push"
 alias gco "git checkout"
 alias gca "git commit -a"
