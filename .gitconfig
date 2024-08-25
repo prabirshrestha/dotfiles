@@ -16,6 +16,9 @@
     untrackedCache = true
     fsmonitor = true
 
+[push]
+    autoSetupRemote = true
+
 {{#if (eq dotter.os "unix")}}
 [merge]
     tool = vimdiff
