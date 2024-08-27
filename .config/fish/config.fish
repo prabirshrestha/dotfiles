@@ -26,6 +26,7 @@ alias gcm "git checkout main || git checkout master"
 alias gup "git fetch && git rebase"
 alias gca "git commit -a"
 alias gco "git checkout"
+alias gcp "git cherry-pick"
 alias satyrn "open /Applications/satyrn.app"
 
 fish_add_path ~/.proto/bin/shims
