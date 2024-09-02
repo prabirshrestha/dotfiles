@@ -15,6 +15,9 @@ fish_add_path ~/.bun/bin
 fish_add_path ~/.cargo/bin
 
 type -q zoxide; and zoxide init fish | source
+if test -n "$HOME/.config/fish/completions/pnpm.fish"
+  source "$HOME/.config/fish/completions/pnpm.fish"
+end
 
 alias g "git"
 alias gs "git status"
