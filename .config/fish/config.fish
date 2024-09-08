@@ -9,6 +9,7 @@ fish_add_path /opt/homebrew/sbin
 
 if type -q brew
   fish_add_path (brew --prefix python)/libexec/bin
+  fish_add_path (brew --prefix llvm)/bin
 end
 
 fish_add_path ~/.bun/bin
@@ -18,6 +19,8 @@ type -q zoxide; and zoxide init fish | source
 if test -n "$HOME/.config/fish/completions/pnpm.fish"
   source "$HOME/.config/fish/completions/pnpm.fish"
 end
+
+alias satyrn "open /Applications/satyrn.app"
 
 alias g "git"
 alias gs "git status"
@@ -30,7 +33,11 @@ alias gup "git fetch && git rebase"
 alias gca "git commit -a"
 alias gco "git checkout"
 alias gcp "git cherry-pick"
-alias satyrn "open /Applications/satyrn.app"
+
+function gpr
+    git fetch origin pull/$argv[1]/head:pr$argv[1]
+    git checkout pr$argv[1]
+end
 
 fish_add_path ~/.proto/bin/shims
 fish_add_path ~/.proto/bin
