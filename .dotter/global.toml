@@ -1,3 +1,6 @@
+[aichat.files]
+".config/aichat" = { type = "symbolic" , target = "~/.config/aichat" }
+
 [awesomewm.files]
 ".config/awesome" = { type = "symbolic" , target = "~/.config/awesome" }
 

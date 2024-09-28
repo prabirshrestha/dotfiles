@@ -3,6 +3,9 @@ set fish_greeting
 
 set -x EDITOR vim
 
+# https://github.com/sigoden/aichat/issues/769#issuecomment-2259388600
+set -x AICHAT_CONFIG_DIR $HOME/.config/aichat
+
 fish_add_path ~/.dotfiles/bin
 fish_add_path /opt/homebrew/bin
 fish_add_path /opt/homebrew/sbin

@@ -1,0 +1,20 @@
+model: ollama:qwen2.5
+keybindings: vi
+editor: vim
+use_tools: true
+document_loaders:
+  # You can add custom loaders using the following syntax:
+  #   <file-extension>: <command-to-load-the-file>
+  # Note: Use `$1` for input file and `$2` for output file. If `$2` is omitted, use stdout as output.
+  pdf: 'pdftotext $1 -'                         # Load .pdf file, see https://poppler.freedesktop.org to set up pdftotext
+  docx: 'pandoc --to plain $1'                  # Load .docx file, see https://pandoc.org to set up pandoc
+# Defines document loaders
+rag_document_loaders:
+  # You can add more loaders, here is the syntax:
+  # <file-extension>: <command-to-load-the-file>
+  pdf: 'pdftotext $1 -'                     # Load .pdf file 
+  docx: 'pandoc --to plain $1'              # Load .docx file
+clients:
+  - type: openai-compatible
+    name: ollama
+    api_base: http://localhost:11434/v1

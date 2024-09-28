@@ -42,6 +42,7 @@ if [ "$platform" == "mac" ]; then
     lnav \
     miniconda \
     node \
+    poppler \
     pnpm \
     ripgrep \
     rustup \
