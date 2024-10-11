@@ -24,6 +24,7 @@ if [ "$platform" == "mac" ]; then
     ava \
     cargo-watch \
     colima \
+    deskpad \
     docker \
     docker-compose \
     dotter \
