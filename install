@@ -66,6 +66,9 @@ if [ "$platform" == "mac" ]; then
 
   brew install --cask nikitabobko/tap/aerospace
 
+  brew install turbot/tap/steampipe
+  steampipe plugin install azuredevops
+
   if [[ "$(scutil --get ComputerName)" == *"Work"* ]]; then
     brew install \
       gettext \
