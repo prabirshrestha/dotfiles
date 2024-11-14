@@ -39,6 +39,7 @@ if [ "$platform" == "mac" ]; then
     just \
     keycastr \
     lazydocker \
+    llm \
     lnav \
     miniconda \
     node \
