@@ -1,4 +1,4 @@
-model: ollama:qwen2.5
+model: ollama:qwen2.5:14b
 keybindings: vi
 editor: vim
 use_tools: true
