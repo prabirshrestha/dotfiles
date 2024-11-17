@@ -41,6 +41,7 @@ if [ "$platform" == "mac" ]; then
     keycastr \
     lazydocker \
     llm \
+    localai \
     lnav \
     miniconda \
     node \
@@ -51,6 +52,7 @@ if [ "$platform" == "mac" ]; then
     sops \
     tree \
     utm \
+    uv \
     vim \
     vlc \
     wezterm \
@@ -64,6 +66,9 @@ if [ "$platform" == "mac" ]; then
   if command -v rustup &> /dev/null; then
     rustup component add rust-src rust-analyzer
   fi
+
+  brew tap versatiles-org/versatiles
+  brew install versatiles
 
   brew install --cask nikitabobko/tap/aerospace
 
@@ -133,6 +138,10 @@ elif [ "$platform" == "linux" ]; then
     fi
     sudo -u "$USERNAME" paru -Sy --noconfirm xorg xfce4 sddm
     sudo -u "$USERNAME" systemctl enable sddm
+  elif [ "$(grep -Ei 'debian|buntu|mint' /etc/*release)" ]; then
+   # do stuff
+   echo "Debian based distro not supported"
+   exit 1
   else
     echo "Unsupported Linux Distro"
     exit 1
