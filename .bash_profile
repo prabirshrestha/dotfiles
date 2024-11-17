@@ -182,3 +182,6 @@ export GRIT_TELEMETRY_DISABLED=true
 export PROTO_HOME="$HOME/.proto";
 export PATH="$PROTO_HOME/shims:$PROTO_HOME/bin:$PATH";
 if hash proto 2>/dev/null; then eval "$(proto activate bash)"; fi
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/prabirshrestha/.cache/lm-studio/bin"

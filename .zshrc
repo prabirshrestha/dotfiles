@@ -56,3 +56,6 @@ export PROTO_HOME="$HOME/.proto"
 export PATH="$PROTO_HOME/shims:$PROTO_HOME/bin:$PATH"
 
 [[ -s ~/.grit/bin/env ]] && . ~/.grit/bin/env
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/prabirshrestha/.cache/lm-studio/bin"
