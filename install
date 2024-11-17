@@ -139,9 +139,14 @@ elif [ "$platform" == "linux" ]; then
     sudo -u "$USERNAME" paru -Sy --noconfirm xorg xfce4 sddm
     sudo -u "$USERNAME" systemctl enable sddm
   elif [ "$(grep -Ei 'debian|buntu|mint' /etc/*release)" ]; then
-   # do stuff
-   echo "Debian based distro not supported"
-   exit 1
+   echo "Debian based distro detected"
+   sudo apt-get update
+   sudo apt-get install -y \
+     age \
+     build-essential \
+     curl \
+     git \
+     vim
   else
     echo "Unsupported Linux Distro"
     exit 1
