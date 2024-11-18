@@ -37,6 +37,9 @@
 [xorg.files]
 ".xprofile" = { type = "symbolic" , target = "~/.xprofile" }
 
+[television.files]
+".config/television" = { type = "symbolic" , target = "~/.config/television" }
+
 [tmux.files]
 ".tmux.conf" = { type = "symbolic" , target = "~/.tmux.conf" }
 
