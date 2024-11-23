@@ -81,6 +81,7 @@ if [ "$platform" == "mac" ]; then
       azure-data-studio \
       azure-cli \
       ;
+    brew install --cask yubico-yubikey-manager
   else
     brew install \
       betterzip \
