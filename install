@@ -61,6 +61,8 @@ if [ "$platform" == "mac" ]; then
     zoxide \
     ;
 
+  brew install dotenvx/brew/dotenvx
+
   brew tap hashicorp/tap
   brew install hashicorp/tap/nomad
   if command -v rustup &> /dev/null; then
