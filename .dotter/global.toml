@@ -1,6 +1,9 @@
 [aichat.files]
 ".config/aichat" = { type = "symbolic" , target = "~/.config/aichat" }
 
+[aider.files]
+".aider.conf.yml" = { type = "symbolic" , target = "~/.aider.conf.yml" }
+
 [awesomewm.files]
 ".config/awesome" = { type = "symbolic" , target = "~/.config/awesome" }
 

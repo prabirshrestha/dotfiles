@@ -13,3 +13,5 @@ path.txt
 clink/.history
 clink/clink_history*
 clink/clink.log
+.aider*
+.env

@@ -1,0 +1,6 @@
+dark-mode: true
+show-model-warnings: false
+model: "openai/qwen2.5:32b"
+openai-api-base: "http://localhost:11434/v1"
+openai-api-key: "ollama"
+analytics-disable: true

@@ -1,6 +1,7 @@
 includes = []
 packages = [
   "aichat",
+  "aider",
   "awesomewm",
   "bash",
   "bspwm",
