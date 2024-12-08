@@ -50,6 +50,7 @@ if [ "$platform" == "mac" ]; then
     ripgrep \
     rustup \
     sops \
+    television \
     tree \
     utm \
     uv \
@@ -72,7 +73,8 @@ if [ "$platform" == "mac" ]; then
   brew tap versatiles-org/versatiles
   brew install versatiles
 
-  brew install --cask nikitabobko/tap/aerospace
+  brew install --cask \
+    keepassxc
 
   brew install turbot/tap/steampipe
   steampipe plugin install azuredevops
