@@ -77,8 +77,7 @@ call plug#begin(s:settings_plugin_dir)
   Plug 'prabirshrestha/vsnip-snippets'
   Plug 'vim-test/vim-test'
 
-  Plug 'mattn/vim-fz'
-  Plug 'prabirshrestha/vim-fz-extras'
+  Plug 'prabirshrestha/tv.vim'
   Plug 'prabirshrestha/quickpick.vim'
   Plug 'prabirshrestha/quickpick-lsp.vim'
   Plug 'prabirshrestha/quickpick-colorscheme.vim'
@@ -239,10 +238,15 @@ nnoremap ]b :bnext<CR>
 nnoremap [b :bprevious<CR>
 
 " fuzzy picker {{{
+command! TvColors call tv#run({
+    \ 'type': 'list',
+    \ 'list': uniq(map(split(globpath(&rtp, "colors/*.vim"), "\n"), "substitute(fnamemodify(v:val, ':t'), '\\..\\{-}$', '', '')")),
+    \ 'accept': {result->execute('colorscheme ' . result['items'][0])},
+    \ })
 " nnoremap <C-p> :execute system('git rev-parse --is-inside-work-tree') =~ 'true'
-"       \ ? fz#run({ 'type': 'cmd', 'cmd': 'git ls-files', 'message': 'Fz>git ls-files' })
-"       \ : fz#run({'message': 'Fz'})<CR>
-nnoremap <c-p> :call fz#run({ 'type': 'cmd', 'cmd': 'git ls-files', 'message': 'Fz>git ls-files' })<CR>
+"       \ ? tv#run({ 'type': 'cmd', 'cmd': 'git ls-files', 'message': 'Fz>git ls-files' })
+"       \ : tv#run({'message': 'Fz'})<CR>
+" nnoremap <c-p> :call tv#run({ 'type': 'cmd', 'cmd': 'git ls-files', 'message': 'Tv>git ls-files' })<CR>
 
 " nmap <leader>s <Plug>(fz-extras-rg)
 nmap     <C-F>f <Plug>CtrlSFPrompt
@@ -398,13 +402,6 @@ nnoremap <leader>tf :TestFile<CR>
 nnoremap <leader>ts :TestSuite<CR>
 nnoremap <leader>tl :TestLast<CR>
 nnoremap <leader>tv :TestVisit<CR>
-" }}}
-
-" vim-fz {{{
-if executable('fzf')
-  let g:fz_command = 'fzf'
-  let g:fz_command_options_action='--expect=%s'
-endif
 " }}}
 
 " vim-gtfo {{{
