@@ -50,3 +50,20 @@ type -q proto; and proto activate fish | source
 
 # Added by LM Studio CLI (lms)
 set -gx PATH $PATH /Users/prabirshrestha/.cache/lm-studio/bin
+
+# Ensure tv is installed and configured
+if command -q tv
+    # Ctrl+Alt+f to select and paste file path
+    bind \e\cf 'set -l selected_file (tv)
+    if test -n "$selected_file"
+        commandline -i "$selected_file"
+    end
+    commandline -f repaint'
+
+    # Ctrl+Alt+d to select and paste directory path
+    bind \e\cd 'set -l selected_dir (find . -type d | tv)
+    if test -n "$selected_dir"
+        commandline -i "$selected_dir"
+    end
+    commandline -f repaint'
+end
