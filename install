@@ -22,6 +22,7 @@ if [ "$platform" == "mac" ]; then
   brew install \
     age \
     aider \
+    cargo-make \
     cargo-watch \
     colima \
     deskpad \
