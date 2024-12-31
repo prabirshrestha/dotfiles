@@ -243,10 +243,9 @@ command! TvColors call tv#run({
     \ 'list': uniq(map(split(globpath(&rtp, "colors/*.vim"), "\n"), "substitute(fnamemodify(v:val, ':t'), '\\..\\{-}$', '', '')")),
     \ 'accept': {result->execute('colorscheme ' . result['items'][0])},
     \ })
-" nnoremap <C-p> :execute system('git rev-parse --is-inside-work-tree') =~ 'true'
-"       \ ? tv#run({ 'type': 'cmd', 'cmd': 'git ls-files', 'message': 'Fz>git ls-files' })
-"       \ : tv#run({'message': 'Fz'})<CR>
-" nnoremap <c-p> :call tv#run({ 'type': 'cmd', 'cmd': 'git ls-files', 'message': 'Tv>git ls-files' })<CR>
+nnoremap <C-p> :execute system('git rev-parse --is-inside-work-tree') =~ 'true'
+      \ ? tv#run({ 'type': 'cmd', 'cmd': 'git ls-files --cached --others --exclude-standard', 'message': 'Tv>git ls-files' })
+      \ : tv#run({'message': 'Fz'})<CR>
 
 " nmap <leader>s <Plug>(fz-extras-rg)
 nmap     <C-F>f <Plug>CtrlSFPrompt
