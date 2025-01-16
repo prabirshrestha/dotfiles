@@ -47,6 +47,7 @@ if [ "$platform" == "mac" ]; then
     miniconda \
     node \
     poppler \
+    portaudio \
     pnpm \
     ripgrep \
     rustup \

@@ -25,6 +25,8 @@ if test -n "$HOME/.config/fish/completions/pnpm.fish"
   source "$HOME/.config/fish/completions/pnpm.fish"
 end
 
+type -q uv; and uv generate-shell-completion fish | source
+
 alias satyrn "open /Applications/satyrn.app"
 
 alias g "git"
