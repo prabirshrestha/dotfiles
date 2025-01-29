@@ -63,6 +63,7 @@ call plug#begin(s:settings_plugin_dir)
 
   Plug 'prabirshrestha/vital.vim', { 'branch': 'popup' }
   Plug 'github/copilot.vim'
+  " Plug 'ggml-org/llama.vim'
   Plug 'prabirshrestha/callbag.vim'
   Plug 'prabirshrestha/async.vim'
   Plug 'prabirshrestha/vim-lsp'

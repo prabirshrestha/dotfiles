@@ -42,6 +42,7 @@ if [ "$platform" == "mac" ]; then
     just \
     keycastr \
     lazydocker \
+    llama.cpp \
     llm \
     localai \
     lnav \
