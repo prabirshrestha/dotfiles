@@ -10,13 +10,14 @@
     "context": "Workspace",
     "bindings": {
       "ctrl-a c": "workspace::NewCenterTerminal",
-      "ctrl-a -": "workspace::NewTerminal"
+      "ctrl-a -": "workspace::NewTerminal",
+      "ctrl-a x": "pane::CloseActiveItem"
     }
   },
   {
-    "context": "Editor",
+    "context": "vim_mode == normal",
     "bindings": {
-      // "j k": ["workspace::SendKeystrokes", "escape"]
+      "cmd-w": "workspace::Save"
     }
   }
 ]
