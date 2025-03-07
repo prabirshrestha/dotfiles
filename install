@@ -24,6 +24,7 @@ if [ "$platform" == "mac" ]; then
     aider \
     cargo-make \
     cargo-watch \
+    code2prompt \
     colima \
     deskpad \
     docker \
