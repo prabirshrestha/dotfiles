@@ -42,26 +42,21 @@
     },
     "JavaScript": {
       "code_actions_on_format": {
-        "source.fixAll.eslint": true
-      },
-      "formatter": [
-        {
-          "external": {
-            "command": "prettier",
-            "arguments": ["--stdin-filepath", "{buffer_path}"]
-          }
-        }
-      ]
+        "source.fixAll.eslint": true,
+        "source.organizeImports": true
+      }
+    },
+    "TSX": {
+      "code_actions_on_format": {
+        "source.fixAll.eslint": true,
+        "source.organizeImports": true
+      }
     },
     "TypeScript": {
-      "formatter": [
-        {
-          "external": {
-            "command": "prettier",
-            "arguments": ["--stdin-filepath", "{buffer_path}"]
-          }
-        }
-      ]
+      "code_actions_on_format": {
+        "source.fixAll.eslint": true,
+        "source.organizeImports": true
+      }
     }
   },
   "telemetry": {
