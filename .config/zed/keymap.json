@@ -19,6 +19,7 @@
     "bindings": {
       "ctrl-a c": "workspace::NewCenterTerminal",
       "ctrl-a -": "workspace::NewTerminal",
+      "ctrl-a \\": "pane::SplitRight", // temporary create split pane until split terminal in right is supported. https://github.com/zed-industries/zed/discussions/26243
       "ctrl-a x": "pane::CloseActiveItem",
       "ctrl-a j": "workspace::ActivatePaneDown",
       "ctrl-a l": "workspace::ActivatePaneRight",
