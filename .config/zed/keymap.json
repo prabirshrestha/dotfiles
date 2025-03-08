@@ -17,7 +17,15 @@
   {
     "context": "vim_mode == insert || vim_mode == visual || vim_mode == normal",
     "bindings": {
-      "ctrl-p": "file_finder::Toggle"
+      "ctrl-p": "file_finder::Toggle",
+      "g o t": "workspace::OpenInTerminal"
+    }
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
+      "ctrl-shift-c": "terminal::Copy",
+      "ctrl-shift-v": "terminal::Paste"
     }
   }
 ]
