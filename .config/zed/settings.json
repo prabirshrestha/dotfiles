@@ -33,8 +33,8 @@
     "use_system_clipboard": "always",
     "use_multiline_find": true
   },
-  "ui_font_size": 16,
-  "buffer_font_size": 16,
+  "ui_font_size": 14,
+  "buffer_font_size": 14,
   "cursor_blink": true,
   "languages": {
     "Markdown": {
