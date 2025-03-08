@@ -11,21 +11,57 @@
     "bindings": {
       "ctrl-a c": "workspace::NewCenterTerminal",
       "ctrl-a -": "workspace::NewTerminal",
-      "ctrl-a x": "pane::CloseActiveItem"
+      "ctrl-a x": "pane::CloseActiveItem",
+      "ctrl-a j": "workspace::ActivatePaneDown",
+      "ctrl-a l": "workspace::ActivatePaneRight",
+      "ctrl-a h": "workspace::ActivatePaneLeft"
     }
   },
   {
-    "context": "vim_mode == insert || vim_mode == visual || vim_mode == normal",
+    "context": "!VimWaiting && (vim_mode == visual || vim_mode == normal)",
     "bindings": {
       "ctrl-p": "file_finder::Toggle",
       "g o t": "workspace::OpenInTerminal"
     }
   },
   {
+    "context": "!VimWaiting && vim_mode == insert",
+    "bindings": {
+      "ctrl-p": "file_finder::Toggle"
+    }
+  },
+  {
+    "context": "vim_mode == normal",
+    "bindings": {}
+  },
+  {
+    "context": "vim_mode == visual",
+    "bindings": {}
+  },
+  {
+    "context": "Editor && VimControl && !VimWaiting && !menu",
+    "bindings": {
+      "ctrl-w z": "workspace::ToggleZoom",
+      "space r n": "editor::Rename",
+      "space c a": "editor::ToggleCodeActions",
+      "c a": "editor::ToggleCodeActions",
+      "g d": "editor::GoToDefinition",
+      "g D": "editor::GoToDeclaration",
+      "g r": "editor::FindAllReferences",
+      "g i": "editor::GoToImplementation",
+      "g t": "editor::GoToTypeDefinition"
+    }
+  },
+  {
     "context": "Terminal",
     "bindings": {
       "ctrl-shift-c": "terminal::Copy",
-      "ctrl-shift-v": "terminal::Paste"
+      "ctrl-shift-v": "terminal::Paste",
+      "ctrl-a k": "workspace::ActivatePaneUp",
+      "ctrl-a j": "workspace::ActivatePaneDown",
+      "ctrl-a l": "workspace::ActivatePaneRight",
+      "ctrl-a h": "workspace::ActivatePaneLeft",
+      "ctrl-a z": "workspace::ToggleZoom"
     }
   }
 ]

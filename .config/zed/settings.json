@@ -7,11 +7,13 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "theme": "Github Dark Dimmed",
   "auto_install_extensions": {
     "html": true,
     "dockerfile": true,
     "docker-compose": true,
-    "toml": true
+    "toml": true,
+    "github-theme": true
   },
   "assistant": {
     "default_model": {
@@ -21,11 +23,17 @@
     "version": "2"
   },
   "vim_mode": true,
-  "ui_font_size": 16,
+  "ui_font_size": 14,
   "buffer_font_size": 16,
   "cursor_blink": true,
   "languages": {
+    "Markdown": {
+      "preferred_line_length": 80
+    },
     "JavaScript": {
+      "code_actions_on_format": {
+        "source.fixAll.eslint": true
+      },
       "formatter": [
         {
           "external": {
@@ -52,6 +60,11 @@
     "metrics": false
   },
   "terminal": {
+    "dock": "bottom",
+    "env": {
+      "GIT_EDITOR": "zed --wait"
+    },
+    "font_size": 14,
     "shell": {
       "program": "fish"
     }
