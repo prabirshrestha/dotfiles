@@ -23,6 +23,29 @@
   "vim_mode": true,
   "ui_font_size": 16,
   "buffer_font_size": 16,
+  "cursor_blink": true,
+  "languages": {
+    "JavaScript": {
+      "formatter": [
+        {
+          "external": {
+            "command": "prettier",
+            "arguments": ["--stdin-filepath", "{buffer_path}"]
+          }
+        }
+      ]
+    },
+    "TypeScript": {
+      "formatter": [
+        {
+          "external": {
+            "command": "prettier",
+            "arguments": ["--stdin-filepath", "{buffer_path}"]
+          }
+        }
+      ]
+    }
+  },
   "telemetry": {
     "enabled": false,
     "diagnostics": false,
