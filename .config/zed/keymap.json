@@ -7,6 +7,14 @@
 // from the command palette.
 [
   {
+    "bindings": {
+      "ctrl-j": "menu::SelectNext",
+      "ctrl-n": "menu::SelectNext",
+      "ctrl-k": "menu::SelectPrevious",
+      "ctrl-p": "menu::SelectPrevious"
+    }
+  },
+  {
     "context": "Workspace",
     "bindings": {
       "ctrl-a c": "workspace::NewCenterTerminal",
@@ -15,13 +23,6 @@
       "ctrl-a j": "workspace::ActivatePaneDown",
       "ctrl-a l": "workspace::ActivatePaneRight",
       "ctrl-a h": "workspace::ActivatePaneLeft"
-    }
-  },
-  {
-    "context": "!VimWaiting && (vim_mode == visual || vim_mode == normal)",
-    "bindings": {
-      "ctrl-p": "file_finder::Toggle",
-      "g o t": "workspace::OpenInTerminal"
     }
   },
   {
@@ -39,19 +40,31 @@
     "bindings": {}
   },
   {
+    "context": "Editor && vim_mode == normal && (vim_operator == none || vim_operator == n) && !VimWaiting",
+    "bindings": {
+      "space q": "pane::CloseActiveItem"
+    }
+  },
+  {
     "context": "Editor && VimControl && !VimWaiting && !menu",
     "bindings": {
+      "ctrl-p": "file_finder::Toggle",
+      "g o t": "workspace::OpenInTerminal",
       "ctrl-w z": "workspace::ToggleZoom",
       "space w": "workspace::Save",
       "space e": "pane::RevealInProjectPanel",
       "space r n": "editor::Rename",
       "space c a": "editor::ToggleCodeActions",
       "space g b": "editor::ToggleGitBlame",
-      "c a": "editor::ToggleCodeActions",
+      "shift-k": "editor::Hover",
+      "g c c": "editor::ToggleComments",
       "g d": "editor::GoToDefinition",
+      "space g d": "editor::GoToDefinitionSplit",
       "g D": "editor::GoToDeclaration",
+      "space g D": "editor::GoToDeclarationSplit",
       "g r": "editor::FindAllReferences",
       "g i": "editor::GoToImplementation",
+      "space g i": "editor::GoToImplementationSplit",
       "g t": "editor::GoToTypeDefinition",
       "j": [
         "vim::Down",
@@ -65,6 +78,39 @@
           "display_lines": true
         }
       ]
+    }
+  },
+  {
+    "context": "Editor && showing_completions",
+    "bindings": {
+      "enter": "editor::ConfirmCompletion",
+      "ctrl-j": "editor::ContextMenuNext",
+      "ctrl-n": "editor::ContextMenuNext",
+      "ctrl-k": "editor::ContextMenuPrevious",
+      "ctrl-p": "editor::ContextMenuPrevious"
+    }
+  },
+  {
+    "context": "Pane",
+    "bindings": {
+      "cmd-1": ["pane::ActivateItem", 0],
+      "cmd-2": ["pane::ActivateItem", 1],
+      "cmd-3": ["pane::ActivateItem", 2],
+      "cmd-4": ["pane::ActivateItem", 3],
+      "cmd-5": ["pane::ActivateItem", 4],
+      "cmd-6": ["pane::ActivateItem", 5],
+      "cmd-7": ["pane::ActivateItem", 6],
+      "cmd-8": ["pane::ActivateItem", 7],
+      "cmd-9": ["pane::ActivateItem", 8],
+      "ctrl-a 1": ["pane::ActivateItem", 0],
+      "ctrl-a 2": ["pane::ActivateItem", 1],
+      "ctrl-a 3": ["pane::ActivateItem", 2],
+      "ctrl-a 4": ["pane::ActivateItem", 3],
+      "ctrl-a 5": ["pane::ActivateItem", 4],
+      "ctrl-a 6": ["pane::ActivateItem", 5],
+      "ctrl-a 7": ["pane::ActivateItem", 6],
+      "ctrl-a 8": ["pane::ActivateItem", 7],
+      "ctrl-a 9": ["pane::ActivateItem", 8]
     }
   },
   {

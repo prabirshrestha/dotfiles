@@ -8,6 +8,7 @@
 // from the command palette or from `Zed` application menu.
 {
   "theme": "Github Dark Dimmed",
+  "tab_size": 2,
   "auto_install_extensions": {
     "html": true,
     "dockerfile": true,
@@ -23,7 +24,11 @@
     "version": "2"
   },
   "vim_mode": true,
-  "ui_font_size": 14,
+  "vim": {
+    "use_system_clipboard": "always",
+    "use_multiline_find": true
+  },
+  "ui_font_size": 16,
   "buffer_font_size": 16,
   "cursor_blink": true,
   "languages": {
