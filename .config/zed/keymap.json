@@ -42,14 +42,29 @@
     "context": "Editor && VimControl && !VimWaiting && !menu",
     "bindings": {
       "ctrl-w z": "workspace::ToggleZoom",
+      "space w": "workspace::Save",
+      "space e": "pane::RevealInProjectPanel",
       "space r n": "editor::Rename",
       "space c a": "editor::ToggleCodeActions",
+      "space g b": "editor::ToggleGitBlame",
       "c a": "editor::ToggleCodeActions",
       "g d": "editor::GoToDefinition",
       "g D": "editor::GoToDeclaration",
       "g r": "editor::FindAllReferences",
       "g i": "editor::GoToImplementation",
-      "g t": "editor::GoToTypeDefinition"
+      "g t": "editor::GoToTypeDefinition",
+      "j": [
+        "vim::Down",
+        {
+          "display_lines": true
+        }
+      ],
+      "k": [
+        "vim::Up",
+        {
+          "display_lines": true
+        }
+      ]
     }
   },
   {
