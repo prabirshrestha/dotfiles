@@ -80,7 +80,8 @@ if [ "$platform" == "mac" ]; then
   brew install versatiles
 
   brew install --cask \
-    keepassxc
+    keepassxc \
+    zed@preview
 
   brew install turbot/tap/steampipe
   steampipe plugin install azuredevops

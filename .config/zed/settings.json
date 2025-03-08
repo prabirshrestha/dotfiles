@@ -7,19 +7,24 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "features": {
+    "edit_prediction_provider": "zed"
+  },
   "theme": "Github Dark Dimmed",
   "tab_size": 2,
   "auto_install_extensions": {
-    "html": true,
-    "dockerfile": true,
     "docker-compose": true,
-    "toml": true,
-    "github-theme": true
+    "dockerfile": true,
+    "emmet": true,
+    "github-theme": true,
+    "harper": true,
+    "html": true,
+    "toml": true
   },
   "assistant": {
     "default_model": {
-      "provider": "zed.dev",
-      "model": "claude-3-7-sonnet-latest"
+      "provider": "copilot_chat",
+      "model": "claude-3-7-sonnet"
     },
     "version": "2"
   },
