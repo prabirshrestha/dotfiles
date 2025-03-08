@@ -15,9 +15,9 @@
     }
   },
   {
-    "context": "vim_mode == normal",
+    "context": "vim_mode == insert || vim_mode == visual || vim_mode == normal",
     "bindings": {
-      "cmd-w": "workspace::Save"
+      "ctrl-p": "file_finder::Toggle"
     }
   }
 ]
