@@ -27,17 +27,30 @@
     }
   },
   {
+    "context": "ProjectPanel",
+    "bindings": {
+      "space e": "workspace::ToggleLeftDock",
+      "q": "workspace::ToggleLeftDock"
+    }
+  },
+  {
     "context": "!VimWaiting && vim_mode == insert",
     "bindings": {
       "ctrl-p": "file_finder::Toggle"
     }
   },
   {
-    "context": "vim_mode == normal",
+    "context": "Editor && (vim_mode == normal || vim_mode == visual)",
+    "bindings": {
+      "space e": "workspace::ToggleLeftDock"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == normal",
     "bindings": {}
   },
   {
-    "context": "vim_mode == visual",
+    "context": "Editor && vim_mode == visual",
     "bindings": {}
   },
   {
@@ -53,7 +66,6 @@
       "g o t": "workspace::OpenInTerminal",
       "ctrl-w z": "workspace::ToggleZoom",
       "space w": "workspace::Save",
-      "space e": "pane::RevealInProjectPanel",
       "space r n": "editor::Rename",
       "space c a": "editor::ToggleCodeActions",
       "space g b": "editor::ToggleGitBlame",
