@@ -37,9 +37,6 @@
   "buffer_font_size": 14,
   "cursor_blink": true,
   "languages": {
-    "Markdown": {
-      "preferred_line_length": 80
-    },
     "JavaScript": {
       "code_actions_on_format": {
         "source.fixAll.eslint": true,
