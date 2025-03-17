@@ -11,6 +11,7 @@ packages = [
   "nvim",
   "picom",
   "polybar",
+  "proto",
   "rofi",
   "sxhkd",
   "xorg",
