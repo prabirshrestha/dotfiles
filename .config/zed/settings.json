@@ -54,6 +54,9 @@
         "source.fixAll.eslint": true,
         "source.organizeImports": true
       }
+    },
+    "Rust": {
+      "tab_size": 4
     }
   },
   "telemetry": {
