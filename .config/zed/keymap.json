@@ -29,8 +29,8 @@
   {
     "context": "ProjectPanel",
     "bindings": {
-      "space e": "workspace::ToggleLeftDock",
-      "q": "workspace::ToggleLeftDock"
+      "space e": "workspace::ToggleLeftDock"
+      // "q": "workspace::ToggleLeftDock"
     }
   },
   {

@@ -22,6 +22,7 @@ if [ "$platform" == "mac" ]; then
   brew install \
     age \
     aider \
+    bacon \
     cargo-make \
     cargo-watch \
     code2prompt \
@@ -80,6 +81,7 @@ if [ "$platform" == "mac" ]; then
   brew install versatiles
 
   brew install --cask \
+    disk-inventory-x \
     keepassxc \
     zed@preview
 
