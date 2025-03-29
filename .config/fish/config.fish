@@ -9,6 +9,7 @@ set -x AICHAT_CONFIG_DIR $HOME/.config/aichat
 set -x TELEVISION_CONFIG $HOME/.config/television
 
 fish_add_path ~/.dotfiles/bin
+fish_add_path ~/.local/bin
 fish_add_path /opt/homebrew/bin
 fish_add_path /opt/homebrew/sbin
 
