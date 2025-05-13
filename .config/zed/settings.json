@@ -8,11 +8,57 @@
 // from the command palette or from `Zed` application menu.
 {
   "agent": {
+    "profiles": {
+      "write": {
+        "name": "Write",
+        "tools": {
+          "copy_path": true,
+          "create_directory": true,
+          "create_file": true,
+          "delete_path": true,
+          "diagnostics": true,
+          "edit_file": true,
+          "fetch": true,
+          "list_directory": true,
+          "move_path": true,
+          "now": true,
+          "find_path": true,
+          "read_file": true,
+          "grep": true,
+          "terminal": true,
+          "thinking": true,
+          "web_search": true
+        },
+        "enable_all_context_servers": true,
+        "context_servers": {
+          "browsermcp": {
+            "path": "bunx",
+            "args": ["-y", "@browsermcp/mcp@latest"],
+            "tools": {
+              "browser_navigate": true,
+              "browser_wait": true,
+              "browser_go_back": true,
+              "browser_go_forward": true,
+              "browser_press_key": true,
+              "browser_snapshot": true,
+              "browser_click": true,
+              "browser_drag": true,
+              "browser_hover": true,
+              "browser_type": true,
+              "browser_select_option": true,
+              "browser_screenshot": true,
+              "browser_get_console_logs": true
+            }
+          }
+        }
+      }
+    },
     "default_profile": "write",
     "default_model": {
       "provider": "copilot_chat",
       "model": "claude-3.7-sonnet"
     },
+    "enable_experimental_live_diffs": true,
     "version": "2"
   },
   "features": {
@@ -29,15 +75,6 @@
     "html": true,
     "just": true,
     "toml": true
-  },
-  "assistant": {
-    "default_profile": "write",
-    "always_allow_tool_actions": true,
-    "default_model": {
-      "provider": "copilot_chat",
-      "model": "claude-3.7-sonnet"
-    },
-    "version": "2"
   },
   "vim_mode": true,
   "vim": {
