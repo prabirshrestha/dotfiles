@@ -7,6 +7,14 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "agent": {
+    "default_profile": "write",
+    "default_model": {
+      "provider": "copilot_chat",
+      "model": "claude-3.7-sonnet"
+    },
+    "version": "2"
+  },
   "features": {
     "edit_prediction_provider": "zed"
   },
@@ -23,10 +31,11 @@
     "toml": true
   },
   "assistant": {
+    "default_profile": "write",
     "always_allow_tool_actions": true,
     "default_model": {
       "provider": "copilot_chat",
-      "model": "claude-3-7-sonnet"
+      "model": "claude-3.7-sonnet"
     },
     "version": "2"
   },
