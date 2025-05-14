@@ -29,28 +29,7 @@
           "thinking": true,
           "web_search": true
         },
-        "enable_all_context_servers": true,
-        "context_servers": {
-          "browsermcp": {
-            "path": "bunx",
-            "args": ["-y", "@browsermcp/mcp@latest"],
-            "tools": {
-              "browser_navigate": true,
-              "browser_wait": true,
-              "browser_go_back": true,
-              "browser_go_forward": true,
-              "browser_press_key": true,
-              "browser_snapshot": true,
-              "browser_click": true,
-              "browser_drag": true,
-              "browser_hover": true,
-              "browser_type": true,
-              "browser_select_option": true,
-              "browser_screenshot": true,
-              "browser_get_console_logs": true
-            }
-          }
-        }
+        "enable_all_context_servers": true
       }
     },
     "default_profile": "write",
@@ -120,6 +99,14 @@
     "font_size": 14,
     "shell": {
       "program": "fish"
+    }
+  },
+  "context_servers": {
+    "git": {
+      "command": {
+        "path": "uvx",
+        "args": ["mcp-server-git"]
+      }
     }
   }
 }
