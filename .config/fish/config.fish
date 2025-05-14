@@ -70,3 +70,7 @@ if command -q tv
     end
     commandline -f repaint'
 end
+
+if test -f ~/.config/fish/local.config.fish
+    source ~/.config/fish/local.config.fish
+end

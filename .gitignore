@@ -1,6 +1,8 @@
 .dotter/cache.toml
 .dotter/cache/
 
+local.config.fish
+
 vim/vim.symlink/.netrwhist
 
 vim/edit_with_vim.reg
