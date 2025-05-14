@@ -396,6 +396,17 @@ augroup configure_lsp
 augroup END
 " }}}
 
+function! s:on_configure_tv() abort
+  " Map Ctrl+Y to remove '> ' from terminal line, open as file, and kill terminal
+
+  tnoremap <C-y> <C-\><C-n>:let @a=getline('.')<CR>:echom "Opening file: " . @a<CR>:bd!<CR>:e <C-r>a<CR>
+endfunction
+
+augroup configure_tv
+  au!
+  autocmd User tv_terminal_created call s:on_configure_tv()
+augroup END
+
 " vim-test {{{
 nnoremap <leader>tn :TestNearest<CR>
 nnoremap <leader>tf :TestFile<CR>

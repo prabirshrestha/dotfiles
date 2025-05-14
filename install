@@ -23,7 +23,7 @@ if [ "$platform" == "mac" ]; then
     age \
     aider \
     bacon \
-    cargo-dist \
+    axodotdev/tap/cargo-dist \
     cargo-make \
     cargo-watch \
     code2prompt \
