@@ -2,6 +2,7 @@
 .dotter/cache/
 
 local.config.fish
+mise.local.toml
 
 vim/vim.symlink/.netrwhist
 

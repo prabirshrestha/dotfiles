@@ -31,14 +31,9 @@ export PATH="$HOME/.config/nvim/plugins/vim-themis/bin:$PATH"
 export PATH="$HOME/.dotfiles/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 #export PATH="/opt/pkg/bin:$PATH"
-# proto
 
-# export PATH="$PROTO_HOME/shims:$PROTO_HOME/bin:$PATH"
-# export PATH="$HOME/.local/share/mise/shims:$PATH"
-# register after proto
 # if hash fnm 2>/dev/null; then eval "$(fnm env --use-on-cd)"; fi
-# if hash mise 2>/dev/null; then eval "$(mise activate bash)"; fi
-# if hash proto 2>/dev/null; then eval "$(proto activate bash)"; fi
+if hash mise 2>/dev/null; then eval "$(mise activate bash)"; fi
 
 if hash nomad 2>/dev/null; then complete -C nomad nomad; fi
 
@@ -178,10 +173,6 @@ start-openwebui() {
 
 export GRIT_TELEMETRY_DISABLED=true
 [[ -s ~/.grit/bin/env ]] && . ~/.grit/bin/env
-
-export PROTO_HOME="$HOME/.proto";
-export PATH="$PROTO_HOME/shims:$PROTO_HOME/bin:$PATH";
-if hash proto 2>/dev/null; then eval "$(proto activate bash)"; fi
 
 # Added by LM Studio CLI (lms)
 export PATH="$PATH:/Users/prabirshrestha/.cache/lm-studio/bin"

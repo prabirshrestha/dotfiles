@@ -47,10 +47,6 @@ function gpr
     git checkout pr$argv[1]
 end
 
-fish_add_path ~/.proto/bin/shims
-fish_add_path ~/.proto/bin
-type -q proto; and proto activate fish | source
-
 # Added by LM Studio CLI (lms)
 set -gx PATH $PATH /Users/prabirshrestha/.cache/lm-studio/bin
 

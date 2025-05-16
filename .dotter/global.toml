@@ -22,6 +22,9 @@
 [git.files]
 ".gitconfig" = "~/.gitconfig"
 
+[mise.files]
+".config/mise" = { type = "symbolic" , target = "~/.config/mise" }
+
 [nvim.files]
 ".config/nvim/init.vim" = { type = "symbolic" , target = "~/.config/nvim/init.vim" }
 
@@ -30,9 +33,6 @@
 
 [polybar.files]
 ".config/polybar" = { type = "symbolic" , target = "~/.config/polybar" }
-
-[proto.files]
-".prototools" = { type = "symbolic" , target = "~/.proto/.prototools" }
 
 [rofi.files]
 ".config/rofi" = { type = "symbolic" , target = "~/.config/rofi" }

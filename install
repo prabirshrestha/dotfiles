@@ -50,7 +50,7 @@ if [ "$platform" == "mac" ]; then
     localai \
     lnav \
     miniconda \
-    node \
+    mise \
     poppler \
     portaudio \
     pnpm \

@@ -51,10 +51,6 @@ if hash zoxide 2>/dev/null; then eval "$(zoxide init zsh)"; fi
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
 
-# proto
-export PROTO_HOME="$HOME/.proto"
-export PATH="$PROTO_HOME/shims:$PROTO_HOME/bin:$PATH"
-
 [[ -s ~/.grit/bin/env ]] && . ~/.grit/bin/env
 
 # Added by LM Studio CLI (lms)
