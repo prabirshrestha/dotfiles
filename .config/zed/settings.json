@@ -8,8 +8,16 @@
 // from the command palette or from `Zed` application menu.
 {
   "agent": {
+    "always_allow_tool_actions": true,
     "profiles": {
       "write": {
+        "context_servers": {
+          "browser-mcp": {
+            "tools": {
+              "getConsoleLogs": true
+            }
+          }
+        },
         "name": "Write",
         "tools": {
           "copy_path": true,
@@ -32,7 +40,7 @@
         "enable_all_context_servers": true
       }
     },
-    "default_profile": "write",
+    "default_profile": "ask",
     "default_model": {
       "provider": "copilot_chat",
       "model": "claude-3.7-sonnet"
@@ -106,6 +114,12 @@
       "command": {
         "path": "uvx",
         "args": ["mcp-server-git"]
+      }
+    },
+    "browser-mcp": {
+      "command": {
+        "path": "npx",
+        "args": ["-y", "@browsermcp/mcp@0.1.2"]
       }
     }
   }
