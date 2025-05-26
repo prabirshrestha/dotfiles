@@ -1,6 +1,9 @@
 [settings]
-idiomatic_version_file_enable_tools = ["node"]
+idiomatic_version_file_enable_tools = ["node", "rust"]
 experimental = true
 
 [tools]
+cargo = "latest"
 node = "latest"
+rust = "latest"
+"npm:prettier" = "latest"
