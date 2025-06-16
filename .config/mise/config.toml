@@ -4,6 +4,7 @@ experimental = true
 
 [tools]
 cargo = "latest"
+bun = "latest"
 node = "latest"
 rust = "latest"
 "npm:prettier" = "latest"
