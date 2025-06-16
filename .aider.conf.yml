@@ -1,30 +1,48 @@
-dark-mode: true
-show-model-warnings: false
-analytics-disable: true
-openai-api-key: not-needed
-openai-api-base: http://localhost:4141/
+# https://github.com/lutzleonhardt/copilot-proxy
+# npx copilot-api@latest start
+# npx copilot-api@latest start --enterprise
+
+# Reference
+# https://aider.chat/docs/config/aider_conf.html#sample-yaml-config-file
+
+## Specify the model to use for the main chat
+
 # model: gemini/gemini-2.5-pro-preview-05-06
 # model: gemini/gemini-2.5-flash-preview-04-17
 # model: openai/gemini-2.5-pro-preview-06-05
 # model: openai/gemini-2.5-flash
+model: openai/claude-sonnet-4
 # model: openai/claude-3.7-sonnet-thought
 # model: openai/claude-3.7-sonnet
 # model: openai/claude-3.5-sonnet
-model: claude-sonnet-4
-# model: claude-opus-4
 # model: openai/gpt-4o
 # model: openai/o1
 # model: openai/o3-mini
+
+########################
+## API Keys and settings:
+
+## Specify the OpenAI API key
+openai-api-key: not-needed
+
+## Specify the api base url
+openai-api-base: http://localhost:4141/
+# openai-api-base: http://localhost:4460/
+
+#################
+## Model settings:
+
+## Add a model alias (can be used multiple times)
 alias:
-  - "sonnet:openai/claude-sonnet-4"
+  - "sonnet:openai/claude-3.7-sonnet"
   - "sonnet-thinking:openai/claude-3.7-sonnet-thought"
   - "gemini-flash:gemini/gemini-2.5-flash-preview-04-17"
   - "gemini:gemini-2.5-pro-preview-06-05"
 
 ## Specify the model to use for commit messages and chat history summarization (default depends on --model)
-weak-model: gemini/gemini-2.5-flash-preview-04-17
+# weak-model: gemini/gemini-2.5-flash-preview-04-17
 # weak-model: gemini/gemini-2.0-flash
-# weak-model: openai/gpt-4o-mini
+weak-model: openai/gpt-4o-mini
 # weak-model: openai/gpt-4o
 
 ## Specify the model to use for editor tasks (default depends on --model)
@@ -32,6 +50,21 @@ weak-model: gemini/gemini-2.5-flash-preview-04-17
 # editor-model: openai/claude-3.7-sonnet
 # editor-model: openai/claude-3.5-sonnet
 # editor-model: gemini/gemini-2.0-flash
+
+## Only work with models that have meta-data available (default: True)
+show-model-warnings: true
+
+###################
+# Repomap settings:
+
+## Suggested number of tokens to use for repo map, use 0 to disable (default: 1024)
+map-tokens: 1024
+
+##################
+# Output settings:
+
+## Use colors suitable for a dark terminal background (default: False)
+dark-mode: true
 
 ###############
 # Git settings:
@@ -47,3 +80,18 @@ attribute-author: false
 
 ## Attribute aider commits in the git committer name (default: True)
 attribute-committer: false
+
+#################
+# Other settings:
+
+## Specify read-only files
+# read:
+# - "~/conventions/general.md"
+# - "~/conventions/typescript.md"
+# - "~/conventions/ghostty-shader.md"
+
+## Enable/disable detection and offering to add URLs to chat (default: True)
+detect-urls: false
+
+## Always say yes to every confirmation
+yes-always: false

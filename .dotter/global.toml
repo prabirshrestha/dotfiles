@@ -3,6 +3,7 @@
 
 [aider.files]
 ".aider.conf.yml" = { type = "symbolic" , target = "~/.aider.conf.yml" }
+".aider.model.metadata.json" = { type = "symbolic" , target = "~/.aider.model.metadata.json" }
 
 [awesomewm.files]
 ".config/awesome" = { type = "symbolic" , target = "~/.config/awesome" }
