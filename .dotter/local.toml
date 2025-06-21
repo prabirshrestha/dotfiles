@@ -1,13 +1,14 @@
 includes = []
 packages = [
   "aichat",
-  "aider",
+  # "aider",
   "awesomewm",
   "bash",
   "bspwm",
   "efm-langserver",
   "fish",
   "git",
+  "ghostty",
   "mise",
   "nvim",
   "picom",

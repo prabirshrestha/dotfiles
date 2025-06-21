@@ -1,9 +1,9 @@
 [aichat.files]
 ".config/aichat" = { type = "symbolic" , target = "~/.config/aichat" }
 
-[aider.files]
-".aider.conf.yml" = { type = "symbolic" , target = "~/.aider.conf.yml" }
-".aider.model.metadata.json" = { type = "symbolic" , target = "~/.aider.model.metadata.json" }
+# [aider.files]
+# ".aider.conf.yml" = { type = "symbolic" , target = "~/.aider.conf.yml" }
+# ".aider.model.metadata.json" = { type = "symbolic" , target = "~/.aider.model.metadata.json" }
 
 [awesomewm.files]
 ".config/awesome" = { type = "symbolic" , target = "~/.config/awesome" }
@@ -22,6 +22,9 @@
 
 [git.files]
 ".gitconfig" = "~/.gitconfig"
+
+[ghostty.files]
+".config/ghostty" = { type = "symbolic" , target = "~/.config/ghostty" }
 
 [mise.files]
 ".config/mise" = { type = "symbolic" , target = "~/.config/mise" }
