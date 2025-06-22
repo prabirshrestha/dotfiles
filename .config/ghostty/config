@@ -1,3 +1,5 @@
+command = /opt/homebrew/bin/fish --login --interactive
+
 keybind = ctrl+a>n=new_window
 keybind = ctrl+a>c=new_tab
 keybind = ctrl+shift+v=paste_from_clipboard
