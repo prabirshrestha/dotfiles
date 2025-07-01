@@ -111,12 +111,14 @@
   },
   "context_servers": {
     "git": {
+      "source": "custom",
       "command": {
         "path": "uvx",
         "args": ["mcp-server-git"]
       }
     },
     "browser-mcp": {
+      "source": "custom",
       "command": {
         "path": "npx",
         "args": ["-y", "@browsermcp/mcp@0.1.2"]
