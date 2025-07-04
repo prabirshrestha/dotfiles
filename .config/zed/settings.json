@@ -45,8 +45,7 @@
       "provider": "copilot_chat",
       "model": "claude-sonnet-4"
     },
-    "enable_experimental_live_diffs": true,
-    "version": "2"
+    "enable_experimental_live_diffs": true
   },
   "features": {
     "edit_prediction_provider": "zed"
@@ -112,17 +111,13 @@
   "context_servers": {
     "git": {
       "source": "custom",
-      "command": {
-        "path": "uvx",
-        "args": ["mcp-server-git"]
-      }
+      "command": "uvx",
+      "args": ["mcp-server-git"]
     },
     "browser-mcp": {
       "source": "custom",
-      "command": {
-        "path": "npx",
-        "args": ["-y", "@browsermcp/mcp@0.1.2"]
-      }
+      "command": "npx",
+      "args": ["-y", "@browsermcp/mcp@0.1.2"]
     }
   }
 }
