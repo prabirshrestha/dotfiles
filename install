@@ -71,8 +71,9 @@ if [ "$platform" == "mac" ]; then
     ;
 
   brew install dotenvx/brew/dotenvx
-  brew install homebrew/cask/ollama
-  brew install --cask ghostty
+  brew install --cask \
+    ghostty \
+    ollama-app
 
   brew tap hashicorp/tap
   brew install hashicorp/tap/nomad
