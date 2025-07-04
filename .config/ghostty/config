@@ -8,3 +8,4 @@ keybind = ctrl+a>-=new_split:down
 keybind = ctrl+a>\=new_split:right
 keybind = ctrl+a>z=toggle_split_zoom
 keybind = ctrl+a>x=close_surface
+keybind = shift+enter=text:\n
