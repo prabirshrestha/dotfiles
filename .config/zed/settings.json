@@ -44,8 +44,7 @@
     "default_model": {
       "provider": "copilot_chat",
       "model": "claude-sonnet-4"
-    },
-    "enable_experimental_live_diffs": true
+    }
   },
   "features": {
     "edit_prediction_provider": "zed"
@@ -64,8 +63,7 @@
   },
   "vim_mode": true,
   "vim": {
-    "use_system_clipboard": "always",
-    "use_multiline_find": true
+    "use_system_clipboard": "always"
   },
   "ui_font_size": 14,
   "buffer_font_size": 14,
