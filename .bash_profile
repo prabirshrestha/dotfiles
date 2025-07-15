@@ -176,3 +176,8 @@ export GRIT_TELEMETRY_DISABLED=true
 
 # Added by LM Studio CLI (lms)
 export PATH="$PATH:/Users/prabirshrestha/.cache/lm-studio/bin"
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/prabirshrestha/.lmstudio/bin"
+# End of LM Studio CLI section
+

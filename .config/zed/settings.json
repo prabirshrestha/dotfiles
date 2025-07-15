@@ -78,13 +78,13 @@
     "TSX": {
       "code_actions_on_format": {
         "source.fixAll.eslint": true,
-        "source.organizeImports": true
+        "source.organizeImports": false
       }
     },
     "TypeScript": {
       "code_actions_on_format": {
         "source.fixAll.eslint": true,
-        "source.organizeImports": true
+        "source.organizeImports": false
       }
     },
     "Rust": {
