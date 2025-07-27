@@ -30,6 +30,7 @@ if [ "$platform" == "mac" ]; then
     colima \
     deskpad \
     docker \
+    docker-credential-helper \
     docker-compose \
     dotter \
     efm-langserver \
