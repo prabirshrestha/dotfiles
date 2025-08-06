@@ -77,3 +77,7 @@ end
 set -gx PATH $PATH /Users/prabirshrestha/.lmstudio/bin
 # End of LM Studio CLI section
 
+
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+set --export --prepend PATH "/Users/prabirshrestha/.rd/bin"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)

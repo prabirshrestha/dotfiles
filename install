@@ -27,7 +27,6 @@ if [ "$platform" == "mac" ]; then
     cargo-make \
     cargo-watch \
     code2prompt \
-    colima \
     deskpad \
     docker \
     docker-credential-helper \
@@ -50,7 +49,6 @@ if [ "$platform" == "mac" ]; then
     llm \
     localai \
     lnav \
-    miniconda \
     mise \
     poppler \
     portaudio \
@@ -74,7 +72,9 @@ if [ "$platform" == "mac" ]; then
   brew install dotenvx/brew/dotenvx
   brew install --cask \
     ghostty \
-    ollama-app
+    ollama-app \
+    rancher \
+  ;
 
   brew tap hashicorp/tap
   brew install hashicorp/tap/nomad
@@ -88,7 +88,8 @@ if [ "$platform" == "mac" ]; then
   brew install --cask \
     disk-inventory-x \
     keepassxc \
-    zed@preview
+    zed@preview \
+  ;
 
   brew install turbot/tap/steampipe
   steampipe plugin install azuredevops
@@ -103,7 +104,6 @@ if [ "$platform" == "mac" ]; then
   else
     brew install \
       betterzip \
-      orbstack \
       ;
   fi
 elif [ "$platform" == "linux" ]; then
@@ -135,7 +135,6 @@ elif [ "$platform" == "linux" ]; then
     fi
     sudo -u "$USERNAME" paru -Sy --noconfirm \
       age \
-      miniconda3 \
       bspwm \
       curl \
       chromium \

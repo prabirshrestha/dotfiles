@@ -181,3 +181,7 @@ export PATH="$PATH:/Users/prabirshrestha/.cache/lm-studio/bin"
 export PATH="$PATH:/Users/prabirshrestha/.lmstudio/bin"
 # End of LM Studio CLI section
 
+
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+export PATH="/Users/prabirshrestha/.rd/bin:$PATH"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
