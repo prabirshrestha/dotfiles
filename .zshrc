@@ -54,3 +54,8 @@ if hash zoxide 2>/dev/null; then eval "$(zoxide init zsh)"; fi
 [[ -s ~/.grit/bin/env ]] && . ~/.grit/bin/env
 
 if hash mise 2>/dev/null; then eval "$(mise activate zsh)"; fi
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/prabirshrestha/.lmstudio/bin"
+# End of LM Studio CLI section
+
