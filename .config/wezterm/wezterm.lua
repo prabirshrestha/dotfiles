@@ -56,6 +56,9 @@ local config = {
 }
 
 if wezterm.target_triple == "x86_64-pc-windows-msvc" then
+    if string.match(wezterm.hostname(), '^C') then
+        config.prefer_egl = true
+    end
     -- config.front_end = "Software" -- OpenGL doesn't work quite well with RDP.
     -- config.term = "" -- Set to empty so FZF works on windows
     table.insert(config.launch_menu, { label = "PowerShell", args = {"powershell.exe", "-NoLogo"} })

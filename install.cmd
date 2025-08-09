@@ -1,7 +1,6 @@
 @set scoop_buckets=^
   extras
 
-
 @for %%i in (%scoop_buckets%) do @(
     scoop bucket list | findstr /i "%%i" >nul || (
         echo Adding bucket: %%i
