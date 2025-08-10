@@ -23,6 +23,7 @@ if [ "$platform" == "mac" ]; then
     age \
     aider \
     bacon \
+    bat \
     axodotdev/tap/cargo-dist \
     cargo-make \
     cargo-watch \
@@ -33,6 +34,7 @@ if [ "$platform" == "mac" ]; then
     docker-compose \
     dotter \
     efm-langserver \
+    fd \
     ffmpeg \
     fish \
     fisher \
