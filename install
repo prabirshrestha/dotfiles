@@ -52,6 +52,7 @@ if [ "$platform" == "mac" ]; then
     localai \
     lnav \
     mise \
+    opensuperwhisper \
     poppler \
     portaudio \
     pnpm \
