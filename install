@@ -43,6 +43,7 @@ if [ "$platform" == "mac" ]; then
     fzf \
     gh \
     hyperfine \
+    jj \
     jq \
     just \
     keycastr \
