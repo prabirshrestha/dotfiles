@@ -1,7 +1,7 @@
 # disable fish greeting
 set fish_greeting
 
-set -x EDITOR vim
+set -gx EDITOR vim
 
 # https://github.com/sigoden/aichat/issues/769#issuecomment-2259388600
 set -x AICHAT_CONFIG_DIR $HOME/.config/aichat
