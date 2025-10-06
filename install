@@ -47,6 +47,7 @@ if [ "$platform" == "mac" ]; then
     jq \
     just \
     keycastr \
+    kind \
     lazydocker \
     llama.cpp \
     llm \
@@ -97,6 +98,9 @@ if [ "$platform" == "mac" ]; then
 
   brew install turbot/tap/steampipe
   steampipe plugin install azuredevops
+
+  brew tap josephpage/jetpack-io
+  brew install devbox
 
   if [[ "$(scutil --get ComputerName)" == *"Work"* ]]; then
     brew install \
