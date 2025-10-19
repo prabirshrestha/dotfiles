@@ -30,6 +30,8 @@ end
 
 type -q uv; and uv generate-shell-completion fish | source
 
+set -gx SOPS_AGE_KEY_FILE ~/.config/sops/age/keys.txt
+
 alias satyrn "open /Applications/satyrn.app"
 
 alias g "git"

@@ -48,6 +48,8 @@ if [ "$platform" == "mac" ]; then
     just \
     keycastr \
     kind \
+    kubectl \
+    kubectx \
     lazydocker \
     llama.cpp \
     llm \
@@ -62,6 +64,7 @@ if [ "$platform" == "mac" ]; then
     rustup \
     satyrn \
     sops \
+    talhelper \
     television \
     tree \
     utm \
@@ -99,8 +102,7 @@ if [ "$platform" == "mac" ]; then
   brew install turbot/tap/steampipe
   steampipe plugin install azuredevops
 
-  brew tap josephpage/jetpack-io
-  brew install devbox
+  brew install siderolabs/tap/talosctl
 
   if [[ "$(scutil --get ComputerName)" == *"Work"* ]]; then
     brew install \
