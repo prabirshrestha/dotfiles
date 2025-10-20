@@ -46,8 +46,10 @@ if [ "$platform" == "mac" ]; then
     jj \
     jq \
     just \
+    derailed/k9s/k9s \
     keycastr \
     kind \
+    kluctl/tap/kluctl \
     kubectl \
     kubectx \
     lazydocker \

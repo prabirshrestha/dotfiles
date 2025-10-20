@@ -34,6 +34,8 @@ set -gx SOPS_AGE_KEY_FILE ~/.config/sops/age/keys.txt
 
 alias satyrn "open /Applications/satyrn.app"
 
+alias k "kubectl"
+
 alias g "git"
 alias gs "git status"
 alias gb "git branch"
