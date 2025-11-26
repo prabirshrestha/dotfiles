@@ -81,6 +81,7 @@ if [ "$platform" == "mac" ]; then
 
   brew install dotenvx/brew/dotenvx
   brew install --cask \
+    freelens \
     ghostty \
     ollama-app \
     rancher \
