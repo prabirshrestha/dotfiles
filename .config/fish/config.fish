@@ -32,6 +32,8 @@ type -q uv; and uv generate-shell-completion fish | source
 
 set -gx SOPS_AGE_KEY_FILE ~/.config/sops/age/keys.txt
 
+alias tailscale "/Applications/Tailscale.app/Contents/MacOS/Tailscale"
+
 alias satyrn "open /Applications/satyrn.app"
 
 alias k "kubectl"
