@@ -81,6 +81,7 @@ if [ "$platform" == "mac" ]; then
 
   brew install dotenvx/brew/dotenvx
   brew install --cask \
+    claude-code \
     freelens \
     ghostty \
     ollama-app \
