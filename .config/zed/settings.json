@@ -14,9 +14,9 @@
         "context_servers": {
           "browser-mcp": {
             "tools": {
-              "getConsoleLogs": true
-            }
-          }
+              "getConsoleLogs": true,
+            },
+          },
         },
         "name": "Write",
         "tools": {
@@ -35,19 +35,19 @@
           "grep": true,
           "terminal": true,
           "thinking": true,
-          "web_search": true
+          "web_search": true,
         },
-        "enable_all_context_servers": true
-      }
+        "enable_all_context_servers": true,
+      },
     },
     "default_profile": "write",
     "default_model": {
       "provider": "copilot_chat",
-      "model": "claude-sonnet-4.5"
-    }
+      "model": "claude-sonnet-4.5",
+    },
   },
   "features": {
-    "edit_prediction_provider": "zed"
+    "edit_prediction_provider": "copilot",
   },
   "theme": "Github Dark Dimmed",
   "tab_size": 2,
@@ -59,11 +59,11 @@
     "harper": true,
     "html": true,
     "just": true,
-    "toml": true
+    "toml": true,
   },
   "vim_mode": true,
   "vim": {
-    "use_system_clipboard": "always"
+    "use_system_clipboard": "always",
   },
   "ui_font_size": 14,
   "buffer_font_size": 14,
@@ -72,50 +72,44 @@
     "JavaScript": {
       "code_actions_on_format": {
         "source.fixAll.eslint": true,
-        "source.organizeImports": true
-      }
+        "source.organizeImports": true,
+      },
     },
     "TSX": {
       "code_actions_on_format": {
         "source.fixAll.eslint": true,
-        "source.organizeImports": false
-      }
+        "source.organizeImports": false,
+      },
     },
     "TypeScript": {
       "code_actions_on_format": {
         "source.fixAll.eslint": true,
-        "source.organizeImports": false
-      }
+        "source.organizeImports": false,
+      },
     },
     "Rust": {
-      "tab_size": 4
-    }
+      "tab_size": 4,
+    },
   },
   "telemetry": {
     "enabled": false,
     "diagnostics": false,
-    "metrics": false
+    "metrics": false,
   },
   "terminal": {
     "dock": "bottom",
     "env": {
-      "GIT_EDITOR": "zed --wait"
+      "GIT_EDITOR": "zed --wait",
     },
     "font_size": 14,
     "shell": {
-      "program": "fish"
-    }
+      "program": "fish",
+    },
   },
   "context_servers": {
-    "git": {
-      "source": "custom",
-      "command": "uvx",
-      "args": ["mcp-server-git"]
-    },
     "browser-mcp": {
-      "source": "custom",
-      "command": "npx",
-      "args": ["-y", "@browsermcp/mcp@0.1.2"]
-    }
-  }
+      "command": "bunx",
+      "args": ["-y", "@browsermcp/mcp@latest"],
+    },
+  },
 }
