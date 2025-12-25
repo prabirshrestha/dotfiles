@@ -38,6 +38,8 @@ alias gp='git push origin HEAD'
 alias gs='git status'
 alias gup='git fetch --all && git rebase'
 
+alias claude-yolo='claude --dangerously-skip-permissions'
+
 gpr() {
     git fetch origin pull/${1}/head:pr${1}
     git checkout pr${1}

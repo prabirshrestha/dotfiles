@@ -50,6 +50,8 @@ alias gca "git commit -a"
 alias gco "git checkout"
 alias gcp "git cherry-pick"
 
+alias claude-yolo "claude --dangerously-skip-permissions"
+
 function gpr
     git fetch origin pull/$argv[1]/head:pr$argv[1]
     git checkout pr$argv[1]
