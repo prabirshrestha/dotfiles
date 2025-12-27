@@ -52,9 +52,95 @@ alias gcp "git cherry-pick"
 
 alias claude-yolo "claude --dangerously-skip-permissions"
 
+# Git Worktree
+alias gw "git worktree"
+alias gwl "git worktree list"
+# gwr: git worktree remove (interactive if no args)
+function gwr
+    if test (count $argv) -eq 0
+        set -l worktree (git worktree list | tv | awk '{print $1}')
+        if test -n "$worktree"
+            git worktree remove $worktree
+        end
+    else
+        git worktree remove $argv[1]
+    end
+end
+
+# gws: git worktree switch (interactive)
+function gws
+    set -l worktree (git worktree list | tv | awk '{print $1}')
+    if test -n "$worktree"
+        cd $worktree
+    end
+end
+
+# gcow: git checkout worktree (-b for new branch)
+function gcow
+    set -l create_branch 0
+    set -l args
+
+    for arg in $argv
+        if test "$arg" = "-b"
+            set create_branch 1
+        else
+            set -a args $arg
+        end
+    end
+
+    if test (count $args) -eq 0
+        echo "Usage: gcow [-b] <branch> [path]"
+        return 1
+    end
+
+    set -l branch $args[1]
+    set -l path $args[2]
+    if test -z "$path"
+        set path "../"(basename (git rev-parse --show-toplevel))"-$branch"
+    end
+
+    if test $create_branch -eq 1
+        git worktree add $path -b $branch
+    else
+        git worktree add $path $branch
+    end
+    and cd $path
+end
+
+# gpr: git pr switch (interactive with -w for worktree)
 function gpr
-    git fetch origin pull/$argv[1]/head:pr$argv[1]
-    git checkout pr$argv[1]
+    set -l use_worktree 0
+    set -l args
+
+    for arg in $argv
+        if test "$arg" = "-w"
+            set use_worktree 1
+        else
+            set -a args $arg
+        end
+    end
+
+    set -l pr
+    if test (count $args) -eq 0
+        # Interactive: select PR with tv
+        set pr (gh pr list | tv | awk '{print $1}')
+        if test -z "$pr"
+            return 1
+        end
+    else
+        set pr $args[1]
+    end
+
+    if test $use_worktree -eq 1
+        set -l base_dir (dirname (git rev-parse --show-toplevel))
+        set -l repo_name (basename (git rev-parse --show-toplevel))
+        set -l path "$base_dir/$repo_name-pr$pr"
+        git worktree add $path -b pr$pr
+        and cd $path
+        and gh pr checkout $pr
+    else
+        gh pr checkout $pr
+    end
 end
 
 # Added by LM Studio CLI (lms)
