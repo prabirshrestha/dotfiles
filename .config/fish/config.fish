@@ -41,6 +41,29 @@ alias k "kubectl"
 alias g "git"
 alias gs "git status"
 alias gb "git branch"
+# gbs: git branch switch (interactive, includes remote branches)
+function gbs
+    set -l branch (git branch -a --format='%(refname:short)' | tv)
+    if test -n "$branch"
+        # Strip 'origin/' prefix for remote branches
+        set branch (string replace -r '^origin/' '' $branch)
+        git checkout $branch
+    end
+end
+# gbr: git branch remove (interactive multiselect)
+function gbr
+    set -l branches (git branch --format='%(refname:short)' | tv)
+    for branch in $branches
+        if test -n "$branch"
+            if not git branch -d $branch 2>/dev/null
+                read -l -P "Force delete $branch? [y/N] " confirm
+                if test "$confirm" = y -o "$confirm" = Y
+                    git branch -D $branch
+                end
+            end
+        end
+    end
+end
 alias gp "git push"
 alias gco "git checkout"
 alias gca "git commit -a"
@@ -55,15 +78,27 @@ alias claude-yolo "claude --dangerously-skip-permissions"
 # Git Worktree
 alias gw "git worktree"
 alias gwl "git worktree list"
-# gwr: git worktree remove (interactive if no args)
+# gwr: git worktree remove (interactive multiselect if no args)
 function gwr
     if test (count $argv) -eq 0
-        set -l worktree (git worktree list | tv | awk '{print $1}')
-        if test -n "$worktree"
-            git worktree remove $worktree
+        set -l worktrees (git worktree list | tv | awk '{print $1}')
+        for worktree in $worktrees
+            if test -n "$worktree"
+                if not git worktree remove $worktree 2>/dev/null
+                    read -l -P "Force remove $worktree? [y/N] " confirm
+                    if test "$confirm" = y -o "$confirm" = Y
+                        git worktree remove --force $worktree
+                    end
+                end
+            end
         end
     else
-        git worktree remove $argv[1]
+        if not git worktree remove $argv[1] 2>/dev/null
+            read -l -P "Force remove $argv[1]? [y/N] " confirm
+            if test "$confirm" = y -o "$confirm" = Y
+                git worktree remove --force $argv[1]
+            end
+        end
     end
 end
 
@@ -135,9 +170,13 @@ function gpr
         set -l base_dir (dirname (git rev-parse --show-toplevel))
         set -l repo_name (basename (git rev-parse --show-toplevel))
         set -l path "$base_dir/$repo_name-pr$pr"
-        git worktree add $path -b pr$pr
-        and cd $path
-        and gh pr checkout $pr
+        if test -d $path
+            cd $path
+        else
+            git worktree add $path -b pr$pr
+            and cd $path
+            and gh pr checkout $pr
+        end
     else
         gh pr checkout $pr
     end
