@@ -64,7 +64,6 @@ if [ "$platform" == "mac" ]; then
     pnpm \
     ripgrep \
     rustup \
-    satyrn \
     sops \
     talhelper \
     television \
@@ -75,6 +74,7 @@ if [ "$platform" == "mac" ]; then
     vlc \
     wezterm \
     wget \
+    max-sixty/worktrunk/wt \
     yq \
     zoxide \
     ;
@@ -92,6 +92,10 @@ if [ "$platform" == "mac" ]; then
   brew install hashicorp/tap/nomad
   if command -v rustup &> /dev/null; then
     rustup component add rust-src rust-analyzer
+  fi
+
+  if command -v wt &> /dev/null; then
+    wt config shell install
   fi
 
   brew tap versatiles-org/versatiles

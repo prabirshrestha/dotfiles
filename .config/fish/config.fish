@@ -34,8 +34,6 @@ set -gx SOPS_AGE_KEY_FILE ~/.config/sops/age/keys.txt
 
 alias tailscale "/Applications/Tailscale.app/Contents/MacOS/Tailscale"
 
-alias satyrn "open /Applications/satyrn.app"
-
 alias k "kubectl"
 
 alias g "git"
@@ -75,71 +73,29 @@ alias gcp "git cherry-pick"
 
 alias claude-yolo "claude --dangerously-skip-permissions"
 
-# Git Worktree
-alias gw "git worktree"
-alias gwl "git worktree list"
-# gwr: git worktree remove (interactive multiselect if no args)
+# Git Worktree (using worktrunk)
+alias gw "wt"
+alias gwl "wt list"
+alias gws "wt select"
+# gwr: git worktree remove (interactive)
 function gwr
-    if test (count $argv) -eq 0
-        set -l worktrees (git worktree list | tv | awk '{print $1}')
-        for worktree in $worktrees
-            if test -n "$worktree"
-                if not git worktree remove $worktree 2>/dev/null
-                    read -l -P "Force remove $worktree? [y/N] " confirm
-                    if test "$confirm" = y -o "$confirm" = Y
-                        git worktree remove --force $worktree
-                    end
-                end
-            end
-        end
-    else
-        if not git worktree remove $argv[1] 2>/dev/null
-            read -l -P "Force remove $argv[1]? [y/N] " confirm
-            if test "$confirm" = y -o "$confirm" = Y
-                git worktree remove --force $argv[1]
-            end
-        end
+    set -l branch (wt list --format json | jq -r '.[].branch' | tv)
+    if test -n "$branch"
+        wt remove $branch
     end
 end
-
-# gws: git worktree switch (interactive)
-function gws
-    set -l worktree (git worktree list | tv | awk '{print $1}')
-    if test -n "$worktree"
-        cd $worktree
-    end
-end
-
 # gcow: git checkout worktree (-b for new branch)
 function gcow
-    set -l create_branch 0
-    set -l args
-
-    for arg in $argv
-        if test "$arg" = "-b"
-            set create_branch 1
-        else
-            set -a args $arg
-        end
-    end
-
-    if test (count $args) -eq 0
-        echo "Usage: gcow [-b] <branch> [path]"
+    if test (count $argv) -eq 0
+        echo "Usage: gcow [-b] <branch>"
         return 1
     end
 
-    set -l branch $args[1]
-    set -l path $args[2]
-    if test -z "$path"
-        set path "../"(basename (git rev-parse --show-toplevel))"-$branch"
-    end
-
-    if test $create_branch -eq 1
-        git worktree add $path -b $branch
+    if test "$argv[1]" = "-b"
+        wt switch $argv[2..-1] --create
     else
-        git worktree add $path $branch
+        wt switch $argv
     end
-    and cd $path
 end
 
 # gpr: git pr switch (interactive with -w for worktree)
