@@ -72,6 +72,7 @@ alias gco "git checkout"
 alias gcp "git cherry-pick"
 
 alias claude-yolo "claude --dangerously-skip-permissions"
+alias claudey "claude --dangerously-skip-permissions"
 
 # Git Worktree (using worktrunk)
 alias gw "wt"
