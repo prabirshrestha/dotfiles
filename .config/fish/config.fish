@@ -76,10 +76,11 @@ alias claude-yolo "claude --dangerously-skip-permissions"
 # Git Worktree (using worktrunk)
 alias gw "wt"
 alias gwl "wt list"
-alias gws "wt select"
+# gws: git worktree switch (interactive, includes main)
+alias gws "wt select --branches"
 # gwr: git worktree remove (interactive)
 function gwr
-    set -l branch (wt list --format json | jq -r '.[].branch' | tv)
+    set -l branch (wt list --format json 2>/dev/null | jq -r '.[].branch' | grep -v '^\[0m$' | tv)
     if test -n "$branch"
         wt remove $branch
     end

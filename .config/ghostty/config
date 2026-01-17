@@ -1,5 +1,7 @@
 command = /opt/homebrew/bin/fish --login --interactive
 
+window-inherit-working-directory = true
+
 keybind = ctrl+shift+comma=reload_config
 
 keybind = ctrl+a>n=new_window
