@@ -118,10 +118,6 @@ if [ "$platform" == "mac" ]; then
       azure-cli \
       ;
     brew install --cask yubico-yubikey-manager
-  else
-    brew install \
-      betterzip \
-      ;
   fi
 elif [ "$platform" == "linux" ]; then
   echo "Linux Detected"
