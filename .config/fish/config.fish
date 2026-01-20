@@ -79,6 +79,8 @@ alias gw "wt"
 alias gwl "wt list"
 # gws: git worktree switch (interactive, includes main)
 alias gws "wt select --branches"
+# gwm: git worktree main (switch to main worktree)
+alias gwm "wt switch main"
 # gwr: git worktree remove (interactive)
 function gwr
     set -l branch (wt list --format json 2>/dev/null | jq -r '.[].branch' | grep -v '^\[0m$' | tv)
