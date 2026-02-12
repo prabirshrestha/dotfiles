@@ -78,7 +78,7 @@ alias claudey "claude --dangerously-skip-permissions"
 alias gw "wt"
 alias gwl "wt list"
 # gws: git worktree switch (interactive, includes main)
-alias gws "wt select --branches"
+alias gws "wt switch --branches"
 # gwm: git worktree main (switch to main worktree)
 alias gwm "wt switch main"
 # gwr: git worktree remove (interactive)
