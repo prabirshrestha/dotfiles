@@ -23,6 +23,14 @@ end
 fish_add_path ~/.bun/bin
 fish_add_path ~/.cargo/bin
 
+if type -q brew; and brew --prefix dotnet &>/dev/null
+    set -gx DOTNET_ROOT (brew --prefix dotnet)/libexec
+end
+
+if test -d ~/.dotnet/tools
+    fish_add_path ~/.dotnet/tools
+end
+
 type -q zoxide; and zoxide init fish | source
 if test -n "$HOME/.config/fish/completions/pnpm.fish"
   source "$HOME/.config/fish/completions/pnpm.fish"
