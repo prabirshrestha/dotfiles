@@ -3,7 +3,6 @@ idiomatic_version_file_enable_tools = ["node", "rust"]
 experimental = true
 
 [tools]
-cargo = "latest"
 bun = "latest"
 node = "latest"
 rust = "latest"
