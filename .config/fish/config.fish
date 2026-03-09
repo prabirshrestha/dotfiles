@@ -71,8 +71,27 @@ alias gca "git commit -a"
 alias gco "git checkout"
 alias gcp "git cherry-pick"
 
-alias claude-yolo "claude --dangerously-skip-permissions"
-alias claudey "claude --dangerously-skip-permissions"
+# agent-safehouse: sandbox agents with deny-first access model
+# use `command <agent>` to bypass the sandbox
+if command -q safehouse
+    function safe
+        safehouse $argv
+    end
+    function claude
+        safe claude --dangerously-skip-permissions $argv
+    end
+    alias claude-yolo claude
+    alias claudey claude
+    function copilot-cli
+        safe copilot-cli $argv
+    end
+    function opencode
+        safe opencode $argv
+    end
+else
+    alias claude-yolo "claude --dangerously-skip-permissions"
+    alias claudey "claude --dangerously-skip-permissions"
+end
 
 # Git Worktree (using worktrunk)
 alias gw "wt"

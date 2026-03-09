@@ -27,6 +27,7 @@ if [ "$platform" == "mac" ]; then
     cargo-make \
     cargo-watch \
     code2prompt \
+    copilot-cli \
     deskpad \
     docker \
     docker-credential-helper \
@@ -110,6 +111,12 @@ if [ "$platform" == "mac" ]; then
   steampipe plugin install azuredevops
 
   brew install siderolabs/tap/talosctl
+
+  # Install agent-safehouse
+  mkdir -p ~/.local/bin
+  curl -fsSL https://raw.githubusercontent.com/eugene1g/agent-safehouse/main/dist/safehouse.sh \
+    -o ~/.local/bin/safehouse
+  chmod +x ~/.local/bin/safehouse
 
   if [[ "$(scutil --get ComputerName)" == *"Work"* ]]; then
     brew install \
