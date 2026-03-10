@@ -94,7 +94,7 @@ if command -q safehouse
         end
     end
     function safe
-        safehouse --enable=browser-native-messaging --enable=clipboard (_safehouse_worktree_args) $argv
+        safehouse --enable=browser-native-messaging --enable=clipboard --add-dirs-ro="$HOME/Library/Application Support/CleanShot" (_safehouse_worktree_args) $argv
     end
     function claude
         safe claude --dangerously-skip-permissions $argv
