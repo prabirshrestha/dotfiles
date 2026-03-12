@@ -107,9 +107,6 @@ if [ "$platform" == "mac" ]; then
     zed@preview \
   ;
 
-  brew install turbot/tap/steampipe
-  steampipe plugin install azuredevops
-
   brew install siderolabs/tap/talosctl
 
   # Install agent-safehouse
