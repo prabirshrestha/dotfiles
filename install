@@ -45,6 +45,7 @@ if [ "$platform" == "mac" ]; then
     fnm \
     fzf \
     gh \
+    git-credential-manager \
     hyperfine \
     jj \
     jq \
