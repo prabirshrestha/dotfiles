@@ -91,7 +91,7 @@ if command -q safehouse
         end
     end
     function safe
-        safehouse (_safehouse_worktree_args) $argv
+        safehouse --enable=browser-native-messaging (_safehouse_worktree_args) $argv
     end
     function claude
         safe claude --dangerously-skip-permissions $argv
@@ -99,7 +99,7 @@ if command -q safehouse
     alias claude-yolo claude
     alias claudey claude
     function copilot
-        safe --enable=browser-native-messaging copilot $argv
+        safe copilot $argv
     end
     function opencode
         safe opencode $argv
