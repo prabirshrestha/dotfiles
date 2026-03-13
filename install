@@ -14,6 +14,9 @@ esac
 if [ "$platform" == "mac" ]; then
   echo "Detected MacOS"
 
+  export HOMEBREW_NO_ENV_HINTS=1
+  export HOMEBREW_NO_ANALYTICS=1
+
   if ! command -v brew &> /dev/null; then
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
     eval "$(/opt/homebrew/bin/brew shellenv)"
@@ -88,8 +91,7 @@ if [ "$platform" == "mac" ]; then
     ollama-app \
   ;
 
-  brew tap hashicorp/tap
-  brew install hashicorp/tap/nomad
+
   if command -v rustup &> /dev/null; then
     rustup component add rust-src rust-analyzer
   fi
@@ -98,8 +100,6 @@ if [ "$platform" == "mac" ]; then
     wt config shell install
   fi
 
-  brew tap versatiles-org/versatiles
-  brew install versatiles
 
   brew install --cask \
     disk-inventory-x \
