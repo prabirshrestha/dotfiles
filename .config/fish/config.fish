@@ -2,6 +2,7 @@
 set fish_greeting
 
 set -gx EDITOR vim
+set -gx DO_NOT_TRACK 1
 
 # https://github.com/sigoden/aichat/issues/769#issuecomment-2259388600
 set -x AICHAT_CONFIG_DIR $HOME/.config/aichat
@@ -90,8 +91,8 @@ if command -q safehouse
     end
     alias claude-yolo claude
     alias claudey claude
-    function copilot-cli
-        safe copilot-cli $argv
+    function copilot
+        safehouse --enable=browser-native-messaging copilot $argv
     end
     function opencode
         safe opencode $argv
