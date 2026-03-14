@@ -24,6 +24,11 @@ end
 fish_add_path ~/.bun/bin
 fish_add_path ~/.cargo/bin
 
+if type -q sccache
+    set -gx RUSTC_WRAPPER sccache
+    set -gx SCCACHE_DIR $HOME/.cache/sccache
+end
+
 if type -q brew; and brew --prefix dotnet &>/dev/null
     set -gx DOTNET_ROOT (brew --prefix dotnet)/libexec
 end

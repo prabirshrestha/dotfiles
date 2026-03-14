@@ -68,6 +68,7 @@ if [ "$platform" == "mac" ]; then
     pnpm \
     ripgrep \
     rustup \
+    sccache \
     sops \
     talhelper \
     television \
