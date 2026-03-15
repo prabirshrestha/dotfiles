@@ -8,3 +8,6 @@ then
   #alias ll="gls -l --color"
   #alias la='gls -A --color'
 fi
+
+# tailscale cli from the mac app
+alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"

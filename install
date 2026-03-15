@@ -91,6 +91,7 @@ if [ "$platform" == "mac" ]; then
     freelens \
     ghostty \
     ollama-app \
+    tailscale-app \
   ;
 
 
