@@ -62,6 +62,7 @@ if [ "$platform" == "mac" ]; then
     localai \
     lnav \
     mise \
+    mosh \
     opensuperwhisper \
     poppler \
     portaudio \
@@ -158,6 +159,7 @@ elif [ "$platform" == "linux" ]; then
       google-chrome \
       gvim \
       linux-headers \
+      mosh \
       lua \
       picom \
       polybar \
@@ -180,6 +182,7 @@ elif [ "$platform" == "linux" ]; then
      build-essential \
      curl \
      git \
+     mosh \
      vim
   else
     echo "Unsupported Linux Distro"
