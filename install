@@ -92,7 +92,6 @@ if [ "$platform" == "mac" ]; then
     freelens \
     ghostty \
     ollama-app \
-    tailscale-app \
   ;
 
 
@@ -122,6 +121,8 @@ if [ "$platform" == "mac" ]; then
       azure-cli \
       ;
     brew install --cask yubico-yubikey-manager
+  else
+    brew install --cask tailscale-app
   fi
 elif [ "$platform" == "linux" ]; then
   echo "Linux Detected"
