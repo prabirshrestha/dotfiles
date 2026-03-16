@@ -86,15 +86,8 @@ alias gcp "git cherry-pick"
 # agent-safehouse: sandbox agents with deny-first access model
 # use `command <agent>` to bypass the sandbox
 if command -q safehouse
-    function _safehouse_worktree_args
-        set -l git_common_dir (git rev-parse --git-common-dir 2>/dev/null)
-        set -l git_dir (git rev-parse --git-dir 2>/dev/null)
-        if test -n "$git_common_dir" -a "$git_common_dir" != "$git_dir"
-            echo --add-dirs=(builtin realpath -s "$git_common_dir" 2>/dev/null)
-        end
-    end
     function safe
-        safehouse --enable=browser-native-messaging --enable=clipboard --add-dirs-ro="$HOME/Library/Application Support/CleanShot" (_safehouse_worktree_args) $argv
+        safehouse --enable=browser-native-messaging --enable=clipboard --enable=ssh --add-dirs-ro="$HOME/Library/Application Support/CleanShot" $argv
     end
     function claude
         safe claude --dangerously-skip-permissions $argv
