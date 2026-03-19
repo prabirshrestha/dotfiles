@@ -109,7 +109,6 @@ if [ "$platform" == "mac" ]; then
   brew install --cask \
     disk-inventory-x \
     keepassxc \
-    sourcetree \
     zed@preview \
   ;
 
