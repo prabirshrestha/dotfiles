@@ -47,6 +47,7 @@ if [ "$platform" == "mac" ]; then
     gh \
     git-credential-manager \
     git-gui \
+    git-lfs \
     hyperfine \
     jj \
     jq \
