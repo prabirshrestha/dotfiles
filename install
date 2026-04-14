@@ -118,6 +118,9 @@ if [ "$platform" == "mac" ]; then
 
   brew install eugene1g/safehouse/agent-safehouse
 
+  # agent-browser requires remote debugging enabled in Chrome: chrome://inspect/#remote-debugging
+  brew install eugene1g/safehouse/agent-browser
+
   if [[ "$(scutil --get ComputerName)" == *"Work"* ]]; then
     brew install \
       gettext \
