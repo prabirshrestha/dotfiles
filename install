@@ -24,7 +24,6 @@ if [ "$platform" == "mac" ]; then
 
   brew install \
     age \
-    agent-browser \
     aider \
     bat \
     axodotdev/tap/cargo-dist \
@@ -117,8 +116,10 @@ if [ "$platform" == "mac" ]; then
 
   brew install siderolabs/tap/talosctl
 
-  # agent-browser requires remote debugging enabled in Chrome: chrome://inspect/#remote-debugging
   brew install eugene1g/safehouse/agent-safehouse
+
+  # agent-browser requires remote debugging enabled in Chrome: chrome://inspect/#remote-debugging
+  brew install agent-browser
 
   if [[ "$(scutil --get ComputerName)" == *"Work"* ]]; then
     brew install \
