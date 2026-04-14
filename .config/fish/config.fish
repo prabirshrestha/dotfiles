@@ -87,7 +87,7 @@ alias gcp "git cherry-pick"
 # use `command <agent>` to bypass the sandbox
 if command -q safehouse
     function safe
-        safehouse --enable=browser-native-messaging --enable=clipboard --enable=ssh --add-dirs-ro="$HOME/Library/Application Support/CleanShot" $argv
+        safehouse --enable=browser-native-messaging --enable=agent-browser --enable=clipboard --enable=ssh --add-dirs-ro="$HOME/Library/Application Support/CleanShot" $argv
     end
     function claude
         safe claude --dangerously-skip-permissions $argv
