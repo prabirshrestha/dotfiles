@@ -87,7 +87,16 @@ alias gcp "git cherry-pick"
 # use `command <agent>` to bypass the sandbox
 if command -q safehouse
     function safe
-        safehouse --enable=browser-native-messaging --enable=agent-browser --enable=clipboard --enable=ssh --enable=all-agents --add-dirs-ro="$HOME/Library/Application Support/CleanShot" --add-dirs="$HOME/Library/Application Support/Microsoft Edge/DevToolsActivePort" $argv
+        set -l extra_args
+        set -l cleanshot_dir "$HOME/Library/Application Support/CleanShot"
+        if test -e "$cleanshot_dir"
+            set -a extra_args --add-dirs-ro="$cleanshot_dir"
+        end
+        set -l edge_devtools "$HOME/Library/Application Support/Microsoft Edge/DevToolsActivePort"
+        if test -e "$edge_devtools"
+            set -a extra_args --add-dirs="$edge_devtools"
+        end
+        safehouse --enable=browser-native-messaging --enable=agent-browser --enable=clipboard --enable=ssh --enable=all-agents $extra_args $argv
     end
     function claude
         safe claude --dangerously-skip-permissions $argv
