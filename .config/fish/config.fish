@@ -114,6 +114,45 @@ else
     alias claudey "claude --dangerously-skip-permissions"
 end
 
+# nono: OS-level command sandbox (functions end in "n" to mark nono-wrapped)
+# use `command <agent>` to bypass the sandbox
+if command -q nono
+    function clauden
+        nono run --silent --profile claude-code --allow-cwd -- claude --dangerously-skip-permissions $argv
+    end
+    function opencoden
+        nono run --silent --profile opencode --allow-cwd -- opencode $argv
+    end
+    # copilot has no built-in profile yet — track: https://github.com/always-further/nono/issues/623
+    # piggyback on claude-code profile: it already bundles node_runtime, system_read_macos,
+    # homebrew_macos, git_config, user_caches_macos, and the claude_code_macos group
+    # (which grants the *.keychain-db file overrides copilot auth needs).
+    function copilotn
+        set -l extra_args
+        set -l gh_config "$HOME/.config/gh"
+        if test -d "$gh_config"
+            set -a extra_args --allow "$gh_config"
+        end
+        set -l copilot_config "$HOME/.copilot"
+        if test -d "$copilot_config"
+            set -a extra_args --allow "$copilot_config"
+        end
+        set -l copilot_cache "$HOME/Library/Caches/copilot"
+        if test -d "$copilot_cache"
+            set -a extra_args --allow "$copilot_cache"
+        end
+        set -l agents_dir "$HOME/.agents"
+        if test -d "$agents_dir"
+            set -a extra_args --read "$agents_dir"
+        end
+        set -l mise_dir "$HOME/.local/share/mise"
+        if test -d "$mise_dir"
+            set -a extra_args --read "$mise_dir"
+        end
+        nono run --silent --profile claude-code --allow-cwd $extra_args -- copilot $argv
+    end
+end
+
 # Git Worktree (using worktrunk)
 alias gw "wt"
 alias gwl "wt list"
