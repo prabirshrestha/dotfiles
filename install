@@ -197,3 +197,7 @@ elif [ "$platform" == "linux" ]; then
     exit 1
   fi
 fi
+
+if command -v bunx &> /dev/null; then
+  bunx skills add JimLiu/baoyu-skills/skills/baoyu-infographic --global --yes
+fi
