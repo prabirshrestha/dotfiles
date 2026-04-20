@@ -66,6 +66,7 @@ if [ "$platform" == "mac" ]; then
     mise \
     mole \
     mosh \
+    nono \
     opensuperwhisper \
     poppler \
     portaudio \
@@ -97,7 +98,6 @@ if [ "$platform" == "mac" ]; then
     ghostty \
     ollama-app \
   ;
-
 
   if command -v rustup &> /dev/null; then
     rustup component add rust-src rust-analyzer
