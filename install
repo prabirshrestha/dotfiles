@@ -29,6 +29,7 @@ if [ "$platform" == "mac" ]; then
     axodotdev/tap/cargo-dist \
     cargo-make \
     cargo-watch \
+    cmux \
     code2prompt \
     copilot-cli \
     deskpad \
