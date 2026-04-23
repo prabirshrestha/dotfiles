@@ -202,4 +202,5 @@ fi
 if command -v bunx &> /dev/null; then
   bunx skills add JimLiu/baoyu-skills/skills/baoyu-infographic --global --yes
   bunx skills add JimLiu/baoyu-skills/skills/baoyu-imagine --global --yes
+  bunx skills add mattpocock/skills/grill-me --global --yes
 fi
