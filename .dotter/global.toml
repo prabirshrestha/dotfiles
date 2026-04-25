@@ -26,6 +26,9 @@
 [ghostty.files]
 ".config/ghostty" = { type = "symbolic" , target = "~/.config/ghostty" }
 
+[cmux.files]
+".config/cmux" = { type = "symbolic" , target = "~/.config/cmux" }
+
 [mise.files]
 ".config/mise" = { type = "symbolic" , target = "~/.config/mise" }
 

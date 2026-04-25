@@ -1,0 +1,21 @@
+{
+  "$schema": "https://raw.githubusercontent.com/manaflow-ai/cmux/main/web/data/cmux-settings.schema.json",
+  "schemaVersion": 1,
+
+  // ctrl+a chord prefix mirrored from .config/ghostty/config — cmux does not
+  // inherit Ghostty's keybinds, so they're duplicated here in cmux-native form.
+  "shortcuts": {
+    "bindings": {
+      "newWindow":       ["ctrl+a", "n"],
+      "newSurface":      ["ctrl+a", "c"],
+      "splitDown":       ["ctrl+a", "-"],
+      "splitRight":      ["ctrl+a", "\\"],
+      "focusUp":         ["ctrl+a", "k"],
+      "focusDown":       ["ctrl+a", "j"],
+      "focusRight":      ["ctrl+a", "l"],
+      "focusLeft":       ["ctrl+a", "h"],
+      "toggleSplitZoom": ["ctrl+a", "z"],
+      "closeTab":        ["ctrl+a", "x"]
+    }
+  }
+}
