@@ -17,5 +17,14 @@
       "toggleSplitZoom": ["ctrl+a", "z"],
       "closeTab":        ["ctrl+a", "x"]
     }
+  },
+
+  "browser": {
+    "openTerminalLinksInCmuxBrowser": false,
+    "interceptTerminalOpenCommandInCmuxBrowser": false
+  },
+  "sidebar": {
+    "openPortLinksInCmuxBrowser": false,
+    "openPullRequestLinksInCmuxBrowser": false
   }
 }
