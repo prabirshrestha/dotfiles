@@ -247,6 +247,62 @@ if command -q tv
         commandline -i "$selected_dir"
     end
     commandline -f repaint'
+
+    # Ports of github.com/prabirshrestha/fzf-scripts using tv.
+    # fbr is omitted — gbs above already covers branch checkout (including remotes).
+
+    # fcoc: fuzzy checkout commit
+    function fcoc
+        set -l commit (tv -s 'git log --pretty=oneline --abbrev-commit --reverse' --no-sort | awk '{print $1}')
+        if test -n "$commit"
+            git checkout $commit
+        end
+    end
+
+    # fcs: fuzzy commit select — prints the chosen hash, e.g. `git show (fcs)`
+    function fcs
+        tv -s 'git log --color=always --pretty=oneline --abbrev-commit --reverse' --ansi --no-sort | awk '{print $1}'
+    end
+
+    # fcd: fuzzy cd into a subdirectory (renamed from fd.cmd to avoid clashing with fd-find)
+    function fcd
+        set -l dir (tv -s 'fd --type d')
+        if test -n "$dir"
+            cd $dir
+        end
+    end
+
+    # fcdf: fuzzy-pick a file and cd into its parent directory
+    function fcdf
+        set -l file (tv -s 'fd --type f')
+        if test -n "$file"
+            cd (dirname $file)
+        end
+    end
+
+    # fdr: fuzzy cd to a parent directory
+    function fdr
+        set -l dir (pwd)
+        set -l parents
+        while test "$dir" != /
+            set dir (dirname $dir)
+            set -a parents $dir
+        end
+        set -l selected (printf '%s\n' $parents | tv)
+        if test -n "$selected"
+            cd $selected
+        end
+    end
+
+    # fgk: fuzzy gitk on selected branch (includes remotes)
+    if command -q gitk
+        function fgk
+            set -l branch (git branch -a --format='%(refname:short)' | tv)
+            if test -n "$branch"
+                gitk $branch &
+            end
+        end
+    end
 end
 
 if test -f ~/.config/fish/local.config.fish
