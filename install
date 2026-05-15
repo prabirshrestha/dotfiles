@@ -200,11 +200,15 @@ elif [ "$platform" == "linux" ]; then
   fi
 fi
 
-if command -v bunx &> /dev/null; then
-  bunx skills add Cocoon-AI/architecture-diagram-generator --global --yes
-  bunx skills add JimLiu/baoyu-skills/skills/baoyu-imagine --global --yes
-  bunx skills add JimLiu/baoyu-skills/skills/baoyu-infographic --global --yes
-  bunx skills add mattpocock/skills/skills/productivity/grill-me --global --yes
+if command -v bun &> /dev/null; then
+  bun x skills add Cocoon-AI/architecture-diagram-generator --global --yes
+  bun x skills add JimLiu/baoyu-skills/skills/baoyu-imagine --global --yes
+  bun x skills add JimLiu/baoyu-skills/skills/baoyu-infographic --global --yes
+  bun x skills add mattpocock/skills/skills/productivity/grill-me --global --yes
+  bun x skills add https://github.com/browser-use/browser-harness-js --skill cdp --global --yes
+  mkdir -p "$HOME/.local/bin"
+  ln -sf "$HOME/.agents/skills/cdp/sdk/browser-harness-js" \
+    "$HOME/.local/bin/browser-harness-js"
 fi
 
 # Minimum release age: only install package versions older than 7 days
