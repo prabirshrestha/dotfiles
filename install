@@ -206,3 +206,20 @@ if command -v bunx &> /dev/null; then
   bunx skills add JimLiu/baoyu-skills/skills/baoyu-infographic --global --yes
   bunx skills add mattpocock/skills/skills/productivity/grill-me --global --yes
 fi
+
+# Minimum release age: only install package versions older than 7 days
+# (mitigates supply-chain attacks via freshly-published malicious versions)
+if command -v npm &> /dev/null; then
+  npm config set min-release-age=7
+fi
+if command -v pnpm &> /dev/null; then
+  pnpm config set minimumReleaseAge 10080
+fi
+if command -v yarn &> /dev/null; then
+  yarn config set -H npmMinimalAgeGate "168h"
+fi
+if command -v bun &> /dev/null; then
+  if ! grep -q "minimumReleaseAge" "$HOME/.bunfig.toml" 2>/dev/null; then
+    printf '\n[install]\nminimumReleaseAge = 604800\n' >> "$HOME/.bunfig.toml"
+  fi
+fi
