@@ -215,8 +215,11 @@ elif [ "$platform" = "windows" ] || [ "$platform" = "cygwin" ] || [ "$platform" 
   if ! cmd.exe /c where scoop > /dev/null 2>&1; then
     powershell.exe -NoProfile -ExecutionPolicy Bypass -Command "Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser -Force; Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression"
   fi
-  if [ -d "$HOME/scoop/shims" ]; then
-    PATH="$HOME/scoop/shims:$PATH"
+  scoop_shims="$(powershell.exe -NoProfile -ExecutionPolicy Bypass -Command '$scoop = if ($env:SCOOP) { $env:SCOOP } else { Join-Path $env:USERPROFILE "scoop" }; Write-Output (Join-Path $scoop "shims")' | tr -d '\r')"
+  PATH="$scoop_shims:$PATH"
+  if ! cmd.exe /c where scoop > /dev/null 2>&1 && ! command -v scoop > /dev/null 2>&1; then
+    echo "Scoop is not available after installation."
+    exit 1
   fi
 
   if ! scoop bucket list | grep -qi '^extras$'; then
