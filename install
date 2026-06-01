@@ -216,28 +216,32 @@ elif [ "$platform" = "windows" ] || [ "$platform" = "cygwin" ] || [ "$platform" 
     powershell.exe -NoProfile -ExecutionPolicy Bypass -Command "Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser -Force; Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression"
   fi
 
-  scoop_packages="dotter 7zip clink fzf television zoxide"
-  powershell.exe -NoProfile -ExecutionPolicy Bypass -Command "
-    `$ErrorActionPreference = 'Stop'
-    `$scoop = Get-Command scoop -ErrorAction SilentlyContinue
-    if (-not `$scoop) {
-      `$shim = Join-Path `$env:USERPROFILE 'scoop\shims\scoop.cmd'
-      if (Test-Path `$shim) {
-        `$env:PATH = (Split-Path `$shim) + ';' + `$env:PATH
+  powershell.exe -NoProfile -ExecutionPolicy Bypass -Command '
+    $ErrorActionPreference = "Stop"
+    $scoop = Get-Command scoop -ErrorAction SilentlyContinue
+    if (-not $scoop) {
+      $shim = Join-Path $env:USERPROFILE "scoop\shims\scoop.cmd"
+      if (Test-Path $shim) {
+        $env:PATH = (Split-Path $shim) + ";" + $env:PATH
       } else {
-        throw 'Scoop is not available after installation.'
+        throw "Scoop is not available after installation."
       }
     }
-    if (-not (scoop bucket list | Select-String -Quiet '^extras$')) {
+    if (-not (scoop bucket list | Select-String -Quiet "^extras$")) {
       scoop bucket add extras
     }
-    foreach (`$pkg in '$scoop_packages'.Split(' ')) {
-      scoop prefix `$pkg *> `$null
-      if (`$LASTEXITCODE -ne 0) {
-        scoop install `$pkg
+    foreach ($pkg in @("dotter", "7zip", "clink", "fzf", "nodejs-lts", "television", "zoxide")) {
+      scoop prefix $pkg *> $null
+      if ($LASTEXITCODE -ne 0) {
+        scoop install $pkg
       }
     }
-  "
+    if (Get-Command npm -ErrorAction SilentlyContinue) {
+      npm install -g @github/copilot
+    } else {
+      Write-Host "Skipping GitHub Copilot CLI; npm is not available."
+    }
+  '
 fi
 
 if command -v bun > /dev/null 2>&1; then
