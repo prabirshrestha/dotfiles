@@ -220,6 +220,8 @@ elif [ "$platform" = "windows" ] || [ "$platform" = "cygwin" ] || [ "$platform" 
 
   if ! cmd.exe /c where scoop > /dev/null 2>&1; then
     powershell.exe -NoProfile -ExecutionPolicy Bypass -Command "Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser -Force; Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression"
+  fi
+  if [ -d "$HOME/scoop/shims" ]; then
     PATH="$HOME/scoop/shims:$PATH"
   fi
 
@@ -227,7 +229,7 @@ elif [ "$platform" = "windows" ] || [ "$platform" = "cygwin" ] || [ "$platform" 
     scoop bucket add extras
   fi
 
-  scoop_packages="dotter 7zip fzf television zoxide"
+  scoop_packages="dotter 7zip clink fzf television zoxide"
   for pkg in $scoop_packages; do
     if ! scoop prefix "$pkg" > /dev/null 2>&1; then
       scoop install "$pkg"
@@ -294,4 +296,15 @@ if [ -x "$dotfiles_dir/configure" ]; then
   cd "$oldpwd"
 else
   echo "Skipping dotfiles apply; $dotfiles_dir/configure was not found or is not executable."
+fi
+
+if [ "$platform" = "windows" ] || [ "$platform" = "cygwin" ] || [ "$platform" = "mingw" ]; then
+  if command -v clink > /dev/null 2>&1 && [ -d "$dotfiles_dir/clink" ]; then
+    clink_profile="${LOCALAPPDATA:-$HOME/AppData/Local}/clink"
+    echo "Configuring Clink profile in $clink_profile"
+    mkdir -p "$clink_profile"
+    cp "$dotfiles_dir"/clink/*.lua "$clink_profile"/
+    cp "$dotfiles_dir"/clink/clink_settings "$clink_profile"/
+    clink autorun install -- --profile "$clink_profile"
+  fi
 fi
