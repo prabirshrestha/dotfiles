@@ -210,7 +210,7 @@ elif [ "$platform" = "linux" ]; then
   fi
 elif [ "$platform" = "windows" ] || [ "$platform" = "cygwin" ] || [ "$platform" = "mingw" ]; then
   echo "Windows Detected"
-  powershell.exe -NoProfile -ExecutionPolicy Bypass -Command 'if (Test-Path "$env:SystemRoot\System32\sudo.exe") { & "$env:SystemRoot\System32\sudo.exe" *> $null; if ($LASTEXITCODE -eq 2) { Start-Process "$env:SystemRoot\System32\sudo.exe" -ArgumentList "config --enable normal" -Verb RunAs -Wait } }'
+  powershell.exe -NoProfile -ExecutionPolicy Bypass -Command 'if (Test-Path "$env:SystemRoot\System32\sudo.exe") { Write-Host "Enabling Windows sudo inline mode..."; Start-Process "$env:SystemRoot\System32\sudo.exe" -ArgumentList "config --enable normal" -Verb RunAs -Wait } else { Write-Host "Windows sudo is not available on this machine." }'
 
   if ! cmd.exe /c where scoop > /dev/null 2>&1; then
     powershell.exe -NoProfile -ExecutionPolicy Bypass -Command "Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser -Force; Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression"
