@@ -161,6 +161,10 @@ if command -q nono
         if test -d "$mise_dir"
             set -a extra_args --read "$mise_dir"
         end
+        set -l agency_config "$HOME/.config/agency"
+        if test -d "$agency_config"
+            set -a extra_args --read "$agency_config"
+        end
         nono run --silent --profile claude-code --allow-cwd $extra_args -- copilot $argv
     end
 end
