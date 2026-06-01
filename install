@@ -1,6 +1,12 @@
 #!/usr/bin/env sh
 set -e
 
+script_path="$0"
+case "$script_path" in
+  /*) ;;
+  *) script_path="$(pwd)/$script_path";;
+esac
+
 arch="$(uname -m)"
 unameOut="$(uname -s)"
 case "${unameOut}" in
@@ -279,6 +285,8 @@ if command -v git > /dev/null 2>&1; then
   if [ ! -d "$dotfiles_dir/.git" ]; then
     echo "Cloning dotfiles into $dotfiles_dir"
     git clone --recurse-submodules https://github.com/prabirshrestha/dotfiles.git "$dotfiles_dir"
+  elif [ "$script_path" != "$dotfiles_dir/install" ]; then
+    echo "Skipping dotfiles update; install is running outside $dotfiles_dir."
   elif [ -z "$(git -C "$dotfiles_dir" status --porcelain)" ]; then
     echo "Updating dotfiles in $dotfiles_dir"
     git -C "$dotfiles_dir" pull --rebase
