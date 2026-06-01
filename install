@@ -249,7 +249,10 @@ fi
 # Minimum release age: only install package versions older than 7 days
 # (mitigates supply-chain attacks via freshly-published malicious versions)
 if command -v npm > /dev/null 2>&1; then
-  npm config set min-release-age=7
+  if ! npm config set min-release-age=7; then
+    npm install -g npm@latest
+    npm config set min-release-age=7
+  fi
 fi
 if command -v pnpm > /dev/null 2>&1; then
   pnpm config set minimumReleaseAge 10080
