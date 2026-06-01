@@ -50,8 +50,8 @@ curl.exe -fL -o "%TEMP%\busybox-%PROCESSOR_ARCHITECTURE%.exe" "https://github.co
 ./install
 ```
 
-This will clone or update `~/.dotfiles` and symlink the appropriate files to your
-home directory. If `~/.dotfiles` has local changes, it skips the update.
+This will clone `~/.dotfiles` if missing and symlink the appropriate files to your
+home directory.
 
 ## Thanks
 
