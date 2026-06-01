@@ -273,18 +273,25 @@ dotfiles_dir="$HOME/.dotfiles"
 
 if command -v git > /dev/null 2>&1; then
   if [ ! -d "$dotfiles_dir/.git" ]; then
+    echo "Cloning dotfiles into $dotfiles_dir"
     git clone --recurse-submodules https://github.com/prabirshrestha/dotfiles.git "$dotfiles_dir"
   elif [ -z "$(git -C "$dotfiles_dir" status --porcelain)" ]; then
+    echo "Updating dotfiles in $dotfiles_dir"
     git -C "$dotfiles_dir" pull --rebase
     git -C "$dotfiles_dir" submodule update --init --recursive
   else
     echo "Skipping dotfiles update; $dotfiles_dir has local changes."
   fi
+else
+  echo "Skipping dotfiles update; git is not installed."
 fi
 
 if [ -x "$dotfiles_dir/configure" ]; then
+  echo "Applying dotfiles from $dotfiles_dir"
   oldpwd="$(pwd)"
   cd "$dotfiles_dir"
   ./configure
   cd "$oldpwd"
+else
+  echo "Skipping dotfiles apply; $dotfiles_dir/configure was not found or is not executable."
 fi
