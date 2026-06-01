@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env sh
 set -e
 
 arch="$(uname -m)"
@@ -7,17 +7,19 @@ case "${unameOut}" in
   Linux*)     platform=linux;;
   Darwin*)    platform=mac;;
   CYGWIN*)    platform=cygwin;;
+  MSYS*)      platform=windows;;
   MINGW*)     platform=mingw;;
+  Windows*|Window*) platform=windows;;
   *)          platform="UNKNOWN:${unameOut}"
 esac
 
-if [ "$platform" == "mac" ]; then
+if [ "$platform" = "mac" ]; then
   echo "Detected MacOS"
 
   export HOMEBREW_NO_ENV_HINTS=1
   export HOMEBREW_NO_ANALYTICS=1
 
-  if ! command -v brew &> /dev/null; then
+  if ! command -v brew > /dev/null 2>&1; then
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
     eval "$(/opt/homebrew/bin/brew shellenv)"
   fi
@@ -104,11 +106,11 @@ if [ "$platform" == "mac" ]; then
     ollama-app \
   ;
 
-  if command -v rustup &> /dev/null; then
+  if command -v rustup > /dev/null 2>&1; then
     rustup component add rust-src rust-analyzer
   fi
 
-  if command -v wt &> /dev/null; then
+  if command -v wt > /dev/null 2>&1; then
     wt config shell install
   fi
 
@@ -126,18 +128,21 @@ if [ "$platform" == "mac" ]; then
   # agent-browser requires remote debugging enabled in Chrome: chrome://inspect/#remote-debugging
   brew install agent-browser
 
-  if [[ "$(scutil --get ComputerName)" == *"Work"* ]]; then
+  case "$(scutil --get ComputerName)" in
+  *Work*)
     brew install \
       gettext \
       azure-data-studio \
       azure-cli \
       ;
     brew install --cask yubico-yubikey-manager
-  else
+    ;;
+  *)
     brew install --cask tailscale-app
     brew install hermes-agent
-  fi
-elif [ "$platform" == "linux" ]; then
+    ;;
+  esac
+elif [ "$platform" = "linux" ]; then
   echo "Linux Detected"
   if [ -f "/etc/arch-release" ]; then
     echo "ArchLinux detected"
@@ -155,13 +160,14 @@ elif [ "$platform" == "linux" ]; then
     else
       USERNAME=$(whoami)
     fi
-    if ! command -v paru &> /dev/null; then
+    if ! command -v paru > /dev/null 2>&1; then
       sudo pacman -S --needed --noconfirm base-devel git
       sudo rm -rf /tmp/paru-bin
       sudo -u "$USERNAME" git clone https://aur.archlinux.org/paru-bin.git /tmp/paru-bin
-      pushd /tmp/paru-bin
+      oldpwd="$(pwd)"
+      cd /tmp/paru-bin
       sudo -u "$USERNAME" makepkg -si --noconfirm
-      popd
+      cd "$oldpwd"
       rm -rf /tmp/paru-bin
     fi
     sudo -u "$USERNAME" paru -Sy --noconfirm \
@@ -182,13 +188,13 @@ elif [ "$platform" == "linux" ]; then
       unzip \
       wezterm \
       xsel
-    if [[ $arch != "aarch64" ]]; then
+    if [ "$arch" != "aarch64" ]; then
       sudo -u "$USERNAME" paru -Sy --noconfirm \
         dotter-rs-bin
     fi
     sudo -u "$USERNAME" paru -Sy --noconfirm xorg xfce4 sddm
     sudo -u "$USERNAME" systemctl enable sddm
-  elif [ "$(grep -Ei 'debian|buntu|mint' /etc/*release)" ]; then
+  elif grep -Eiq 'debian|buntu|mint' /etc/*release; then
    echo "Debian based distro detected"
    sudo apt-get update
    sudo apt-get install -y \
@@ -202,9 +208,34 @@ elif [ "$platform" == "linux" ]; then
     echo "Unsupported Linux Distro"
     exit 1
   fi
+elif [ "$platform" = "windows" ] || [ "$platform" = "cygwin" ] || [ "$platform" = "mingw" ]; then
+  echo "Windows Detected"
+  if cmd.exe /c where sudo > /dev/null 2>&1; then
+    sudo --help > /dev/null 2>&1 || sudo_status=$?
+    if [ "${sudo_status:-0}" -eq 2 ]; then
+      powershell.exe -NoProfile -ExecutionPolicy Bypass -Command "Start-Process sudo -ArgumentList 'config --enable inline' -Verb RunAs -Wait"
+    fi
+    unset sudo_status
+  fi
+
+  if ! cmd.exe /c where scoop > /dev/null 2>&1; then
+    powershell.exe -NoProfile -ExecutionPolicy Bypass -Command "Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser -Force; Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression"
+    PATH="$HOME/scoop/shims:$PATH"
+  fi
+
+  if ! scoop bucket list | grep -qi '^extras$'; then
+    scoop bucket add extras
+  fi
+
+  scoop_packages="dotter 7zip fzf television zoxide"
+  for pkg in $scoop_packages; do
+    if ! scoop prefix "$pkg" > /dev/null 2>&1; then
+      scoop install "$pkg"
+    fi
+  done
 fi
 
-if command -v bun &> /dev/null; then
+if command -v bun > /dev/null 2>&1; then
   bun x skills add Cocoon-AI/architecture-diagram-generator --global --yes
   bun x skills add JimLiu/baoyu-skills/skills/baoyu-image-gen --global --yes
   bun x skills add JimLiu/baoyu-skills/skills/baoyu-infographic --global --yes
@@ -217,16 +248,16 @@ fi
 
 # Minimum release age: only install package versions older than 7 days
 # (mitigates supply-chain attacks via freshly-published malicious versions)
-if command -v npm &> /dev/null; then
+if command -v npm > /dev/null 2>&1; then
   npm config set min-release-age=7
 fi
-if command -v pnpm &> /dev/null; then
+if command -v pnpm > /dev/null 2>&1; then
   pnpm config set minimumReleaseAge 10080
 fi
-if command -v yarn &> /dev/null; then
+if command -v yarn > /dev/null 2>&1; then
   yarn config set -H npmMinimalAgeGate "168h"
 fi
-if command -v bun &> /dev/null; then
+if command -v bun > /dev/null 2>&1; then
   if ! grep -q "minimumReleaseAge" "$HOME/.bunfig.toml" 2>/dev/null; then
     printf '\n[install]\nminimumReleaseAge = 604800\n' >> "$HOME/.bunfig.toml"
   fi

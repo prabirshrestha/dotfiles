@@ -32,8 +32,16 @@ or
 
 ### Windows
 
+From PowerShell:
+
+```powershell
+curl.exe -fL -o "$env:TEMP\busybox-${env:PROCESSOR_ARCHITECTURE}.exe" "https://github.com/prabirshrestha/dotfiles/releases/download/busybox/busybox-${env:PROCESSOR_ARCHITECTURE}.exe"; if ($LASTEXITCODE -eq 0) { & "$env:TEMP\busybox-${env:PROCESSOR_ARCHITECTURE}.exe" sh ./install }
+```
+
+From Command Prompt:
+
 ```cmd
-scoop install dotter
+curl.exe -fL -o "%TEMP%\busybox-%PROCESSOR_ARCHITECTURE%.exe" "https://github.com/prabirshrestha/dotfiles/releases/download/busybox/busybox-%PROCESSOR_ARCHITECTURE%.exe" && "%TEMP%\busybox-%PROCESSOR_ARCHITECTURE%.exe" sh ./install
 ```
 
 ## Install dotter
