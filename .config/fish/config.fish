@@ -230,7 +230,7 @@ function gpr
 end
 
 # Added by LM Studio CLI (lms)
-set -gx PATH $PATH /Users/prabirshrestha/.cache/lm-studio/bin
+set -gx PATH $PATH $HOME/.cache/lm-studio/bin
 
 # Ensure tv is installed and configured
 if command -q tv
@@ -310,5 +310,5 @@ if test -f ~/.config/fish/local.config.fish
 end
 
 # Added by LM Studio CLI (lms)
-set -gx PATH $PATH /Users/prabirshrestha/.lmstudio/bin
+set -gx PATH $PATH $HOME/.lmstudio/bin
 # End of LM Studio CLI section

@@ -58,7 +58,7 @@ if hash zoxide 2>/dev/null; then eval "$(zoxide init zsh)"; fi
 if hash mise 2>/dev/null; then eval "$(mise activate zsh)"; fi
 
 # Added by LM Studio CLI (lms)
-export PATH="$PATH:/Users/prabirshrestha/.lmstudio/bin"
+export PATH="$PATH:$HOME/.lmstudio/bin"
 # End of LM Studio CLI section
 
 
@@ -68,3 +68,7 @@ if command -v wt >/dev/null 2>&1; then eval "$(command wt config shell init zsh)
 
 # bun completions
 [ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:$HOME/.cache/lm-studio/bin"
+# End of LM Studio CLI section
