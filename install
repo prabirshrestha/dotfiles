@@ -230,7 +230,17 @@ elif [ "$platform" = "windows" ] || [ "$platform" = "cygwin" ] || [ "$platform" 
     if (-not (scoop bucket list | Select-String -Quiet "^extras$")) {
       scoop bucket add extras
     }
-    foreach ($pkg in @("dotter", "7zip", "busybox", "clink", "copilot-cli", "fzf", "television", "zoxide")) {
+    $scoop_packages = @(
+      "dotter",
+      "7zip",
+      "busybox",
+      "clink",
+      "copilot-cli",
+      "fzf",
+      "television",
+      "zoxide"
+    )
+    foreach ($pkg in $scoop_packages) {
       scoop prefix $pkg *> $null
       if ($LASTEXITCODE -ne 0) {
         scoop install $pkg
