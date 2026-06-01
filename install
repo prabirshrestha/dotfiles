@@ -230,16 +230,11 @@ elif [ "$platform" = "windows" ] || [ "$platform" = "cygwin" ] || [ "$platform" 
     if (-not (scoop bucket list | Select-String -Quiet "^extras$")) {
       scoop bucket add extras
     }
-    foreach ($pkg in @("dotter", "7zip", "clink", "fzf", "nodejs-lts", "television", "zoxide")) {
+    foreach ($pkg in @("dotter", "7zip", "clink", "copilot-cli", "fzf", "television", "zoxide")) {
       scoop prefix $pkg *> $null
       if ($LASTEXITCODE -ne 0) {
         scoop install $pkg
       }
-    }
-    if (Get-Command npm -ErrorAction SilentlyContinue) {
-      npm install -g @github/copilot
-    } else {
-      Write-Host "Skipping GitHub Copilot CLI; npm is not available."
     }
   '
 fi
