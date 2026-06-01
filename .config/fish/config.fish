@@ -104,6 +104,10 @@ if command -q safehouse
         if test -d "$fish_config"
             set -a extra_args --add-dirs="$fish_config"
         end
+        set -l agency_config "$HOME/.config/agency"
+        if test -d "$agency_config"
+            set -a extra_args --add-dirs-ro="$agency_config"
+        end
         safehouse --enable=browser-native-messaging --enable=agent-browser --enable=clipboard --enable=ssh --enable=all-agents $extra_args $argv
     end
     function claude
