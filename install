@@ -268,3 +268,23 @@ if command -v bun > /dev/null 2>&1; then
     printf '\n[install]\nminimumReleaseAge = 604800\n' >> "$HOME/.bunfig.toml"
   fi
 fi
+
+dotfiles_dir="$HOME/.dotfiles"
+
+if command -v git > /dev/null 2>&1; then
+  if [ ! -d "$dotfiles_dir/.git" ]; then
+    git clone --recurse-submodules https://github.com/prabirshrestha/dotfiles.git "$dotfiles_dir"
+  elif [ -z "$(git -C "$dotfiles_dir" status --porcelain)" ]; then
+    git -C "$dotfiles_dir" pull --rebase
+    git -C "$dotfiles_dir" submodule update --init --recursive
+  else
+    echo "Skipping dotfiles update; $dotfiles_dir has local changes."
+  fi
+fi
+
+if [ -x "$dotfiles_dir/configure" ]; then
+  oldpwd="$(pwd)"
+  cd "$dotfiles_dir"
+  ./configure
+  cd "$oldpwd"
+fi

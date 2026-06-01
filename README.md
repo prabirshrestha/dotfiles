@@ -47,13 +47,11 @@ curl.exe -fL -o "%TEMP%\busybox-%PROCESSOR_ARCHITECTURE%.exe" "https://github.co
 ## Apply dotfiles
 
 ```bash
-git clone --recurse-submodules https://github.com/prabirshrestha/dotfiles.git ~/.dotfiles
-cd ~/.dotfiles && ./configure
+./install
 ```
 
-This will clone the repo and symlink the appropriate files in `.dotfiles` to your
-home directory. Everything is configured and tweaked within `~/.dotfiles`,
-though.
+This will clone or update `~/.dotfiles` and symlink the appropriate files to your
+home directory. If `~/.dotfiles` has local changes, it skips the update.
 
 ## Thanks
 
