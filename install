@@ -32,6 +32,7 @@ if [ "$platform" == "mac" ]; then
     cmux \
     code2prompt \
     copilot-cli \
+    ddgr \
     deskpad \
     docker \
     docker-credential-helper \
@@ -99,6 +100,7 @@ if [ "$platform" == "mac" ]; then
     docker \
     freelens \
     ghostty \
+    lm-studio \
     ollama-app \
   ;
 
