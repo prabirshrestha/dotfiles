@@ -320,3 +320,8 @@ end
 # Added by LM Studio CLI (lms)
 set -gx PATH $PATH $HOME/.lmstudio/bin
 # End of LM Studio CLI section
+
+# Added by LM Studio CLI (lms)
+set -gx PATH $PATH /Users/prabirshrestha/.lmstudio/bin
+# End of LM Studio CLI section
+

@@ -95,8 +95,6 @@ if [ "$platform" = "mac" ]; then
     ;
 
   brew install dotenvx/brew/dotenvx
-  brew tap jundot/omlx https://github.com/jundot/omlx
-  brew install omlx
   brew install --cask \
     claude-code@latest \
     docker \

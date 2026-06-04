@@ -72,3 +72,8 @@ if command -v wt >/dev/null 2>&1; then eval "$(command wt config shell init zsh)
 # Added by LM Studio CLI (lms)
 export PATH="$PATH:$HOME/.cache/lm-studio/bin"
 # End of LM Studio CLI section
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/prabirshrestha/.lmstudio/bin"
+# End of LM Studio CLI section
+
