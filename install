@@ -208,7 +208,15 @@ elif [ "$platform" = "linux" ]; then
   fi
 elif [ "$platform" = "windows" ] || [ "$platform" = "cygwin" ] || [ "$platform" = "mingw" ]; then
   echo "Windows Detected"
-  powershell.exe -NoProfile -ExecutionPolicy Bypass -Command 'if (Test-Path "$env:SystemRoot\System32\sudo.exe") { Write-Host "Enabling Windows sudo inline mode..."; Start-Process "$env:SystemRoot\System32\sudo.exe" -ArgumentList "config --enable normal" -Verb RunAs -Wait } else { Write-Host "Windows sudo is not available on this machine." }'
+  # Enable Windows sudo if not already enabled
+  if ! sudo.exe config > /dev/null 2>&1; then
+    powershell.exe -NoProfile -ExecutionPolicy Bypass -Command 'Start-Process "$env:SystemRoot\System32\sudo.exe" -ArgumentList "config","--enable","normal" -Verb RunAs -Wait'
+  fi
+
+  # Enable Windows Developer Mode (required for symlinks without elevation)
+  if ! reg.exe query "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModelUnlock" /v AllowDevelopmentWithoutDevLicense 2>/dev/null | grep -q "0x1"; then
+    sudo.exe reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModelUnlock" /t REG_DWORD /f /v AllowDevelopmentWithoutDevLicense /d 1
+  fi
 
   if ! cmd.exe /c where scoop > /dev/null 2>&1; then
     powershell.exe -NoProfile -ExecutionPolicy Bypass -Command "Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser -Force; Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression"
