@@ -102,6 +102,7 @@ if [ "$platform" = "mac" ]; then
     ghostty \
     lm-studio \
     ollama-app \
+    spokenly \
   ;
 
   if command -v rustup > /dev/null 2>&1; then
