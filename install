@@ -256,6 +256,13 @@ elif [ "$platform" = "windows" ] || [ "$platform" = "cygwin" ] || [ "$platform" 
   '
 fi
 
+if [ "$platform" = "mac" ] || [ "$platform" = "linux" ]; then
+  if ! command -v pi > /dev/null 2>&1; then
+    echo "Installing pi"
+    curl -fsSL https://pi.dev/install.sh | sh
+  fi
+fi
+
 if command -v bun > /dev/null 2>&1; then
   bun x skills add Cocoon-AI/architecture-diagram-generator --global --yes
   bun x skills add JimLiu/baoyu-skills/skills/baoyu-image-gen --global --yes
