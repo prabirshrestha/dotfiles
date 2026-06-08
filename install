@@ -27,6 +27,7 @@ if [ "$platform" = "mac" ]; then
   brew install \
     age \
     aider \
+    apfel \
     bat \
     axodotdev/tap/cargo-dist \
     cargo-make \
