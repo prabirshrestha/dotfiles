@@ -26,14 +26,12 @@ if [ "$platform" = "mac" ]; then
 
   brew install \
     age \
-    aider \
     apfel \
     bat \
     axodotdev/tap/cargo-dist \
     cargo-make \
     cargo-watch \
     cmux \
-    code2prompt \
     copilot-cli \
     ddgr \
     deskpad \
@@ -65,7 +63,6 @@ if [ "$platform" = "mac" ]; then
     kubectx \
     lazydocker \
     llama.cpp \
-    llm \
     localai \
     lnav \
     mise \
@@ -79,9 +76,7 @@ if [ "$platform" = "mac" ]; then
     ripgrep \
     rmux \
     rustup \
-    sccache \
     sops \
-    talhelper \
     television \
     tig \
     tmux \
@@ -122,8 +117,6 @@ if [ "$platform" = "mac" ]; then
     keepassxc \
     zed@preview \
   ;
-
-  brew install siderolabs/tap/talosctl
 
   brew install eugene1g/safehouse/agent-safehouse
 
