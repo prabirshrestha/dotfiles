@@ -77,6 +77,7 @@ if [ "$platform" = "mac" ]; then
     portaudio \
     pnpm \
     ripgrep \
+    rmux \
     rustup \
     sccache \
     sops \
