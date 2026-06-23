@@ -15,6 +15,7 @@ packages = [
   "picom",
   "polybar",
   "rofi",
+  "rmux",
   "sxhkd",
   "xorg",
   "television",

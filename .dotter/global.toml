@@ -44,6 +44,9 @@
 [rofi.files]
 ".config/rofi" = { type = "symbolic" , target = "~/.config/rofi" }
 
+[rmux.files]
+".config/rmux/rmux.conf" = { type = "symbolic" , target = "~/.config/rmux/rmux.conf" }
+
 [sxhkd.files]
 ".config/sxhkd" = { type = "symbolic" , target = "~/.config/sxhkd" }
 
