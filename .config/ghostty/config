@@ -2,6 +2,14 @@ command = /opt/homebrew/bin/fish --login --interactive
 
 window-inherit-working-directory = true
 
+# Preserve native terminal selection while TUIs or rmux have mouse reporting on.
+# Drag normally for app/rmux mouse behavior; Shift-drag for terminal selection.
+mouse-shift-capture = never
+
+# Match common terminal behavior: selection stays highlighted until explicitly
+# copied with the terminal copy shortcut.
+copy-on-select = false
+
 keybind = ctrl+shift+comma=reload_config
 
 keybind = ctrl+a>n=new_window
