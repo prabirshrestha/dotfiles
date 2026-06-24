@@ -21,6 +21,10 @@ if type -q brew
   fish_add_path (brew --prefix llvm)/bin
 end
 
+if type -q mise
+    mise activate fish | source
+end
+
 fish_add_path ~/.bun/bin
 fish_add_path ~/.cargo/bin
 
