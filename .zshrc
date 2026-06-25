@@ -53,8 +53,6 @@ if hash zoxide 2>/dev/null; then eval "$(zoxide init zsh)"; fi
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
 
-[[ -s ~/.grit/bin/env ]] && . ~/.grit/bin/env
-
 if hash mise 2>/dev/null; then eval "$(mise activate zsh)"; fi
 
 # Added by LM Studio CLI (lms)
@@ -76,4 +74,3 @@ export PATH="$PATH:$HOME/.cache/lm-studio/bin"
 # Added by LM Studio CLI (lms)
 export PATH="$PATH:/Users/prabirshrestha/.lmstudio/bin"
 # End of LM Studio CLI section
-

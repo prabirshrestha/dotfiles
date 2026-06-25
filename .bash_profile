@@ -171,15 +171,11 @@ start-openwebui() {
   docker run -d --network=host -v open-webui:/app/backend/data -e OLLAMA_API_BASE_URL=http://localhost:11434/api --restart always --name open-webui ghcr.io/open-webui/open-webui:main
 }
 
-export GRIT_TELEMETRY_DISABLED=true
-[[ -s ~/.grit/bin/env ]] && . ~/.grit/bin/env
-
 # Added by LM Studio CLI (lms)
 export PATH="$PATH:/Users/prabirshrestha/.cache/lm-studio/bin"
 
 # Added by LM Studio CLI (lms)
 export PATH="$PATH:/Users/prabirshrestha/.lmstudio/bin"
 # End of LM Studio CLI section
-
 
 
