@@ -29,6 +29,7 @@ if [ "$platform" = "mac" ]; then
     apfel \
     bat \
     axodotdev/tap/cargo-dist \
+    cargo-cache \
     cargo-make \
     cargo-watch \
     cmux \
