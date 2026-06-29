@@ -271,6 +271,7 @@ if command -v bun > /dev/null 2>&1; then
   bun x skills add Cocoon-AI/architecture-diagram-generator --global --yes
   bun x skills add JimLiu/baoyu-skills/skills/baoyu-image-gen --global --yes
   bun x skills add JimLiu/baoyu-skills/skills/baoyu-infographic --global --yes
+  bun x skills add https://github.com/anthropics/skills --skill skill-creator --global --yes
   bun x skills add mattpocock/skills/skills/productivity/grill-me --global --yes
   bun x skills add mattpocock/skills/skills/engineering/grill-with-docs --global --yes
   bun x skills add https://github.com/browser-use/browser-harness-js --skill cdp --global --yes
