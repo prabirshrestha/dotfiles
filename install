@@ -93,12 +93,14 @@ if [ "$platform" = "mac" ]; then
     ;
 
   brew install dotenvx/brew/dotenvx
+  brew trust maddada/tap
   brew install --cask \
     claude-code@latest \
     codex \
     codex-app \
     docker \
     freelens \
+    maddada/tap/ghostex \
     ghostty \
     lm-studio \
     ollama-app \
