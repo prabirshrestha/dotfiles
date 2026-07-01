@@ -119,9 +119,9 @@ if command -q safehouse
     end
     alias claude-yolo claude
     alias claudey claude
-    function copilot
-        safe copilot $argv
-    end
+    # function copilot
+    #     safe copilot $argv
+    # end
     function opencode
         safe opencode $argv
     end
