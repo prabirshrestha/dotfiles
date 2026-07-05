@@ -53,6 +53,7 @@ if [ "$platform" = "mac" ]; then
     git-gui \
     git-lfs \
     hmans/beans/beans \
+    herdr \
     hyperfine \
     jj \
     jq \
