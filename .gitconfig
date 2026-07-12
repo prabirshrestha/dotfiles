@@ -19,6 +19,9 @@
 [push]
     autoSetupRemote = true
 
+[init]
+    defaultBranch = main
+
 {{#if (eq dotter.os "unix")}}
 [merge]
     tool = vimdiff
