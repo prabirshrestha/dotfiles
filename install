@@ -31,7 +31,6 @@ if [ "$platform" = "mac" ]; then
   mise bootstrap --yes
 
   brew install \
-    apfel \
     bat \
     axodotdev/tap/cargo-dist \
     cargo-cache \
