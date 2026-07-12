@@ -1,0 +1,3 @@
+[bootstrap.packages]
+"apt:age" = "latest"
+"pacman:age" = "latest"

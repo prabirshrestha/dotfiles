@@ -173,8 +173,10 @@ elif [ "$platform" = "linux" ]; then
       cd "$oldpwd"
       rm -rf /tmp/paru-bin
     fi
+    if ! command -v mise > /dev/null 2>&1; then
+      sudo pacman -Sy --needed --noconfirm mise
+    fi
     sudo -u "$USERNAME" paru -Sy --noconfirm \
-      age \
       bspwm \
       curl \
       chromium \
@@ -198,21 +200,29 @@ elif [ "$platform" = "linux" ]; then
     fi
     sudo -u "$USERNAME" paru -Sy --noconfirm xorg xfce4 sddm
     sudo -u "$USERNAME" systemctl enable sddm
+    mise bootstrap --yes
   elif grep -Eiq 'debian|buntu|mint' /etc/*release; then
    echo "Debian based distro detected"
    sudo apt-get update
+   if ! command -v mise > /dev/null 2>&1; then
+     sudo apt-get install -y ca-certificates extrepo
+     sudo extrepo enable mise
+     sudo apt-get update
+     sudo apt-get install -y mise
+   fi
    sudo apt-get install -y \
-     age \
      build-essential \
      curl \
      git \
      mosh \
      tmux \
      vim
+   mise bootstrap --yes
   else
     echo "Unsupported Linux Distro"
     exit 1
   fi
+
 elif [ "$platform" = "windows" ] || [ "$platform" = "cygwin" ] || [ "$platform" = "mingw" ]; then
   echo "Windows Detected"
   # Enable Windows sudo if not already enabled
