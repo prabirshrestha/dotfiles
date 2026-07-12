@@ -24,8 +24,13 @@ if [ "$platform" = "mac" ]; then
     eval "$(/opt/homebrew/bin/brew shellenv)"
   fi
 
+  if ! command -v mise > /dev/null 2>&1; then
+    brew install mise
+  fi
+
+  mise bootstrap --yes
+
   brew install \
-    age \
     apfel \
     bat \
     axodotdev/tap/cargo-dist \
@@ -68,7 +73,6 @@ if [ "$platform" = "mac" ]; then
     llama.cpp \
     localai \
     lnav \
-    mise \
     mole \
     mosh \
     nono \

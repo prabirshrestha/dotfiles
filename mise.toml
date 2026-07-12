@@ -1,0 +1,4 @@
+min_version = "2026.6.14"
+
+[bootstrap.packages]
+"brew:age" = "latest"
