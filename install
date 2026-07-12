@@ -96,6 +96,7 @@ if [ "$platform" = "mac" ]; then
     ;
 
   brew install dotenvx/brew/dotenvx
+  brew tap beadbox/cask && brew install --cask beadbox
   brew trust maddada/tap
   brew install --cask \
     claude-code@latest \
