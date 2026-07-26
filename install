@@ -34,8 +34,6 @@ if [ "$platform" = "mac" ]; then
     axodotdev/tap/cargo-dist \
     cmux \
     deskpad \
-    dotter \
-    efm-langserver \
     fd \
     ffmpeg \
     fisher \
@@ -57,7 +55,6 @@ if [ "$platform" = "mac" ]; then
     kluctl/tap/kluctl \
     kubectl \
     kubectx \
-    lazydocker \
     llama.cpp \
     localai \
     lnav \
@@ -93,6 +90,7 @@ if [ "$platform" = "mac" ]; then
     claude-code@latest \
     codex \
     codex-app \
+    docker \
     freelens \
     maddada/tap/ghostex \
     ghostty \

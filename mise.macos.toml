@@ -9,8 +9,10 @@
 "brew:docker" = "latest"
 "brew:docker-compose" = "latest"
 "brew:docker-credential-helper" = "latest"
-"brew-cask:docker-desktop" = "latest"
+"brew:dotter" = "latest"
+"brew:efm-langserver" = "latest"
 "brew:fish" = "latest"
+"brew:lazydocker" = "latest"
 
 [bootstrap.user]
 login_shell = "/opt/homebrew/bin/fish"
