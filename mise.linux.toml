@@ -1,3 +1,5 @@
 [bootstrap.packages]
 "apt:age" = "latest"
+"apt:fish" = "latest"
 "pacman:age" = "latest"
+"pacman:fish" = "latest"

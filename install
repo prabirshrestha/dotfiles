@@ -47,7 +47,6 @@ if [ "$platform" = "mac" ]; then
     efm-langserver \
     fd \
     ffmpeg \
-    fish \
     fisher \
     flameshot \
     fnm \

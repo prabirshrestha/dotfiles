@@ -1,2 +1,6 @@
 [bootstrap.packages]
 "brew:age" = "latest"
+"brew:fish" = "latest"
+
+[bootstrap.user]
+login_shell = "/opt/homebrew/bin/fish"
