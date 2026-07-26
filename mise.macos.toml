@@ -1,6 +1,7 @@
 [bootstrap.packages]
 "brew:age" = "latest"
 "brew:bat" = "latest"
+"brew:ca-certificates" = "latest"
 "brew:cargo-cache" = "latest"
 "brew:cargo-make" = "latest"
 "brew:cargo-watch" = "latest"
@@ -11,6 +12,7 @@
 "brew:docker-credential-helper" = "latest"
 "brew:dotter" = "latest"
 "brew:efm-langserver" = "latest"
+"brew:ffmpeg" = "latest"
 "brew:fish" = "latest"
 "brew:lazydocker" = "latest"
 
