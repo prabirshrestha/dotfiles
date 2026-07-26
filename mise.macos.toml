@@ -1,5 +1,15 @@
 [bootstrap.packages]
 "brew:age" = "latest"
+"brew:bat" = "latest"
+"brew:cargo-cache" = "latest"
+"brew:cargo-make" = "latest"
+"brew:cargo-watch" = "latest"
+"brew-cask:copilot-cli" = "latest"
+"brew:ddgr" = "latest"
+"brew:docker" = "latest"
+"brew:docker-compose" = "latest"
+"brew:docker-credential-helper" = "latest"
+"brew-cask:docker-desktop" = "latest"
 "brew:fish" = "latest"
 
 [bootstrap.user]

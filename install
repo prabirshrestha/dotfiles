@@ -31,18 +31,9 @@ if [ "$platform" = "mac" ]; then
   mise bootstrap --yes
 
   brew install \
-    bat \
     axodotdev/tap/cargo-dist \
-    cargo-cache \
-    cargo-make \
-    cargo-watch \
     cmux \
-    copilot-cli \
-    ddgr \
     deskpad \
-    docker \
-    docker-credential-helper \
-    docker-compose \
     dotter \
     efm-langserver \
     fd \
@@ -102,7 +93,6 @@ if [ "$platform" = "mac" ]; then
     claude-code@latest \
     codex \
     codex-app \
-    docker \
     freelens \
     maddada/tap/ghostex \
     ghostty \
