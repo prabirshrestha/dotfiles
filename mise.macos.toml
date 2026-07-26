@@ -1,5 +1,2 @@
 [bootstrap.packages]
 "brew:age" = "latest"
-
-[dotfiles]
-"~/.hushlogin" = { source = ".hushlogin", mode = "symlink" }

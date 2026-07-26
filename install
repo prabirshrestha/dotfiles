@@ -259,6 +259,7 @@ elif [ "$platform" = "windows" ] || [ "$platform" = "cygwin" ] || [ "$platform" 
       "clink",
       "copilot-cli",
       "fzf",
+      "mise",
       "television",
       "tmux",
       "zoxide"

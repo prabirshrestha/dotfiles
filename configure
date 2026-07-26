@@ -1,2 +1,5 @@
 #!/usr/bin/env sh
+set -e
+
+mise bootstrap --yes -v
 dotter -vv

@@ -2,3 +2,7 @@ min_version = "2026.6.11"
 
 [settings]
 experimental = true
+
+[dotfiles]
+# Suppress Unix login banners such as "Last login"; ignored on unsupported platforms.
+"~/.hushlogin" = { source = ".hushlogin", mode = "symlink" }
