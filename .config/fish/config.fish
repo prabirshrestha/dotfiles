@@ -12,13 +12,19 @@ set -x TELEVISION_CONFIG $HOME/.config/television
 fish_add_path ~/.dotfiles/bin
 fish_add_path ~/.local/bin
 
-if test -f /opt/homebrew/bin/brew
-    /opt/homebrew/bin/brew shellenv | source
-end
+if test -x /opt/homebrew/bin/brew
+    set -gx HOMEBREW_PREFIX /opt/homebrew
+    set -gx HOMEBREW_CELLAR $HOMEBREW_PREFIX/Cellar
+    set -gx HOMEBREW_REPOSITORY $HOMEBREW_PREFIX
+    set -gx HOMEBREW_NO_AUTO_UPDATE 1
+    fish_add_path --global --move $HOMEBREW_PREFIX/bin $HOMEBREW_PREFIX/sbin
 
-if type -q brew
-  fish_add_path (brew --prefix python)/libexec/bin
-  fish_add_path (brew --prefix llvm)/bin
+    if test -n "$MANPATH[1]"
+        set -gx MANPATH '' $MANPATH
+    end
+    if not contains $HOMEBREW_PREFIX/share/info $INFOPATH
+        set -gx INFOPATH $HOMEBREW_PREFIX/share/info $INFOPATH
+    end
 end
 
 if type -q mise
@@ -27,14 +33,6 @@ end
 
 fish_add_path ~/.bun/bin
 fish_add_path ~/.cargo/bin
-
-if type -q brew; and brew --prefix dotnet &>/dev/null
-    set -gx DOTNET_ROOT (brew --prefix dotnet)/libexec
-end
-
-if test -d ~/.dotnet/tools
-    fish_add_path ~/.dotnet/tools
-end
 
 type -q zoxide; and zoxide init fish | source
 if test -n "$HOME/.config/fish/completions/pnpm.fish"
