@@ -48,7 +48,6 @@ if [ "$platform" = "mac" ]; then
     fd \
     ffmpeg \
     fisher \
-    flameshot \
     fnm \
     fzf \
     gh \
