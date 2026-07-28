@@ -6,3 +6,6 @@ experimental = true
 [dotfiles]
 # Suppress Unix login banners such as "Last login"; ignored on unsupported platforms.
 "~/.hushlogin" = { source = ".hushlogin", mode = "symlink" }
+
+[tools]
+"cargo:ferricket" = "latest"
