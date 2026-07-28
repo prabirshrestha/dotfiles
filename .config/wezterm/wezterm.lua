@@ -8,7 +8,35 @@ end
 local config = {
     audible_bell = "Disabled",
     check_for_updates = false,
-    color_scheme = "Builtin Solarized Dark",
+    -- Match Ghostty's built-in default colors.
+    colors = {
+        foreground = "#ffffff",
+        background = "#282c34",
+        cursor_bg = "#ffffff",
+        cursor_fg = "#282c34",
+        selection_bg = "#ffffff",
+        selection_fg = "#282c34",
+        ansi = {
+            "#1d1f21",
+            "#cc6666",
+            "#b5bd68",
+            "#f0c674",
+            "#81a2be",
+            "#b294bb",
+            "#8abeb7",
+            "#c5c8c6",
+        },
+        brights = {
+            "#666666",
+            "#d54e53",
+            "#b9ca4a",
+            "#e7c547",
+            "#7aa6da",
+            "#c397d8",
+            "#70c0b1",
+            "#eaeaea",
+        },
+    },
     inactive_pane_hsb = {
         hue = 1.0,
         saturation = 1.0,
