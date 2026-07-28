@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+set -e
+
+mise bootstrap packages upgrade --yes -v
+mise upgrade --yes -v
