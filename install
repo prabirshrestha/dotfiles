@@ -218,6 +218,24 @@ elif [ "$platform" = "windows" ] || [ "$platform" = "cygwin" ] || [ "$platform" 
     sudo.exe reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModelUnlock" /t REG_DWORD /f /v AllowDevelopmentWithoutDevLicense /d 1
   fi
 
+  # Add ~/.local/bin and dotfiles bin-windows to user PATH
+  powershell.exe -NoProfile -ExecutionPolicy Bypass -Command '
+    $dirs = @(
+      (Join-Path $env:USERPROFILE ".local\bin"),
+      (Join-Path $env:USERPROFILE ".dotfiles\bin-windows")
+    )
+    $current = [Environment]::GetEnvironmentVariable("Path", "User")
+    foreach ($dir in $dirs) {
+      if ($current -notlike "*$dir*") {
+        $current = $current + ";" + $dir
+        Write-Host "Added $dir to user PATH"
+      } else {
+        Write-Host "$dir already in user PATH"
+      }
+    }
+    [Environment]::SetEnvironmentVariable("Path", $current, "User")
+  '
+
   if ! cmd.exe /c where scoop > /dev/null 2>&1; then
     powershell.exe -NoProfile -ExecutionPolicy Bypass -Command "Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser -Force; Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression"
   fi
