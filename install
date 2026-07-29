@@ -42,7 +42,6 @@ if [ "$platform" = "mac" ]; then
     git-credential-manager \
     git-gui \
     git-lfs \
-    hmans/beans/beans \
     herdr \
     hyperfine \
     jj \
@@ -94,7 +93,6 @@ if [ "$platform" = "mac" ]; then
     maddada/tap/ghostex \
     ghostty \
     lm-studio \
-    ollama-app \
     spokenly \
   ;
 
