@@ -15,6 +15,7 @@
 "brew:ffmpeg" = "latest"
 "brew:fish" = "latest"
 "brew:lazydocker" = "latest"
+"brew-cask:radix" = "latest"
 
 [bootstrap.user]
 login_shell = "/opt/homebrew/bin/fish"
