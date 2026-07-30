@@ -53,6 +53,7 @@ if [ "$platform" = "mac" ]; then
     kluctl/tap/kluctl \
     kubectl \
     kubectx \
+    kunobi-ninja/kunobi/kache \
     llama.cpp \
     localai \
     lnav \
@@ -235,6 +236,9 @@ elif [ "$platform" = "windows" ] || [ "$platform" = "cygwin" ] || [ "$platform" 
     if (-not (scoop bucket list | Select-String -Quiet "^extras$")) {
       scoop bucket add extras
     }
+    if (-not (scoop bucket list | Select-String -Quiet "^kunobi$")) {
+      scoop bucket add kunobi https://github.com/kunobi-ninja/scoop-kunobi
+    }
     $scoop_packages = @(
       "dotter",
       "7zip",
@@ -242,6 +246,7 @@ elif [ "$platform" = "windows" ] || [ "$platform" = "cygwin" ] || [ "$platform" 
       "clink",
       "copilot-cli",
       "fzf",
+      "kunobi/kache",
       "mise",
       "television",
       "tmux",
