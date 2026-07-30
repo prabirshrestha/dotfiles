@@ -333,6 +333,10 @@ else
   echo "Skipping dotfiles apply; $dotfiles_dir/configure was not found or is not executable."
 fi
 
+if command -v cargo > /dev/null 2>&1 && ! command -v cargo-clean-all > /dev/null 2>&1; then
+  cargo install cargo-clean-all
+fi
+
 if [ "$platform" = "windows" ] || [ "$platform" = "cygwin" ] || [ "$platform" = "mingw" ]; then
   if command -v clink > /dev/null 2>&1 && [ -d "$dotfiles_dir/clink" ]; then
     clink_profile="${LOCALAPPDATA:-$HOME/AppData/Local}/clink"
