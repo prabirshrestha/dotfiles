@@ -1,5 +1,5 @@
 #!/usr/bin/env sh
 set -e
 
-mise bootstrap --yes -v
+MISE_TRUSTED_CONFIG_PATHS="$PWD" mise bootstrap --yes -v
 dotter -vv

@@ -32,16 +32,27 @@ or
 
 ### Windows
 
+From an existing checkout, run the Windows wrapper from PowerShell or Command
+Prompt:
+
+```powershell
+.\install.cmd
+```
+
+`install.cmd` runs the shared `install` script with `busybox.exe`. On a fresh
+machine, use one of the bootstrap commands below; it downloads BusyBox before
+running that script.
+
 From PowerShell:
 
 ```powershell
-curl.exe -fL -o "$env:TEMP\busybox-${env:PROCESSOR_ARCHITECTURE}.exe" "https://github.com/prabirshrestha/dotfiles/releases/download/busybox/busybox-${env:PROCESSOR_ARCHITECTURE}.exe"; if ($LASTEXITCODE -eq 0) { curl.exe -fL -o "$env:TEMP\dotfiles-install" "https://raw.githubusercontent.com/prabirshrestha/dotfiles/main/install" }; if ($LASTEXITCODE -eq 0) { & "$env:TEMP\busybox-${env:PROCESSOR_ARCHITECTURE}.exe" sh "$env:TEMP\dotfiles-install" }
+curl.exe -fL -o "$env:TEMP\busybox-${env:PROCESSOR_ARCHITECTURE}.exe" "https://github.com/prabirshrestha/dotfiles/releases/download/busybox/busybox-${env:PROCESSOR_ARCHITECTURE}.exe"; if ($LASTEXITCODE -eq 0) { curl.exe -fL -o "$env:TEMP\dotfiles-install" "https://raw.githubusercontent.com/prabirshrestha/dotfiles/main/install" }; if ($LASTEXITCODE -eq 0) { & "$env:TEMP\busybox-${env:PROCESSOR_ARCHITECTURE}.exe" sh "$env:TEMP\dotfiles-install" "$env:TEMP\busybox-${env:PROCESSOR_ARCHITECTURE}.exe" }
 ```
 
 From Command Prompt:
 
 ```cmd
-curl.exe -fL -o "%TEMP%\busybox-%PROCESSOR_ARCHITECTURE%.exe" "https://github.com/prabirshrestha/dotfiles/releases/download/busybox/busybox-%PROCESSOR_ARCHITECTURE%.exe" && curl.exe -fL -o "%TEMP%\dotfiles-install" "https://raw.githubusercontent.com/prabirshrestha/dotfiles/main/install" && "%TEMP%\busybox-%PROCESSOR_ARCHITECTURE%.exe" sh "%TEMP%\dotfiles-install"
+curl.exe -fL -o "%TEMP%\busybox-%PROCESSOR_ARCHITECTURE%.exe" "https://github.com/prabirshrestha/dotfiles/releases/download/busybox/busybox-%PROCESSOR_ARCHITECTURE%.exe" && curl.exe -fL -o "%TEMP%\dotfiles-install" "https://raw.githubusercontent.com/prabirshrestha/dotfiles/main/install" && "%TEMP%\busybox-%PROCESSOR_ARCHITECTURE%.exe" sh "%TEMP%\dotfiles-install" "%TEMP%\busybox-%PROCESSOR_ARCHITECTURE%.exe"
 ```
 
 ## Apply dotfiles

@@ -1,3 +1,83 @@
 [dotfiles]
 # psmux checks this path before falling back to ~/.tmux.conf.
 "~/.psmux.conf" = { source = ".config/psmux/psmux.conf", mode = "symlink" }
+
+# Mise does not yet have built-in WinGet or Scoop bootstrap package managers.
+# Keep the Windows package convergence here so `mise bootstrap` still owns it.
+[tasks.bootstrap]
+description = "Install Windows packages with Scoop"
+shell = '"{{ env.DOTFILES_BUSYBOX | default(value="busybox.exe") }}" sh -c'
+run = '''
+set -e
+
+scoop_root="${SCOOP:-$HOME/scoop}"
+scoop_tmp="${TEMP:-$HOME/AppData/Local/Temp}/scoop-bootstrap-$$"
+if [ ! -f "$scoop_root/shims/scoop" ]; then
+  echo "Installing Scoop"
+  mkdir -p "$scoop_tmp" "$scoop_root/apps/scoop"
+  curl.exe -fsSL https://github.com/ScoopInstaller/Scoop/archive/refs/tags/v0.5.3.zip -o "$scoop_tmp/scoop.zip"
+  unzip -q "$scoop_tmp/scoop.zip" -d "$scoop_tmp"
+  mv "$scoop_tmp/Scoop-0.5.3" "$scoop_root/apps/scoop/current"
+  mkdir -p "$scoop_root/shims"
+  printf '%s\n' \
+    '#!/bin/sh' \
+    'if command -v pwsh.exe >/dev/null 2>&1; then' \
+    '  exec pwsh.exe -NoProfile -ExecutionPolicy Bypass -File "'"$scoop_root"'/apps/scoop/current/bin/scoop.ps1" "$@"' \
+    'else' \
+    '  exec powershell.exe -NoProfile -ExecutionPolicy Bypass -File "'"$scoop_root"'/apps/scoop/current/bin/scoop.ps1" "$@"' \
+    'fi' > "$scoop_root/shims/scoop"
+  chmod +x "$scoop_root/shims/scoop"
+
+  user_path="$(reg.exe query 'HKCU\Environment' /v Path 2>/dev/null | tr -d '\r' | sed -n 's/^[[:space:]]*Path[[:space:]]*REG_[A-Z_]*[[:space:]]*//p')"
+  user_path_key="$(printf '%s' ";$user_path;" | tr '\\' '/' | tr '[:upper:]' '[:lower:]')"
+  scoop_shims_key="$(printf '%s' "$scoop_root/shims" | tr '\\' '/' | tr '[:upper:]' '[:lower:]')"
+  case "$user_path_key" in
+    *";$scoop_shims_key;"*) ;;
+    *)
+      user_path="${user_path:+$user_path;}$scoop_root/shims"
+      reg.exe add 'HKCU\Environment' /v Path /t REG_EXPAND_SZ /d "$user_path" /f >/dev/null
+      ;;
+  esac
+fi
+
+if [ ! -d "$scoop_root/buckets/main" ]; then
+  mkdir -p "$scoop_tmp" "$scoop_root/buckets"
+  curl.exe -fsSL https://github.com/ScoopInstaller/Main/archive/master.zip -o "$scoop_tmp/main.zip"
+  unzip -q "$scoop_tmp/main.zip" -d "$scoop_tmp"
+  mv "$scoop_tmp/Main-master" "$scoop_root/buckets/main"
+fi
+rm -rf "$scoop_tmp"
+
+PATH="$scoop_root/shims;$PATH"
+export PATH
+
+if ! command -v git >/dev/null 2>&1; then
+  scoop install git
+fi
+if ! scoop bucket list | grep -q '^extras[[:space:]]'; then
+  scoop bucket add extras
+fi
+if ! scoop bucket list | grep -q '^psmux[[:space:]]'; then
+  scoop bucket add psmux https://github.com/psmux/scoop-psmux
+fi
+if ! scoop bucket list | grep -q '^rmux[[:space:]]'; then
+  scoop bucket add rmux https://github.com/Helvesec/scoop-rmux
+fi
+
+for package in \
+  dotter \
+  7zip \
+  busybox \
+  clink \
+  copilot-cli \
+  fzf \
+  psmux \
+  rmux \
+  television \
+  zoxide
+do
+  if [ ! -d "$scoop_root/apps/$package/current" ]; then
+    scoop install "$package"
+  fi
+done
+'''

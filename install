@@ -1,6 +1,11 @@
 #!/usr/bin/env sh
 set -e
 
+# On Windows, keep using the BusyBox executable that started this bootstrap
+# until Scoop has installed its own copy.
+DOTFILES_BUSYBOX="${1:-busybox.exe}"
+export DOTFILES_BUSYBOX
+
 arch="$(uname -m)"
 unameOut="$(uname -s)"
 case "${unameOut}" in
@@ -208,9 +213,13 @@ elif [ "$platform" = "linux" ]; then
 
 elif [ "$platform" = "windows" ] || [ "$platform" = "cygwin" ] || [ "$platform" = "mingw" ]; then
   echo "Windows Detected"
-  # Enable Windows sudo if not already enabled
+  # Enabling Windows sudo requires an elevated terminal. Configure it directly
+  # when this shell is elevated; otherwise leave the existing setting alone.
   if ! sudo.exe config > /dev/null 2>&1; then
-    powershell.exe -NoProfile -ExecutionPolicy Bypass -Command 'Start-Process "$env:SystemRoot\System32\sudo.exe" -ArgumentList "config","--enable","normal" -Verb RunAs -Wait'
+    if ! sudo.exe config --enable normal; then
+      echo "Windows sudo is disabled; enable it from an Administrator terminal with:"
+      echo "  sudo.exe config --enable normal"
+    fi
   fi
 
   # Enable Windows Developer Mode (required for symlinks without elevation)
@@ -218,73 +227,62 @@ elif [ "$platform" = "windows" ] || [ "$platform" = "cygwin" ] || [ "$platform" 
     sudo.exe reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModelUnlock" /t REG_DWORD /f /v AllowDevelopmentWithoutDevLicense /d 1
   fi
 
-  # Add ~/.local/bin and dotfiles bin-windows to user PATH
-  powershell.exe -NoProfile -ExecutionPolicy Bypass -Command '
-    $dirs = @(
-      (Join-Path $env:USERPROFILE ".local\bin"),
-      (Join-Path $env:USERPROFILE ".dotfiles\bin-windows")
-    )
-    $current = [Environment]::GetEnvironmentVariable("Path", "User")
-    foreach ($dir in $dirs) {
-      if ($current -notlike "*$dir*") {
-        $current = $current + ";" + $dir
-        Write-Host "Added $dir to user PATH"
-      } else {
-        Write-Host "$dir already in user PATH"
-      }
-    }
-    [Environment]::SetEnvironmentVariable("Path", $current, "User")
-  '
+  # Add ~/.local/bin and dotfiles bin-windows to the persistent user PATH.
+  user_path="$(reg.exe query 'HKCU\Environment' /v Path 2>/dev/null | tr -d '\r' | sed -n 's/^[[:space:]]*Path[[:space:]]*REG_[A-Z_]*[[:space:]]*//p')"
+  user_path_key="$(printf '%s' ";$user_path;" | tr '\\' '/' | tr '[:upper:]' '[:lower:]')"
+  for dir in "$HOME/.local/bin" "$HOME/.dotfiles/bin-windows"; do
+    dir_key="$(printf '%s' "$dir" | tr '\\' '/' | tr '[:upper:]' '[:lower:]')"
+    case "$user_path_key" in
+      *";$dir_key;"*) echo "$dir already in user PATH" ;;
+      *)
+        user_path="${user_path:+$user_path;}$dir"
+        user_path_key="$user_path_key$dir_key;"
+        reg.exe add 'HKCU\Environment' /v Path /t REG_EXPAND_SZ /d "$user_path" /f > /dev/null
+        echo "Added $dir to user PATH"
+        ;;
+    esac
+  done
 
-  if ! cmd.exe /c where scoop > /dev/null 2>&1; then
-    powershell.exe -NoProfile -ExecutionPolicy Bypass -Command "Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser -Force; Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression"
+  # Install the latest sshdt Windows release into the user-local bin directory.
+  sshdt_release_json="$(curl.exe -fsSL https://api.github.com/repos/prabirshrestha/sshdt/releases/latest)"
+  sshdt_asset_url="$(printf '%s\n' "$sshdt_release_json" | sed -n 's/.*"browser_download_url": "\([^"]*x86_64-pc-windows-msvc.zip\)".*/\1/p' | head -n 1)"
+  if [ -z "$sshdt_asset_url" ]; then
+    echo "Unable to find the latest sshdt Windows release asset." >&2
+    exit 1
   fi
+  sshdt_asset_name="${sshdt_asset_url##*/}"
+  sshdt_tmp="${TEMP:-$HOME/AppData/Local/Temp}/sshdt-install-$$"
+  mkdir -p "$HOME/.local/bin" "$sshdt_tmp"
+  echo "Installing sshdt into $HOME/.local/bin"
+  curl.exe -fsSL "$sshdt_asset_url" -o "$sshdt_tmp/$sshdt_asset_name"
+  unzip -qo "$sshdt_tmp/$sshdt_asset_name" -d "$sshdt_tmp/extracted"
+  cp "$sshdt_tmp/extracted/sshdt.exe" "$HOME/.local/bin/sshdt.exe"
+  rm -rf "$sshdt_tmp"
 
-  powershell.exe -NoProfile -ExecutionPolicy Bypass -Command '
-    $ErrorActionPreference = "Stop"
-    $scoop = Get-Command scoop -ErrorAction SilentlyContinue
-    if (-not $scoop) {
-      $shim = Join-Path $env:USERPROFILE "scoop\shims\scoop.cmd"
-      if (Test-Path $shim) {
-        $env:PATH = (Split-Path $shim) + ";" + $env:PATH
-      } else {
-        throw "Scoop is not available after installation."
-      }
-    }
-    if (-not (scoop bucket list | Select-String -Quiet "^extras$")) {
-      scoop bucket add extras
-    }
-    if (-not (scoop bucket list | Select-String -Quiet "^kunobi$")) {
-      scoop bucket add kunobi https://github.com/kunobi-ninja/scoop-kunobi
-    }
-    $scoop_packages = @(
-      "dotter",
-      "7zip",
-      "busybox",
-      "clink",
-      "copilot-cli",
-      "fzf",
-      "kunobi/kache",
-      "mise",
-      "television",
-      "tmux",
-      "zoxide"
-    )
-    foreach ($pkg in $scoop_packages) {
-      scoop prefix $pkg *> $null
-      if ($LASTEXITCODE -ne 0) {
-        scoop install $pkg
-      }
-    }
-  '
+  # WinGet is the Windows bootstrap; Mise owns the remaining package setup.
+  if ! cmd.exe /c where mise > /dev/null 2>&1; then
+    winget.exe install --id jdx.mise --exact --source winget --scope user \
+      --accept-package-agreements --accept-source-agreements \
+      --disable-interactivity --no-upgrade
+  fi
+  mise_bin="$(cmd.exe /d /c where mise.exe 2>/dev/null | tr -d '\r' | head -n 1)"
+  if [ -n "$mise_bin" ]; then
+    PATH="$(dirname "$mise_bin");$PATH"
+    export PATH
+  elif [ -x "$LOCALAPPDATA/Microsoft/WinGet/Links/mise.exe" ]; then
+    PATH="$LOCALAPPDATA/Microsoft/WinGet/Links;$PATH"
+    export PATH
+  fi
 fi
 
 if ! command -v pi > /dev/null 2>&1; then
   echo "Installing pi"
   if [ "$platform" = "mac" ] || [ "$platform" = "linux" ]; then
     curl -fsSL https://pi.dev/install.sh | sh
-  elif [ "$platform" = "windows" ] || [ "$platform" = "cygwin" ] || [ "$platform" = "msys" ]; then
-    powershell.exe -NoProfile -ExecutionPolicy Bypass -Command "irm https://pi.dev/install.ps1 | iex"
+  elif command -v npm > /dev/null 2>&1; then
+    npm install -g --ignore-scripts @earendil-works/pi-coding-agent
+  else
+    echo "Skipping Pi; npm is not available yet. Re-run install after Mise installs Node.js."
   fi
 fi
 
@@ -309,7 +307,12 @@ if command -v pnpm > /dev/null 2>&1; then
   pnpm config set minimumReleaseAge 10080
 fi
 if command -v yarn > /dev/null 2>&1; then
-  yarn config set -H npmMinimalAgeGate "168h"
+  yarn_major="$(yarn --version | cut -d. -f1)"
+  if [ "$yarn_major" -ge 2 ] 2>/dev/null; then
+    yarn config set -H npmMinimalAgeGate "168h"
+  else
+    echo "Skipping Yarn minimum age gate; Yarn Classic does not support it."
+  fi
 fi
 if command -v bun > /dev/null 2>&1; then
   if ! grep -q "minimumReleaseAge" "$HOME/.bunfig.toml" 2>/dev/null; then
