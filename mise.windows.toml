@@ -1,4 +1,8 @@
 [dotfiles]
+# GhosttyWin32 reads this exact LocalAppData path. mise falls back to copying
+# file symlinks on Windows, while preserving the declarative symlink intent.
+"~/AppData/Local/ghostty/config" = { source = ".config/ghostty/config.windows", mode = "symlink" }
+
 # psmux checks this path before falling back to ~/.tmux.conf.
 "~/.psmux.conf" = { source = ".config/psmux/psmux.conf", mode = "symlink" }
 

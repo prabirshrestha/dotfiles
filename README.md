@@ -55,6 +55,16 @@ From Command Prompt:
 curl.exe -fL -o "%TEMP%\busybox-%PROCESSOR_ARCHITECTURE%.exe" "https://github.com/prabirshrestha/dotfiles/releases/download/busybox/busybox-%PROCESSOR_ARCHITECTURE%.exe" && curl.exe -fL -o "%TEMP%\dotfiles-install" "https://raw.githubusercontent.com/prabirshrestha/dotfiles/main/install" && "%TEMP%\busybox-%PROCESSOR_ARCHITECTURE%.exe" sh "%TEMP%\dotfiles-install" "%TEMP%\busybox-%PROCESSOR_ARCHITECTURE%.exe"
 ```
 
+#### Ghostty
+
+[GhosttyWin32](https://github.com/i999rri/GhosttyWin32) is not installed by
+the bootstrap because its self-signed MSIX currently supports only manual
+installation. Download the `.msix` and `Ghostty.cer` from its
+[releases](https://github.com/i999rri/GhosttyWin32/releases), trust the
+certificate as described in its installation guide, then install the MSIX.
+The bootstrap will deploy this repository's Ghostty configuration to
+`%LOCALAPPDATA%\ghostty\config`.
+
 ## Apply dotfiles
 
 ```bash
