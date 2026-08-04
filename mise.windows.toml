@@ -78,6 +78,7 @@ for package in \
   psmux \
   rmux \
   television \
+  worktrunk \
   zoxide
 do
   if [ ! -d "$scoop_root/apps/$package/current" ]; then
