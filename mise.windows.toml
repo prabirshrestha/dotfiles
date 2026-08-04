@@ -6,6 +6,9 @@
 # psmux checks this path before falling back to ~/.tmux.conf.
 "~/.psmux.conf" = { source = ".config/psmux/psmux.conf", mode = "symlink" }
 
+[tools]
+worktrunk = "latest"
+
 # Mise does not yet have built-in WinGet or Scoop bootstrap package managers.
 # Keep the Windows package convergence here so `mise bootstrap` still owns it.
 [tasks.bootstrap]
@@ -78,7 +81,6 @@ for package in \
   psmux \
   rmux \
   television \
-  worktrunk \
   zoxide
 do
   if [ ! -d "$scoop_root/apps/$package/current" ]; then
