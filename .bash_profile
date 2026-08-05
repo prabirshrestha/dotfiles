@@ -172,10 +172,11 @@ start-openwebui() {
 }
 
 # Added by LM Studio CLI (lms)
-export PATH="$PATH:/Users/prabirshrestha/.cache/lm-studio/bin"
+export PATH="$PATH:$HOME/.cache/lm-studio/bin"
 
 # Added by LM Studio CLI (lms)
-export PATH="$PATH:/Users/prabirshrestha/.lmstudio/bin"
+export PATH="$PATH:$HOME/.lmstudio/bin"
 # End of LM Studio CLI section
 
 
+. "$HOME/.cargo/env"
