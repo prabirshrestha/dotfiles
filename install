@@ -77,6 +77,8 @@ if [ "$platform" = "mac" ]; then
     tig \
     tmux \
     tree \
+    trzsz-ssh \
+    tsshd \
     utm \
     uv \
     vim \
