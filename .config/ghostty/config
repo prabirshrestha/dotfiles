@@ -2,9 +2,11 @@ command = /opt/homebrew/bin/fish --login --interactive
 
 window-inherit-working-directory = true
 
-# Preserve native terminal selection while TUIs or rmux have mouse reporting on.
-# Drag normally for app/rmux mouse behavior; Shift-drag for terminal selection.
+# Preserve native terminal interactions while TUIs and multiplexers have mouse
+# reporting on. Use Shift-drag for selection and Shift-Command-click for links.
 mouse-shift-capture = never
+
+link-url = true
 
 # Match common terminal behavior: selection stays highlighted until explicitly
 # copied with the terminal copy shortcut.

@@ -41,4 +41,5 @@ keybinds {
 }
 
 default_mode "normal"
+osc8_hyperlinks true
 show_startup_tips false
