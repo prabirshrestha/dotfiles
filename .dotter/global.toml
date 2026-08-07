@@ -68,5 +68,8 @@
 [zed.files]
 ".config/zed" = { type = "symbolic" , target = "~/.config/zed" }
 
+[zellij.files]
+".config/zellij/config.kdl" = { type = "symbolic", target = "~/.config/zellij/config.kdl" }
+
 [zsh.files]
 ".zshrc" = { type = "symbolic" , target = "~/.zshrc" }

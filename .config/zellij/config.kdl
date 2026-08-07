@@ -1,0 +1,44 @@
+// Use Zellij like tmux: press Ctrl-b, then a command key.
+keybinds {
+    tmux {
+        // Press Ctrl-b twice to send Ctrl-b to the focused application.
+        bind "Ctrl b" { Write 2; SwitchToMode "Normal"; }
+
+        // Match the custom pane bindings in ~/.tmux.conf.
+        bind "\\" { NewPane "Right"; SwitchToMode "Normal"; }
+        bind "-" { NewPane "Down"; SwitchToMode "Normal"; }
+        bind "h" { MoveFocus "Left"; SwitchToMode "Normal"; }
+        bind "j" { MoveFocus "Down"; SwitchToMode "Normal"; }
+        bind "k" { MoveFocus "Up"; SwitchToMode "Normal"; }
+        bind "l" { MoveFocus "Right"; SwitchToMode "Normal"; }
+        bind "H" { Resize "Increase Left"; SwitchToMode "Normal"; }
+        bind "J" { Resize "Increase Down"; SwitchToMode "Normal"; }
+        bind "K" { Resize "Increase Up"; SwitchToMode "Normal"; }
+        bind "L" { Resize "Increase Right"; SwitchToMode "Normal"; }
+        bind "T" { SwitchToMode "RenamePane"; PaneNameInput 0; }
+        bind "Esc" { SwitchToMode "Scroll"; }
+
+        // Zellij tabs are the equivalent of tmux windows.
+        bind "c" { NewTab; SwitchToMode "Normal"; }
+        bind "Ctrl h" { GoToPreviousTab; SwitchToMode "Normal"; }
+        bind "Ctrl l" { GoToNextTab; SwitchToMode "Normal"; }
+        bind "1" { GoToTab 1; SwitchToMode "Normal"; }
+        bind "2" { GoToTab 2; SwitchToMode "Normal"; }
+        bind "3" { GoToTab 3; SwitchToMode "Normal"; }
+        bind "4" { GoToTab 4; SwitchToMode "Normal"; }
+        bind "5" { GoToTab 5; SwitchToMode "Normal"; }
+        bind "6" { GoToTab 6; SwitchToMode "Normal"; }
+        bind "7" { GoToTab 7; SwitchToMode "Normal"; }
+        bind "8" { GoToTab 8; SwitchToMode "Normal"; }
+        bind "9" { GoToTab 9; SwitchToMode "Normal"; }
+    }
+
+    // Preserve the rest of Zellij's default bindings while making Ctrl-b the
+    // tmux-style prefix from every interactive mode except locked mode.
+    shared_except "tmux" "locked" {
+        bind "Ctrl b" { SwitchToMode "Tmux"; }
+    }
+}
+
+default_mode "normal"
+show_startup_tips false

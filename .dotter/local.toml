@@ -23,5 +23,6 @@ packages = [
   "vim",
   "wezterm",
   "zed",
+  "zellij",
   "zsh"
 ]
