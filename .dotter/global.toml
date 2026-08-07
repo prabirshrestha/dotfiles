@@ -70,6 +70,7 @@
 
 [zellij.files]
 ".config/zellij/config.kdl" = { type = "symbolic", target = "~/.config/zellij/config.kdl" }
+".config/zellij/layouts/graphite.kdl" = { type = "symbolic", target = "~/.config/zellij/layouts/graphite.kdl" }
 
 [zsh.files]
 ".zshrc" = { type = "symbolic" , target = "~/.zshrc" }

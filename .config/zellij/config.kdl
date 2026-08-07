@@ -171,6 +171,7 @@ themes {
 }
 
 default_mode "normal"
+default_layout "graphite"
 osc8_hyperlinks true
 show_startup_tips false
 theme "graphite"
