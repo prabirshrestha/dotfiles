@@ -79,6 +79,7 @@ if [ "$platform" = "mac" ]; then
     tree \
     trzsz-ssh \
     tsshd \
+    tuicr \
     utm \
     uv \
     vim \
