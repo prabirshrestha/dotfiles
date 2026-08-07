@@ -40,6 +40,137 @@ keybinds {
     }
 }
 
+// Match the quiet graphite palette used by tmux and cmux.
+themes {
+    graphite {
+        text_unselected {
+            base "#74777c"
+            background "#0f1217"
+            emphasis_0 "#aeb4be"
+            emphasis_1 "#5aa7ff"
+            emphasis_2 "#5aa7ff"
+            emphasis_3 "#eef1f5"
+        }
+        text_selected {
+            base "#eef1f5"
+            background "#22262d"
+            emphasis_0 "#aeb4be"
+            emphasis_1 "#5aa7ff"
+            emphasis_2 "#5aa7ff"
+            emphasis_3 "#eef1f5"
+        }
+        ribbon_unselected {
+            base "#74777c"
+            background "#0f1217"
+            emphasis_0 "#aeb4be"
+            emphasis_1 "#22262d"
+            emphasis_2 "#5aa7ff"
+            emphasis_3 "#eef1f5"
+        }
+        ribbon_selected {
+            base "#0f1217"
+            background "#5aa7ff"
+            emphasis_0 "#eef1f5"
+            emphasis_1 "#aeb4be"
+            emphasis_2 "#22262d"
+            emphasis_3 "#eef1f5"
+        }
+        table_title {
+            base "#5aa7ff"
+            background "#0f1217"
+            emphasis_0 "#eef1f5"
+            emphasis_1 "#aeb4be"
+            emphasis_2 "#5aa7ff"
+            emphasis_3 "#74777c"
+        }
+        table_cell_unselected {
+            base "#aeb4be"
+            background "#0f1217"
+            emphasis_0 "#eef1f5"
+            emphasis_1 "#74777c"
+            emphasis_2 "#5aa7ff"
+            emphasis_3 "#aeb4be"
+        }
+        table_cell_selected {
+            base "#eef1f5"
+            background "#22262d"
+            emphasis_0 "#5aa7ff"
+            emphasis_1 "#aeb4be"
+            emphasis_2 "#eef1f5"
+            emphasis_3 "#74777c"
+        }
+        list_unselected {
+            base "#aeb4be"
+            background "#0f1217"
+            emphasis_0 "#eef1f5"
+            emphasis_1 "#74777c"
+            emphasis_2 "#5aa7ff"
+            emphasis_3 "#aeb4be"
+        }
+        list_selected {
+            base "#eef1f5"
+            background "#22262d"
+            emphasis_0 "#5aa7ff"
+            emphasis_1 "#aeb4be"
+            emphasis_2 "#eef1f5"
+            emphasis_3 "#74777c"
+        }
+        frame_unselected {
+            base "#262b33"
+            background "#0f1217"
+            emphasis_0 "#74777c"
+            emphasis_1 "#262b33"
+            emphasis_2 "#aeb4be"
+            emphasis_3 "#22262d"
+        }
+        frame_selected {
+            base "#5aa7ff"
+            background "#0f1217"
+            emphasis_0 "#eef1f5"
+            emphasis_1 "#aeb4be"
+            emphasis_2 "#5aa7ff"
+            emphasis_3 "#22262d"
+        }
+        frame_highlight {
+            base "#5aa7ff"
+            background "#0f1217"
+            emphasis_0 "#eef1f5"
+            emphasis_1 "#5aa7ff"
+            emphasis_2 "#aeb4be"
+            emphasis_3 "#5aa7ff"
+        }
+        exit_code_success {
+            base "#5aa7ff"
+            background "#0f1217"
+            emphasis_0 "#aeb4be"
+            emphasis_1 "#22262d"
+            emphasis_2 "#eef1f5"
+            emphasis_3 "#74777c"
+        }
+        exit_code_error {
+            base "#ff6b6b"
+            background "#0f1217"
+            emphasis_0 "#d6b55f"
+            emphasis_1 "#22262d"
+            emphasis_2 "#aeb4be"
+            emphasis_3 "#74777c"
+        }
+        multiplayer_user_colors {
+            player_1 "#5aa7ff"
+            player_2 "#a78bfa"
+            player_3 "#7dcfff"
+            player_4 "#d6b55f"
+            player_5 "#ff6b6b"
+            player_6 "#aeb4be"
+            player_7 "#5aa7ff"
+            player_8 "#a78bfa"
+            player_9 "#7dcfff"
+            player_10 "#d6b55f"
+        }
+    }
+}
+
 default_mode "normal"
 osc8_hyperlinks true
 show_startup_tips false
+theme "graphite"
