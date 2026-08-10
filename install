@@ -275,17 +275,6 @@ elif [ "$platform" = "windows" ] || [ "$platform" = "cygwin" ] || [ "$platform" 
   fi
 fi
 
-if ! command -v pi > /dev/null 2>&1; then
-  echo "Installing pi"
-  if [ "$platform" = "mac" ] || [ "$platform" = "linux" ]; then
-    curl -fsSL https://pi.dev/install.sh | sh
-  elif command -v npm > /dev/null 2>&1; then
-    npm install -g --ignore-scripts @earendil-works/pi-coding-agent
-  else
-    echo "Skipping Pi; npm is not available yet. Re-run install after Mise installs Node.js."
-  fi
-fi
-
 if command -v bun > /dev/null 2>&1; then
   if ! command -v rift > /dev/null 2>&1; then
     bun add -g rift-snapshot
