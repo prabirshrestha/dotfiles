@@ -82,7 +82,6 @@ if [ "$platform" = "mac" ]; then
     tuicr \
     utm \
     uv \
-    vim \
     vlc \
     wezterm \
     wget \
@@ -174,10 +173,8 @@ elif [ "$platform" = "linux" ]; then
       chromium \
       git \
       google-chrome \
-      gvim \
       linux-headers \
       mosh \
-      lua \
       picom \
       polybar \
       rofi \
@@ -203,8 +200,7 @@ elif [ "$platform" = "linux" ]; then
      curl \
      git \
      mosh \
-     tmux \
-     vim
+     tmux
    mise bootstrap --yes
   else
     echo "Unsupported Linux Distro"

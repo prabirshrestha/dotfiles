@@ -6,6 +6,12 @@
 "apt:fish" = "latest"
 "pacman:fish" = "latest"
 
+"apt:lua5.2" = "latest"
+"pacman:lua52" = "latest"
+
+"apt:vim-nox" = "latest"
+"pacman:gvim" = "latest"
+
 "apt:zoxide" = "latest"
 "pacman:zoxide" = "latest"
 
