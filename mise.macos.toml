@@ -10,7 +10,6 @@
 "brew:docker" = "latest"
 "brew:docker-compose" = "latest"
 "brew:docker-credential-helper" = "latest"
-"brew:dotter" = "latest"
 "brew:efm-langserver" = "latest"
 "brew:ffmpeg" = "latest"
 "brew:fish" = "latest"

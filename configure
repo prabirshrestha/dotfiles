@@ -2,4 +2,4 @@
 set -e
 
 MISE_TRUSTED_CONFIG_PATHS="$PWD" mise bootstrap --yes -v
-dotter -vv
+MISE_TRUSTED_CONFIG_PATHS="$PWD" mise exec -- dotter -vv "$@"

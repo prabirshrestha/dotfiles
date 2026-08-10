@@ -186,10 +186,6 @@ elif [ "$platform" = "linux" ]; then
       unzip \
       wezterm \
       xsel
-    if [ "$arch" != "aarch64" ]; then
-      sudo -u "$USERNAME" paru -Sy --noconfirm \
-        dotter-rs-bin
-    fi
     sudo -u "$USERNAME" paru -Sy --noconfirm xorg xfce4 sddm
     sudo -u "$USERNAME" systemctl enable sddm
     mise bootstrap --yes

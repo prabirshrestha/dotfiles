@@ -15,13 +15,13 @@ subject](http://zachholman.com/2010/08/dotfiles-are-meant-to-be-forked/).
 ### ArchLinux
 
 ```bash
-paru -Sy --noconfirm dotter-rs-bin git
+paru -Sy --noconfirm git
 ```
 
-### Mac
+### Ubuntu/Debian and Mac
 
 ```bash
-bash <(curl -s https://raw.githubusercontent.com/prabirshrestha/dotfiles/main/install)
+bash <(curl -fsSL https://raw.githubusercontent.com/prabirshrestha/dotfiles/main/install)
 ```
 
 or 

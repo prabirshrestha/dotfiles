@@ -72,7 +72,6 @@ if ! scoop bucket list | grep -q '^rmux[[:space:]]'; then
 fi
 
 for package in \
-  dotter \
   7zip \
   busybox \
   clink \
