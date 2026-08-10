@@ -1,3 +1,4 @@
+# Linux-only system packages and account settings for the repository bootstrap.
 [bootstrap.packages]
 "apt:age" = "latest"
 "pacman:age" = "latest"

@@ -1,9 +1,11 @@
+# Deployed to ~/.config/mise/config.toml for tools available in every directory.
 [settings]
 idiomatic_version_file_enable_tools = ["node", "rust"]
 experimental = true
 
 [tools]
 bun = "latest"
+"cargo:ferricket" = "latest"
 fzf = "latest"
 node = "latest"
 rust = "latest"
