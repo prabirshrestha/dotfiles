@@ -2,7 +2,7 @@ layout {
     default_tab_template {
         pane size=1 borderless=true {
             plugin location="https://github.com/dj95/zjstatus/releases/download/v0.24.0/zjstatus.wasm" {
-                format_left "{tabs}"
+                format_left "#[fg=#aeb4be,bg=#0f1217,bold] {session} #[fg=#74777c,bg=#0f1217]{tabs}"
                 format_right ""
                 format_space "#[bg=#0f1217]"
 
