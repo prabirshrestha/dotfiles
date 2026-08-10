@@ -76,7 +76,6 @@ for package in \
   busybox \
   clink \
   copilot-cli \
-  fzf \
   psmux \
   rmux \
   television \

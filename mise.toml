@@ -10,3 +10,4 @@ experimental = true
 [tools]
 "cargo:ferricket" = "latest"
 "github:SuperCuber/dotter" = "latest"
+fzf = "latest"
