@@ -4,6 +4,7 @@ experimental = true
 
 [tools]
 bun = "latest"
+fzf = "latest"
 node = "latest"
 rust = "latest"
 # Temporarily disabled: the current npm package is blocked by organizational policy.
