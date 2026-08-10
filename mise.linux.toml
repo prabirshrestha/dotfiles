@@ -1,5 +1,10 @@
 [bootstrap.packages]
 "apt:age" = "latest"
 "apt:fish" = "latest"
+"apt:zoxide" = "latest"
 "pacman:age" = "latest"
 "pacman:fish" = "latest"
+"pacman:zoxide" = "latest"
+
+[bootstrap.user]
+login_shell = "/usr/bin/fish"
