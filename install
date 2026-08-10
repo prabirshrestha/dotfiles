@@ -317,7 +317,8 @@ if command -v git > /dev/null 2>&1; then
     echo "Cloning dotfiles into $dotfiles_dir"
     git clone --recurse-submodules https://github.com/prabirshrestha/dotfiles.git "$dotfiles_dir"
   else
-    echo "Skipping dotfiles clone; $dotfiles_dir already exists."
+    echo "Updating dotfiles in $dotfiles_dir"
+    git -C "$dotfiles_dir" pull --ff-only --recurse-submodules
   fi
 else
   echo "Skipping dotfiles clone; git is not installed."
