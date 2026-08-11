@@ -327,3 +327,6 @@ set -gx PATH $PATH $HOME/.lmstudio/bin
 # Added by LM Studio CLI (lms)
 set -gx PATH $PATH /Users/prabirshrestha/.lmstudio/bin
 # End of LM Studio CLI section
+
+# cder environment
+test -r "$HOME/.config/cder/env.fish"; and source "$HOME/.config/cder/env.fish"
