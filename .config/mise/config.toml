@@ -13,3 +13,4 @@ television = { version = "latest", os = ["linux", "macos"] }
 # Temporarily disabled: the current npm package is blocked by organizational policy.
 # "npm:prettier" = "latest"
 uv = "latest"
+worktrunk = "latest"

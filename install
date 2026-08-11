@@ -84,7 +84,6 @@ if [ "$platform" = "mac" ]; then
     vlc \
     wezterm \
     wget \
-    max-sixty/worktrunk/wt \
     yq \
     zellij \
     zoxide \
@@ -107,11 +106,6 @@ if [ "$platform" = "mac" ]; then
   if command -v rustup > /dev/null 2>&1; then
     rustup component add rust-src rust-analyzer
   fi
-
-  if command -v wt > /dev/null 2>&1; then
-    wt config shell install
-  fi
-
 
   brew install --cask \
     disk-inventory-x \
