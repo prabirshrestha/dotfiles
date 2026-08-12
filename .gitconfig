@@ -50,3 +50,8 @@
 	helper =
 	helper = /usr/local/share/gcm-core/git-credential-manager
 {{/if}}
+
+[credential]
+	azreposCredentialType = oauth
+[credential "https://microsoft.ghe.com"]
+	provider = github
