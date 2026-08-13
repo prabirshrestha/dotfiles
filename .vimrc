@@ -25,7 +25,6 @@ silent! exec 'source ' . s:settings_plug_path
 
 let g:plug_shallow = 0
 call plug#begin(s:settings_plugin_dir)
-  Plug 'lifepillar/vim-solarized8'
   if !has('nvim') | Plug 'rhysd/vim-healthcheck' | endif
 
   Plug 'itchyny/lightline.vim'
@@ -106,7 +105,7 @@ let &t_EI.="\e[1 q" "EI = NORMAL mode (ELSE)
 if !has('gui_running') | set t_Co=256 | endif
 set termguicolors
 set background=dark
-silent! colorscheme solarized8
+silent! colorscheme habamax
 
 set mouse=a                           " automatically enable mouse usage
 set noerrorbells visualbell t_vb=     " no annoying sound on errors
@@ -332,7 +331,7 @@ let g:lsp_settings = {
 \}
 
 let g:lightline = {
-  \ 'colorscheme': 'solarized',
+  \ 'colorscheme': 'wombat',
   \ 'active': {
   \   'left': [
   \     ['mode', 'paste'],
