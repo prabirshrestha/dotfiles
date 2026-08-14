@@ -7,6 +7,7 @@ experimental = true
 bun = "latest"
 "cargo:ferricket" = "latest"
 fzf = "latest"
+"github:kunobi-ninja/kache" = "latest"
 hunk = "latest"
 node = "latest"
 rust = "latest"

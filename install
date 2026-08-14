@@ -58,7 +58,6 @@ if [ "$platform" = "mac" ]; then
     kluctl/tap/kluctl \
     kubectl \
     kubectx \
-    kunobi-ninja/kunobi/kache \
     llama.cpp \
     localai \
     lnav \
