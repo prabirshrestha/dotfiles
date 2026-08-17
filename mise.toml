@@ -10,4 +10,4 @@ experimental = true
 [tools]
 # Dotter must be available before the global Mise config can be deployed.
 "github:SuperCuber/dotter" = "latest"
-"npm:calldiff" = "0.1.0"
+"npm:calldiff" = "0.5.0"
