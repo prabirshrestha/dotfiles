@@ -17,5 +17,54 @@
 "brew:vim" = "latest"
 "brew-cask:radix" = "latest"
 
+[tools."github:Blaizzy/nativ"]
+version = "latest"
+asset_pattern = "Nativ-*.dmg"
+
 [bootstrap.user]
 login_shell = "/opt/homebrew/bin/fish"
+
+[tasks.bootstrap]
+description = "Install macOS applications"
+run = '''
+set -eu
+
+nativ_install="$(mise where github:Blaizzy/nativ)"
+nativ_dmg="$(find "$nativ_install" -maxdepth 1 -type f -name 'Nativ-*.dmg' -print -quit)"
+if [ -z "$nativ_dmg" ]; then
+  echo "Nativ DMG not found in $nativ_install" >&2
+  exit 1
+fi
+
+nativ_mount="$(mktemp -d "${TMPDIR:-/tmp}/nativ.XXXXXX")"
+cleanup_nativ() {
+  hdiutil detach "$nativ_mount" -quiet >/dev/null 2>&1 || true
+  rmdir "$nativ_mount" >/dev/null 2>&1 || true
+}
+trap cleanup_nativ EXIT HUP INT TERM
+
+hdiutil attach -quiet -nobrowse -readonly -mountpoint "$nativ_mount" "$nativ_dmg"
+nativ_source="$nativ_mount/Nativ.app"
+nativ_target="/Applications/Nativ.app"
+
+if [ ! -d "$nativ_source" ]; then
+  echo "Nativ.app not found in $nativ_dmg" >&2
+  exit 1
+fi
+
+nativ_source_version="$(defaults read "$nativ_source/Contents/Info" CFBundleShortVersionString)"
+nativ_target_version=""
+if [ -d "$nativ_target" ]; then
+  nativ_target_version="$(defaults read "$nativ_target/Contents/Info" CFBundleShortVersionString 2>/dev/null || true)"
+fi
+
+if [ "$nativ_target_version" = "$nativ_source_version" ]; then
+  echo "Nativ $nativ_source_version is already installed"
+  exit 0
+fi
+
+codesign --verify --deep --strict "$nativ_source"
+spctl --assess --type execute --verbose "$nativ_source"
+ditto "$nativ_source" "$nativ_target"
+echo "Installed Nativ $nativ_source_version in /Applications"
+'''
