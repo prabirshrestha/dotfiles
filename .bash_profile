@@ -35,6 +35,8 @@ export PATH="$HOME/.local/bin:$PATH"
 # if hash fnm 2>/dev/null; then eval "$(fnm env --use-on-cd)"; fi
 if hash mise 2>/dev/null; then eval "$(mise activate bash)"; fi
 
+if command -v wt >/dev/null 2>&1; then eval "$(command wt config shell init bash)"; fi
+
 if hash nomad 2>/dev/null; then complete -C nomad nomad; fi
 
 # if [ "$platform" == "mac" ]

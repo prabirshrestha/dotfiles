@@ -31,6 +31,10 @@ if type -q mise
     mise activate fish | source
 end
 
+if type -q wt
+    command wt config shell init fish | source
+end
+
 if type -q kache
     set -gx RUSTC_WRAPPER kache
     set -gx CC "kache cc"
