@@ -190,7 +190,7 @@ function gwr
         wt remove $branch
     end
 end
-# gcow: git checkout worktree (-b for new branch)
+# gcow: git checkout worktree (-b for new branch from the current branch)
 function gcow
     if test (count $argv) -eq 0
         echo "Usage: gcow [-b] <branch>"
@@ -198,7 +198,11 @@ function gcow
     end
 
     if test "$argv[1]" = "-b"
-        wt switch $argv[2..-1] --create
+        if test (count $argv) -eq 1
+            wt switch --branches --remotes
+        else
+            wt switch $argv[2..-1] --create --base=@
+        end
     else
         wt switch $argv
     end
