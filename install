@@ -34,7 +34,9 @@ if [ "$platform" = "mac" ]; then
     brew install mise
   fi
 
+  brew update
   mise bootstrap --yes
+  copilot update stable
 
   brew install \
     axodotdev/tap/cargo-dist \
@@ -101,6 +103,7 @@ if [ "$platform" = "mac" ]; then
     lm-studio \
     spokenly \
   ;
+  brew upgrade --cask codex
 
   if command -v rustup > /dev/null 2>&1; then
     rustup component add rust-src rust-analyzer
