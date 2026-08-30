@@ -30,11 +30,12 @@ if [ "$platform" = "mac" ]; then
     eval "$(/opt/homebrew/bin/brew shellenv)"
   fi
 
-  if ! command -v mise > /dev/null 2>&1; then
+  brew update
+  if brew list --formula mise > /dev/null 2>&1; then
+    brew upgrade mise
+  else
     brew install mise
   fi
-
-  brew update
   mise bootstrap --yes
   copilot update stable
 
@@ -322,6 +323,11 @@ if [ -x "$dotfiles_dir/configure" ]; then
   cd "$oldpwd"
 else
   echo "Skipping dotfiles apply; $dotfiles_dir/configure was not found or is not executable."
+fi
+
+if command -v mise > /dev/null 2>&1; then
+  mise -C "$dotfiles_dir" bootstrap packages upgrade --yes -v
+  mise -C "$dotfiles_dir" upgrade --yes -v
 fi
 
 if command -v cargo > /dev/null 2>&1 && ! command -v cargo-clean-all > /dev/null 2>&1; then

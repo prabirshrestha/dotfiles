@@ -9,6 +9,7 @@ bun = "latest"
 fzf = "latest"
 "github:kunobi-ninja/kache" = "latest"
 hunk = "latest"
+mr-boxington = "latest"
 node = "latest"
 rust = "latest"
 television = { version = "latest", os = ["linux", "macos"] }
