@@ -37,6 +37,7 @@ if [ "$platform" = "mac" ]; then
     brew install mise
   fi
   mise bootstrap --yes
+  brew upgrade
   copilot update stable
 
   brew install \
