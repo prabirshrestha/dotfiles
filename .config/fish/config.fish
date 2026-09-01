@@ -338,3 +338,7 @@ set -gx PATH $PATH /Users/prabirshrestha/.lmstudio/bin
 
 # cder environment
 test -r "$HOME/.config/cder/env.fish"; and source "$HOME/.config/cder/env.fish"
+
+# BEGIN Agency MANAGED BLOCK
+fish_add_path "$HOME/.config/agency/CurrentVersion"
+# END Agency MANAGED BLOCK
