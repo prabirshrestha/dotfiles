@@ -1,0 +1,5 @@
+[registry]
+global-credential-providers = ["msrustup", "cargo:token"]
+
+[build]
+rustc-wrapper = "kache"
