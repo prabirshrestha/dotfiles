@@ -1,6 +1,10 @@
 # disable fish greeting
 set fish_greeting
 
+# Temporary workaround for Codex skill loading exceeding macOS's default file limit.
+# Remove when https://github.com/openai/codex/issues/36755 is fixed.
+ulimit -Sn 4096
+
 set -gx EDITOR vim
 set -gx DO_NOT_TRACK 1
 
