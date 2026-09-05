@@ -95,6 +95,7 @@ if [ "$platform" = "mac" ]; then
   brew install dotenvx/brew/dotenvx
   brew trust maddada/tap
   brew install --cask \
+    barutsrb/tap/omniwm \
     claude-code@latest \
     codex \
     chatgpt \
