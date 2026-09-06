@@ -76,6 +76,7 @@ if [ "$platform" = "mac" ]; then
     rmux \
     rustup \
     sops \
+    steipete/tap/imsg \
     tig \
     tmux \
     tree \
