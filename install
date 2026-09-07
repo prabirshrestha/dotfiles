@@ -238,22 +238,6 @@ elif [ "$platform" = "windows" ] || [ "$platform" = "cygwin" ] || [ "$platform" 
     esac
   done
 
-  # Install the latest sshdt Windows release into the user-local bin directory.
-  sshdt_release_json="$(curl.exe -fsSL https://api.github.com/repos/prabirshrestha/sshdt/releases/latest)"
-  sshdt_asset_url="$(printf '%s\n' "$sshdt_release_json" | sed -n 's/.*"browser_download_url": "\([^"]*x86_64-pc-windows-msvc.zip\)".*/\1/p' | head -n 1)"
-  if [ -z "$sshdt_asset_url" ]; then
-    echo "Unable to find the latest sshdt Windows release asset." >&2
-    exit 1
-  fi
-  sshdt_asset_name="${sshdt_asset_url##*/}"
-  sshdt_tmp="${TEMP:-$HOME/AppData/Local/Temp}/sshdt-install-$$"
-  mkdir -p "$HOME/.local/bin" "$sshdt_tmp"
-  echo "Installing sshdt into $HOME/.local/bin"
-  curl.exe -fsSL "$sshdt_asset_url" -o "$sshdt_tmp/$sshdt_asset_name"
-  unzip -qo "$sshdt_tmp/$sshdt_asset_name" -d "$sshdt_tmp/extracted"
-  cp "$sshdt_tmp/extracted/sshdt.exe" "$HOME/.local/bin/sshdt.exe"
-  rm -rf "$sshdt_tmp"
-
   # WinGet is the Windows bootstrap; Mise owns the remaining package setup.
   if ! cmd.exe /c where mise > /dev/null 2>&1; then
     winget.exe install --id jdx.mise --exact --source winget --scope user \
