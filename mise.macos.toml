@@ -15,6 +15,7 @@
 "brew:ffmpeg" = "latest"
 "brew:fish" = "latest"
 "brew:lazydocker" = "latest"
+"brew-cask:terminal-browser" = "latest"
 "brew:vim" = "latest"
 "brew-cask:radix" = "latest"
 

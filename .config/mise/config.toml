@@ -9,6 +9,7 @@ bun = "latest"
 fzf = "latest"
 "github:kunobi-ninja/kache" = "latest"
 "github:prabirshrestha/sshdt" = "latest"
+"github:zenbu-labs/terminal-browser" = { version = "latest", os = ["linux"] }
 hunk = "latest"
 mr-boxington = "latest"
 node = "latest"
