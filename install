@@ -94,8 +94,10 @@ if [ "$platform" = "mac" ]; then
 
   brew install dotenvx/brew/dotenvx
   brew trust maddada/tap
+  # Blender's set_permissions cask step is unsupported by Mise 2026.9.3.
   brew install --cask \
     barutsrb/tap/omniwm \
+    blender \
     claude-code@latest \
     codex \
     chatgpt \
