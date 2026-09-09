@@ -51,7 +51,6 @@ if [ "$platform" = "mac" ]; then
     git-credential-manager \
     git-gui \
     git-lfs \
-    herdr \
     hyperfine \
     jj \
     jq \
@@ -251,6 +250,14 @@ elif [ "$platform" = "windows" ] || [ "$platform" = "cygwin" ] || [ "$platform" 
   elif [ -x "$LOCALAPPDATA/Microsoft/WinGet/Links/mise.exe" ]; then
     PATH="$LOCALAPPDATA/Microsoft/WinGet/Links;$PATH"
     export PATH
+  fi
+fi
+
+if [ "$platform" = "mac" ] || [ "$platform" = "linux" ]; then
+  if command -v herdr > /dev/null 2>&1; then
+    herdr update --handoff
+  else
+    curl -fsSL https://herdr.dev/install.sh | sh
   fi
 fi
 
