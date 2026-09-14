@@ -14,6 +14,9 @@ stty -ixon
 export PATH="$HOME/.cargo/bin:$HOME/go/bin:$HOME/Library/Python/3.7/bin:$PATH"
 export PATH="$HOME/.config/nvim/plugins/vim-themis/bin:$PATH"
 export PATH="/opt/homebrew/bin:$PATH"
+if [ -d "$HOME/.rd/bin" ]; then
+  export PATH="$HOME/.rd/bin:$PATH"
+fi
 #export PATH="/opt/pkg/bin:$PATH"
 
 # alias

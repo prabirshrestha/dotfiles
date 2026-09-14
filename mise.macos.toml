@@ -7,17 +7,14 @@
 "brew:cargo-watch" = "latest"
 "brew-cask:copilot-cli" = "latest"
 "brew:ddgr" = "latest"
-"brew:docker" = "latest"
-"brew:docker-compose" = "latest"
-"brew:docker-credential-helper" = "latest"
 "brew:efm-langserver" = "latest"
 "brew:ffmpeg" = "latest"
 "brew:fish" = "latest"
-"brew:lazydocker" = "latest"
 "brew:lua" = "latest"
 "brew-cask:terminal-browser" = "latest"
 "brew:vim" = "latest"
 "brew-cask:radix" = "latest"
+"brew-cask:rancher" = "latest"
 
 # Copilot casks installed by older Mise releases did not own their generated
 # completion files. Remove only those generated files so the current cask can

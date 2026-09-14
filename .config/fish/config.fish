@@ -15,6 +15,9 @@ set -x TELEVISION_CONFIG $HOME/.config/television
 
 fish_add_path ~/.dotfiles/bin
 fish_add_path ~/.local/bin
+if test -d ~/.rd/bin
+    fish_add_path ~/.rd/bin
+end
 
 if test -x /opt/homebrew/bin/brew
     set -gx HOMEBREW_PREFIX /opt/homebrew

@@ -101,7 +101,6 @@ if [ "$platform" = "mac" ]; then
     claude-code@latest \
     codex \
     chatgpt \
-    docker \
     freelens \
     maddada/tap/ghostex \
     ghostty \

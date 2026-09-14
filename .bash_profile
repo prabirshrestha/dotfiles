@@ -30,6 +30,9 @@ export PATH="$HOME/.cargo/bin:$HOME/go/bin:$HOME/Library/Python/3.8/bin:$PATH"
 export PATH="$HOME/.config/nvim/plugins/vim-themis/bin:$PATH"
 export PATH="$HOME/.dotfiles/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
+if [ -d "$HOME/.rd/bin" ]; then
+  export PATH="$HOME/.rd/bin:$PATH"
+fi
 #export PATH="/opt/pkg/bin:$PATH"
 
 # if hash fnm 2>/dev/null; then eval "$(fnm env --use-on-cd)"; fi
@@ -167,10 +170,6 @@ fstash() {
       git stash show -p $sha
     fi
   done
-}
-
-start-openwebui() {
-  docker run -d --network=host -v open-webui:/app/backend/data -e OLLAMA_API_BASE_URL=http://localhost:11434/api --restart always --name open-webui ghcr.io/open-webui/open-webui:main
 }
 
 # Added by LM Studio CLI (lms)
