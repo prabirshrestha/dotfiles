@@ -34,10 +34,6 @@ if test -x /opt/homebrew/bin/brew
     end
 end
 
-if type -q mise
-    mise activate fish | source
-end
-
 if type -q wt
     command wt config shell init fish | source
 end
@@ -56,7 +52,7 @@ if test -n "$HOME/.config/fish/completions/pnpm.fish"
   source "$HOME/.config/fish/completions/pnpm.fish"
 end
 
-type -q uv; and uv generate-shell-completion fish | source
+# Fish loads uv completions on demand.
 
 set -gx SOPS_AGE_KEY_FILE ~/.config/sops/age/keys.txt
 
