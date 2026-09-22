@@ -1,7 +1,8 @@
 #!/usr/bin/env sh
 set -e
 
-MISE_TRUSTED_CONFIG_PATHS="$PWD" mise bootstrap --yes -v
+# Kache may not exist yet when Mise installs Cargo-backed tools.
+MISE_TRUSTED_CONFIG_PATHS="$PWD" RUSTC_WRAPPER= mise bootstrap --yes -v
 MISE_TRUSTED_CONFIG_PATHS="$PWD" mise exec -- dotter -vv "$@"
-MISE_TRUSTED_CONFIG_PATHS="$PWD" mise install
+MISE_TRUSTED_CONFIG_PATHS="$PWD" RUSTC_WRAPPER= mise install
 MISE_TRUSTED_CONFIG_PATHS="$PWD" mise exec -- kache daemon install
