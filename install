@@ -222,10 +222,10 @@ elif [ "$platform" = "windows" ] || [ "$platform" = "cygwin" ] || [ "$platform" 
     sudo.exe reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModelUnlock" /t REG_DWORD /f /v AllowDevelopmentWithoutDevLicense /d 1
   fi
 
-  # Add ~/.local/bin and dotfiles bin-windows to the persistent user PATH.
+  # Add user tools, Mise shims, and dotfiles commands to the persistent user PATH.
   user_path="$(reg.exe query 'HKCU\Environment' /v Path 2>/dev/null | tr -d '\r' | sed -n 's/^[[:space:]]*Path[[:space:]]*REG_[A-Z_]*[[:space:]]*//p')"
   user_path_key="$(printf '%s' ";$user_path;" | tr '\\' '/' | tr '[:upper:]' '[:lower:]')"
-  for dir in "$HOME/.local/bin" "$HOME/.dotfiles/bin-windows"; do
+  for dir in "$HOME/.local/bin" "$LOCALAPPDATA/mise/shims" "$HOME/.dotfiles/bin-windows"; do
     dir_key="$(printf '%s' "$dir" | tr '\\' '/' | tr '[:upper:]' '[:lower:]')"
     case "$user_path_key" in
       *";$dir_key;"*) echo "$dir already in user PATH" ;;
