@@ -314,7 +314,7 @@ let g:lsp_diagnostics_echo_cursor = 1
 let g:lsp_format_sync_timeout = 1000
 let g:lsp_documentation_float_docked = 1
 let g:lsp_inlay_hints_enabled = 0
-let g:lsp_semantic_enabled = 1
+let g:lsp_semantic_enabled = 0
 let g:lsp_code_actions_use_popup_menu = 1
 let g:lsp_virtual_text = 1
 let g:lsp_diagnostics_virtual_text_enabled = 0
@@ -322,6 +322,9 @@ let g:lsp_diagnostics_virtual_text_enabled = 0
 hi! LspErrorHighlight guifg=#dc322f guibg=NONE guisp=#dc322f gui=undercurl cterm=undercurl
 hi! LspInfoHighlight guifg=#2aa198 guibg=NONE guisp=#2aa198 gui=undercurl cterm=undercurl
 hi! LspWarningHighlight guifg=#b58900 guibg=NONE guisp=#b58900 gui=undercurl cterm=undercurl
+
+" Prefer full Rust language support over the diagnostics-only bacon-ls.
+let g:lsp_settings_filetype_rust = 'rust-analyzer'
 
 let g:lsp_settings = {
   \  'efm-langserver': {
