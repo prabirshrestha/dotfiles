@@ -11,6 +11,3 @@
 ".config/bspwm"="~/.config/bspwm"
 ".config/sxhkd"="~/.config/sxhkd"
 ".xprofile"="~/.xprofile"
-
-[windows]
-"clink"="~/scoop/persist/clink/profile"

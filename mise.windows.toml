@@ -6,6 +6,12 @@
 # psmux checks this path before falling back to ~/.tmux.conf.
 "~/.psmux.conf" = { source = ".config/psmux/psmux.conf", mode = "symlink" }
 
+# Clink loads settings and Lua scripts from its LocalAppData state directory.
+"~/AppData/Local/clink/clink_settings" = { source = "clink/clink_settings", mode = "symlink" }
+"~/AppData/Local/clink/home.lua" = { source = "clink/home.lua", mode = "symlink" }
+"~/AppData/Local/clink/scoop.lua" = { source = "clink/scoop.lua", mode = "symlink" }
+"~/AppData/Local/clink/zoxide.lua" = { source = "clink/zoxide.lua", mode = "symlink" }
+
 # Mise does not yet have built-in WinGet or Scoop bootstrap package managers.
 # Keep the Windows package convergence here so `mise bootstrap` still owns it.
 [tasks.bootstrap]
@@ -82,4 +88,7 @@ do
     scoop install "$package"
   fi
 done
+
+# Ensure every newly opened cmd.exe session injects Clink.
+clink autorun install
 '''

@@ -18,6 +18,23 @@ case "${unameOut}" in
   *)          platform="UNKNOWN:${unameOut}"
 esac
 
+case "$platform" in
+  mac) MISE_ENV=macos;;
+  windows|cygwin|mingw)
+    MISE_ENV=windows
+    if [ -z "${HOME:-}" ]; then
+      if [ -z "${USERPROFILE:-}" ]; then
+        echo "USERPROFILE is required when HOME is not set." >&2
+        exit 1
+      fi
+      HOME="$(printf '%s' "$USERPROFILE" | tr '\\' '/')"
+      export HOME
+    fi
+    ;;
+  linux) MISE_ENV=linux;;
+esac
+export MISE_ENV
+
 if [ "$platform" = "mac" ]; then
   echo "Detected MacOS"
 
@@ -222,10 +239,11 @@ elif [ "$platform" = "windows" ] || [ "$platform" = "cygwin" ] || [ "$platform" 
     sudo.exe reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModelUnlock" /t REG_DWORD /f /v AllowDevelopmentWithoutDevLicense /d 1
   fi
 
-  # Add user tools, Mise shims, and dotfiles commands to the persistent user PATH.
+  # Add user tools, package-manager binaries, Mise shims, and dotfiles commands
+  # to the persistent user PATH.
   user_path="$(reg.exe query 'HKCU\Environment' /v Path 2>/dev/null | tr -d '\r' | sed -n 's/^[[:space:]]*Path[[:space:]]*REG_[A-Z_]*[[:space:]]*//p')"
   user_path_key="$(printf '%s' ";$user_path;" | tr '\\' '/' | tr '[:upper:]' '[:lower:]')"
-  for dir in "$HOME/.local/bin" "$LOCALAPPDATA/mise/shims" "$HOME/.dotfiles/bin-windows"; do
+  for dir in "$HOME/.local/bin" "$HOME/.bun/bin" "$LOCALAPPDATA/mise/shims" "$HOME/.dotfiles/bin-windows"; do
     dir_key="$(printf '%s' "$dir" | tr '\\' '/' | tr '[:upper:]' '[:lower:]')"
     case "$user_path_key" in
       *";$dir_key;"*) echo "$dir already in user PATH" ;;
@@ -252,6 +270,14 @@ elif [ "$platform" = "windows" ] || [ "$platform" = "cygwin" ] || [ "$platform" 
     PATH="$LOCALAPPDATA/Microsoft/WinGet/Links;$PATH"
     export PATH
   fi
+
+  codex_dir="$LOCALAPPDATA/Programs/OpenAI/Codex/bin"
+  if [ ! -x "$codex_dir/codex.exe" ]; then
+    powershell.exe -NoProfile -ExecutionPolicy Bypass -Command \
+      'irm https://chatgpt.com/codex/install.ps1 | iex'
+  fi
+  PATH="$codex_dir;$PATH"
+  export PATH
 fi
 
 if [ "$platform" = "mac" ] || [ "$platform" = "linux" ]; then
@@ -262,23 +288,15 @@ if [ "$platform" = "mac" ] || [ "$platform" = "linux" ]; then
   fi
 fi
 
+# Configure Bun's age gate before using it to install global packages.
 if command -v bun > /dev/null 2>&1; then
-  if ! command -v rift > /dev/null 2>&1; then
-    bun add -g rift-snapshot
+  if ! grep -q "minimumReleaseAge" "$HOME/.bunfig.toml" 2>/dev/null; then
+    printf '\n[install]\nminimumReleaseAge = 604800\n' >> "$HOME/.bunfig.toml"
   fi
 fi
 
-# Minimum release age: only install package versions older than 7 days
-# (mitigates supply-chain attacks via freshly-published malicious versions)
-if command -v npm > /dev/null 2>&1; then
-  if ! npm config set min-release-age=7; then
-    if npm install -g npm@latest; then
-      npm config set min-release-age=7 || echo "Skipping npm min-release-age; unsupported by current npm."
-    else
-      echo "Skipping npm min-release-age; npm update failed."
-    fi
-  fi
-fi
+# Configure minimum release ages where the package manager supports a global
+# age gate. npm has no equivalent global setting.
 if command -v pnpm > /dev/null 2>&1; then
   pnpm config set minimumReleaseAge 10080
 fi
@@ -288,11 +306,6 @@ if command -v yarn > /dev/null 2>&1; then
     yarn config set -H npmMinimalAgeGate "168h"
   else
     echo "Skipping Yarn minimum age gate; Yarn Classic does not support it."
-  fi
-fi
-if command -v bun > /dev/null 2>&1; then
-  if ! grep -q "minimumReleaseAge" "$HOME/.bunfig.toml" 2>/dev/null; then
-    printf '\n[install]\nminimumReleaseAge = 604800\n' >> "$HOME/.bunfig.toml"
   fi
 fi
 
@@ -310,6 +323,11 @@ else
   echo "Skipping dotfiles clone; git is not installed."
 fi
 
+if command -v mise > /dev/null 2>&1; then
+  mise -C "$dotfiles_dir" bootstrap packages upgrade --yes -v
+  mise -C "$dotfiles_dir" upgrade --yes -v
+fi
+
 if [ -x "$dotfiles_dir/configure" ]; then
   echo "Applying dotfiles from $dotfiles_dir"
   oldpwd="$(pwd)"
@@ -320,22 +338,6 @@ else
   echo "Skipping dotfiles apply; $dotfiles_dir/configure was not found or is not executable."
 fi
 
-if command -v mise > /dev/null 2>&1; then
-  mise -C "$dotfiles_dir" bootstrap packages upgrade --yes -v
-  mise -C "$dotfiles_dir" upgrade --yes -v
-fi
-
 if command -v cargo > /dev/null 2>&1 && ! command -v cargo-clean-all > /dev/null 2>&1; then
   cargo install cargo-clean-all
-fi
-
-if [ "$platform" = "windows" ] || [ "$platform" = "cygwin" ] || [ "$platform" = "mingw" ]; then
-  if command -v clink > /dev/null 2>&1 && [ -d "$dotfiles_dir/clink" ]; then
-    clink_profile="${LOCALAPPDATA:-$HOME/AppData/Local}/clink"
-    echo "Configuring Clink profile in $clink_profile"
-    mkdir -p "$clink_profile"
-    cp "$dotfiles_dir"/clink/*.lua "$clink_profile"/
-    cp "$dotfiles_dir"/clink/clink_settings "$clink_profile"/
-    clink autorun install -- --profile "$clink_profile"
-  fi
 fi

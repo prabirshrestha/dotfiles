@@ -1,6 +1,15 @@
 #!/usr/bin/env sh
 set -e
 
+if [ -z "${MISE_ENV:-}" ]; then
+    case "$(uname -s)" in
+    Darwin*) MISE_ENV=macos;;
+    Linux*) MISE_ENV=linux;;
+    CYGWIN*|MSYS*|MINGW*|Windows*) MISE_ENV=windows;;
+    esac
+    export MISE_ENV
+fi
+
 # Kache may not exist yet when Mise installs Cargo-backed tools.
 MISE_TRUSTED_CONFIG_PATHS="$PWD" RUSTC_WRAPPER= mise bootstrap --yes -v
 MISE_TRUSTED_CONFIG_PATHS="$PWD" mise exec -- dotter -vv "$@"
