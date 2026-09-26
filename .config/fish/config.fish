@@ -128,9 +128,9 @@ if command -q safehouse
     # function copilot
     #     safe copilot $argv
     # end
-    function opencode
-        safe opencode $argv
-    end
+    # function opencode
+    #     safe opencode $argv
+    # end
 else
     alias claude-yolo "claude --dangerously-skip-permissions"
     alias claudey "claude --dangerously-skip-permissions"
