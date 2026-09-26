@@ -22,8 +22,8 @@ uv = "latest"
 worktrunk = "latest"
 
 [tools."github:0xShug0/audio.cpp"]
-version = "0.8.1"
+version = "0.8.2-audio8-perf-hotfix"
 os = ["macos"]
 asset_pattern = "audio-v*-bin-macos-{{ arch() }}-metal.tar.gz"
-# The official 0.8.1 archive omits executable permissions on these binaries.
+# The official archive omits executable permissions on these binaries.
 postinstall = 'chmod +x "$MISE_TOOL_INSTALL_PATH/audiocpp_cli" "$MISE_TOOL_INSTALL_PATH/audiocpp_server" "$MISE_TOOL_INSTALL_PATH/audiocpp_gguf"'
