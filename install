@@ -64,7 +64,6 @@ if [ "$platform" = "mac" ]; then
     fd \
     fisher \
     fnm \
-    gh \
     git-credential-manager \
     git-gui \
     git-lfs \

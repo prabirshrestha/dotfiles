@@ -10,6 +10,7 @@ minimum_release_age = "3d"
 "~/.cargo/config.toml" = { source = ".cargo/config.toml", mode = "symlink" }
 
 [tools]
+"gh" = "latest"
 # Dotter must be available before the global Mise config can be deployed.
 "github:SuperCuber/dotter" = "latest"
 "microsandbox" = "latest"
