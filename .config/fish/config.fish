@@ -34,7 +34,7 @@ if test -x /opt/homebrew/bin/brew
     end
 end
 
-if type -q wt
+if command -q wt
     command wt config shell init fish | source
 end
 
