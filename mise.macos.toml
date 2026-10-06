@@ -1,6 +1,8 @@
 [bootstrap.packages]
 "brew:age" = "latest"
 "brew:bat" = "latest"
+"brew:bruno-cli" = "latest"
+"brew-cask:bruno" = "latest"
 "brew:ca-certificates" = "latest"
 "brew:cargo-cache" = "latest"
 "brew:cargo-make" = "latest"

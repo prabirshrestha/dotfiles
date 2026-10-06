@@ -14,3 +14,4 @@ minimum_release_age = "3d"
 # Dotter must be available before the global Mise config can be deployed.
 "github:SuperCuber/dotter" = "latest"
 "microsandbox" = "latest"
+"npm:@usebruno/cli" = { version = "latest", os = ["linux", "windows"] }

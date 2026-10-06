@@ -15,6 +15,7 @@ hunk = "latest"
 mr-boxington = "latest"
 node = "latest"
 "npm:@microsoft/workiq" = "latest"
+"npm:@usebruno/cli" = { version = "latest", os = ["linux", "windows"] }
 rust = "latest"
 television = { version = "latest", os = ["linux", "macos"] }
 # Temporarily disabled: the current npm package is blocked by organizational policy.
