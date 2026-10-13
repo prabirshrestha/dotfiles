@@ -34,6 +34,10 @@ if test -x /opt/homebrew/bin/brew
     end
 end
 
+if command -q mise
+    mise activate fish | source
+end
+
 if command -q wt
     command wt config shell init fish | source
 end
