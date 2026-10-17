@@ -349,3 +349,7 @@ test -r "$HOME/.config/cder/env.fish"; and source "$HOME/.config/cder/env.fish"
 # BEGIN Agency MANAGED BLOCK
 fish_add_path "$HOME/.config/agency/CurrentVersion"
 # END Agency MANAGED BLOCK
+
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+set --export --prepend PATH "/Users/prabirshrestha/.rd/bin"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
