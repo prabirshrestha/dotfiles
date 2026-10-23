@@ -11,7 +11,6 @@ minimum_release_age = "3d"
 
 [tools]
 "gh" = "latest"
-"github:alltuner/git-sprout" = "latest"
 # Dotter must be available before the global Mise config can be deployed.
 "github:SuperCuber/dotter" = "latest"
 "microsandbox" = "latest"

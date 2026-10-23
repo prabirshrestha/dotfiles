@@ -8,7 +8,6 @@ bun = "latest"
 "cargo:ferricket" = "latest"
 fzf = "latest"
 gh = "latest"
-"github:alltuner/git-sprout" = "latest"
 "github:kunobi-ninja/kache" = "latest"
 "github:prabirshrestha/sshdt" = "latest"
 "github:zenbu-labs/terminal-browser" = { version = "latest", os = ["linux"] }
