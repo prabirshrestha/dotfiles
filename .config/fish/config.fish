@@ -192,7 +192,7 @@ alias gws "wt switch --branches"
 alias gwm "wt switch main"
 # gwr: git worktree remove (interactive)
 function gwr
-    set -l branch (wt list --format json 2>/dev/null | jq -r '.[].branch' | grep -v '^\[0m$' | tv)
+    set -l branch (wt list --format json 2>/dev/null | jq -r '(.items? // .)[] | select(.worktree != null and .worktree.main != true and .branch != null) | .branch' | tv)
     if test -n "$branch"
         wt remove $branch
     end
