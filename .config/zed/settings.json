@@ -133,9 +133,7 @@
       "GIT_EDITOR": "zed --wait",
     },
     "font_size": 14,
-    "shell": {
-      "program": "fish",
-    },
+    "shell": "system",
   },
   "context_servers": {
     "browser-mcp": {
