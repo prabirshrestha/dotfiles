@@ -1,3 +1,4 @@
+# Keep this config in sync with .config/rex/init.lua.
 command = /opt/homebrew/bin/fish --login --interactive
 
 window-inherit-working-directory = true

@@ -8,6 +8,7 @@ minimum_release_age = "3d"
 # Suppress Unix login banners such as "Last login"; ignored on unsupported platforms.
 "~/.hushlogin" = { source = ".hushlogin", mode = "symlink" }
 "~/.cargo/config.toml" = { source = ".cargo/config.toml", mode = "symlink" }
+"~/.config/rex/init.lua" = { source = ".config/rex/init.lua", mode = "symlink" }
 
 [tools]
 "gh" = "latest"
