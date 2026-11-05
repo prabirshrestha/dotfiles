@@ -98,7 +98,6 @@ if [ "$platform" = "mac" ]; then
     trzsz-ssh \
     tsshd \
     tuicr \
-    utm \
     uv \
     vlc \
     wezterm \
