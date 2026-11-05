@@ -18,7 +18,6 @@
 "brew:vim" = "latest"
 "brew-cask:radix" = "latest"
 "brew-cask:rancher" = "latest"
-"brew-cask:swiftvm-app/tap/swiftvm" = "latest"
 
 # Copilot casks installed by older Mise releases did not own their generated
 # completion files. Remove only those generated files so the current cask can
