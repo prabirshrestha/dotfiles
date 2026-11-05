@@ -34,6 +34,7 @@ if test -x /opt/homebrew/bin/brew
     end
 end
 
+set -gx MSRUSTUP_DISABLE_TELEMETRY 1
 # Set Rust PATH order before mise activate. mise saves PATH at activation.
 fish_add_path ~/.cargo/bin
 # msrustup multiplexers must come before rustup proxies. They run ms- toolchains
