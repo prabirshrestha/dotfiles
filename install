@@ -138,7 +138,7 @@ if [ "$platform" = "mac" ]; then
   brew install eugene1g/safehouse/agent-safehouse
 
   case "$(scutil --get ComputerName)" in
-  *Work*)
+  *[Ww]ork*)
     brew install \
       gettext \
       azure-data-studio \
