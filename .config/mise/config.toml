@@ -1,6 +1,6 @@
 # Deployed to ~/.config/mise/config.toml for tools available in every directory.
 [settings]
-idiomatic_version_file_enable_tools = ["node", "rust"]
+idiomatic_version_file_enable_tools = ["node"]
 experimental = true
 
 [tools]
@@ -11,11 +11,9 @@ gh = "latest"
 "github:prabirshrestha/sshdt" = "latest"
 "github:zenbu-labs/terminal-browser" = { version = "latest", os = ["linux"] }
 hunk = "latest"
-mr-boxington = "latest"
 node = "latest"
 "npm:@microsoft/workiq" = "latest"
 "npm:@usebruno/cli" = { version = "latest", os = ["linux", "windows"] }
-rust = "latest"
 television = { version = "latest", os = ["linux", "macos"] }
 # Temporarily disabled: the current npm package is blocked by organizational policy.
 # "npm:prettier" = "latest"
