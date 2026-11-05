@@ -59,7 +59,6 @@ if [ "$platform" = "mac" ]; then
 
   brew install \
     axodotdev/tap/cargo-dist \
-    cmux \
     deskpad \
     fd \
     fisher \

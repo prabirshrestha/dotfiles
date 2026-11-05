@@ -5,7 +5,6 @@ packages = [
   "awesomewm",
   "bash",
   "bspwm",
-  "cmux",
   "efm-langserver",
   "fish",
   "git",
