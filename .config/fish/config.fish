@@ -42,12 +42,6 @@ if command -q wt
     command wt config shell init fish | source
 end
 
-if type -q kache
-    set -gx RUSTC_WRAPPER kache
-    set -gx CC "kache cc"
-    set -gx CXX "kache c++"
-end
-
 fish_add_path ~/.bun/bin
 fish_add_path ~/.cargo/bin
 
