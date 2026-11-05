@@ -185,3 +185,7 @@ export PATH="$PATH:$HOME/.lmstudio/bin"
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
 export PATH="/Users/prabirshrestha/.rd/bin:$PATH"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
+# >>> msrustup managed block (v1) >>>
+# Managed by msrustup. Do not edit between these markers.
+[ -f "$HOME/.msrustup/multiplexers/env" ] && . "$HOME/.msrustup/multiplexers/env"
+# <<< msrustup managed block (v1) <<<
