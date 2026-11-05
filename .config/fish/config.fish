@@ -34,6 +34,14 @@ if test -x /opt/homebrew/bin/brew
     end
 end
 
+# Set Rust PATH order before mise activate. mise saves PATH at activation.
+fish_add_path ~/.cargo/bin
+# msrustup multiplexers must come before rustup proxies. They run ms- toolchains
+# and forward other toolchains to rustup.
+if test -d ~/.msrustup/multiplexers/bin
+    fish_add_path --move ~/.msrustup/multiplexers/bin
+end
+
 if command -q mise
     mise activate fish | source
 end
@@ -43,7 +51,6 @@ if command -q wt
 end
 
 fish_add_path ~/.bun/bin
-fish_add_path ~/.cargo/bin
 
 type -q zoxide; and zoxide init fish | source
 if test -n "$HOME/.config/fish/completions/pnpm.fish"

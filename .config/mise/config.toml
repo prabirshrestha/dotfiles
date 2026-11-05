@@ -26,3 +26,13 @@ os = ["macos"]
 asset_pattern = "audio-v*-bin-macos-{{ arch() }}-metal.tar.gz"
 # The official archive omits executable permissions on these binaries.
 postinstall = 'chmod +x "$MISE_TOOL_INSTALL_PATH/audiocpp_cli" "$MISE_TOOL_INSTALL_PATH/audiocpp_server" "$MISE_TOOL_INSTALL_PATH/audiocpp_gguf"'
+
+# The huacnlee/cargo fork lives in ~/.local/share/cargo-fork/bin. mise rebuilds
+# PATH on cd, so let mise keep this folder in front in every shell.
+[env]
+_.path = ["~/.local/share/cargo-fork/bin"]
+# Turn off the daily self-update of the huacnlee/cargo fork.
+CARGO_FORK_AUTO_UPDATE = "0"
+# Share build output only inside one repo and its worktrees, so crates from
+# different rustc versions do not mix.
+CARGO_SHARED_DEPS = "0"

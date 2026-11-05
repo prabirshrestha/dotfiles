@@ -336,6 +336,13 @@ else
   echo "Skipping dotfiles apply; $dotfiles_dir/configure was not found or is not executable."
 fi
 
+# Install the huacnlee/cargo fork into its own folder. It shares one build
+# directory across worktrees. ~/.cargo/bin keeps the rustup proxy, so msrustup
+# and rustup still pick the toolchain. Mise puts this folder first in PATH.
+if [ "$platform" = "mac" ] || [ "$platform" = "linux" ]; then
+  curl -fsSL https://huacnlee.github.io/cargo/install.sh | sh -s -- --dir "$HOME/.local/share/cargo-fork/bin"
+fi
+
 if command -v cargo > /dev/null 2>&1 && ! command -v cargo-clean-all > /dev/null 2>&1; then
   cargo install cargo-clean-all
 fi
