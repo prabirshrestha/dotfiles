@@ -23,7 +23,7 @@ uv = "latest"
 worktrunk = "latest"
 
 [tools."github:0xShug0/audio.cpp"]
-version = "0.9.3"
+version = "0.9.4"
 os = ["macos"]
 asset_pattern = "audio-v*-bin-macos-{{ arch() }}-metal.tar.gz"
 # The official archive omits executable permissions on these binaries.
