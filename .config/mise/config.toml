@@ -4,6 +4,7 @@ idiomatic_version_file_enable_tools = ["node"]
 experimental = true
 
 [tools]
+7zip = { version = "latest", os = ["windows"] }
 bun = "latest"
 "cargo:ferricket" = "latest"
 fzf = "latest"
@@ -11,15 +12,18 @@ gh = "latest"
 "github:vercel-labs/agent-browser" = "latest"
 "github:vercel-labs/agent-desktop" = "latest"
 "github:prabirshrestha/sshdt" = "latest"
+"github:chrisant996/clink" = { version = "latest", os = ["windows"], asset_pattern = "clink.*.zip", postinstall = "clink.bat autorun install" }
 "github:zenbu-labs/terminal-browser" = { version = "latest", os = ["linux"] }
 hunk = "latest"
 node = "latest"
+ripgrep = { version = "latest", os = ["windows"] }
 "npm:@microsoft/workiq" = "latest"
 television = { version = "latest", os = ["linux", "macos"] }
 # Temporarily disabled: the current npm package is blocked by organizational policy.
 # "npm:prettier" = "latest"
 uv = "latest"
 worktrunk = "latest"
+zoxide = { version = "latest", os = ["windows"] }
 
 [tools."github:0xShug0/audio.cpp"]
 version = "0.9.3"

@@ -1,3 +1,3 @@
 @echo off
-busybox.exe sh "%~dp0configure"
+call "%~dp0bin-windows\_sh.cmd" "%~dp0configure" %*
 exit /b %ERRORLEVEL%

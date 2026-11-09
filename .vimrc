@@ -89,7 +89,6 @@ call plug#end()
 if has('gui_running')
   set guioptions=Mc!
   if has('win32')
-    " scoop install JetBrainsMono-NF-Mono
     silent! set guifont=JetBrainsMono_NFM:h18
   else
     silent! set guifont=Fira\ Code\ Nerd\ Font\ weight=450\ 15

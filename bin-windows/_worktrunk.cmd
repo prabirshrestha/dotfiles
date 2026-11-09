@@ -23,7 +23,7 @@ if "%result%"=="0" set "result=%errorlevel%"
 :run_exec
 for %%F in ("%wt_exec_file%") do set "wt_exec_size=%%~zF"
 if "%wt_exec_size%"=="0" goto cleanup
-busybox.exe sh "%wt_exec_file%"
+call "%~dp0_sh.cmd" "%wt_exec_file%"
 if not errorlevel 1 goto cleanup
 if "%result%"=="0" set "result=%errorlevel%"
 

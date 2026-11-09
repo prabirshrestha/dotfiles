@@ -39,21 +39,41 @@ Prompt:
 .\install.cmd
 ```
 
-`install.cmd` runs the shared `install` script with `busybox.exe`. On a fresh
-machine, use one of the bootstrap commands below; it downloads BusyBox before
-running that script.
+`install.cmd` installs portable BusyBox through WinGet for the current user,
+without admin permissions, then runs the shared installer with `busybox sh`.
+WinGet adds the `busybox` command. Its utilities, such as `ls` and `grep`, are
+available inside that shell or as `busybox ls` and `busybox grep`.
 
-From PowerShell:
+Windows setup also installs uutils coreutils through WinGet for the current
+user, providing native commands such as `ls.exe`, `cp.exe`, and `cat.exe`.
+Use the `.exe` suffix in PowerShell to avoid its built-in aliases. Mise
+installs ripgrep, available as `rg`, on Windows.
+
+`configure.cmd` and the Worktrunk wrapper use Git for Windows' bundled shell.
+Install Git to clone the repository and use those wrappers:
 
 ```powershell
-curl.exe -fL -o "$env:TEMP\busybox-${env:PROCESSOR_ARCHITECTURE}.exe" "https://github.com/prabirshrestha/dotfiles/releases/download/busybox/busybox-${env:PROCESSOR_ARCHITECTURE}.exe"; if ($LASTEXITCODE -eq 0) { curl.exe -fL -o "$env:TEMP\dotfiles-install" "https://raw.githubusercontent.com/prabirshrestha/dotfiles/main/install" }; if ($LASTEXITCODE -eq 0) { & "$env:TEMP\busybox-${env:PROCESSOR_ARCHITECTURE}.exe" sh "$env:TEMP\dotfiles-install" "$env:TEMP\busybox-${env:PROCESSOR_ARCHITECTURE}.exe" }
+winget install --id Git.Git --exact --source winget
 ```
 
-From Command Prompt:
+Open a new terminal after installing Git. From a fresh machine, clone this
+repository and run the installer:
 
-```cmd
-curl.exe -fL -o "%TEMP%\busybox-%PROCESSOR_ARCHITECTURE%.exe" "https://github.com/prabirshrestha/dotfiles/releases/download/busybox/busybox-%PROCESSOR_ARCHITECTURE%.exe" && curl.exe -fL -o "%TEMP%\dotfiles-install" "https://raw.githubusercontent.com/prabirshrestha/dotfiles/main/install" && "%TEMP%\busybox-%PROCESSOR_ARCHITECTURE%.exe" sh "%TEMP%\dotfiles-install" "%TEMP%\busybox-%PROCESSOR_ARCHITECTURE%.exe"
+```powershell
+git clone --recurse-submodules https://github.com/prabirshrestha/dotfiles.git "$env:USERPROFILE\.dotfiles"
+& "$env:USERPROFILE\.dotfiles\install.cmd"
 ```
+
+Windows setup uses WinGet to bootstrap Mise. It does not install the former
+Windows package bundle. Install any additional Windows applications separately.
+Mise installs portable 7-Zip command-line tools on Windows without admin
+permissions. Use `7za` to create and extract archives. This package does not
+include the File Manager or Explorer context menu.
+
+Mise also installs portable Clink from its official GitHub releases without
+admin permissions. The Windows bootstrap enables it for the current user's
+Command Prompt sessions.
+Clink's install hook refreshes that registration when Mise upgrades it.
 
 #### Ghostty
 

@@ -1,11 +1,6 @@
 #!/usr/bin/env sh
 set -e
 
-# On Windows, keep using the BusyBox executable that started this bootstrap
-# until Scoop has installed its own copy.
-DOTFILES_BUSYBOX="${1:-busybox.exe}"
-export DOTFILES_BUSYBOX
-
 arch="$(uname -m)"
 unameOut="$(uname -s)"
 case "${unameOut}" in
@@ -223,6 +218,19 @@ elif [ "$platform" = "linux" ]; then
 
 elif [ "$platform" = "windows" ] || [ "$platform" = "cygwin" ] || [ "$platform" = "mingw" ]; then
   echo "Windows Detected"
+  if ! winget.exe list --id uutils.coreutils --exact --source winget --disable-interactivity --accept-source-agreements > /dev/null 2>&1; then
+    winget.exe install --id uutils.coreutils --exact --source winget --scope user \
+      --accept-package-agreements --accept-source-agreements --disable-interactivity
+  fi
+  # BusyBox uses Windows PATH separators; Git's shell uses Unix separators.
+  path_separator=';'
+  # Native commands use slash-prefixed switches that MSYS would rewrite.
+  export MSYS_NO_PATHCONV=1
+  if command -v cygpath > /dev/null 2>&1; then
+    path_separator=':'
+    LOCALAPPDATA="$(cygpath -u "$LOCALAPPDATA")"
+    export LOCALAPPDATA
+  fi
   # Enabling Windows sudo requires an elevated terminal. Configure it directly
   # when this shell is elevated; otherwise leave the existing setting alone.
   if ! sudo.exe config > /dev/null 2>&1; then
@@ -242,6 +250,9 @@ elif [ "$platform" = "windows" ] || [ "$platform" = "cygwin" ] || [ "$platform" 
   user_path="$(reg.exe query 'HKCU\Environment' /v Path 2>/dev/null | tr -d '\r' | sed -n 's/^[[:space:]]*Path[[:space:]]*REG_[A-Z_]*[[:space:]]*//p')"
   user_path_key="$(printf '%s' ";$user_path;" | tr '\\' '/' | tr '[:upper:]' '[:lower:]')"
   for dir in "$HOME/.local/bin" "$HOME/.bun/bin" "$LOCALAPPDATA/mise/shims" "$HOME/.dotfiles/bin-windows"; do
+    if command -v cygpath > /dev/null 2>&1; then
+      dir="$(cygpath -m "$dir")"
+    fi
     dir_key="$(printf '%s' "$dir" | tr '\\' '/' | tr '[:upper:]' '[:lower:]')"
     case "$user_path_key" in
       *";$dir_key;"*) echo "$dir already in user PATH" ;;
@@ -255,26 +266,32 @@ elif [ "$platform" = "windows" ] || [ "$platform" = "cygwin" ] || [ "$platform" 
   done
 
   # WinGet is the Windows bootstrap; Mise owns the remaining package setup.
-  if ! cmd.exe /c where mise > /dev/null 2>&1; then
+  if ! cmd.exe /d /c where mise.exe > /dev/null 2>&1; then
     winget.exe install --id jdx.mise --exact --source winget --scope user \
       --accept-package-agreements --accept-source-agreements \
       --disable-interactivity --no-upgrade
   fi
   mise_bin="$(cmd.exe /d /c where mise.exe 2>/dev/null | tr -d '\r' | head -n 1)"
   if [ -n "$mise_bin" ]; then
-    PATH="$(dirname "$mise_bin");$PATH"
+    if command -v cygpath > /dev/null 2>&1; then
+      mise_bin="$(cygpath -u "$mise_bin")"
+    fi
+    PATH="$(dirname "$mise_bin")$path_separator$PATH"
     export PATH
   elif [ -x "$LOCALAPPDATA/Microsoft/WinGet/Links/mise.exe" ]; then
-    PATH="$LOCALAPPDATA/Microsoft/WinGet/Links;$PATH"
+    PATH="$LOCALAPPDATA/Microsoft/WinGet/Links$path_separator$PATH"
     export PATH
   fi
 
   codex_dir="$LOCALAPPDATA/Programs/OpenAI/Codex/bin"
   if [ ! -x "$codex_dir/codex.exe" ]; then
-    powershell.exe -NoProfile -ExecutionPolicy Bypass -Command \
+    powershell.exe -NoProfile -Command \
       'irm https://chatgpt.com/codex/install.ps1 | iex'
   fi
-  PATH="$codex_dir;$PATH"
+  PATH="$codex_dir$path_separator$PATH"
+  # Registry PATH updates do not reach this running installer. Make tools
+  # installed later by Mise available to configure and its child commands.
+  PATH="$LOCALAPPDATA/mise/shims$path_separator$HOME/.dotfiles/bin-windows$path_separator$PATH"
   export PATH
 fi
 

@@ -1,6 +1,9 @@
 #!/usr/bin/env sh
 set -e
 
+# Resolve repository configs even when invoked from another directory.
+cd "$(dirname "$0")"
+
 if [ -z "${MISE_ENV:-}" ]; then
     case "$(uname -s)" in
     Darwin*) MISE_ENV=macos;;
