@@ -358,6 +358,29 @@ fi
 # and rustup still pick the toolchain. Mise puts this folder first in PATH.
 if [ "$platform" = "mac" ] || [ "$platform" = "linux" ]; then
   curl -fsSL https://huacnlee.github.io/cargo/install.sh | sh -s -- --dir "$HOME/.local/share/cargo-fork/bin"
+elif [ "$platform" = "windows" ] || [ "$platform" = "cygwin" ] || [ "$platform" = "mingw" ]; then
+  powershell.exe -NoProfile -Command '
+    $ErrorActionPreference = "Stop"
+    # Prefer Windows PowerShell modules over inherited PowerShell 7 modules.
+    $env:PSModulePath = "$PSHOME\Modules;" + $env:PSModulePath
+    $installDir = Join-Path $env:USERPROFILE ".local\share\cargo-fork\bin"
+    $installer = (Invoke-WebRequest -UseBasicParsing https://huacnlee.github.io/cargo/install.ps1).Content
+    if ($installer -is [byte[]]) {
+      $installer = [Text.Encoding]::UTF8.GetString($installer)
+    }
+    & ([scriptblock]::Create($installer)) -InstallDir $installDir
+    $ErrorActionPreference = "Stop"
+    if (-not (Test-Path -LiteralPath (Join-Path $installDir "cargo.exe"))) {
+      throw "Cargo fork installation did not produce cargo.exe"
+    }
+    $userPath = [Environment]::GetEnvironmentVariable("Path", "User")
+    $otherPaths = @($userPath -split ";" | Where-Object {
+      $_ -and $_.Replace("/", "\").TrimEnd("\") -ine $installDir
+    })
+    [Environment]::SetEnvironmentVariable("Path", (@($installDir) + $otherPaths -join ";"), "User")
+  '
+  PATH="$HOME/.local/share/cargo-fork/bin$path_separator$PATH"
+  export PATH
 fi
 
 if command -v cargo > /dev/null 2>&1 && ! command -v cargo-clean-all > /dev/null 2>&1; then

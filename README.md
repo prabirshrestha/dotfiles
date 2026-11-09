@@ -75,6 +75,11 @@ admin permissions. The Windows bootstrap enables it for the current user's
 Command Prompt sessions.
 Clink's install hook refreshes that registration when Mise upgrades it.
 
+Windows setup installs the huacnlee Cargo fork in
+`~/.local/share/cargo-fork/bin` and puts it first in your user PATH. The
+existing rustup and msrustup proxies remain in their original directories.
+The upstream Windows release currently supports x64 only.
+
 #### Ghostty
 
 [GhosttyWin32](https://github.com/i999rri/GhosttyWin32) is not installed by
