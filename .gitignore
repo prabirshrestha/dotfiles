@@ -3,6 +3,10 @@
 
 local.config.fish
 mise.local.toml
+/.gitconfig
+/.gitconfig.local
+/.config/git/*
+!/.config/git/shared.gitconfig
 
 vim/vim.symlink/.netrwhist
 

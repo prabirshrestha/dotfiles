@@ -99,6 +99,44 @@ The bootstrap will deploy this repository's Ghostty configuration to
 This will clone `~/.dotfiles` if missing and symlink the appropriate files to your
 home directory.
 
+### Git configuration
+
+Mise renders portable defaults to `~/.config/git/shared.gitconfig`. The local
+`~/.gitconfig` includes that file first and stays a regular, untracked file.
+Machine-specific identity overrides, optional pagers, work settings and credential
+helpers stay local. Tools such as `gh auth setup-git` and `git config --global`
+continue writing to `~/.gitconfig`.
+
+Private configs can sit alongside the shared one, for example
+`~/.config/git/work.gitconfig`. Add an include for that file in `~/.gitconfig`
+when you need it. Only `shared.gitconfig` is managed by this repository; do not
+symlink the entire `~/.config/git` directory into the checkout. Credential helpers
+can combine across files, and an empty `helper` resets the earlier list.
+The shared file deliberately sets no credential helpers.
+
+`./configure` preserves the old local config in
+`~/.config/git/config.before-shared` on the first migration. It removes only
+defaults that match the shared file, keeps other local values, and releases
+Dotter's old ownership of `~/.gitconfig`. Later applies update the shared defaults
+without overwriting local tool settings. The backup may contain private settings;
+keep it outside this repository.
+
+To apply only this Git setup, without installing other tools:
+
+```sh
+mise dotfiles apply --yes ~/.config/git/shared.gitconfig
+sh scripts/configure-git
+```
+
+Git reads includes without a terminal or GUI, so the layout works in headless
+sessions too. It does not change external credential overrides supplied through
+`GIT_CONFIG_*` environment variables.
+
+On Windows, `configure.cmd` runs the same setup through Git for Windows' shell.
+`USERPROFILE` supplies the home directory when `HOME` is unset. Mise renders the
+Windows defaults, while Windows credential helpers and other local settings stay
+in `%USERPROFILE%\.gitconfig`. No Bash, Zsh, or Fish startup edits are required.
+
 ## Thanks
 
 Fork of [Holman's dotfiles](https://github.com/holman/dotfiles) which has been supported to work

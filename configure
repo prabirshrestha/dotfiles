@@ -13,6 +13,17 @@ if [ -z "${MISE_ENV:-}" ]; then
     export MISE_ENV
 fi
 
+# Git's shell normally sets HOME; native Windows launchers may only set USERPROFILE.
+if [ -z "${HOME:-}" ] && [ -n "${USERPROFILE:-}" ]; then
+    HOME=$(printf '%s' "$USERPROFILE" | tr '\\' '/')
+    if command -v cygpath >/dev/null 2>&1; then
+        HOME=$(cygpath -u "$HOME")
+    fi
+    export HOME
+fi
+
 MISE_TRUSTED_CONFIG_PATHS="$PWD" mise bootstrap --yes -v
+# Bootstrap renders the shared Git defaults before the local config includes them.
+sh ./scripts/configure-git
 MISE_TRUSTED_CONFIG_PATHS="$PWD" mise exec -- dotter -vv "$@"
 MISE_TRUSTED_CONFIG_PATHS="$PWD" mise install

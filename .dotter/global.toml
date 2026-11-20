@@ -20,9 +20,6 @@
 [fish.files]
 ".config/fish" = { type = "symbolic", target = "~/.config/fish" }
 
-[git.files]
-".gitconfig" = "~/.gitconfig"
-
 [ghostty.files]
 ".config/ghostty" = { type = "symbolic" , target = "~/.config/ghostty" }
 

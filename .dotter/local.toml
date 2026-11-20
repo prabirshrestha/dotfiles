@@ -7,7 +7,6 @@ packages = [
   "bspwm",
   "efm-langserver",
   "fish",
-  "git",
   "ghostty",
   "mise",
   "nvim",

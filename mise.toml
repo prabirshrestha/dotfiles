@@ -5,6 +5,7 @@ experimental = true
 minimum_release_age = "3d"
 
 [dotfiles]
+"~/.config/git/shared.gitconfig" = { source = ".config/git/shared.gitconfig", mode = "template" }
 # Suppress Unix login banners such as "Last login"; ignored on unsupported platforms.
 "~/.hushlogin" = { source = ".hushlogin", mode = "symlink" }
 "~/.cargo/config.toml" = { source = ".cargo/config.toml", mode = "symlink" }

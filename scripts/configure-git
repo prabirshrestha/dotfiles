@@ -1,0 +1,84 @@
+#!/usr/bin/env sh
+set -eu
+
+repo=$(CDPATH= cd -- "$(dirname "$0")/.." && pwd)
+if [ -z "${HOME:-}" ]; then
+    if [ -z "${USERPROFILE:-}" ]; then
+        echo 'HOME or USERPROFILE is required.' >&2
+        exit 1
+    fi
+    HOME=$(printf '%s' "$USERPROFILE" | tr '\\' '/')
+    if command -v cygpath >/dev/null 2>&1; then
+        HOME=$(cygpath -u "$HOME")
+    fi
+    export HOME
+fi
+local_config="$HOME/.gitconfig"
+shared_config="$HOME/.config/git/shared.gitconfig"
+include='~/.config/git/shared.gitconfig'
+cache="$repo/.dotter/cache.toml"
+
+if [ ! -f "$shared_config" ]; then
+    echo 'Apply ~/.config/git/shared.gitconfig with mise dotfiles apply first.' >&2
+    exit 1
+fi
+
+# Validate before replacing anything. Keep credentials and machine-specific values
+# in the original file, including the location of any relative includes.
+git config --file "$shared_config" --list >/dev/null
+if [ -e "$local_config" ] || [ -L "$local_config" ]; then
+    git config --file "$local_config" --list >/dev/null
+fi
+
+umask 077
+tmp=$(mktemp "$HOME/.gitconfig-migrate.XXXXXX")
+body=$(mktemp "$HOME/.gitconfig-migrate.XXXXXX")
+cache_tmp=
+trap 'rm -f "$tmp" "$body" ${cache_tmp:+"$cache_tmp"}' EXIT HUP INT TERM
+
+if [ -f "$local_config" ]; then
+    cat "$local_config" > "$body"
+fi
+if ! git config --file "$body" --get-all include.path | grep -Fxq "$include"; then
+    backup="$HOME/.config/git/config.before-shared"
+    if [ -f "$local_config" ] && [ ! -e "$backup" ]; then
+        cat "$local_config" > "$backup"
+        chmod 600 "$backup"
+    fi
+    # Remove only defaults that match exactly. Preserve all local overrides and
+    # multi-valued credential helpers, including empty helper resets.
+    git config --file "$shared_config" --list |
+        while IFS='=' read -r key value; do
+            if git config --file "$body" --fixed-value --unset-all "$key" "$value"; then
+                :
+            else
+                code=$?
+                [ "$code" -eq 5 ] || exit "$code"
+            fi
+        done
+    # Git reads includes in place: local and tool-written settings take priority.
+    printf '[include]\n    path = %s\n\n' "$include" > "$tmp"
+    cat "$body" >> "$tmp"
+else
+    cat "$body" > "$tmp"
+fi
+git config --file "$tmp" --includes --list >/dev/null
+
+# Detach an old symlink too, so global writes never edit a tracked source file.
+if [ -L "$local_config" ] || ! cmp -s "$tmp" "$local_config"; then
+    mv "$tmp" "$local_config"
+fi
+
+# Dotter must not undeploy its former target on its next run. Forget only this
+# old mapping, leaving unrelated templates and symlinks under its control.
+if [ -f "$cache" ]; then
+    cache_tmp=$(mktemp "$repo/.dotter/cache.toml.XXXXXX")
+    awk '
+        /^\[/ { templates = ($0 ~ /^\[templates\]\r?$/) }
+        templates && /^"\.gitconfig"[[:space:]]*=/ { next }
+        { print }
+    ' "$cache" > "$cache_tmp"
+    if ! cmp -s "$cache_tmp" "$cache"; then
+        mv "$cache_tmp" "$cache"
+    fi
+fi

@@ -1,0 +1,41 @@
+[user]
+    name = Prabir Shrestha
+    email = mail@prabir.me
+
+[core]
+{% if os() == "windows" %}
+    symlinks = true
+    autocrlf = true
+{% else %}
+    autocrlf = input
+{% endif %}
+    editor = vim
+    untrackedCache = true
+    fsmonitor = true
+
+[push]
+    autoSetupRemote = true
+
+[init]
+    defaultBranch = main
+
+{% if os_family() == "unix" %}
+[merge]
+    tool = vimdiff
+    conflictstyle = diff3
+[mergetool]
+    prompt = false
+{% endif %}
+
+{% if os() == "windows" %}
+[diff]
+    tool = kdiff3
+[difftool "kdiff3"]
+    path = C:/Program Files/KDiff3/bin/kdiff3.exe
+[merge]
+    tool = kdiff3
+[mergetool "kdiff3"]
+    path = C:/Program Files/KDiff3/bin/kdiff3.exe
+    keepBackup = false
+    trustExitCode = false
+{% endif %}
